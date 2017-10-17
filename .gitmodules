@@ -1,0 +1,12 @@
+[submodule "GUI"]
+	path = GUI
+	url = https://github.com/KgpKubs/GUI.git
+[submodule "ompl_planner"]
+	path = ompl_planner
+	url = https://github.com/KgpKubs/ompl_planner.git
+[submodule "krssg_ssl_msgs"]
+	path = krssg_ssl_msgs
+	url = https://github.com/KgpKubs/krssg_ssl_msgs.git
+[submodule "RRT"]
+	path = RRT
+	url = https://github.com/KgpKubs/RRT.git
