@@ -10,3 +10,6 @@
 [submodule "RRT"]
 	path = RRT
 	url = https://github.com/KgpKubs/RRT.git
+[submodule "grSim"]
+	path = grSim
+	url = https://github.com/RoboCup-SSL/grSim.git
