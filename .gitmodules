@@ -13,3 +13,6 @@
 [submodule "ompl_planner"]
 	path = ompl_planner
 	url = https://github.com/KgpKubs/ompl_planner.git
+[submodule "ssl-vision"]
+	path = ssl-vision
+	url = https://github.com/RoboCup-SSL/ssl-vision.git
