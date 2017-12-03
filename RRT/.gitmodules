@@ -1,0 +1,3 @@
+[submodule "krssg_ssl_msgs"]
+	path = krssg_ssl_msgs
+	url = https://github.com/KgpKubs/krssg_ssl_msgs.git
