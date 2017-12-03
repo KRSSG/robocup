@@ -1,0 +1,7 @@
+build/
+devel/
+*.catkin_generated
+ssl-vision/
+src/ssl-vision/
+*pyc
+*~

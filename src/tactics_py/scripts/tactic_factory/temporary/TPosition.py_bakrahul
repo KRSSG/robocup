@@ -1,0 +1,162 @@
+from tactic import Tactic
+import time
+import sys
+from math import *
+
+sys.path.append('/home/aif/ssl/sipah00/krssg-ssl/catkin_ws/src/skills_py/scripts/skills')
+sys.path.append('/home/aif/ssl/sipah00/krssg-ssl/catkin_ws/src/plays_py/scripts/utils/')
+sys.path.insert(0, '/home/aif/ssl/sipah00/krssg-ssl/catkin_ws/src/navigation_py/scripts/navigation/src')
+sys.path.insert(0, '/home/aif/ssl/sipah00/krssg-ssl/catkin_ws/src/navigation_py/scripts/navigation')
+
+from geometry import * 
+import skills_union
+from config import *
+import obstacle
+import sGoToPoint
+import sKickToPoint
+
+KICK_RANGE_THRESH = MAX_DRIBBLE_R   #ASK
+THRES  = 0.8
+THETA_THRESH = 0.005
+TURNING_THRESH = 10
+k=k2=3000000
+
+
+class TPosition(Tactic):
+    def __init__(self, bot_id, state, param=None):
+        super(TPosition, self).__init__( bot_id, state, param)
+        self.sParam = skills_union.SParam()
+
+    def Dist(self,a,state):
+        a=a[0]
+        return fabs(a.x-state.homePos[self.bot_id].x)+ fabs(a.y-int(state.homePos[self.bot_id].y))
+    def Dist2(self,a,state):
+        return a[0]
+    def Dist3(self,a,state):
+        return fabs(a[0].x-state.homePos[self.bot_id].x)+ fabs(a[0].y-int(state.homePos[self.bot_id].y))
+    
+    def DistTheta(self,thetaLine, thetaBot, BotPos, AttackPos):
+        thetaleft=thetaLine-thetaBot
+        distance=AttackPos.dist(BotPos)
+        return sin(thetaleft)*distance
+
+
+    def execute(self, state, pub):
+        ballPos = Vector2D(int(state.ballPos.x), int(state.ballPos.y))
+        DistancesFromBot=999999999999
+        count=0
+        for i in state.homePos:
+            botIDs=Vector2D(int(i.x),int(i.y))
+            dist=botIDs.dist(ballPos)
+            if dist<DistancesFromBot:
+                DistancesFromBot=dist
+                self.bot_id=count
+            count+=1
+        botPos = Vector2D(int(state.homePos[self.bot_id].x), int(state.homePos[self.bot_id].y))
+        DistancesFromBot=999999999999
+        count=0
+        closest_opp=0
+        for i in state.awayPos:
+            botIDs=Vector2D(int(i.x),int(i.y))
+            dist=botIDs.dist(ballPos)
+            if dist<DistancesFromBot:
+                DistancesFromBot=dist
+                closest_opp=count
+            count+=1
+
+        opponents=[]
+        j=0
+        for i in state.awayPos:
+            opponents.append([Vector2D(int(i.x),int(i.y)),j])
+            j+=1
+        opponents.sort(key=lambda opp: self.Dist(opp,state))
+        opponents=opponents[0:4]
+        angles=[]
+        for opponent in opponents:
+            angle=opponent[0].angle(botPos) - state.ballPos.theta
+            thresh=k/pow(self.Dist(opponent,state),2)
+            angles.append([angle-thresh,angle+thresh, opponent[1]])
+
+        for black_ang in angles:
+            print " from "+str(black_ang[0]*180/pi)+" to "+str(black_ang[1]*180/pi)+" due to "+str(black_ang[2])+" thres="+str(thresh*180/pi)    
+        
+        avail_to_rec=[]
+        for i in xrange(len(state.homePos)):
+            if i!=self.bot_id:
+               for black_ang in angles:
+                       angle_to_shoot=(state.homePos[i].theta-state.ballPos.theta)
+                       print "checking bot no"+str(i)+" "+str(angle_to_shoot*180/pi)+" in b/w "+str(black_ang[0]*180/pi)+" and "+str(black_ang[1]*180/pi)
+                       if((black_ang[0]<angle_to_shoot<black_ang[1])):
+                         att=Vector2D(int(state.homePos[self.bot_id].x),int(state.homePos[self.bot_id].y))
+                         pla=Vector2D(int(state.homePos[i].x),int(state.homePos[i].y))
+                         if(att.dist(pla)<att.dist(opponents[black_ang[2]][0])):
+                            avail_to_rec.append(i)
+                            break
+                       else:
+                         avail_to_rec.append(i)
+                         break
+                         
+        for a in avail_to_rec:
+            print "bot no "+str(a)+" is available"             
+
+        # lineangles=[]
+        # for i in xrange(len(angles)):
+        #     j=i+1
+        #     if j>2: j=0
+        #     lineangles.append((angles[i][1]+angles[j][0])/2)
+        # players=[]
+        # for oppnent in opponents:
+        #     print opponent[1]
+        # for i in lineangles:
+        #     print i*180/pi
+        # for i in xrange(len(state.homePos)):
+        #     if i!=self.bot_id:
+        #         players.append([Vector2D(int(state.homePos[i].x), int(state.homePos[i].y)),i])
+        # players.sort(key=lambda player: self.Dist3(player,state))
+        # players=players[0:4]
+        # corrAngles=[]
+        # for player in players:
+        #     Scores=[]
+        #     for angle in lineangles:
+        #         Scores.append([self.DistTheta(angle,state.homePos[self.bot_id].theta,player[0],botPos),botPos])   #Dist_theta taking: angle-to-shoot, attacking bot orientation, player to shoot pos, attacking bot position.
+        #     Scores.sort(key=lambda score: self.Dist2(score,state))
+        #     corrAngles.append(Scores[0][0])
+        # FinalScore=[]
+        # for i in xrange(4):
+        #     distance=self.DistTheta(corrAngles[i],state.homePos[self.bot_id].theta,players[i][0],botPos)
+        #     try:
+        #         FinalScore.append([fabs(k2/distance),players[i][1]])
+        #     except:
+        #         FinalScore.append([99999999999999999999999999,players[i][1]])
+        # FinalScore.sort(key=lambda score: self.Dist2(score,state))
+        
+        # import sKickToPoint
+        # self.sParam.KickToPointP.x    = state.homePos[FinalScore[0][1]].x
+        # self.sParam.KickToPointP.y    = state.homePos[FinalScore[0][1]].y
+        # self.sParam.KickToPointP.power    = 7
+        # print self.sParam.KickToPointP.x
+        # print "a"+str(self.sParam.KickToPointP.y)
+        # print FinalScore[0][1]
+
+        sKickToPoint.execute(self.sParam, state, self.bot_id, pub)
+        #import TMark
+
+        #sGoToBallOpp.execute(self.sParam,state,closest_opp,pub)
+        # import sGoToPointOpp
+        # self.sParam.GoToPointP.x=(state.homePos[FinalScore[0][1]].x + state.homePos[self.bot_id].x)/2
+        # self.sParam.GoToPointP.y=(state.homePos[FinalScore[0][1]].y + state.homePos[self.bot_id].y)/2
+        # sGoToPointOpp.execute(self.sParam,state,0,pub)
+
+
+    def isComplete(self, state):
+        # TO DO use threshold distance instead of actual co ordinates
+        if self.destination.dist(state.homePos[self.bot_id]) < self.threshold:
+            return True
+        elif time.time()-self.begin_time > self.time_out:
+            return True
+        else:
+            return False
+
+    def updateParams(self, state):
+        # No parameter to update here
+        pass
