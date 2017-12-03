@@ -1,0 +1,9 @@
+<launch>        
+  <node pkg="grsim_comm" type="grsim_xyw_node" name="grsim_xyw_node" output="screen">
+    
+    
+    <!-- <remap from="~image" to="/head/kinect2/qhd/image_color"/> -->
+    <!-- <remap from="~camera_info" to="/head/kinect2/qhd/camera_info"/> -->
+    
+  </node>
+</launch>

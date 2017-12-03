@@ -1,0 +1,33 @@
+<launch>        
+  <!-- need a node fr every robot. -->
+  <node pkg="ssl_robot" type="robot" name="bot0" output="screen" >
+    <param name="botID" value="0" type="int"/>
+    <remap from="/tactic_topic" to="/tactic_0"/>
+
+  </node>
+  <node pkg="ssl_robot" type="robot" name="bot1" output="screen" >
+    <param name="botID" value="1" type="int"/>
+    <remap from="/tactic_topic" to="/tactic_1"/>
+
+  </node>
+  <node pkg="ssl_robot" type="robot" name="bot2" output="screen" >
+    <param name="botID" value="2" type="int"/>
+    <remap from="/tactic_topic" to="/tactic_2"/>
+
+  </node>
+  <node pkg="ssl_robot" type="robot" name="bot3" output="screen" >
+    <param name="botID" value="3" type="int"/>
+    <remap from="/tactic_topic" to="/tactic_3"/>
+
+  </node>
+  <node pkg="ssl_robot" type="robot" name="bot4" output="screen" >
+    <param name="botID" value="4" type="int"/>
+    <remap from="/tactic_topic" to="/tactic_4"/>
+
+  </node>
+  <node pkg="ssl_robot" type="robot" name="bot5" output="screen" >
+    <param name="botID" value="5" type="int"/>
+    <remap from="/tactic_topic" to="/tactic_5"/>
+
+  </node>
+</launch>

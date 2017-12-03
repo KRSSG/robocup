@@ -1,0 +1,10 @@
+
+<launch>        
+  <node pkg="ssl_robot" type="test_play_node" name="test_play_node" output="screen">
+    
+    
+    <!-- <remap from="~image" to="/head/kinect2/qhd/image_color"/> -->
+    <!-- <remap from="~camera_info" to="/head/kinect2/qhd/camera_info"/> -->
+    
+  </node>
+</launch>

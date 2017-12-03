@@ -1,0 +1,10 @@
+<launch>        
+  <node pkg="bot_comm" type="bot_comm_nrf" name="bot_comm_nrf" output="screen">   
+  </node> 
+  
+  <!-- <node pkg="bot_comm" type="bot_comm_node2" name="bot_comm2" output="screen">   
+  </node>
+  
+  <node pkg="bot_comm" type="bot_comm_node3" name="bot_comm3" output="screen">   
+  </node> -->
+</launch>

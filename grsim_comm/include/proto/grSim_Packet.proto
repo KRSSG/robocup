@@ -1,0 +1,9 @@
+import "grSim_Commands.proto";
+import "grSim_Replacement.proto";
+import "sslDebug_Data.proto";
+
+message grSim_Packet {
+    optional grSim_Commands commands = 1;
+    optional grSim_Replacement replacement = 2;
+    optional sslDebug_Data debuginfo =3;
+}
