@@ -185,7 +185,6 @@ set(src
 include_directories(include ${catkin_INCLUDE_DIRS} ${PROTOBUF_INCLUDE_DIRS})
 include_directories(${CMAKE_BINARY_DIR}/${PROJECT_NAME})
 
-
-add_executable(vision_node src/vision_node.cpp ${src} ${PROTO_CPP} ${PROTO_H})
+add_executable(vision_node src/vision_node.cpp src/class_node.cpp ${src} ${PROTO_CPP} ${PROTO_H})
 target_link_libraries(vision_node ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LIBRARIES})
 add_dependencies(vision_node grsim_comm_generate_messages_cpp)

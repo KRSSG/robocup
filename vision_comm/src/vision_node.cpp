@@ -2,6 +2,7 @@
 #include "std_msgs/String.h"
 
 #include "geometry_msgs/Pose2D.h"
+#include "class_node.hpp"
 
 #include "robocup_ssl_client.h"
 #include <sstream>
@@ -16,68 +17,14 @@
 #include <ctime>
 #include <climits>
 
-
 using namespace std;
 using namespace geometry_msgs;
 
-// Currently not adding geometry data
-
 bool isteamyellow = false;
-
-void update_bot_pos(std::vector<krssg_ssl_msgs::SSL_DetectionRobot> robot,
-	std::vector<geometry_msgs::Pose2D> pos) {
-
-	for (int i = 0; i < robot.size(); ++i) {
-		int bot_id = robot[i].robot_id;
-		pos[bot_id].x = robot[bot_id].x;
-		pos[bot_id].y = robot[bot_id].y;
-	}
-}
-
-
-void update_belief_data(
-	krssg_ssl_msgs::SSL_DetectionFrame *frame,
-	krssg_ssl_msgs::BeliefState *bf) {
-
-	bf->stamp = ros::Time::now();
-	bf->isteamyellow = isteamyellow;
-	bf->frame_number = frame->frame_number;
-	bf->t_capture = frame->t_capture;
-	bf->t_sent = frame->t_sent;
-
-	// Ball
-	Pose2D ballPos;
-	float max_confidence = INT_MIN;
-	int ball_idx;
-	for (int i = 0; i < frame->balls.size(); ++i) {
-		float confidence = frame->balls[ball_idx].confidence;
-		if (max_confidence < confidence) {
-			max_confidence = confidence;
-			ball_idx = i;
-		}
-	}
-	ballPos.x = frame->balls[ball_idx].x;
-	ballPos.y = frame->balls[ball_idx].y;
-	bf->ballPos = ballPos;
-
-	// Bot Positions
-	vector<Pose2D> home_bots;
-	vector<Pose2D> away_bots;
-	if (isteamyellow) {
-		update_bot_pos(frame->robots_yellow, home_bots);
-		update_bot_pos(frame->robots_blue, away_bots);
-	} else {
-		update_bot_pos(frame->robots_blue, home_bots);
-		update_bot_pos(frame->robots_yellow, away_bots);
-	}
-	bf->homePos = home_bots;
-	bf->awayPos = away_bots;
-}
-
+bool first_packet = true;
 
 int main(int argc, char **argv)
 {
-
 	int vision = 0;
 	if (argc < 2) {
 		std::cerr << "usage:\n ./vision <vision_port> <team_id>\n"
@@ -89,6 +36,7 @@ int main(int argc, char **argv)
 		isteamyellow = atof(argv[2]);
 	}
 
+	BeliefState bf(isteamyellow);
 	ros::init(argc, argv, "vision_node");
 	ros::NodeHandle n;
 	
@@ -103,8 +51,8 @@ int main(int argc, char **argv)
 	while(ros::ok()) {
 		//see if the packet contains a robot detection frame:
 		if (client.receive(packet)) {
+			krssg_ssl_msgs::BeliefState final_msg;
 			krssg_ssl_msgs::SSL_DetectionFrame msg;
-			krssg_ssl_msgs::BeliefState bf;
 			if (packet.has_detection()) {
 				SSL_DetectionFrame detection = packet.detection();
 				int balls_n = detection.balls_size();
@@ -161,10 +109,10 @@ int main(int argc, char **argv)
 				}
 			}
 
+			bf.update_frame(&msg);
 			printf("sending packet...\n");
-
-			update_belief_data(&msg, &bf);
-			pulisher.publish(bf);
+			final_msg = bf.get_beliefstate_msg();
+			pulisher.publish(final_msg);
 		}
 		ros::spinOnce();
 	}
