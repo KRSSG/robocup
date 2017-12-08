@@ -15,4 +15,4 @@
 	url = https://github.com/KgpKubs/ompl_planner.git
 [submodule "ssl-vision"]
 	path = ssl-vision
-	url = https://github.com/RoboCup-SSL/ssl-vision.git
+	url = https://github.com/KgpKubs/ssl-vision.git
