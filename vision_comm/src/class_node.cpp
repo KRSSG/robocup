@@ -161,10 +161,27 @@ void BeliefState::copy(const BeliefState& bs){
    this->awayDetected = bs.awayDetected;
 }
 
-void BeliefState::print(){
+void print(Pose2D& p) {
+   cout<<"x: "<<p.x<<" y: "<<p.y<<endl;
+}
+
+void print(vector<Pose2D> p) {
+   for(int i = 0; i < p.size(); i++) {
+      cout<<"i: \t";
+      print(p[i]);
+   }
+}
+
+void print(vector<bool> p) {
+   for(int i=0;i<p.size();i++) {
+      cout<<"i: \t"<<p[i]<<endl;
+   }
+}
+
+void BeliefState::print() {
    system("clear");
-   cout<<"time: "<<this->time<<endl;
-   cout<<"isteamyellow: "<<isteamyellow<<endl;
+   cout<<"time: "<<this->stamp<<endl;
+   cout<<"isteamyellow: "<<this->isteamyellow<<endl;
    cout<<"frame_number: "<<frame_number<<endl;
    cout<<"t_capture: "<<t_capture<<" t_sent: "<<t_sent<<endl;
    cout<<"ballPos:"<<endl;
