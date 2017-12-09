@@ -4,6 +4,42 @@ import pylab as pl
 from pykalman.datasets import load_robot
 from pykalman import KalmanFilter
 
+import rospy
+from std_msgs.msg import String
+
+from krssg_ssl_msgs.msg import BeliefState
+import time
+dict_old={}
+
+def rectify(dict):
+    pass
+
+def callback(data):
+    print "I heard: "+str(data.homePos[3].x)
+    # dict_now = {x: data.homePos[3].x, y:data.homePos[3].y, time_now: time.time()}
+
+    # dict_updated = rectify(dict_now)
+
+    # dict_old = dict_now
+    # rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
+    
+def listener():
+
+    # In ROS, nodes are uniquely named. If two nodes with the same
+    # node are launched, the previous one is kicked off. The
+    # anonymous=True flag means that rospy will choose a unique
+    # name for our 'listener' node so that multiple listeners can
+    # run simultaneously.
+    rospy.init_node('filter', anonymous=True)
+
+    rospy.Subscriber("belief_state", BeliefState, callback)
+
+    # spin() simply keeps python from exiting until this node is stopped
+    rospy.spin()
+
+if __name__ == '__main__':
+    listener()
+
 n_timesteps = 51
 print(n_timesteps)
 n_dim_state = 2

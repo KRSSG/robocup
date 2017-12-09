@@ -36,9 +36,9 @@ int main(int argc, char **argv)
 		isteamyellow = atof(argv[2]);
 	}
 
-	BeliefState bf(isteamyellow);
 	ros::init(argc, argv, "vision_node");
 	ros::NodeHandle n;
+	BeliefState bf(isteamyellow);
 	
 	ros::Publisher pulisher = n.advertise<krssg_ssl_msgs::BeliefState>("vision", 10000);
 	
