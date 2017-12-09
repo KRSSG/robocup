@@ -5,7 +5,7 @@ This package publishes krssg_ssl_msgs/BeliefState.msg on the topic '/vision'
 ## Dependencies:
 krssg_ssl_msgs
 
-## Runing
+## Running
 
 ```
 roscore
@@ -25,4 +25,7 @@ rosrun vision_comm vision_node 1 1
 ```
 
 
+### Note
+- By default `vision_node` connects to grSim port and our team is Team Yellow
 
+- To make the changes on what to launch, refer `kgpkubs_launch/launch/vision.launch` file
