@@ -4,9 +4,6 @@
 [submodule "RRT"]
 	path = RRT
 	url = https://github.com/KgpKubs/RRT.git
-[submodule "grSim"]
-	path = grSim
-	url = https://github.com/RoboCup-SSL/grSim.git
 [submodule "krssg_ssl_msgs"]
 	path = krssg_ssl_msgs
 	url = https://github.com/KgpKubs/krssg_ssl_msgs.git
@@ -15,4 +12,7 @@
 	url = https://github.com/KgpKubs/ompl_planner.git
 [submodule "ssl-vision"]
 	path = ssl-vision
-	url = https://github.com/RoboCup-SSL/ssl-vision.git
+	url = https://github.com/KgpKubs/ssl-vision.git
+[submodule "grSim"]
+	path = grSim
+	url = https://github.com/KgpKubs/grSim.git

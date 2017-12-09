@@ -36,4 +36,4 @@ pr_launcher "vision"    "vision.launch"
 # pr_launcher "play_node" "play.launch"
 # pr_launcher "rj_robot"         "rj_robot.launch"
 
- rosrun grsim_comm debug_test
+ # rosrun grsim_comm debug_test
