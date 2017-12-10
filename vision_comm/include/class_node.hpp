@@ -110,7 +110,7 @@ public:
    /**
     * @brief      Print one instance of the belief state data
     */
-   void print();
+   void print(string str);
 
    /**
     * @brief      Gets the beliefstate message of the current instance.

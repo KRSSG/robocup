@@ -34,32 +34,24 @@ bool first_packet = true;
 
 int main(int argc, char **argv)
 {
-	int vision = 0;
-	if (argc < 2) {
-		std::cerr << "usage:\n ./vision <vision_port> <team_id>\n"
-					 << "<vision_port> : Use 0 for grSim and 1 for ssl-vision\n"
-					 << "<team_id> : Use 0 for our team as blue team\n";
-		return -1;
-	} else {
-		vision = atof(argv[1]);
-		isteamyellow = atof(argv[2]);
-	}
+	int vision = 1;
+	vision = atof(argv[1]);
+	isteamyellow = atof(argv[2]);
 
-	BeliefState bf(isteamyellow);
 	ros::init(argc, argv, "vision_node");
 	ros::NodeHandle n;
+	BeliefState bf(isteamyellow);
 	
 	ros::Publisher pulisher = n.advertise<krssg_ssl_msgs::BeliefState>("vision", 10000);
-	
+
 	GOOGLE_PROTOBUF_VERIFY_VERSION;
-	int port = vision? 10020: 10006;
+	int port = vision == 1 ? 10020: 10006;
 	RoboCupSSLClient client(port);	
 	client.open(true);
 	printf("Connected to %s.\n", vision? "grSim vision" : "ssl-vision");
 
 	SSL_WrapperPacket packet;
    krssg_ssl_msgs::SSL_WrapperPacket ssl_packet;
-
 	while(ros::ok()) {
 		//see if the packet contains a robot detection frame:
 		if (client.receive(packet)) {
@@ -199,11 +191,11 @@ int main(int argc, char **argv)
 
 			bf.update_frame(&ssl_packet);
 			printf("sending packet...\n");
+			bf.print(vision == 1? "grSim vision" : "ssl-vision");
 			final_msg = bf.get_beliefstate_msg();
 			pulisher.publish(final_msg);
 		}
 		ros::spinOnce();
 	}
-
 	return 0;
 }

@@ -1,6 +1,7 @@
 #include "class_node.hpp"
 
 #include <climits>
+#include <string>
 
 bool is_valid(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vmsg) {
    if(vmsg->robots_yellow.size() == 0 && vmsg->robots_blue.size() == 0)
@@ -54,9 +55,11 @@ void BeliefState::update_frame(const krssg_ssl_msgs::SSL_WrapperPacket *pkt){
    const krssg_ssl_msgs::SSL_DetectionFrame *vmsg = &pkt->detection;
    const krssg_ssl_msgs::SSL_GeometryData   *geo  = &pkt->geometry;
 
+   BeliefState prev_state;
    if(this->prev_msg == NULL) {
       this->initialise();
    } else {
+      prev_state = *this->prev_msg;
       this->stamp = ros::Time::now();
       this->frame_number = vmsg->frame_number;
       this->t_capture = vmsg->t_capture;
@@ -98,13 +101,10 @@ void BeliefState::update_frame(const krssg_ssl_msgs::SSL_WrapperPacket *pkt){
 
       update_geometry_data(geo);
    }
-      
-   BeliefState prev_state;
+
    if(this->prev_msg == NULL) {
       prev_msg = this;
       return;
-   } else {
-      prev_state = *(this->prev_msg);
    }
 
    assert(prev_state.homePos.size() == 6);
@@ -122,8 +122,6 @@ void BeliefState::update_frame(const krssg_ssl_msgs::SSL_WrapperPacket *pkt){
       this->awayVel[i].x = (this->awayPos[i].x - prev_state.awayPos[i].x)/(this->stamp - prev_state.stamp).toSec();
       this->awayVel[i].y = (this->awayPos[i].y - prev_state.awayPos[i].y)/(this->stamp - prev_state.stamp).toSec();
    }
-
-   prev_msg = this;
 }
 
 void BeliefState::initialise() {
@@ -183,13 +181,15 @@ void print(vector<bool> p) {
    }
 }
 
-void BeliefState::print() {
+void BeliefState::print(string str) {
    system("clear");
-   cout<<"time: "<<this->stamp<<endl;
-   cout<<"isteamyellow: "<<this->isteamyellow<<endl;
-   cout<<"frame_number: "<<frame_number<<endl;
-   cout<<"t_capture: "<<t_capture<<" t_sent: "<<t_sent<<endl;
-   cout<<"ballPos:"<<endl;
+   cout<<"Data recieved from : " << str << endl 
+       <<"Time: "<<this->stamp<<endl
+       <<"isteamyellow: "<<this->isteamyellow<<endl
+       <<"frame_number: "<<frame_number<<endl
+       <<"t_capture: "<<t_capture<<endl
+       <<"t_sent: "<<t_sent<<endl
+       <<"ballPos:"<<endl;
    ::print(ballPos);
    cout<<"awayPos:"<<endl;
    ::print(awayPos);
