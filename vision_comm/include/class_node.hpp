@@ -55,6 +55,18 @@ class BeliefState {
    bool ballDetected;
    vector<bool> awayDetected, homeDetected;
 
+   // Geometry Data
+   int field_length,
+       field_width,
+       goal_width,
+       goal_depth,
+       boundary_width;
+
+   vector<krssg_ssl_msgs::SSL_FieldLineSegment> lines;
+   vector<krssg_ssl_msgs::SSL_FieldCircularArc> arcs;
+
+   vector<krssg_ssl_msgs::SSL_GeometryCameraCalibration> cam_params;
+
 public:
 
    /**
@@ -107,4 +119,26 @@ public:
     */
    krssg_ssl_msgs::BeliefState get_beliefstate_msg();
 
+   /**
+    * @brief      Updates the geometry data
+    *
+    * @param[in]  geo  Instance of Geometry data
+    */
+   void update_geometry_data(const krssg_ssl_msgs::SSL_GeometryData *geo);
+
+protected:
+  /**
+   * @brief      Update field parameters
+   *
+   * @param[in]  field  Instance of field data
+   */
+   void update_field_params(const krssg_ssl_msgs::SSL_GeometryFieldSize *field);
+
+   /**
+    * @brief      Update camera clibration paramters
+    *
+    * @param      camera_params  The calib
+    */
+   void update_camera_calib(const vector<
+    krssg_ssl_msgs::SSL_GeometryCameraCalibration> &cam_params);
 };

@@ -95,6 +95,8 @@ void BeliefState::update_frame(const krssg_ssl_msgs::SSL_WrapperPacket *pkt){
          this->awayPos[bot_id].y = awayPos[i].y;
          this->awayPos[bot_id].theta = awayPos[i].orientation;
       }
+
+      update_geometry_data(geo);
    }
       
    BeliefState prev_state;
@@ -204,4 +206,30 @@ void BeliefState::print() {
    ::print(homeDetected);
    cout<<"awayDetected:"<<endl;
    ::print(awayDetected);
+}
+
+void BeliefState::update_geometry_data(
+   const krssg_ssl_msgs::SSL_GeometryData *geo) {
+
+   update_field_params(&geo->field);
+   update_camera_calib(geo->calib);
+}
+
+void BeliefState::update_field_params(
+   const krssg_ssl_msgs::SSL_GeometryFieldSize *field) {
+
+   this->field_length = field->field_length;   
+   this->field_width = field->field_width;   
+   this->goal_width = field->goal_width;   
+   this->goal_depth = field->goal_depth;   
+   this->boundary_width = field->boundary_width;   
+
+   this->lines = field->field_lines;
+   this->arcs = field->field_arcs;
+}
+
+void BeliefState::update_camera_calib(
+   const vector<krssg_ssl_msgs::SSL_GeometryCameraCalibration> &cam_params) {
+
+   this->cam_params = cam_params;
 }
