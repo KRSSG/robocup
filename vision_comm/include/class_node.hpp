@@ -1,7 +1,17 @@
 #include "ros/ros.h"
-#include <krssg_ssl_msgs/BeliefState.h>
-#include <krssg_ssl_msgs/SSL_DetectionFrame.h>
-#include <krssg_ssl_msgs/SSL_DetectionRobot.h>
+
+#include "krssg_ssl_msgs/Vector2f.h"
+#include "krssg_ssl_msgs/BeliefState.h"
+#include "krssg_ssl_msgs/SSL_DetectionFrame.h"
+#include "krssg_ssl_msgs/SSL_DetectionBall.h"
+#include "krssg_ssl_msgs/SSL_DetectionRobot.h"
+#include "krssg_ssl_msgs/SSL_GeometryData.h"
+#include "krssg_ssl_msgs/SSL_GeometryCameraCalibration.h"
+#include "krssg_ssl_msgs/SSL_GeometryFieldSize.h"
+#include "krssg_ssl_msgs/SSL_WrapperPacket.h"
+#include "krssg_ssl_msgs/SSL_FieldLineSegment.h"
+#include "krssg_ssl_msgs/SSL_FieldCircularArc.h"
+
 #include <geometry_msgs/Pose2D.h>
 #include <geometry_msgs/Point32.h>
 
@@ -69,9 +79,9 @@ public:
    /**
     * @brief      Copy Constructer for frame data
     *
-    * @param[in]  vmsg  packet of frame data
+    * @param[in]  vmsg  packet of data
     */
-   void update_frame(const krssg_ssl_msgs::SSL_DetectionFrame *vmsg);
+   void update_frame(const krssg_ssl_msgs::SSL_WrapperPacket *pkt);
 
    /**
     * @brief      Copy `bf` to current instance

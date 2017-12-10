@@ -50,7 +50,10 @@ krssg_ssl_msgs::BeliefState BeliefState::get_beliefstate_msg() {
    return msg;
 }
 
-void BeliefState::update_frame(const krssg_ssl_msgs::SSL_DetectionFrame *vmsg){
+void BeliefState::update_frame(const krssg_ssl_msgs::SSL_WrapperPacket *pkt){
+   const krssg_ssl_msgs::SSL_DetectionFrame *vmsg = &pkt->detection;
+   const krssg_ssl_msgs::SSL_GeometryData   *geo  = &pkt->geometry;
+
    if(this->prev_msg == NULL) {
       this->initialise();
    } else {
