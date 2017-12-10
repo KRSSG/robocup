@@ -108,7 +108,70 @@ int main(int argc, char **argv)
 					msg.robots_yellow.push_back(botmsg);
 				}
 			}
+            krssg_ssl_msgs::SSL_GeometryData geom_msg;
+            if (packet.has_geometry()) {
+                const SSL_GeometryData & geom = packet.geometry();
+                krssg_ssl_msgs::SSL_GeometryFieldSize field_size_msg;
+                const SSL_GeometryFieldSize & field = geom.field();
+                field_size_msg.field_length = field.field_length();
+                field_size_msg.field_width = field.field_width();
+                field_size_msg.boundary_width = field.boundary_width();
+				field_size_msg.goal_width = field.goal_width();
+				field_size_msg.goal_depth = field.goal_depth();
 
+				for(int i =0; i<field.field_lines_size(); i++)
+				{
+					const SSL_FieldLineSegment &field_lines = field.field_lines(i);
+                    krssg_ssl_msgs::SSL_FieldLineSegment field_lines_msg;
+                    field_lines_msg.name = field_lines.name();
+                    field_lines_msg.p1 = field_lines.p1();
+                    field_lines_msg.p2 = field_lines.p();
+                    field_lines_msg.thickness = field_lines.thickness();
+                    field_size_msg.field_lines.push_back(field_lines_msg);
+
+				}
+
+				for(int i =0; i<field.field_arcs_size(); i++)
+				{
+					const SSL_FieldCircularArc &field_arcs = field.field_arcs(i);
+                    krssg_ssl_msgs::SSL_FieldCircularArc field_arcs_msg;
+                    field_arcs_msg.name = field_arcs.name();
+                    field_arcs_msg.center = field_arcs.center();
+                    field_arcs_msg.radius = field_arcs.radius();
+                    field_arcs_msg.a1 = field_arcs.a1();
+                    field_arcs_msg.a2 = field_arcs.a2();
+                    field_arcs_msg.thickness = field_arcs.thickness();
+                    field_size_msg.field_arcs.push_back(field_arcs_msg);
+
+				}
+
+                geom_msg.field = field_size_msg;
+                int calib_n = geom.calib_size();
+                for (int i=0; i< calib_n; i++) {
+                    const SSL_GeometryCameraCalibration & calib = geom.calib(i);
+                    krssg_ssl_msgs::SSL_GeometryCameraCalibration calib_msg
+					calib_msg.camera_id =  calib.camera_id();
+					calib_msg.focal_length = calib.focal_length();
+					calib_msg.principal_point_x = calib.principal_point_x();
+					calib_msg.principal_point_y = calib.principal_point_y();
+					calib_msg.distortion = calib.distortion();
+					calib_msg.q0 = calib.q0();
+					calib_msg.q1 = calib.q1();
+					calib_msg.q2 = calib.q2();
+					calib_msg.q3 = calib.q3();
+					calib_msg.tx = calib.tx();
+					calib_msg.ty = calib.ty();
+					calib_msg.tz = calib.tz();
+
+                    if (calib.has_derived_camera_world_tx() && calib.has_derived_camera_world_ty() && calib.has_derived_camera_world_tz()) {
+                    calib_msg.derived_camera_world_tx = calib.derived_camera_world_tx();
+                    calib_msg.derived_camera_world_ty = calib.derived_camera_world_ty();
+                    calib_msg.derived_camera_world_tz = calib.derived_camera_world_tz();
+                    }
+
+                    geom_msg.calib.push_back(calib_msg);
+                }
+              }
 			bf.update_frame(&msg);
 			printf("sending packet...\n");
 			final_msg = bf.get_beliefstate_msg();
