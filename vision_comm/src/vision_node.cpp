@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 	int vision = 1;
 	vision = atof(argv[1]);
 	isteamyellow = atof(argv[2]);
-
+	isteamyellow = !isteamyellow;
 	ros::init(argc, argv, "vision_node");
 	ros::NodeHandle n;
 	BeliefState bf(isteamyellow);

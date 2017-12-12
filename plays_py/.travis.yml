@@ -1,0 +1,25 @@
+sudo : required
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+
+language : generic
+
+compiler : gcc
+
+install:
+
+script:
+  - mkdir -p /home/$USER/catkin_ws/src
+  - cd .. && mv `ls` /home/$USER/catkin_ws/src/
+  - cd /home/$USER/catkin_ws/src/
+  - if [ ! -d "ssl-misc" ]; then git clone https://github.com/krssg-ssl/ssl-misc; fi;
+  - cd ssl-misc/
+  - sudo chmod +x install.sh
+  - bash install.sh "/home/$USER/catkin_ws"
+
+
+notifications:
+    email: false
