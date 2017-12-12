@@ -15,4 +15,10 @@
 	url = https://github.com/KgpKubs/ompl_planner.git
 [submodule "ssl-vision"]
 	path = ssl-vision
-	url = https://github.com/RoboCup-SSL/ssl-vision.git
+	url = https://github.com/KgpKubs/ssl-vision.git
+[submodule "grSim"]
+	path = grSim
+	url = https://github.com/KgpKubs/grSim.git
+[submodule "velocity_profiling"]
+	path = velocity_profiling
+	url = https://github.com/KgpKubs/Velocity_Profiling.git
