@@ -22,3 +22,6 @@
 [submodule "velocity_profiling"]
 	path = velocity_profiling
 	url = https://github.com/KgpKubs/Velocity_Profiling.git
+[submodule "role"]
+	path = role
+	url = https://github.com/KgpKubs/role.git
