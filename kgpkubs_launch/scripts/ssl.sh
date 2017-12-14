@@ -30,8 +30,9 @@ launcher    "core"         "roscore"
 pr_launcher "vision"    "vision.launch"
 # pr_launcher "belief_state"      "belief_state.launch"
 pr_launcher "grsim_comm"    "grsim_comm.launch"
-python vision_comm/src/svg_filter.py & >/dev/null
-rosrun ompl_planner listener_ompl & >/dev/null
+# python vision_comm/src/svg_filter.py & >/dev/null
+../devel/lib/belief_state/beliefstate_node >a 2>&1 &
+rosrun ompl_planner listener_ompl >/dev/null &
 # cd velocity_profiling/src
 # python pidOperator.py & >/dev/null
 # cd ../..

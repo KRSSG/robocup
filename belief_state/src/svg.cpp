@@ -1,5 +1,5 @@
 #define WINDOW_SIZE 2 // will be converted into 2*WINDOW_SIZE +1
-#define LAST_FRAMES 5
+#define LAST_FRAMES 6
 #define POLY_DEG 3
 // From : https://raw.githubusercontent.com/thatchristoph/vmd-cvs-github/master/plugins/signalproc/src/sgsmooth.C
 //!
@@ -414,7 +414,7 @@ std::deque<double> sg_smooth(const std::deque<double> &v, const int width, const
     std::deque<double> res(v.size(), 0.0);
     if ((width < 1) || (deg < 0) || (v.size() < (2 * width + 2))) {
       //sgs_error("sgsmooth: parameter error.\n");
-        return res;
+        return v;
     }
 
     const int window = 2 * width + 1;
@@ -566,7 +566,7 @@ std::deque<double> sg_derivative(const std::deque<double> &v, const int width,
 
 void bsCallback(const krssg_ssl_msgs::BeliefState& msg_org)
 {
-
+  // system("sleep 0.01s");
   krssg_ssl_msgs::BeliefState msg;
   msg.isteamyellow=msg_org.isteamyellow;
   msg.frame_number=msg_org.frame_number ;
@@ -595,53 +595,82 @@ void bsCallback(const krssg_ssl_msgs::BeliefState& msg_org)
   if (vect_ball_x.size()>LAST_FRAMES)
   	vect_ball_x.pop_front();
 
-  vect_ball_x = sg_derivative(vect_ball_x,2, 5,  2*acos(0.0));
+  // std::cout<<"here1\n";
+  vect_ball_x = sg_smooth(vect_ball_x,WINDOW_SIZE, POLY_DEG);
 
+  // std::cout<<"here1.5\n"<<vect_ball_x.size()<<std::endl;
+  // std::cout<<"size: "<<vect_ball_x.size()<<std::endl;
   msg.ballPos.x = vect_ball_x[vect_ball_x.size()-1];
 
-  vect_ball_x.push_back(ball_y);
+  vect_ball_y.push_back(ball_y);
   if (vect_ball_y.size()>LAST_FRAMES)
-  	vect_ball_y.pop_front();
+    vect_ball_y.pop_front();
 
-  vect_ball_y = sg_derivative(vect_ball_y,2, 5,  2*acos(0.0));
+  vect_ball_y = sg_smooth(vect_ball_y,WINDOW_SIZE, POLY_DEG);
+  // std::cout<<"here2\n";
 
   msg.ballPos.y = vect_ball_y[vect_ball_y.size()-1];
 
+  // std::cout<<"here2\n";
 
 
 
   for (int i=0; i<6; i++)
   {
-  	  float bot_x = msg.homePos[i].x;
-  	  float bot_y = msg.homePos[i].y;
+      float bot_x = msg.homePos[i].x;
+      vect_home_Pos_x[i].push_back(bot_x);
+      if (vect_home_Pos_x[i].size()>LAST_FRAMES)
+        vect_home_Pos_x[i].pop_front();
 
-  	  vect_home_Pos_x[i].push_back(bot_x);
-  	  if (vect_home_Pos_x[i].size()>LAST_FRAMES)
-  	  	vect_home_Pos_x[i].pop_front();
+      vect_home_Pos_x[i] = sg_smooth(vect_home_Pos_x[i],WINDOW_SIZE, POLY_DEG);
 
-  	  vect_home_Pos_x[i] = sg_derivative(vect_home_Pos_x[i],2, 5,  2*acos(0.0));
+      msg.homePos[i].x = vect_home_Pos_x[i][vect_home_Pos_x[i].size()-1];
 
-  	  msg.homePos[i].x = vect_home_Pos_x[i][vect_home_Pos_x[i].size()-1];
+      float bot_y = msg.homePos[i].y;
+      vect_home_Pos_y[i].push_back(bot_y);
+      if (vect_home_Pos_y[i].size()>LAST_FRAMES)
+        vect_home_Pos_y[i].pop_front();
 
+      vect_home_Pos_y[i] = sg_smooth(vect_home_Pos_y[i],WINDOW_SIZE, POLY_DEG);
+
+      msg.homePos[i].y = vect_home_Pos_y[i][vect_home_Pos_y[i].size()-1];
+
+      // std::cout<<"here3\n";
   }
+      // std::cout<<"here3\n";
 
+    // std::cout<<"here4\n";
 
+    // std::cout<<"here4\n";
   for (int i=0; i<6; i++)
   {
-  	  float bot_x = msg.awayPos[i].x;
-  	  float bot_y = msg.awayPos[i].y;
+      float bot_x = msg.awayPos[i].x;
 
-  	  vect_away_Pos_x[i].push_back(bot_x);
-  	  if (vect_away_Pos_x[i].size()>LAST_FRAMES)
+      vect_away_Pos_x[i].push_back(bot_x);
+      if (vect_away_Pos_x[i].size()>LAST_FRAMES)
   	  	vect_away_Pos_x[i].pop_front();
 
-  	  vect_away_Pos_x[i] = sg_derivative(vect_away_Pos_x[i],2, 5,  2*acos(0.0));
+  	  vect_away_Pos_x[i] = sg_smooth(vect_away_Pos_x[i],WINDOW_SIZE, POLY_DEG);
 
   	  msg.awayPos[i].x = vect_away_Pos_x[i][vect_away_Pos_x[i].size()-1];
 
+      float bot_y = msg.awayPos[i].y;
+
+      vect_away_Pos_y[i].push_back(bot_y);
+      if (vect_away_Pos_y[i].size()>LAST_FRAMES)
+        vect_away_Pos_y[i].pop_front();
+
+      vect_away_Pos_y[i] = sg_smooth(vect_away_Pos_y[i],WINDOW_SIZE, POLY_DEG);
+
+      msg.awayPos[i].y = vect_away_Pos_y[i][vect_away_Pos_y[i].size()-1];
+
+
   }
 
-  
+  std::cout<<"Bot 0 Orig: "<<msg_org.homePos[0].x<<", "<<msg_org.homePos[0].y<<std::endl;
+  std::cout<<"Bot 0 Now : "<<msg.homePos[0].x<<", "<<msg.homePos[0].y<<std::endl;
+  std::cout<<"Ball org: "<<msg_org.homePos[0].x<<", "<<msg_org.homePos[0].y<<std::endl;
+  std::cout<<"Ball now: "<<msg.homePos[0].x<<", "<<msg.homePos[0].y<<std::endl;
   pub.publish(msg);
 
   // ROS_INFO("I heard: [%s]", msg->data.c_str());
@@ -653,7 +682,7 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "filter");
   ros::NodeHandle n;
 
-  ros::Subscriber sub = n.subscribe("chatter", 1000, bsCallback);
+  ros::Subscriber sub = n.subscribe("vision", 1000, bsCallback);
   pub = n.advertise<krssg_ssl_msgs::BeliefState>("belief_state", 1000);
   ros::spin();
 
