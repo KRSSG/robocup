@@ -97,14 +97,14 @@ def gr_Commands_CB(msg):
     buff = ''
     
     for i in xrange(1,32):
-        buf[i] = 20
-    buf[11],   buf[12],  buf[13],  buf[14] = vel_convert([-30,0,0])
-    # buf[1],   buf[2],  buf[3],  buf[4] = vel_convert([0,-50,0])
-    for i in xrange(11,15):
-        buf[i] = int(buf[i])
+        buf[i] = 0
+    buf[11],   buf[12],  buf[13],  buf[14] = vel_convert([0,0,0])
+    # # buf[1],   buf[2],  buf[3],  buf[4] = vel_convert([0,-50,0])
+    # for i in xrange(11,15):
+    #     buf[i] = int(buf[i])
 
-    for i in xrange(1,5):
-        buf[i] = int(buf[i])
+    # for i in xrange(1,5):
+    #     buf[i] = int(buf[i])
     for i in xrange(32):
         #print("f#ck off ",i)
         buff += chr(int(buf[i])%256)
@@ -123,7 +123,7 @@ def gr_Commands_CB(msg):
     # print(statinfo.st_size,file)
     #ser.flushInput()
 
-    print(buf)
+    print(map(int,buf))
     ser.write(buff)
     # print(,"data return ")
     #print(size_buf_file(file),file)

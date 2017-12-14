@@ -30,10 +30,22 @@ launcher    "core"         "roscore"
 pr_launcher "vision"    "vision.launch"
 # pr_launcher "belief_state"      "belief_state.launch"
 pr_launcher "grsim_comm"    "grsim_comm.launch"
+python vision_comm/src/svg_filter.py & >/dev/null
+rosrun ompl_planner listener_ompl & >/dev/null
+# cd velocity_profiling/src
+# python pidOperator.py & >/dev/null
+# cd ../..
+# rosrun velocity_profiling vel_profiling & >/dev/null
+cd GUI
+python ompl_gui.py & >/dev/null
+cd ..
+cd behavior-fsm
+python test_GoToPoint.py & >/dev/null
+
 # pr_launcher "robot"         "robot.launch"
 #pr_launcher "bot_comm"         "bot_comm.launch"
 #pr_launcher "test_play_node" "test_play.launch"
 # pr_launcher "play_node" "play.launch"
 # pr_launcher "rj_robot"         "rj_robot.launch"
 
- # rosrun grsim_comm debug_test
+# rosrun grsim_comm debug_test
