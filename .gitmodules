@@ -25,3 +25,6 @@
 [submodule "role"]
 	path = role
 	url = https://github.com/KgpKubs/role.git
+[submodule "kubs"]
+	path = kubs
+	url = https://github.com/KgpKubs/kubs.git
