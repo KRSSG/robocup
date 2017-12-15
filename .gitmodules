@@ -28,3 +28,6 @@
 [submodule "kubs"]
 	path = kubs
 	url = https://github.com/KgpKubs/kubs.git
+[submodule "velocity"]
+	path = velocity
+	url = https://github.com/KgpKubs/velocity.git
