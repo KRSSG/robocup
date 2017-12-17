@@ -14,12 +14,14 @@ from utils.math_functions import *
 pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
 
-
+#kub,kub.state.ballPos,normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.y))
 
 def g(id_,state):
 	kub = kubs.kubs(id_,state,pub)
 	print(kub.kubs_id)
-	g_fsm = GoToPoint.GoToPoint(kub,kub.state.ballPos,normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.y)))
+	g_fsm = GoToPoint.GoToPoint()
+	g_fsm.add_kub(kub)
+	g_fsm.add_point(point=kub.state.ballPos,orient=normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.y)))
 	# g_fsm = GoToBall.GoToBall(kub,normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.y)))
 	# g_fsm.as_graphviz()
 	# g_fsm.write_diagram_png()
