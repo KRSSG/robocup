@@ -32,3 +32,6 @@
 [submodule "kubs"]
 	path = kubs
 	url = https://github.com/KgpKubs/kubs.git
+[submodule "tactics"]
+	path = tactics
+	url = https://github.com/KgpKubs/tactics.git
