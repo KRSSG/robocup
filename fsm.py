@@ -15,12 +15,13 @@ import graphviz as gv
 #
 # Subclasses of StateMachine can optionally implement them and they will automatically be called at the appropriate times.
 class StateMachine(object):
-    def __init__(self, start_state):
+    def __init__(self, start_state,end_state):
         #print "fsm"
         # stores all states in the form _state_hierarchy[state] = parent_state
         self._state_hierarchy = {}
         self._transitions = {}
         self._start_state = start_state
+        self._end_state = end_state
         self._state = None
 
     @property
@@ -43,13 +44,13 @@ class StateMachine(object):
     # if more than one evaluates to true, we throw a RuntimeError
     def spin(self):
         s1 = self.state
-        print "current State : "+str(self.state)
+        # print "current State : "+str(self.state)
 
         # call execute_STATENAME
         if self.state is not None:
             for state in self.ancestors_of_state(self.state) + [self.state]:
                 method_name = "execute_" + state.name
-                print method_name
+                # print method_name
                 state_method = None
                 try:
                     state_method = getattr(self, method_name)
@@ -83,9 +84,10 @@ class StateMachine(object):
 
         # if a transition occurred during the spin, we'll spin again
         # note: this could potentially cause infinite recursion (although it shouldn't)
-        print "inside fsm from "+str(s1)+'  to '+str(self.state)
-                    # if :
+        print ' :from '+str(s1)+'  to '+str(self.state)+' :'
+
         if s1 != self.state :
+            # print self.state is not self._end_state
             StateMachine.spin(self)
 
     # if you add a transition that already exists, the old one will be overwritten
@@ -105,7 +107,7 @@ class StateMachine(object):
             for state in self.ancestors_of_state(self.state) + [self.state]:
                 if not self.state_is_substate(new_state, state):
                     method_name = "on_exit_" + state.name
-                    print method_name
+                    # print method_name
                     state_method = None
                     try:
                         state_method = getattr(self, method_name)  # call the transition FROM method if it exists
@@ -117,7 +119,7 @@ class StateMachine(object):
         for state in self.ancestors_of_state(new_state) + [new_state]:
             if not self.state_is_substate(self.state, state):
                 method_name = "on_enter_" + state.name
-                print method_name
+                # print method_name
                 state_method = None
                 try:
                     state_method = getattr(self, method_name)  # call the transition TO method if it exists

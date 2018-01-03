@@ -18,8 +18,8 @@ class Behavior(fsm.StateMachine):
         cancelled = 5
 
     def __init__(self):
-        print "behav"
-        super(Behavior, self).__init__(start_state=Behavior.State.start)
+        # print "behav"
+        super(Behavior, self).__init__(start_state=Behavior.State.start,end_state=Behavior.State.completed)
         # add base states for Behavior
         self.add_state(Behavior.State.start)
         self.add_state(Behavior.State.running)
@@ -42,7 +42,7 @@ class Behavior(fsm.StateMachine):
             if self.is_in_state(state): return True
 
         return False
-    
+
     ## Set the behavior to failed if sub behaviors remains uncompleted
     def set_failed(self):
         if self.is_done_running():
