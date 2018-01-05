@@ -1,5 +1,3 @@
-syntax = "proto2";
-
 // A 2D float vector.
 message Vector2f {
   required float x = 1;
@@ -23,7 +21,7 @@ message SSL_FieldLineSegment {
 
 // Represents a field marking as a circular arc segment represented by center point, a
 // start angle, an end angle, and an arc thickness.
-message SSL_FieldCircularArc {
+message SSL_FieldCicularArc {
   // Name of this field marking.
   required string name = 1;
   // Center point of the circular arc.
@@ -45,7 +43,7 @@ message SSL_GeometryFieldSize {
   required int32 goal_depth = 4;
   required int32 boundary_width = 5;
   repeated SSL_FieldLineSegment field_lines = 6;
-  repeated SSL_FieldCircularArc field_arcs = 7;
+  repeated SSL_FieldCicularArc field_arcs = 7;
 }
 
 message SSL_GeometryCameraCalibration {
