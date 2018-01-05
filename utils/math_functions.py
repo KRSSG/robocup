@@ -4,7 +4,7 @@ from geometry import Vector2D
 from config import *
 
 class Circle:
-  def __init__(self,center=Vector2D(0,0),,radius=0):
+  def __init__(self,center=Vector2D(0,0),radius=0):
     self.center = center
     self.radius = radius
 
@@ -21,7 +21,7 @@ class Line:
     else:
       self.slope = slope
 
-    def ne
+
 
 
   def line_circle_intersection(self,circle):
