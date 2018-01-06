@@ -41,8 +41,8 @@ buf = [None]*32
 for i in range(32):
     buf[i] = 0
 buf[0] = Team_ID
-FACTOR_T = 30
-FACTOR_N = 30
+FACTOR_T = 30*1
+FACTOR_N = 30*1
 FACTOR_W = 90
 v_4_wheel = [None, None, None, None]
 ch_buff = ''
@@ -59,9 +59,9 @@ def vel_convert(vel_3_wheel):
         v_4_wheel[i] = ((bot_radius*vw) - (vx*math.sin(theta[i]*math.pi/180.0)) + (vy*math.cos(theta[i]*math.pi/180.0)))/(bot_wheel_radius * math.pi)
     for i in range(4):
         if v_4_wheel[i] > 0 :
-            v_4_wheel[i] = 126 + ((v_4_wheel[i]-max_vel_wheel)*126) / max_vel_wheel
+            v_4_wheel[i] = int(126 + ((v_4_wheel[i]-max_vel_wheel)*126) / max_vel_wheel)
         else :
-            v_4_wheel[i] = 255 + (v_4_wheel[i]*129) / max_vel_wheel
+            v_4_wheel[i] = int(256 - (v_4_wheel[i]*(129-256)) / max_vel_wheel)
     return v_4_wheel
 
 def gr_Commands_CB(msg):

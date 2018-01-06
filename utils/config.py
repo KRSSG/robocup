@@ -1,15 +1,15 @@
 # Includes all the global parameters as in 'ssl_common/conig.h'
-SIM_COMM = True
-GR_SIM_COMM = True
+SIM_COMM = False
+GR_SIM_COMM = False
 
 def SELECT(sim_param, ssl_param):
     if SIM_COMM or GR_SIM_COMM:       #Parameters for the simulator
         return sim_param
-    elif SSL_COMM or FIRA_COMM or FIRASSL_COMM:  #Parameters for real bots
+    else:  #Parameters for real bots
         return ssl_param
-    else:
-        print(" Global Constants Intialization Error!")  
-    return ssl_param
+    # else:
+    #     print(" Global Constants Intialization Error!")  
+    # return ssl_param
 
 BS_ADDRESS                   = ['127.0.0.1:11211']
 BOT_MAX                      = SELECT(6, 5)
@@ -19,8 +19,8 @@ MOVING_BALL_VELOCITY         = SELECT(40, 30)
 MIN_DIST_FROM_TARGET         = SELECT(30.0, 25.0)
 CENTER_X                     = SELECT(0, 0)
 CENTER_Y                     = SELECT(0, 0)
-HALF_FIELD_MAXX              = SELECT(3000, 2975)   #actual 225 (rugged surace at end)
-HALF_FIELD_MAXY              = SELECT(2000, 2050)
+HALF_FIELD_MAXX              = SELECT(3000, 4500)   #actual 225 (rugged surace at end)
+HALF_FIELD_MAXY              = SELECT(2000, 3000)
 OUR_GOAL_MAXYX				 = SELECT(340,340)
 OUR_GOAL_MAXY                = SELECT(360,600)
 OUR_GOAL_MINY                = SELECT(-360, -600)
