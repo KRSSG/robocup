@@ -1,8 +1,8 @@
 <launch>        
-  <!-- need a node fr every robot. right now just making 1 node 
+  <!-- need a node fr every robot. right now just making 1 node -->
   <node pkg="ssl_robot" type="rj_robot" name="bot0" output="screen" >
     <param name="botID" value="0" type="int"/>
-    <remap from="/tactic_topic" to="/tactic_0"/> -->
+    <remap from="/tactic_topic" to="/tactic_0"/>
 
   </node>
   <!-- <node pkg="ssl_robot" type="rj_robot" name="bot1" output="screen" >

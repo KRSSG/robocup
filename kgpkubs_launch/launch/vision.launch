@@ -1,7 +1,8 @@
 <launch>        
-  <node pkg="vision_comm" type="vision_node" name="vision_node" args="1" output="screen">
+  <node pkg="vision_comm" type="vision_node" name="vision_node" args="1 1" output="screen"> 
     <!-- args= 0 = ssl-vision camera input -->
     <!-- args= 1 = grSim input -->
+    <!-- 1 -> yellow -->
     
     <!-- <remap from="~image" to="/head/kinect2/qhd/image_color"/> -->
     <!-- <remap from="~camera_info" to="/head/kinect2/qhd/camera_info"/> -->

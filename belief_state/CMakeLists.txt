@@ -11,6 +11,9 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
+include_directories("include" ${catkin_INCLUDE_DIRS})
+
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -163,8 +166,5 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(beliefstate_node src/node.cpp ${src})
+add_executable(beliefstate_node src/svg.cpp ${src})
 target_link_libraries(beliefstate_node ${catkin_LIBRARIES})
-
-add_executable(beliefstate_class src/node_class.cpp ${src})
-target_link_libraries(beliefstate_class ${catkin_LIBRARIES})
