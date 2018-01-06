@@ -219,9 +219,9 @@ target_link_libraries(dt ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LIBRARIE
 add_dependencies(dt grsim_comm_generate_messages_cpp)
 
 
-#add_executable(debug_test src/debug_test.cpp ${PROTO_CPP} ${PROTO_H})
-#target_link_libraries(debug_test ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LIBRARIES})
-#add_dependencies(debug_test grsim_comm_generate_messages_cpp)
+add_executable(debug_test src/debug_test.cpp ${PROTO_CPP} ${PROTO_H})
+target_link_libraries(debug_test ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LIBRARIES})
+add_dependencies(debug_test grsim_comm_generate_messages_cpp)
 ###############################	For client server services #########################################
 
 #add_executable(add_two_ints_server src/add_two_ints_server.cpp)

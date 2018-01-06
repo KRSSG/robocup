@@ -11,9 +11,9 @@ def SELECT(sim_param, ssl_param):
         print(" Global Constants Intialization Error!")  
     return ssl_param
 
-
+BS_ADDRESS                   = ['127.0.0.1:11211']
 BOT_MAX                      = SELECT(6, 5)
-
+BOT_ANGLE_THRESH			 = SELECT(0.32,0.32)
 GOAL_DEPTH                   = SELECT(300, 300)
 MOVING_BALL_VELOCITY         = SELECT(40, 30)
 MIN_DIST_FROM_TARGET         = SELECT(30.0, 25.0)
@@ -35,7 +35,8 @@ DBOX_DEPTH                   = SELECT(10, 10)
 BALL_AT_CORNER_THRESH        = SELECT(20,20) 
 
 #Bot Parameteres configuration 
-ROTATION_FACTOR            = SELECT(0.05, 0.15)               
+ROTATION_FACTOR            = SELECT(0.15, 0.15)               
+DISTANCE_THRESH            = 1.5*SELECT(200.0,200.0)
 
 RFACTOR                    = SELECT(3,   0.3)
 RFACTOR_SMALL              = SELECT(0.6, 0.15)
@@ -65,10 +66,10 @@ MAX_BOT_LINEAR_VEL_CHANGE  = SELECT(10, 3)
 
 FF = 2.0
 #MAX_BOT_ACCELERATION       = SELECT(900, 900) as per sudo  
-MAX_BOT_ACCELERATION       = SELECT(600, 600)  
+MAX_BOT_ACCELERATION       = SELECT(1000, 1000)  
 MAX_BOT_SPEED              = SELECT(1800*FF, 80.0*FF)           #mm
 MIN_BOT_SPEED              = SELECT(5, 30)                      #mm/s
-MAX_BOT_OMEGA              = SELECT(7, 100)                     #rad/s//2
+MAX_BOT_OMEGA              = SELECT(0.5, 0.5)                     #rad/s//2
 MIN_BOT_OMEGA              = SELECT(0.15,0.15)                    #rad/s
 MAX_BACK_DRIBBLE_V_Y       = SELECT(500, 500)                   #mm/s
 MAX_FRONT_DRIBBLE_V_Y      = SELECT(1200, 1200)                 #mm/s

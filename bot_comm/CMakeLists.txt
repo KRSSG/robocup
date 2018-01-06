@@ -129,9 +129,9 @@ include_directories(
 # add_dependencies(bot_comm ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-add_executable(bot_comm_nrf src/bot_xyw_nrf.cpp src/serial.cpp)
-target_link_libraries(bot_comm_nrf ${catkin_LIBRARIES})
-set_target_properties(bot_comm_nrf PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+##add_executable(bot_comm_nrf src/bot_xyw_nrf.cpp src/serial.cpp)
+#target_link_libraries(bot_comm_nrf ${catkin_LIBRARIES})
+#set_target_properties(bot_comm_nrf PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 
 #add_dependencies(grsim_xyw_node grsim_comm_generate_messages_cpp)
