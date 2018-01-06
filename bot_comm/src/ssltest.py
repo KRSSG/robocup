@@ -59,9 +59,9 @@ def vel_convert(vel_3_wheel):
         v_4_wheel[i] = ((bot_radius*vw) - (vx*math.sin(theta[i]*math.pi/180.0)) + (vy*math.cos(theta[i]*math.pi/180.0)))/(bot_wheel_radius * math.pi)
     for i in range(4):
         if v_4_wheel[i] > 0 :
-            v_4_wheel[i] = 126 + ((v_4_wheel[i]-max_vel_wheel)*126) / max_vel_wheel
+            v_4_wheel[i] = int(126 + ((v_4_wheel[i]-max_vel_wheel)*126) / max_vel_wheel)
         else :
-            v_4_wheel[i] = 255 + (v_4_wheel[i]*129) / max_vel_wheel
+            v_4_wheel[i] = int(255 + (v_4_wheel[i]*129) / max_vel_wheel)
     return v_4_wheel
 
 def gr_Commands_CB(msg):
@@ -97,8 +97,10 @@ def gr_Commands_CB(msg):
     buff = ''
     
     for i in xrange(1,32):
-        buf[i] = 20
-    buf[11],   buf[12],  buf[13],  buf[14] = vel_convert([-30,0,0])
+        buf[i] = 0
+
+    for i in range(6):    
+    	buf[5*i+1],   buf[5*i+2],  buf[5*i+3],  buf[5*i+4] = vel_convert([-50,0,0])
     # buf[1],   buf[2],  buf[3],  buf[4] = vel_convert([0,-50,0])
     for i in xrange(11,15):
         buf[i] = int(buf[i])
