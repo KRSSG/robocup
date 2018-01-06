@@ -6,7 +6,7 @@ from thread import start_new_thread
 import os
 import numpy as np
 from math import cos, sin, atan2
-from interfacePath1 import Ui_MainWindow
+from interfacePath import Ui_MainWindow
 from krssg_ssl_msgs.msg import BeliefState
 from krssg_ssl_msgs.msg import point_2d
 from krssg_ssl_msgs.msg import planner_path
@@ -18,9 +18,7 @@ MINOR_AXIS_FACTOR = 2
 PI = 3.141592653589793
 radius  = 10
 VEL_ANGLE = 0
-sys.path.insert(0, '../plays_py/scripts/utils')
-sys.path.append('../velocity_profiling/src')
-from config import *
+from utils.config import *
 
 points_home = []
 points_home_theta = []
@@ -75,6 +73,7 @@ def Callback_VelProfile(msg):
 
 def Callback_BS(msg):
     global points_home, points_home_theta, points_opp, ballPos
+    print "777"
     ballPos = BS_TO_GUI(msg.ballPos.x, msg.ballPos.y)
     points_home = []
     points_home_theta = []
@@ -104,7 +103,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
         self.mark_e = QtGui.QPen(QtCore.Qt.blue)
         self.mark_ball = QtGui.QPen(QtCore.Qt.yellow)
         
-        self.GoToBall.clicked.connect(self.goToBall)
+        # self.GoToBall.clicked.connect(self.goToBall)
         self.timer=QtCore.QTimer(self)
         self.timer.timeout.connect(self.updateImage)
         self.timer.start(30)

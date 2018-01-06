@@ -31,7 +31,9 @@ pr_launcher "vision"    "vision.launch"
 # pr_launcher "belief_state"      "belief_state.launch"
 pr_launcher "grsim_comm"    "grsim_comm.launch"
 
+
 python vision_comm/src/svg_filter.py & >/dev/null
+rosrun ompl_planner listener_ompl
 python bs.py
 
 # pr_launcher "robot"         "robot.launch"
