@@ -1,0 +1,15 @@
+uint32 camera_id  
+float64 focal_length 
+float64 principal_point_x 
+float64 principal_point_y
+float64 distortion
+float64 q0
+float64 q1
+float64 q2
+float64 q3
+float64 tx 
+float64 ty 
+float64 tz 
+float64 derived_camera_world_tx 
+float64 derived_camera_world_ty 
+float64 derived_camera_world_tz 

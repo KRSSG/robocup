@@ -1,0 +1,7 @@
+geometry_msgs/Pose2D botPos
+geometry_msgs/Pose2D targetPos
+obstacle[] obs_vec
+uint32 obs_size
+uint32 botID
+---
+geometry_msgs/Pose2D[] control_points

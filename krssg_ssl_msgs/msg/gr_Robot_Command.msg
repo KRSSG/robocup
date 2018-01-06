@@ -1,0 +1,10 @@
+uint32 id
+float32 kickspeedx
+float32 kickspeedz
+float32 veltangent
+float32 velnormal
+float32 velangular
+bool spinner
+bool wheelsspeed
+#float64 nextExpectedX
+#float64 nextExpectedY
