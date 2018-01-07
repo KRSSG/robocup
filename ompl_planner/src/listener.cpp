@@ -117,7 +117,7 @@ bool path(krssg_ssl_msgs::path_plan::Request &req,
   
 
   ROS_INFO("Start (%f %f)  target (%f %f) ",start.x,start.y,target.x,target.y);
-  ROS_INFO("Distance = %f, threshold = %f",distance_(start.x, start.y, target.x, target.y)*BS_TO_OMPL, radius);
+  ROS_INFO("Distance = %f, threshold = %f",distance_(start.x, start.y, target.x, target.y)*BS_TO_OMPL, self_radius);
   ROS_INFO("Planning");
 
 

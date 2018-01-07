@@ -83,35 +83,6 @@ void simplifyPoint(std::vector<krssg_ssl_msgs::point_2d>& v){
   v = newPoints;
 }
 
-/**
- * @brief      Function for converting path into smooth path.
- * @see        windowSize
- * @param      v     Vector of path
- * Generate new points using next "windowSize" point to smooth path
- */
-void simplifyWindow(vector<krssg_ssl_msgs::point_2d> & v){
-  std::vector<krssg_ssl_msgs::point_2d> newPoints;
-  for (int i = 0; i <= v.size(); i += windowSize)
-  {
-    int lastPtr = i + windowSize - 1;
-    if (lastPtr > v.size() - 1)
-    {
-      lastPtr = v.size() - 1;
-    }
-    int currentWindowSize = lastPtr - i + 1;
-    float deltaX = (v[lastPtr].x - v[i].x)/currentWindowSize;
-    float deltaY = (v[lastPtr].y - v[i].y)/currentWindowSize;
-    for (int j = i; j <= lastPtr; j++)
-    {
-      krssg_ssl_msgs::point_2d p;
-      p.x = v[i].x + (j - i + 1)*deltaX;
-      p.y = v[i].y + (j - i + 1)*deltaY;
-      newPoints.push_back(p);
-    }
-  }
-  v = newPoints;
-}
-
 void Planning::init(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs)
 {
 
@@ -228,10 +199,10 @@ bool Planning::isStateValid(const ob::State *state) const {
 
   const int w = std::min((int)state->as<ob::RealVectorStateSpace::StateType>()->values[0], maxWidth_);
   const int h = std::min((int)state->as<ob::RealVectorStateSpace::StateType>()->values[1], maxHeight_);
-  if(sqrt(pow((xstart-w),2)+pow((ystart-h),2))<=radius)
+  if(sqrt(pow((xstart-w),2)+pow((ystart-h),2))<=self_radius)
     return true;
   for (int i = 0; i < numObstacles; ++i){
-    if (sqrt(pow((xc[i]-w),2)+pow((yc[i]-h),2))<=radius){
+    if (sqrt(pow((xc[i]-w),2)+pow((yc[i]-h),2))<=obs_radius){
       return false;
     }
   }

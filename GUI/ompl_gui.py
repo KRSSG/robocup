@@ -30,6 +30,8 @@ GUI_Y = 400
 vel_theta=0
 vel_mag=0
 ballPos = [0,0]
+BState = None
+
 def BS_TO_GUI(x, y):
     #GUI -> 600X400
     x1 = (x + FIELD_MAXX)*GUI_X/(2*FIELD_MAXX)
@@ -43,6 +45,7 @@ VEL_UNIT = 5
 BOT_ID = 0
 
 pub = rospy.Publisher('gui_params', point_SF)
+kubs_pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
 path_received=0
 
@@ -74,6 +77,7 @@ def Callback_VelProfile(msg):
 def Callback_BS(msg):
     global points_home, points_home_theta, points_opp, ballPos
     # print "777"
+    BState = msg
     ballPos = BS_TO_GUI(msg.ballPos.x, msg.ballPos.y)
     points_home = []
     points_home_theta = []
@@ -104,6 +108,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
         self.mark_ball = QtGui.QPen(QtCore.Qt.yellow)
         
         self.GoToBall.clicked.connect(self.goToBall)
+        self.GoToBallFsm.clicked.connect(self.goToBallFsm)
         self.timer=QtCore.QTimer(self)
         self.timer.timeout.connect(self.updateImage)
         self.timer.start(30)
@@ -126,6 +131,33 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
         # start_new_thread(self.pidOperator,())
         # start_new_thread(self.velocityProfiling,())
         # return
+    def goToBallFsm(self):
+        global BState,kubs_pub
+        import signal
+
+        if(not self.t1==None):
+            self.t1.terminate()
+
+        signal.signal(signal.SIGINT, signal.SIG_DFL)
+        msg=point_SF()
+
+        # while True:
+        kubs_id = int(self.textBotId.text())
+        # msg.bot_id = kubs_id
+        # pub.publish(msg)
+        print "in goToBall",BState
+
+        if BState:
+            print "belief_state Subscriber"
+            kub = kubs.kubs(kubs_id,BState,kubs_pub)
+            g_fsm = GoToBall.GoToBall()
+            g_fsm.add_kub(kub)
+            g_fsm.add_theta(theta=normalize_angle(pi+atan2(BState.ballPos.y,BState.ballPos.y-3000)))
+            g_fsm.spin()
+            if not (self.t1 == None):
+                self.t1.terminate()
+            self.t1 = multiprocessing.Process(target=g_fsm.spin)
+            self.t1.start()
 
     def pidOperator(self):
         try:

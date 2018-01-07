@@ -1,15 +1,14 @@
 # Includes all the global parameters as in 'ssl_common/conig.h'
-SIM_COMM = False
-GR_SIM_COMM = False
+GRSIM = True
+VISION = not GRSIM
 
-def SELECT(sim_param, ssl_param):
-    if SIM_COMM or GR_SIM_COMM:       #Parameters for the simulator
-        return sim_param
-    else:  #Parameters for real bots
-        return ssl_param
-    # else:
-    #     print(" Global Constants Intialization Error!")  
-    # return ssl_param
+def SELECT(ssl_param, sim_param):
+	assert(GRSIM is not VISION)
+	if GRSIM:
+		return sim_param
+	else:
+		return ssl_param
+
 
 BS_ADDRESS                   = ['127.0.0.1:11211']
 BOT_MAX                      = SELECT(6, 5)
@@ -19,8 +18,8 @@ MOVING_BALL_VELOCITY         = SELECT(40, 30)
 MIN_DIST_FROM_TARGET         = SELECT(30.0, 25.0)
 CENTER_X                     = SELECT(0, 0)
 CENTER_Y                     = SELECT(0, 0)
-HALF_FIELD_MAXX              = SELECT(3000, 4500)   #actual 225 (rugged surace at end)
-HALF_FIELD_MAXY              = SELECT(2000, 3000)
+HALF_FIELD_MAXX              = SELECT(3000, 3000)   #actual 225 (rugged surace at end)
+HALF_FIELD_MAXY              = SELECT(2000, 2000)
 OUR_GOAL_MAXYX				 = SELECT(340,340)
 OUR_GOAL_MAXY                = SELECT(360,600)
 OUR_GOAL_MINY                = SELECT(-360, -600)
@@ -64,7 +63,7 @@ MAX_WHEEL_SPEED            = SELECT(2000, 100)                 #mm/s
 MAX_BOT_LINEAR_ACC         = SELECT(1000, 100)                 #mm/s/s
 MAX_BOT_LINEAR_VEL_CHANGE  = SELECT(10, 3)
 
-FF = 6.0
+FF = 20
 #MAX_BOT_ACCELERATION       = SELECT(900, 900) as per sudo  
 MAX_BOT_ACCELERATION       = SELECT(1000, 1000)  
 MAX_BOT_SPEED              = SELECT(1800*FF, 80.0*FF)           #mm

@@ -69,7 +69,7 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
         kub.move(vx, vy)
         kub.turn(vw)
 
-        print vx,vy,vw
+        # print vx,vy,vw
 
         # print radian_2_deg(kub.state.homePos[kub.kubs_id].theta-rotate),radian_2_deg(ROTATION_FACTOR)
         # print dist(kub.state.homePos[kub.kubs_id], GOAL_POINT),DIST_THRESH

@@ -306,7 +306,7 @@ class Velocity():
   			
 
   	def ellipse(self, myPos, oppPos, angle):
-  		majorAxis = 10.0
+  		majorAxis = 5.0
   		minorAxis = 2.0
   		a = 1.0*majorAxis*BOT_RADIUS/2.0
   		b = 1.0*minorAxis*BOT_RADIUS/2.0
