@@ -1,5 +1,5 @@
 build/
 devel/
 *.catkin_generated
-*pyc
+*.pyc
 *~
