@@ -60,14 +60,22 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
         [vx, vy, vw, REPLANNED] = Get_Vel(start_time, t, kub.kubs_id, GOAL_POINT, kub.state.homePos, kub.state.awayPos, avoid_ball)
         vw = Get_Omega(kub.kubs_id,rotate,kub.state.homePos)
         
+        if not vx and not vy:
+            vx,vy = vx_end,vy_end
+        else:
+            vx_end,vy_end = vx,vy
+
+        if vx is inf or vy is inf:
+            vx,vy = 0,0
+            
         if not vw:
             # print "Didn't receive Omega"
             vw = 0
 
         if(REPLANNED):
             reset()
-        kub.move(vx, vy)
-        kub.turn(vw)
+        
+        
 
         # print vx,vy,vw
 
@@ -79,11 +87,15 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
         if abs(kub.state.homePos[kub.kubs_id].theta-rotate)<ROTATION_FACTOR:
             kub.turn(0)
             FLAG_turn = True
+        else:
+            kub.turn(vw)           
 
 
         if dist(kub.state.homePos[kub.kubs_id], GOAL_POINT)<DIST_THRESH :
             kub.move(0,0)
             FLAG_move = True
+        else:
+            kub.move(vx, vy)
         
         kub.execute()
         yield kub,GOAL_POINT
