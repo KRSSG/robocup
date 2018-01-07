@@ -119,12 +119,13 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
         import signal
         signal.signal(signal.SIGINT, signal.SIG_DFL)
         msg=point_SF()
-        print("__here__")
-        msg.bot_id = int(self.textBotId.text())
+        kubs_id = int(self.textBotId.text())
+        msg.bot_id = kubs_id
+        print("__here__",msg.bot_id)
         pub.publish(msg)
         if(not self.t1==None):
             self.t1.terminate()
-        self.t1 = multiprocessing.Process(target=self.goToPoint)
+        self.t1 = multiprocessing.Process(target=self.goToPoint,args=(kubs_id,))
         self.t1.start()
         # self.t1.terminate()
         #start_new_thread(self.goToPoint,())
@@ -143,9 +144,10 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
 
         # while True:
         kubs_id = int(self.textBotId.text())
+
         # msg.bot_id = kubs_id
         # pub.publish(msg)
-        print "in goToBall",BState
+        print "in goToBall",kubs_id
 
         if BState:
             print "belief_state Subscriber"
@@ -178,10 +180,11 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
         except Exception as e:
             print("Error: ", e)
             pass
-    def goToPoint(self):
+    def goToPoint(self,kubs_id):
         try:
-            os.system('python test_GoToPoint.py')
-        except:
+            os.system('python test_GoToPoint.py '+str(kubs_id))
+        except Exception as e:
+            print e
             pass
     
     def drawBoundary(self):

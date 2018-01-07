@@ -99,7 +99,7 @@ def gr_Commands_CB(msg):
     for i in xrange(1,32):
         buf[i] = 0
 
-    for i in range(6):    
+    for i in range(0,1):    
     	buf[5*i+1],   buf[5*i+2],  buf[5*i+3],  buf[5*i+4] = vel_convert([0,-50,0])
     # buf[1],   buf[2],  buf[3],  buf[4] = vel_convert([0,-50,0])
     for i in xrange(11,15):

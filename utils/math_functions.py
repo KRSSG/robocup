@@ -62,8 +62,8 @@ def direction(vector):
   return math.atan2(vector.y,vector.x)
 
 def getPointBehindTheBall(point ,theta):
-  x = point.x -(3.5 * BOT_RADIUS) *(math.cos(theta))
-  y = point.y -(3.5 * BOT_RADIUS) *(math.sin(theta))
+  x = point.x -(0*3.5 * BOT_RADIUS) *(math.cos(theta))
+  y = point.y -(0*3.5 * BOT_RADIUS) *(math.sin(theta))
   return Vector2D(int(x), int(y))
 
 def deg_2_radian(theta):

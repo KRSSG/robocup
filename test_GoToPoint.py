@@ -1,3 +1,4 @@
+print "In test GOToPoint"
 from kubs import kubs, cmd_node
 from velocity.run import *
 import rospy,sys
@@ -9,8 +10,10 @@ from krssg_ssl_msgs.msg import point_SF
 from utils.config import *
 import memcache
 shared = memcache.Client(['127.0.0.1:11211'], debug = False)
+import sys
 
-BOT_ID = 0
+BOT_ID = int(sys.argv[1])
+print "bot_id received",BOT_ID
 pub = rospy.Publisher('/grsim_data', gr_Commands, queue_size=1000)
 
 GOAL_POINT = point_2d()
