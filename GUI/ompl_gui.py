@@ -73,7 +73,7 @@ def Callback_VelProfile(msg):
 
 def Callback_BS(msg):
     global points_home, points_home_theta, points_opp, ballPos
-    print "777"
+    # print "777"
     ballPos = BS_TO_GUI(msg.ballPos.x, msg.ballPos.y)
     points_home = []
     points_home_theta = []
@@ -103,7 +103,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
         self.mark_e = QtGui.QPen(QtCore.Qt.blue)
         self.mark_ball = QtGui.QPen(QtCore.Qt.yellow)
         
-        # self.GoToBall.clicked.connect(self.goToBall)
+        self.GoToBall.clicked.connect(self.goToBall)
         self.timer=QtCore.QTimer(self)
         self.timer.timeout.connect(self.updateImage)
         self.timer.start(30)
@@ -114,10 +114,11 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
         import signal
         signal.signal(signal.SIGINT, signal.SIG_DFL)
         msg=point_SF()
+        print("__here__")
         msg.bot_id = int(self.textBotId.text())
         pub.publish(msg)
         if(not self.t1==None):
-            self.t1.end()
+            self.t1.terminate()
         self.t1 = multiprocessing.Process(target=self.goToPoint)
         self.t1.start()
         # self.t1.terminate()
@@ -147,13 +148,13 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
             pass
     def goToPoint(self):
         try:
-            os.system('cd .. && python test_GoToPoint.py')
+            os.system('python test_GoToPoint.py')
         except:
             pass
     
     def drawBoundary(self):
-        x1,y1 = BS_TO_GUI(3000, 2000)
-        x2,y2 = BS_TO_GUI(-3000, -2000)
+        x1,y1 = BS_TO_GUI(HALF_FIELD_MAXX, HALF_FIELD_MAXY)
+        x2,y2 = BS_TO_GUI(-HALF_FIELD_MAXX, -HALF_FIELD_MAXY)
         self.scene.addLine(x1,y1, x1, y2)
         self.scene.addLine(x1, y2, x2, y2)
         self.scene.addLine(x2,y1, x1,y1)
@@ -252,7 +253,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
 app=QtGui.QApplication(sys.argv)
 w=MainWindow()
 def main():
-    rospy.init_node('display', anonymous=False)
+    rospy.init_node('display1', anonymous=False)
     rospy.Subscriber("/belief_state", BeliefState , Callback_BS);
     rospy.Subscriber("/grsim_data", gr_Commands , Callback_VelProfile);
     rospy.Subscriber("/path_planner_ompl", planner_path, debug_path)
@@ -261,7 +262,6 @@ def main():
     app.exec_()
     import signal
     signal.signal(signal.SIGINT, signal.SIG_DFL)
-    thread.interrupt_main()
     sys.exit(0)
 
 if __name__=='__main__':

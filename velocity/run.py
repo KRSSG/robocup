@@ -28,7 +28,7 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
     homePos = homePos_
     awayPos = awayPos_
     kubid = kub_id
-
+    print("in getVelocity, FIRST_CALL = ",FIRST_CALL)
     curPos = Vector2D(int(homePos[kubid].x),int(homePos[kubid].y))
     distance = sqrt(pow(target.x - homePos[kubid].x,2) + pow(target.y - homePos[kubid].y,2))
     if(FIRST_CALL):
@@ -92,7 +92,8 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
         vXBot = vX*cos(botAngle) + vY*sin(botAngle)
         vYBot = -vX*sin(botAngle) + vY*cos(botAngle)
         return [vXBot, vYBot, 0, REPLAN]            
-
+    print("end getVelocity")    
+        
 def shouldReplan():
     global homePos,awayPos,kubid
     if v.velocity < 10:
