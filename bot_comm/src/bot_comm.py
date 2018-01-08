@@ -41,8 +41,8 @@ buf = [None]*32
 for i in range(32):
     buf[i] = 0
 buf[0] = Team_ID
-FACTOR_T = 30*1
-FACTOR_N = 30*1
+FACTOR_T = 40
+FACTOR_N = 40
 FACTOR_W = 90
 v_4_wheel = [None, None, None, None]
 ch_buff = ''
@@ -101,7 +101,7 @@ def gr_Commands_CB(msg):
         #   buf[i] = 3
         if buf[i] > 255:
             print(buf[i])
-            buf[i] = 80
+            buf[i] = 0
         #print("f#ck off ",i)
         buff += chr(int(buf[i])%256)
     #print(buff)

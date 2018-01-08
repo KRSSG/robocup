@@ -30,6 +30,7 @@ def distance_(a, b):
     return sqrt(dx*dx+dy*dy)
 
 def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
+    print("Get_Vel:     t - start = ",t-start)       
     global expectedTraverseTime, REPLAN, v, errorInfo, pso, FIRST_CALL, homePos, awayPos, kubid, prev_target
     REPLAN = 0
     homePos = homePos_
@@ -54,7 +55,6 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
         return [0,0,0,0]
     print("ex = ",expectedTraverseTime) 
     # print("t = ",t," start = ",start)
-    print("t - start = ",t-start)       
     if (t - start< expectedTraverseTime):
         if v.trapezoid(t - start,curPos):
             index = v.GetExpectedPositionIndex()

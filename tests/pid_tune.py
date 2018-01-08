@@ -16,8 +16,8 @@ from utils.config import *
 def main():
 	import memcache
 	shared = memcache.Client(['127.0.0.1:11211'],debug=False)
-	paddingX = 300
-	paddingY = 150
+	paddingX = 1250	
+	paddingY = 750
 
 	points = [
 		Vector2D((HALF_FIELD_MAXX*0-paddingX),(HALF_FIELD_MAXY-paddingY)),

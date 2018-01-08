@@ -48,6 +48,9 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
         start_time = startTime
         FIRST_CALL = False
 
+
+    print("+++++"*100)    
+    print("condition = ",not FLAG_move and FLAG_turn)    
     while not (FLAG_move and FLAG_turn):
         # print not (FLAG_move and FLAG_turn)
 
@@ -56,7 +59,10 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
         
         t = rospy.Time.now()
         t = t.secs + 1.0*t.nsecs/pow(10,9)
-
+        print(GOAL_POINT.x, GOAL_POINT.y)
+        print("_____________________________")
+        print(start_time,"t-start = ", t-start_time,"         ", kub.kubs_id,"Goal point", GOAL_POINT.x, GOAL_POINT.y,"bot position", kub.state.homePos[0].x, kub.state.homePos[0].y , avoid_ball)
+        print(" __________________________________")
         [vx, vy, vw, REPLANNED] = Get_Vel(start_time, t, kub.kubs_id, GOAL_POINT, kub.state.homePos, kub.state.awayPos, avoid_ball)
         vw = Get_Omega(kub.kubs_id,rotate,kub.state.homePos)
         

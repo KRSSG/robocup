@@ -53,7 +53,8 @@ def pid(vX,vY,errorInfo,pso=None):
 		# Disabling I & D in PID
 		# k[1] = k[2] = 0
 		# k[0] = 0
-		print k
+		# print k
+		# k = np.array([0,0,0])
 
 		deltaVX = errorX.dot(k)
 		deltaVY = errorY.dot(k)

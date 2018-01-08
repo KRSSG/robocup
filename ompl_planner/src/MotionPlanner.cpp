@@ -32,57 +32,6 @@ Planning::Planning(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::po
   init(v,n,gui_msgs);
 }
 
-
-/**
- * @brief      Smooth Path using neighbour points.
- *
- *Smooth path using "windowSize" points, half of which are behind
- *current point and half after it
- *@see        windowSize
- * @param      v     Vector of path 
- * @return     Vector of smooth path
- */
-void simplifyPoint(std::vector<krssg_ssl_msgs::point_2d>& v){
-  std::vector<krssg_ssl_msgs::point_2d> newPoints;
-
-  windowSize = windowSize/2 > v.size()?v.size():windowSize;
-  for (int i = 0; i < windowSize/2; ++i)
-  {
-    newPoints.push_back(v[i]);
-  }
-  for (int i = windowSize/2; i < v.size() - windowSize/2; ++i)
-  {
-    float X = 0;
-    float Y = 0;
-    for (int j = i - windowSize/2; j <= i + windowSize/2; ++j)
-    {
-      X += v[j].x;
-      Y += v[j].y;
-    }
-    krssg_ssl_msgs::point_2d p;
-    p.x = X/(windowSize + 1);
-    p.y = Y/(windowSize + 1);
-    newPoints.push_back(p);
-  }
-  float deltaX = (newPoints[windowSize/2].x - newPoints[0].x)*2/windowSize;
-  float deltaY = (newPoints[windowSize/2].y - newPoints[0].y)*2/windowSize;
-  for (int i = 0; i < windowSize/2; ++i)
-  {
-    newPoints[i].x = newPoints[0].x + i*deltaX;
-    newPoints[i].y = newPoints[0].y + i*deltaY;
-  }
-  deltaY = (v[v.size() - 1].y - newPoints[v.size() - windowSize/2 - 1].y)*2/windowSize;
-  deltaX = (v[v.size() - 1].x - newPoints[v.size() - windowSize/2 - 1].x)*2/windowSize;
-  for (int i = 0; i < windowSize/2; ++i)
-  {
-    krssg_ssl_msgs::point_2d p;
-    p.x = newPoints[v.size() - windowSize/2 - 1].x + (i+1)*deltaX;
-    p.y = newPoints[v.size() - windowSize/2 - 1].y + (i+1)*deltaY; 
-    newPoints.push_back(p);
-  }
-  v = newPoints;
-}
-
 void Planning::init(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs)
 {
 

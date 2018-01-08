@@ -37,5 +37,6 @@ def send_command(pub, team, bot_id, v_x, v_y, v_w, kick_power, dribble, chip_pow
         print 'vel_x: {}\nvel_y: {}\nvel_w: {}\n'.format(v_x, v_y, v_w)
         print 'kick_power: {}\nchip_power: {}\ndribble_speed:{}\n\n'.format(kick_power, chip_power, dribble)
     
+    debug()
     pub.publish(final_command)
 

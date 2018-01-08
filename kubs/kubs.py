@@ -111,7 +111,7 @@ class kubs:
     
 
     def execute(self):
-        cmd_node.send_command(self.pub, self.isteamyellow, self.kubs_id, self.vx, self.vy, self.vw, self.power, self.dribbler)  
+        cmd_node.send_command(self.pub, self.isteamyellow, self.kubs_id, self.vx, self.vy, self.vw*0, self.power, self.dribbler)  
         self.reset()
 
     def has_ball(self):

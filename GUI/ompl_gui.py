@@ -37,6 +37,7 @@ def BS_TO_GUI(x, y):
     x1 = (x + FIELD_MAXX)*GUI_X/(2*FIELD_MAXX)
     y1 = (y + FIELD_MAXY)*GUI_Y/(2*FIELD_MAXY)
 
+
     return [x1, y1]
 
 vrtx=[(200,200)]
@@ -82,6 +83,7 @@ def Callback_BS(msg):
     points_home = []
     points_home_theta = []
     points_opp=[]
+    print(BS_TO_GUI(-HALF_FIELD_MAXX,0))
     for i in msg.homePos:
         points_home.append(BS_TO_GUI(i.x, i.y))
         points_home_theta.append(i.theta)  

@@ -8,7 +8,7 @@
 			true
 		</Var>
 		<Var name="Have Angles" type="bool">
-			true
+			false
 		</Var>
 		<Var name="Robot Height (mm)" type="double" minval="" maxval="">
 			125.000000
@@ -18,7 +18,7 @@
 				true
 			</Var>
 			<Var name="Marker Image File" type="string">
-				patterns/teams/standard2010.png
+				/home/krssg/krssg/src/ssl-vision/patterns/teams/standard2010.png
 			</Var>
 			<Var name="Marker Image Rows" type="int" minval="" maxval="">
 				3
@@ -46,22 +46,22 @@
 					true
 				</Var>
 				<Var name="6" type="bool">
-					true
+					false
 				</Var>
 				<Var name="7" type="bool">
-					true
+					false
 				</Var>
 				<Var name="8" type="bool">
-					true
+					false
 				</Var>
 				<Var name="9" type="bool">
-					true
+					false
 				</Var>
 				<Var name="10" type="bool">
-					true
+					false
 				</Var>
 				<Var name="11" type="bool">
-					true
+					false
 				</Var>
 			</Var>
 		</Var>
@@ -2510,13 +2510,13 @@
 			kgpkubs
 		</Var>
 		<Var name="Unique Patterns" type="bool">
-			false
+			true
 		</Var>
 		<Var name="Have Angles" type="bool">
-			false
+			true
 		</Var>
 		<Var name="Robot Height (mm)" type="double" minval="" maxval="">
-			140.000000
+			500.000000
 		</Var>
 		<Var name="Use Heights from Marker Image" type="bool">
 			true

@@ -44,7 +44,7 @@ class GoToBall(behavior.Behavior):
             GoToBall.State.course_approach,lambda: self.target_present(),'setup')
 
         self.add_transition(GoToBall.State.course_approach,
-            GoToBall.State.fine_approach,lambda:self.at_target_point(),'complete')
+            behavior.Behavior.State.completed,lambda:self.at_target_point(),'complete')
 
         self.add_transition(GoToBall.State.fine_approach,
             behavior.Behavior.State.completed,lambda:self.at_ball_pos(),'complete')
@@ -121,6 +121,7 @@ class GoToBall(behavior.Behavior):
         pass
 
     def execute_fine_approach(self):
+        print("in execute_fine_approach")
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
         generatingfunction = _GoToPoint.execute(start_time,self.ball_dist_thresh)
@@ -138,7 +139,7 @@ class GoToBall(behavior.Behavior):
         self.power = 0.0
 
     def on_exit_fine_approach(self):
-        
+        print("on_exit_fine_approach")
         self.kub.kick(self.power)
         self.kub.execute()
         pass

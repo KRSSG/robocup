@@ -33,6 +33,7 @@ def reset():
 def GUI_Callback(data):
 	global BOT_ID, kub, BState, pub
 	BOT_ID = data.bot_id
+	print BOT_ID, "_____________________________"
 	kub = kubs.kubs(BOT_ID, BState, pub)
 
 def BS_callback(data):
