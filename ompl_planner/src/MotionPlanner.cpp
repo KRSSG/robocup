@@ -43,14 +43,13 @@ void Planning::init(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::p
   yBottom=-HALF_FIELD_MAXY_OMPL;
   selector=gui_msgs.max_iteration;
 
-  n--;
   numObstacles = n;
   xc = new double[numObstacles];
   yc = new double[numObstacles];
 
   for(int i=0;i<n;i++){
-    xc[i] = v[i+1].x;
-    yc[i] = v[i+1].y;
+    xc[i] = v[i].x;
+    yc[i] = v[i].y;
   }
 
 }
@@ -66,6 +65,8 @@ bool Planning::plan(int start_row, int start_col, int goal_row, int goal_col){
   start[0] = start_row;
   xstart = start_row;
   ystart = start_col;
+  xgoal = goal_row;
+  ygoal = goal_col;
   start[1] = start_col;
   ob::ScopedState<> goal(ss_->getStateSpace());
   goal[0] = goal_row;
@@ -149,6 +150,8 @@ bool Planning::isStateValid(const ob::State *state) const {
   const int w = std::min((int)state->as<ob::RealVectorStateSpace::StateType>()->values[0], maxWidth_);
   const int h = std::min((int)state->as<ob::RealVectorStateSpace::StateType>()->values[1], maxHeight_);
   if(sqrt(pow((xstart-w),2)+pow((ystart-h),2))<=self_radius)
+    return true;
+  if(sqrt(pow((xgoal-w),2)+pow((ygoal-h),2))<=self_radius)
     return true;
   for (int i = 0; i < numObstacles; ++i){
     if (sqrt(pow((xc[i]-w),2)+pow((yc[i]-h),2))<=obs_radius){

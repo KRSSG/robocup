@@ -7,18 +7,16 @@ INF = 9999999
 
 class Vector2D(Structure):
 	
-	_fields_ =	[ ("x", c_int),
-			 ("y", c_int) ]
+	_fields_ =	[ ("x", c_float),
+			 ("y", c_float) ]
 
 	def __init__(self,x = None,y = None):
 		if x is None:
 			self.x = self.y = INF
 		elif type(x) is Vector2D:
 			self.x, self.y = x.x, x.y
-		elif type(x) is int and type(y) is int:
-			self.x, self.y = x, y
 		else:
-			raise Exception("Invalid constructor")
+			self.x,self.y=x,y
 
 	def valid(self):
 		if math.fabs(self.x) == INF or math.fabs(self.y) == INF :

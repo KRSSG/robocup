@@ -16,6 +16,7 @@ v = None
 kubid = None
 expectedTraverseTime = None
 pso = None
+# pso = PSO(5,20,1000,2,1,0.5)
 errorInfo = Error()
 REPLAN = 0
 FIRST_CALL = 1
@@ -164,7 +165,7 @@ def findPath(startPoint,end,avoid_ball=False):
 
     planner = rospy.ServiceProxy('planner', path_plan)
 
-    message = planner(startPt,target,avoid_ball)
+    message = planner(kubid,startPt,target,avoid_ball)
     path = []
     for i in xrange(len(message.path)):
         path = path + [Vector2D(int(message.path[i].x),int(message.path[i].y))]
@@ -175,6 +176,6 @@ def findPath(startPoint,end,avoid_ball=False):
     expectedTraverseTime = v.getTime(v.GetPathLength())
     global time_cal
     time_cal = expectedTraverseTime
-    pso = PSO(5,20,1000,1,1,0.5)
+    # pso = PSO(5,20,1000,1,1,0.5)
     errorInfo = Error()
     # print("Path Planned")

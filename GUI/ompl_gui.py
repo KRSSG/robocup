@@ -25,6 +25,7 @@ points_home_theta = []
 points_opp=[]
 FIELD_MAXX = HALF_FIELD_MAXX    #4000 in GrSim
 FIELD_MAXY = HALF_FIELD_MAXY    #3000 in GrSim
+BOT_ID = None
 GUI_X = 600
 GUI_Y = 400
 vel_theta=0
@@ -40,7 +41,13 @@ def BS_TO_GUI(x, y):
 
     return [x1, y1]
 
-vrtx=[(200,200)]
+vrtx_0=[(200,200)]
+vrtx_1=[(200,200)]
+vrtx_2=[(200,200)]
+vrtx_3=[(200,200)]
+vrtx_4=[(200,200)]
+vrtx_5=[(200,200)]
+
 curr_vel = [10,0]
 VEL_UNIT = 5
 BOT_ID = 0
@@ -50,18 +57,41 @@ kubs_pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
 path_received=0
 
-
 def debug_path(msg):
-    print("New Path Received")
-    global vrtx, path_received, VEL_ANGLE, vel_theta, vel_mag
-    vrtx=[]
-    for v in msg.point_array:
-        vrtx.append((BS_TO_GUI(v.x, v.y)))
-    path_received=1    
-    if(vel_mag<0.01):     
-        VEL_ANGLE = atan2(vrtx[2][1]-vrtx[0][1], vrtx[2][0]-vrtx[0][0])
-    else:
-        VEL_ANGLE = vel_theta      
+    global BOT_ID
+    BOT_ID = msg.bot_id
+    print("New Path Received: BOT_ID = ",BOT_ID)
+    global path_received, VEL_ANGLE, vel_theta, vel_mag, vrtx_0, vrtx_1, vrtx_2, vrtx_3, vrtx_4, vrtx_5
+    if(BOT_ID==0):
+        vrtx_0=[]
+        for v in msg.point_array:
+            vrtx_0.append((BS_TO_GUI(v.x, v.y)))
+    elif BOT_ID==1:
+        vrtx_1=[]
+        for v in msg.point_array:
+            vrtx_1.append((BS_TO_GUI(v.x, v.y)))
+    elif BOT_ID==2:
+        vrtx_2=[]
+        for v in msg.point_array:
+            vrtx_2.append((BS_TO_GUI(v.x, v.y)))
+    elif BOT_ID==3:
+        vrtx_3=[]
+        for v in msg.point_array:
+            vrtx_3.append((BS_TO_GUI(v.x, v.y)))
+    elif BOT_ID==4:
+        vrtx_4=[]
+        for v in msg.point_array:
+            vrtx_4.append((BS_TO_GUI(v.x, v.y)))
+    elif BOT_ID==5:
+        vrtx_5=[]
+        for v in msg.point_array:
+            vrtx_5.append((BS_TO_GUI(v.x, v.y)))        
+
+    path_received = 1        
+    # if(vel_mag<0.01):     
+    #     VEL_ANGLE = atan2(vrtx[2][1]-vrtx[0][1], vrtx[2][0]-vrtx[0][0])
+    # else:
+    #     VEL_ANGLE = vel_theta      
 
 def Callback_VelProfile(msg):
     global curr_vel, vel_mag, vel_theta
@@ -83,7 +113,7 @@ def Callback_BS(msg):
     points_home = []
     points_home_theta = []
     points_opp=[]
-    print(BS_TO_GUI(-HALF_FIELD_MAXX,0))
+    # print(BS_TO_GUI(-HALF_FIELD_MAXX,0))
     for i in msg.homePos:
         points_home.append(BS_TO_GUI(i.x, i.y))
         points_home_theta.append(i.theta)  
@@ -111,22 +141,37 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
         
         self.GoToBall.clicked.connect(self.goToBall)
         self.GoToBallFsm.clicked.connect(self.goToBallFsm)
+        self.GoInTriangle.clicked.connect(self.Move_in_Triangle)
         self.timer=QtCore.QTimer(self)
         self.timer.timeout.connect(self.updateImage)
         self.timer.start(30)
         self.t1 = None
+        self.tri_pr1 = None
+        self.tri_pr2 = None
+        self.tri_pr3 = None
+        self.tri_controller = None 
 
     
+    def end_all_process(self):
+        if(not self.t1==None):
+            self.t1.terminate()
+        if(not self.tri_pr1==None):
+            self.tri_pr1.terminate()
+        if(not self.tri_pr2==None):
+            self.tri_pr2.terminate()
+        if(not self.tri_pr3==None):
+            self.tri_pr3.terminate()
+        if(not self.tri_controller==None):
+            self.tri_controller.terminate()    
+
     def goToBall(self):
-        import signal
-        signal.signal(signal.SIGINT, signal.SIG_DFL)
         msg=point_SF()
         kubs_id = int(self.textBotId.text())
         msg.bot_id = kubs_id
         print("__here__",msg.bot_id)
         pub.publish(msg)
-        if(not self.t1==None):
-            self.t1.terminate()
+                    
+        self.end_all_process()
         self.t1 = multiprocessing.Process(target=self.goToPoint,args=(kubs_id,))
         self.t1.start()
         # self.t1.terminate()
@@ -136,12 +181,8 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
         # return
     def goToBallFsm(self):
         global BState,kubs_pub
-        import signal
 
-        if(not self.t1==None):
-            self.t1.terminate()
-
-        signal.signal(signal.SIGINT, signal.SIG_DFL)
+        self.end_all_process()
         msg=point_SF()
 
         # while True:
@@ -162,6 +203,41 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
                 self.t1.terminate()
             self.t1 = multiprocessing.Process(target=g_fsm.spin)
             self.t1.start()
+
+    def Move_in_Triangle(self):
+        self.end_all_process()
+        self.tri_controller = multiprocessing.Process(target=self.triangle_controller)
+        self.tri_pr1 =  multiprocessing.Process(target=self.move_bot_1)
+        self.tri_pr2 =  multiprocessing.Process(target=self.move_bot_2)
+        self.tri_pr3 =  multiprocessing.Process(target=self.move_bot_3)
+        self.tri_controller.start()
+        self.tri_pr1.start()
+        self.tri_pr2.start()
+        self.tri_pr3.start()           
+
+    def triangle_controller(self):
+        try:
+            os.system('python test_Triangle.py')
+        except Exception as e:
+            print("Error TRI_CONTROLLER = ",e) 
+
+    def move_bot_1(self):
+        try:
+            os.system('python triangle1.py')
+        except Exception as e:
+            print("Error BOT_1 = ",e)    
+
+    def move_bot_2(self):
+        try:
+            os.system('python triangle2.py')
+        except Exception as e:
+            print("Error BOT_2 = ",e)
+
+    def move_bot_3(self):
+        try:
+            os.system('python triangle3.py')
+        except Exception as e:
+            print("Error BOT_3 = ",e)                
 
     def pidOperator(self):
         try:
@@ -238,8 +314,6 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
         global ballPos
         transform = QtGui.QTransform()
        
-
-        global vrtx
         self.scene.clear()
 
         self.graphicsView.setScene(self.scene)
@@ -271,9 +345,20 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow, QtGui.QWidget):
             i=i+1
             self.scene.addEllipse(point[0]-self.obstacleRadius, point[1]-self.obstacleRadius,2*self.obstacleRadius,2*self.obstacleRadius , self.mark_s, brush_red)
             self.scene.addItem(io) 
-        self.draw_path(vrtx)  
+        self.draw_path()  
 
-    def draw_path(self, vrtx):
+    def draw_path(self):
+        # print("IN DRAW PATH__"*100)
+        global vrtx_0, vrtx_1, vrtx_2, vrtx_3, vrtx_4, vrtx_5
+
+        self.draw_path_one(vrtx_0)
+        self.draw_path_one(vrtx_1)
+        self.draw_path_one(vrtx_2)
+        self.draw_path_one(vrtx_3)
+        self.draw_path_one(vrtx_4)
+        self.draw_path_one(vrtx_5)
+
+    def draw_path_one(self, vrtx):
         
         path = QtGui.QPainterPath()
         path.moveTo(vrtx[0][0],vrtx[0][1])

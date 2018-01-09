@@ -63,6 +63,7 @@ SSL_FieldCircularArc.msg
 point_SF.msg
 planner_path.msg
 plannner.msg
+pid_tune.msg
 IR_data.msg
 gr_Commands.msg
 pid_message.msg
@@ -79,6 +80,7 @@ SSL_GeometryFieldSize.msg
 gr_BallReplacement.msg
 sslDebug_Data.msg
 gr_RobotReplacement.msg
+target_triangle.msg
  )
 
 

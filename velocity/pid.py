@@ -2,12 +2,21 @@
 ## @file pid.py
 ## @brief Return velocity after applying PID
 ##
-
+import rospy
 import numpy as np
 import matplotlib.pyplot as plt
 import time
 dt = 0.001
 
+# try:
+# 	f = open("pid_img/values/pid.txt",'a')
+# except:
+# 	f = open("pid_img/values/pid.txt",'w')
+
+
+
+
+# pid_tu = rospy.Publisher('pid_c', pid_tune, queue_size=10)
 
 ##
 ## @brief      PID on velocity vx,vy
@@ -22,7 +31,9 @@ dt = 0.001
 ##
 ## @return     Velocity after PID
 ##
+i = 0
 def pid(vX,vY,errorInfo,pso=None):
+	global i,f
 	errorPX = errorInfo.errorX
 	errorPY = errorInfo.errorY
 	errorIX = errorInfo.errorIX + errorPX
@@ -32,7 +43,8 @@ def pid(vX,vY,errorInfo,pso=None):
 	errorX = np.array([errorPX,errorIX,errorDX])
 	errorY = np.array([errorPY,errorIY,errorDY])
 	if pso==None:
-		k = np.array([0,0,0]) 		#define k
+		# k = np.array([0,0,0]) 		#define k
+		k = np.array([0.1,0.00,0.00])
 		deltaVX = errorX.dot(k)
 		deltaVY = errorY.dot(k)
 
@@ -50,6 +62,11 @@ def pid(vX,vY,errorInfo,pso=None):
 		maxIter = pso.maxIter
 
 		k = pso.swarm[p].k
+		# pid_tune = pid_tune()
+		# pid_tune.pc = k[0]
+		# pid_tune.ic = k[1]
+		# pid_tune.dc = k[2]
+		# pid_tu.publish(pid_tune)
 		print("pid constants ", k)
 
 		deltaVX = errorX.dot(k)
@@ -69,8 +86,8 @@ def pid(vX,vY,errorInfo,pso=None):
 
 		pso.swarm[p].move = (currMove + 1)%maxMoves
 		pso.lastTime = time.time()
-		pso.errors.append(errorMagnitude)
-
+		pso.errors.append(errorPX)
+		# print("Current Move", currMove)
 		if pso.swarm[p].move == 0:
 			if pso.swarm[p].currErrorSum <= pso.swarm[p].minLocalError:
 				pso.swarm[p].minLocalError = pso.swarm[p].currErrorSum
@@ -86,11 +103,23 @@ def pid(vX,vY,errorInfo,pso=None):
 			pso.swarm[p].v = pso.omega*pso.swarm[p].v + pso.c1*r1*(pso.swarm[p].bestLocalK - k) + pso.c2*r2*(pso.bestGlobalK - k)
 			pso.swarm[p].k = k + pso.swarm[p].v
 			pso.currParticle = (p+1)%numParticles
+			# print("Particle #", pso.currParticle)
 			if pso.currParticle == 0:
 				pso.currIter = currIter + 1
+				print("Current Iteration #", pso.currIter)
 
-		# if pso.currIter == 20:
-		# 	plt.plot(pso.errors)
-		# 	plt.show()
+		if pso.currIter%20 == 0:
+			plt.plot(pso.errors)
+			plt.savefig('pid_img/img/myfig_'+str(i)+'.png')
+			print("____________________________File Saved______________________________________",i)
+			# if i%100 == 0:
+			k_values = ','.join(map(str,pso.bestGlobalK))
+			# f.write(k_values)	
+
+			# np.save("pid_img/values/pid_"+str(i)+".txt",pso.bestGlobalK)
+			i += 1
+
+
 
 		return vX,vY
+

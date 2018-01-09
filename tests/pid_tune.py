@@ -13,11 +13,17 @@ from math import atan2,pi
 from utils.math_functions import *
 from utils.config import *
 
+
+# points = [
+# Vector2D(-2000.79174805,-1160.16650391),Vector2D(-2000.79174805,700.04296875) ,Vector2D(-600.57901001,700.04296875),
+# Vector2D(-600.57901001,-1160.16650391)
+
+# ]
 def main():
 	import memcache
 	shared = memcache.Client(['127.0.0.1:11211'],debug=False)
-	paddingX = 1250	
-	paddingY = 750
+	paddingX = 200	
+	paddingY = 100
 
 	points = [
 		Vector2D((HALF_FIELD_MAXX*0-paddingX),(HALF_FIELD_MAXY-paddingY)),

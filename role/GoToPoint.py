@@ -1,6 +1,6 @@
 from enum import Enum
 import behavior
-import _GoToPoint
+import _GoToPoint_
 import rospy
 from utils.math_functions import *
 from utils.config import *
@@ -74,7 +74,7 @@ class GoToPoint(behavior.Behavior):
     def on_enter_setup(self):
         pass
     def execute_setup(self):
-        _GoToPoint.init(self.kub,self.target_point,self.theta)
+        _GoToPoint_.init(self.kub,self.target_point,self.theta)
         pass
         
     def on_exit_setup(self):
@@ -89,7 +89,7 @@ class GoToPoint(behavior.Behavior):
     def execute_drive(self):
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-        generatingfunction = _GoToPoint.execute(start_time,DISTANCE_THRESH)
+        generatingfunction = _GoToPoint_.execute(start_time,DISTANCE_THRESH)
         for gf in generatingfunction:
             self.kub,target_point = gf
 

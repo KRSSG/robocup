@@ -11,7 +11,8 @@ ti = time.time()
 # # sys.path.append('/home/aif/ROBOCUP_SSL_WS/devel/lib/python2.7/dist-packages/krssg_ssl_msgs/msg/')
 # from krssg_ssl_msgs.msg import gr_Commands
 ser = None
-
+prev_time = time.time()
+now_time = time.time()
 # # ser = serial.Serial('/dev/ttyUSB1',bytesize=32)
 # ser = serial.Serial('/dev/ttyUSB1')
 file = ''
@@ -65,7 +66,7 @@ def vel_convert(vel_3_wheel):
     return v_4_wheel
 
 def gr_Commands_CB(msg):
-    global buf
+    global buf, prev_time, now_time
     #print("Command received for bot_id : ",msg.robot_commands.id)
     # vel_xyw = [None]*3
     # vel_xyw[0] = int(msg.robot_commands.velnormal * FACTOR_T)
@@ -99,9 +100,16 @@ def gr_Commands_CB(msg):
     for i in xrange(1,32):
         buf[i] = 0
 
-    for i in range(0,1):    
+    for i in range(1,2):    
     	buf[5*i+1],   buf[5*i+2],  buf[5*i+3],  buf[5*i+4] = vel_convert([0,-50,0])
     # buf[1],   buf[2],  buf[3],  buf[4] = vel_convert([0,-50,0])
+    now_time = time.time()
+    # print now_time- prev_time
+    if(now_time- prev_time>1):
+        prev_time = now_time
+        buf[31] = 1
+        print("SENDING_RESET"*20)
+
     for i in xrange(11,15):
         buf[i] = int(buf[i])
 

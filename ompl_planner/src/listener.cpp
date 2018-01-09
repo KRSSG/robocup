@@ -80,7 +80,7 @@ void Callback(const krssg_ssl_msgs::BeliefState::ConstPtr& msg)
   for(int i=0;i<msg->homePos.size();i++){
     p.x = msg->homePos[i].x*BS_TO_OMPL;
     p.y = msg->homePos[i].y*BS_TO_OMPL;
-  	v.push_back(p);
+    v.push_back(p);
     // vel.x = msg->homeVel[i].x;
     // vel.y = msg->homeVel[i].y;
     // homeVel.push_back(vel);
@@ -89,7 +89,7 @@ void Callback(const krssg_ssl_msgs::BeliefState::ConstPtr& msg)
   for(int i=0;i<msg->awayPos.size();i++){
     p.x = msg->awayPos[i].x*BS_TO_OMPL;
     p.y = msg->awayPos[i].y*BS_TO_OMPL;
-  	v.push_back(p);
+    v.push_back(p);
     // vel.x = msg->awayVel[i].x;
     // vel.y = msg->awayVel[i].y;
     // awayVel.push_back(vel);
@@ -114,7 +114,9 @@ bool path(krssg_ssl_msgs::path_plan::Request &req,
   start.y = req.start.y;
   target.x = req.target.x;
   target.y = req.target.y;
-  
+  int BOT_ID;
+  BOT_ID = req.bot_id;
+  points.bot_id = BOT_ID;
 
   ROS_INFO("Start (%f %f)  target (%f %f) ",start.x,start.y,target.x,target.y);
   ROS_INFO("Distance = %f, threshold = %f",distance_(start.x, start.y, target.x, target.y)*BS_TO_OMPL, self_radius);

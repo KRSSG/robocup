@@ -122,7 +122,7 @@ class Planning{
     double* xc;
     double* yc;
     double* r;
-    double xstart, ystart;
+    double xstart, ystart, xgoal, ygoal;
     /**
      * Number of obstacles in space
      */
