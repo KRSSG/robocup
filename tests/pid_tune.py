@@ -13,20 +13,28 @@ from math import atan2,pi
 from utils.math_functions import *
 from utils.config import *
 
+import sys
+BOT_ID = sys.argv[1]
+#ssl-vision-points
+points = [
+	Vector2D(-2400.79174805,-1560.16650391),
+	Vector2D(-2400.79174805,500.04296875) ,
+	Vector2D(-300.57901001,500.04296875),
+	Vector2D(-300.57901001,-1560.16650391)
+]
+
 def main():
 	import memcache
 	shared = memcache.Client(['127.0.0.1:11211'],debug=False)
 	paddingX = 1250	
 	paddingY = 750
 
-	points = [
-		Vector2D((HALF_FIELD_MAXX*0-paddingX),(HALF_FIELD_MAXY-paddingY)),
-		Vector2D((HALF_FIELD_MAXX*0-paddingX),-(HALF_FIELD_MAXY-paddingY)),
-		Vector2D(-(HALF_FIELD_MAXX-paddingX),-(HALF_FIELD_MAXY-paddingY)),
-		Vector2D(-(HALF_FIELD_MAXX-paddingX),(HALF_FIELD_MAXY-paddingY)),
-	]
-
-	BOT_ID = 0
+# 	points = [
+# 		Vector2D((HALF_FIELD_MAXX*0-paddingX),(HALF_FIELD_MAXY-paddingY)),
+# 		Vector2D((HALF_FIELD_MAXX*0-paddingX),-(HALF_FIELD_MAXY-paddingY)),
+# 		Vector2D(-(HALF_FIELD_MAXX-paddingX),-(HALF_FIELD_MAXY-paddingY)),
+# 		Vector2D(-(HALF_FIELD_MAXX-paddingX),(HALF_FIELD_MAXY-paddingY)),
+# 	]
 	pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 	state = shared.get('state')
 	kub = kubs.kubs(BOT_ID,state,pub)
