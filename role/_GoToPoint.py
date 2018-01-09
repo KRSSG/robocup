@@ -93,7 +93,5 @@ def execute(start_time_,DIST_THRESH,data,avoid_ball=False):
         
 
         kub.execute()
-    except Exception as e:
-        print("In except",e)
-        pass   
+ 
         # yield kub

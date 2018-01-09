@@ -185,8 +185,8 @@ def normalize_angle(angle):
 def magnitute(vector):
     return math.sqrt(vector.x * vector.x + vector.y * vector.y)
 
-  def line_circle_intersection(self,circle):
-    pass
+def line_circle_intersection(self,circle):
+  pass
 
 
 def direction(vector):
