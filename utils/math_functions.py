@@ -181,8 +181,12 @@ def normalize_angle(angle):
         return angle
 
 
+
 def magnitute(vector):
     return math.sqrt(vector.x * vector.x + vector.y * vector.y)
+
+  def line_circle_intersection(self,circle):
+    pass
 
 
 def direction(vector):
@@ -210,6 +214,11 @@ def dist(point1, point2):
 def angle_diff(point1, point2):
     return math.atan2(point2.y - point1.y, point2.x - point1.x)
 
+
+def getPointBehindTheBall(point ,theta):
+  x = point.x -(3.5 * BOT_RADIUS) *(math.cos(theta))
+  y = point.y -(3.5 * BOT_RADIUS) *(math.sin(theta))
+  return Vector2D(int(x), int(y))
 
 def vicinity_points(point1, point2, thresh=10):
     return dist(point1, point2) < thresh

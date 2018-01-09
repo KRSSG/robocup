@@ -1,6 +1,6 @@
 from enum import Enum
 import behavior
-import _GoToPoint
+import _GoToPoint_
 import rospy
 from utils.math_functions import *
 from utils.config import *
@@ -44,7 +44,7 @@ class GoToBall(behavior.Behavior):
             GoToBall.State.course_approach,lambda: self.target_present(),'setup')
 
         self.add_transition(GoToBall.State.course_approach,
-            behavior.Behavior.State.completed,lambda:self.at_target_point(),'complete')
+            GoToBall.State.fine_approach,lambda:self.at_target_point(),'complete')
 
         self.add_transition(GoToBall.State.fine_approach,
             behavior.Behavior.State.completed,lambda:self.at_ball_pos(),'complete')
@@ -86,9 +86,8 @@ class GoToBall(behavior.Behavior):
     def on_enter_setup(self):
         pass
     def execute_setup(self):
-        # self.target_point = self.kub.state.ballPos
         self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
-        _GoToPoint.init(self.kub, self.target_point, self.theta)
+        _GoToPoint_.init(self.kub, self.target_point, self.theta)
         pass
         
     def on_exit_setup(self):
@@ -101,7 +100,7 @@ class GoToBall(behavior.Behavior):
     def execute_course_approach(self):
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-        generatingfunction = _GoToPoint.execute(start_time,self.initial_target_dist_thresh,False)
+        generatingfunction = _GoToPoint_.execute(start_time,self.initial_target_dist_thresh,True)
         for gf in generatingfunction:
             self.kub,target_point = gf
             self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
@@ -117,14 +116,13 @@ class GoToBall(behavior.Behavior):
 
     def on_enter_fine_approach(self):
         theta = self.kub.get_pos().theta
-        _GoToPoint.init(self.kub, self.kub.state.ballPos, theta)
+        _GoToPoint_.init(self.kub, self.kub.state.ballPos, theta)
         pass
 
     def execute_fine_approach(self):
-        print("in execute_fine_approach")
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-        generatingfunction = _GoToPoint.execute(start_time,self.ball_dist_thresh)
+        generatingfunction = _GoToPoint_.execute(start_time,self.ball_dist_thresh)
         for gf in generatingfunction:
             self.kub,ballPos = gf
             
@@ -139,7 +137,7 @@ class GoToBall(behavior.Behavior):
         self.power = 0.0
 
     def on_exit_fine_approach(self):
-        print("on_exit_fine_approach")
+        
         self.kub.kick(self.power)
         self.kub.execute()
         pass

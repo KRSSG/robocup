@@ -15,6 +15,7 @@ class kubs:
     ##
     
     def __init__(self, kubs_id,state, pub):
+        print "in kubs0"
         self.kubs_id = kubs_id
         self.pos = state.homePos[kubs_id]
         self.vx = 0
@@ -25,6 +26,7 @@ class kubs:
         self.power = False
         self.state = state
         # self.kubsBelief()
+        print "in kubs"
         self.pub = pub
         self.c=0
     ##
@@ -111,7 +113,7 @@ class kubs:
     
 
     def execute(self):
-        cmd_node.send_command(self.pub, self.isteamyellow, self.kubs_id, self.vx, self.vy, self.vw*0, self.power, self.dribbler)  
+        cmd_node.send_command(self.pub, self.isteamyellow, self.kubs_id, self.vx, self.vy, self.vw, self.power, self.dribbler)  
         self.reset()
 
     def has_ball(self):

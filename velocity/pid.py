@@ -50,11 +50,7 @@ def pid(vX,vY,errorInfo,pso=None):
 		maxIter = pso.maxIter
 
 		k = pso.swarm[p].k
-		# Disabling I & D in PID
-		# k[1] = k[2] = 0
-		# k[0] = 0
-		# print k
-		# k = np.array([0,0,0])
+		print("pid constants ", k)
 
 		deltaVX = errorX.dot(k)
 		deltaVY = errorY.dot(k)

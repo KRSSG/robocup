@@ -1,0 +1,49 @@
+from role import _GoToPoint
+from kubs import kubs, cmd_node
+from velocity.run import *
+import rospy,sys
+from krssg_ssl_msgs.msg import point_2d
+from krssg_ssl_msgs.msg import BeliefState
+from krssg_ssl_msgs.msg import gr_Commands
+from krssg_ssl_msgs.msg import gr_Robot_Command
+from krssg_ssl_msgs.msg import point_SF
+from utils.config import *
+import memcache
+shared = memcache.Client(['127.0.0.1:11211'], debug = False)
+import sys
+
+BOT_ID = int(sys.argv[1])
+print "bot_id received",BOT_ID
+pub = rospy.Publisher('/grsim_data', gr_Commands, queue_size=1000)
+
+state = None
+kub = None
+
+def BS_callback(BState):
+    global start_time,pub,BOT_ID,state,kub
+    # print "in BS_callback"
+    if not state:
+        state = BState
+        kub = kubs.kubs(BOT_ID, BState, pub)
+        
+    _GoToPoint.init(kub,BState.ballPos,pub)
+    _GoToPoint.execute(start_time,200,BState,False)
+    print "in BS_callback"
+
+    # generatingfunction = _GoToPoint.execute(start_time,200,False)
+    # for gf in generatingfunction:
+    #     kub,target_point = gf
+    #     print kub.kubs_id
+        
+
+    #def execute(startTime,DIST_THRESH,avoid_ball=False):
+
+
+if __name__ == "__main__":
+    global start_time
+    rospy.init_node('node_new',anonymous=False)
+    start_time = rospy.Time.now()
+    start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
+    pub = rospy.Publisher('/grsim_data', gr_Commands, queue_size=1000)  
+    rospy.Subscriber('/belief_state', BeliefState, BS_callback, queue_size=1000)
+    rospy.spin()

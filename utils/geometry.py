@@ -7,8 +7,8 @@ INF = 9999999
 
 class Vector2D(Structure):
 	
-	_fields_ =	[ ("x", c_float),
-			 ("y", c_float) ]
+	_fields_ =	[ ("x", c_int),
+			 ("y", c_int) ]
 
 	def __init__(self,x = None,y = None):
 		if x is None:

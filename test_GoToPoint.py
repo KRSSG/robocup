@@ -69,3 +69,5 @@ if __name__ == "__main__":
 	rospy.Subscriber('/belief_state', BeliefState, BS_callback, queue_size=1000)
 	rospy.Subscriber('/gui_params', point_SF, GUI_Callback, queue_size = 1000)
 	rospy.spin()
+
+

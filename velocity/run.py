@@ -30,18 +30,19 @@ def distance_(a, b):
     return sqrt(dx*dx+dy*dy)
 
 def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
-    print("Get_Vel:     t - start = ",t-start)       
+    # print("Get_Vel:     t - start = ",t-start)       
     global expectedTraverseTime, REPLAN, v, errorInfo, pso, FIRST_CALL, homePos, awayPos, kubid, prev_target
     REPLAN = 0
     homePos = homePos_
     awayPos = awayPos_
     kubid = kub_id
-    if(not prev_target==None):
+    # if not prev_target==None:
+    if isinstance(prev_target, Vector2D):
         dist = distance_(target, prev_target)
         if(dist>DESTINATION_THRESH):
             REPLAN = 1
     prev_target = target        
-    print("in getVelocity, FIRST_CALL = ",FIRST_CALL)
+    # print("in getVelocity, FIRST_CALL = ",FIRST_CALL)
     curPos = Vector2D(int(homePos[kubid].x),int(homePos[kubid].y))
     distance = sqrt(pow(target.x - homePos[kubid].x,2) + pow(target.y - homePos[kubid].y,2))
     if(FIRST_CALL):
@@ -53,7 +54,7 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
 
     if distance < 1.5*BOT_BALL_THRESH:
         return [0,0,0,0]
-    print("ex = ",expectedTraverseTime) 
+    # print("ex = ",expectedTraverseTime) 
     # print("t = ",t," start = ",start)
     if (t - start< expectedTraverseTime):
         if v.trapezoid(t - start,curPos):
@@ -89,13 +90,19 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
     should_replan = shouldReplan()
     if(should_replan == True):
         v.velocity = 0
-        print("v.velocity now = ",v.velocity)
-    print("entering if, should_replan = ", should_replan)
+        # print("v.velocity now = ",v.velocity)
+    # print("entering if, should_replan = ", should_replan)
     if  should_replan or \
         (errorMag > 350 and distance > 1.5* BOT_BALL_THRESH) or \
         REPLAN == 1:
-            print("Should Replan",should_replan)
-            print("ErrorMag",errorMag > 350 and distance > 2*BOT_BALL_THRESH)
+            # print("______________here____________________")
+            # print("condition 1",should_replan)
+            # print("error magnitude", errorMag)
+            # print("distance threshold",distance > 1.5* BOT_BALL_THRESH)
+            # print("condition 2",errorMag > 350 and distance > 1.5* BOT_BALL_THRESH)
+            # print("condition 3",REPLAN)
+            # print("Should Replan",should_replan)
+            # print("ErrorMag",errorMag > 350 and distance > 2*BOT_BALL_THRESH)
             REPLAN = 1
             startPt = point_2d()
             startPt.x = homePos[kubid].x
@@ -110,11 +117,11 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
         vXBot = vX*cos(botAngle) + vY*sin(botAngle)
         vYBot = -vX*sin(botAngle) + vY*cos(botAngle)
         return [vXBot, vYBot, 0, REPLAN]            
-    print("end getVelocity")    
+    # print("end getVelocity")    
         
 def shouldReplan():
     global homePos,awayPos,kubid, v
-    print("velocity = ",v.velocity)
+    # print("velocity = ",v.velocity)
     if v.velocity < 10:
         return False
 

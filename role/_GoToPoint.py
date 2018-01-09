@@ -1,70 +1,58 @@
+print "In test GOToPoint"
 from kubs import kubs, cmd_node
 from velocity.run import *
-from velocity.run_w import *
 import rospy,sys
 from krssg_ssl_msgs.msg import point_2d
 from krssg_ssl_msgs.msg import BeliefState
 from krssg_ssl_msgs.msg import gr_Commands
 from krssg_ssl_msgs.msg import gr_Robot_Command
-from utils.geometry import Vector2D
+from krssg_ssl_msgs.msg import point_SF
 from utils.config import *
 from utils.math_functions import *
-
 import memcache
-shared = memcache.Client(BS_ADDRESS,debug=0)
+shared = memcache.Client(['127.0.0.1:11211'], debug = False)
+import sys
 
+# BOT_ID = int(sys.argv[1])
+# print "bot_id received",BOT_ID
+pub = rospy.Publisher('/grsim_data', gr_Commands, queue_size=1000)
+
+GOAL_POINT = point_2d()
+GOAL_POINT.x = 1000
+GOAL_POINT.y = 1200
+REPLANNED = 0
+homePos = None
+awayPos = None
 kub = None
 start_time = None
-GOAL_POINT = None
-FLAG_move = False
-FLAG_turn = False
-rotate = 0
-
 FIRST_CALL = True
+FLAG_move = None
+target = None
 
 
-def init(_kub,target,theta):
-    global kub,GOAL_POINT,rotate,FLAG_turn,FLAG_move,FIRST_CALL
-    kub = _kub
-    GOAL_POINT = point_2d()
-    rotate = theta
-    GOAL_POINT.x = target.x
-    GOAL_POINT.y = target.y
-    FLAG_move = False
-    FLAG_turn = False
+def init(kub_,target_,theta_):
+    global start_time,kub,FLAG_move,FIRST_CALL, target
+    kub = kub_
+    FLAG_move = True
     FIRST_CALL = True
-
-
+    target = target_
+    print("initialised ")
 def reset():
     global start_time
     start_time = rospy.Time.now()
     start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
-    
-def execute(startTime,DIST_THRESH,avoid_ball=False):
-    global GOAL_POINT, start_time,FIRST_CALL,FLAG_turn,FLAG_move,kub
 
-    # print DIST_THRESH
+
+
+def execute(start_time_,DIST_THRESH,data,avoid_ball=False):
+    global homePos, REPLANNED,FIRST_CALL,FLAG_move
+    global awayPos, start_time, BState, kub, target
+    print ("safsdf")
+    # while FLAG_move:
+    data = shared.get('state')
     if FIRST_CALL:
-        start_time = startTime
+        start_time = start_time_
         FIRST_CALL = False
-
-
-    print("+++++"*100)    
-    print("condition = ",not FLAG_move and FLAG_turn)    
-    while not (FLAG_move and FLAG_turn):
-        # print not (FLAG_move and FLAG_turn)
-
-        kub.state = shared.get('state')
-        # print " in _ ",kub.state.ballPos.x
-        
-        t = rospy.Time.now()
-        t = t.secs + 1.0*t.nsecs/pow(10,9)
-        print(GOAL_POINT.x, GOAL_POINT.y)
-        print("_____________________________")
-        print(start_time,"t-start = ", t-start_time,"         ", kub.kubs_id,"Goal point", GOAL_POINT.x, GOAL_POINT.y,"bot position", kub.state.homePos[0].x, kub.state.homePos[0].y , avoid_ball)
-        print(" __________________________________")
-        [vx, vy, vw, REPLANNED] = Get_Vel(start_time, t, kub.kubs_id, GOAL_POINT, kub.state.homePos, kub.state.awayPos, avoid_ball)
-        vw = Get_Omega(kub.kubs_id,rotate,kub.state.homePos)
         
         if not vx and not vy:
             vx,vy = vx_end,vy_end
@@ -103,16 +91,9 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
         else:
             kub.move(vx, vy)
         
+
         kub.execute()
-        yield kub,GOAL_POINT
-
-
-    
-    kub.execute()
-    kub.execute()
-
-    # print "sd", not (FLAG_move and FLAG_turn)
-    # print kub.get_pos().x,kub.get_pos().y,GOAL_POINT.x,GOAL_POINT.y,
-    yield kub,GOAL_POINT
-
-
+    except Exception as e:
+        print("In except",e)
+        pass   
+        # yield kub
