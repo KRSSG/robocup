@@ -42,14 +42,15 @@ void Planning::init(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::p
   yTop=HALF_FIELD_MAXY_OMPL;
   yBottom=-HALF_FIELD_MAXY_OMPL;
   selector=gui_msgs.max_iteration;
-
+  n--;
   numObstacles = n;
+
   xc = new double[numObstacles];
   yc = new double[numObstacles];
 
   for(int i=0;i<n;i++){
-    xc[i] = v[i].x;
-    yc[i] = v[i].y;
+    xc[i] = v[i+1].x;
+    yc[i] = v[i+1].y;
   }
 
 }

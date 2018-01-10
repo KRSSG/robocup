@@ -1,7 +1,11 @@
 print("_gotopoint imported")
 from kubs import kubs, cmd_node
 print("Importing run")
-from velocity.run import *
+try:
+    velocity.run = reload(velocity.run)
+except:
+    import velocity.run
+# from velocity.run import *
 # import velocity.run 
 from velocity.run_w import *
 import rospy,sys
@@ -12,6 +16,7 @@ from krssg_ssl_msgs.msg import gr_Robot_Command
 from utils.geometry import Vector2D
 from utils.config import *
 from utils.math_functions import *
+import math
 
 import memcache
 shared = memcache.Client(BS_ADDRESS,debug=0)
@@ -65,6 +70,15 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
             t = t.secs + 1.0*t.nsecs/pow(10,9)
 
             [vx, vy, vw, REPLANNED] = velocity.run.Get_Vel(start_time, t, kub.kubs_id, GOAL_POINT, kub.state.homePos, kub.state.awayPos, avoid_ball)
+            velocity_magnitude = Vector2D(vx,vy).abs(Vector2D(vx,vy))
+            if velocity_magnitude > MAX_BOT_SPEED:
+                angle_movement = math.atan2(vy,vx)
+                print("_____________Velocity Changed____________")
+                vy = MAX_BOT_SPEED*math.sin(angle_movement)
+                vx = MAX_BOT_SPEED*math.cos(angle_movement)
+                # pass
+            # vy = min(vy,MIN_BOT_SPEED)
+
             vw = Get_Omega(kub.kubs_id,rotate,kub.state.homePos)
             
             if not vw:
@@ -80,16 +94,17 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
 
             if abs(kub.state.homePos[kub.kubs_id].theta-rotate)<ROTATION_FACTOR:
                 kub.turn(0)
-                # print("Angle completed")
+                print("Angle completed")
                 FLAG_turn = True
             else:
                 kub.turn(vw)
             # print("Distance ______",dist(kub.state.homePos[kub.kubs_id], GOAL_POINT))
-            if dist(kub.state.homePos[kub.kubs_id], GOAL_POINT)<DIST_THRESH :
+            if dist(kub.state.homePos[kub.kubs_id], GOAL_POINT)<0 :
                 kub.move(0,0)
-                # print("Distance completed")
+                print("Distance completed")
                 FLAG_move = True
             else:
+                print("Sending velocity",vx,vy)
                 kub.move(vx, vy)
 
             kub.execute()
@@ -101,7 +116,7 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
 
     
     kub.execute()
-    kub.execute()
+    # kub.execute()
 
     yield kub,GOAL_POINT
 

@@ -3,6 +3,10 @@ from enum import Enum
 import behavior
 print("Importing _gotopoint_")
 import _GoToPoint_
+try:
+    _GoToPoint_ = reload(_GoToPoint_)
+except:
+    import _GoToPoint_
 import rospy
 from utils.math_functions import *
 from utils.config import *
@@ -70,7 +74,7 @@ class GoToPoint(behavior.Behavior):
 
     def at_new_point(self):
         #print (dist(self.target_point,self.new_point),210)
-        return dist(self.target_point,self.new_point) < DISTANCE_THRESH
+        return dist(self.target_point,self.new_point) < 0
 
         
     def on_enter_setup(self):

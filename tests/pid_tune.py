@@ -34,25 +34,29 @@ def main():
 	paddingX = 200	
 	paddingY = 100
 
-	points = [
-		Vector2D((HALF_FIELD_MAXX-paddingX),(HALF_FIELD_MAXY-paddingY)),
-		# Vector2D((HALF_FIELD_MAXX*0-paddingX),-(HALF_FIELD_MAXY-paddingY)),
-		Vector2D((HALF_FIELD_MAXX-paddingX),-(HALF_FIELD_MAXY-paddingY)),
-		# Vector2D(-(HALF_FIELD_MAXX-paddingX),(HALF_FIELD_MAXY-paddingY)),
-	]
+	# points = [
+	# 	Vector2D((HALF_FIELD_MAXX-paddingX),(HALF_FIELD_MAXY-paddingY)),
+	# 	# Vector2D((HALF_FIELD_MAXX*0-paddingX),-(HALF_FIELD_MAXY-paddingY)),
+	# 	Vector2D((HALF_FIELD_MAXX-paddingX),-(HALF_FIELD_MAXY-paddingY)),
+	# 	# Vector2D(-(HALF_FIELD_MAXX-paddingX),(HALF_FIELD_MAXY-paddingY)),
+	# ]
+	# x: -2561.67480469
+    # y: -2001.43408203
+	point = Vector2D(-2300,-1750)
+	# point = Vector2D(HALF_FIELD_MAXX, HALF_FIELD_MAXY)
 	pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 	state = shared.get('state')
 	kub = kubs.kubs(BOT_ID,state,pub)
 
 	# while True:
-	for p in points:
-		print("Starting again")
-		state = shared.get('state')
-		kub.update_state(state)
-		g_fsm = GoToPoint.GoToPoint()
-		g_fsm.add_kub(kub)
-		g_fsm.add_point(point=p,orient=state.homePos[kub.kubs_id].theta)
-		g_fsm.spin()
+	# for p in points:
+	print("Starting again")
+	state = shared.get('state')
+	kub.update_state(state)
+	g_fsm = GoToPoint.GoToPoint()
+	g_fsm.add_kub(kub)
+	g_fsm.add_point(point=point,orient=state.homePos[kub.kubs_id].theta)
+	g_fsm.spin()
 
 if __name__ == '__main__':
 	main()

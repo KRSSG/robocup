@@ -130,7 +130,7 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
     if pso.should_save_data:
         print("here")
         import sys
-        # sys.exit(0)
+        sys.exit(0)
     botAngle = homePos[kubid].theta
     vXBot = vX*cos(botAngle) + vY*sin(botAngle)
     vYBot = -vX*sin(botAngle) + vY*cos(botAngle)
