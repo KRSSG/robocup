@@ -70,8 +70,8 @@ class Planning{
      * @param[in]  n         Total Number of Bots
      * @param[in]  gui_msgs  msg from gui node
      */
-    Planning(std::vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs);
-    void init(std::vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs);
+    Planning(std::vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs, int BOT_ID);
+    void init(std::vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs, int BOT_ID);
     
     /**
  * @brief      Determines if ompl state is valid.

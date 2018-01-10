@@ -6,6 +6,8 @@ import rospy
 import numpy as np
 import matplotlib.pyplot as plt
 import time
+from utils.config import *
+from utils.geometry import *
 dt = 0.001
 
 # try:
@@ -44,12 +46,25 @@ def pid(vX,vY,errorInfo,pso=None):
 	errorY = np.array([errorPY,errorIY,errorDY])
 	if pso==None:
 		# k = np.array([0,0,0]) 		#define k
-		k = np.array([0.1,0.00,0.00])
+		k = np.array([3.5,0.00001,0.0003])
+		print("PID applied")
 		deltaVX = errorX.dot(k)
 		deltaVY = errorY.dot(k)
+		errorInfo.errorIX = errorInfo.errorIX + errorInfo.errorX
+		errorInfo.errorIY = errorInfo.errorIY + errorInfo.errorY
+		errorInfo.lastErrorX = errorInfo.errorX
+		errorInfo.lastErrorY = errorInfo.errorY
 
 		vX = vX + deltaVX
 		vY = vY + deltaVY
+
+		velocity = Vector2D(vX,vY)
+		velocity_magnitude = velocity.abs(velocity)
+		if velocity_magnitude > MAX_BOT_SPEED:
+			velocity_angle = math.atan2(vY,vX)
+			vX = MAX_BOT_SPEED*math.cos(velocity_angle)
+			vY = MAX_BOT_SPEED*math.sin(velocity_angle)
+			print("________________Velocity Clipped________________")
 		return vX,vY
 
 	# Optimiser (PSO)

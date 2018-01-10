@@ -60,7 +60,7 @@ MAX_WHEEL_SPEED            = SELECT(2000, 100)                 #mm/s
 MAX_BOT_LINEAR_ACC         = SELECT(1000, 100)                 #mm/s/s
 MAX_BOT_LINEAR_VEL_CHANGE  = SELECT(10, 3)
 
-FFV 					  = SELECT(0.5,10.0)
+FFV 					  = SELECT(1.0,10.0)
 FFA 					  = SELECT(1.0,5.0)
 
 #MAX_BOT_ACCELERATION       = SELECT(900, 900) as per sudo  
