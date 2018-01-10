@@ -6,6 +6,7 @@ import rospy
 import numpy as np
 import matplotlib.pyplot as plt
 import time
+import sys
 dt = 0.001
 
 # try:
@@ -31,9 +32,9 @@ dt = 0.001
 ##
 ## @return     Velocity after PID
 ##
-i = 0
+# i = 0
 def pid(vX,vY,errorInfo,pso=None):
-	global i,f
+	global f
 	errorPX = errorInfo.errorX
 	errorPY = errorInfo.errorY
 	errorIX = errorInfo.errorIX + errorPX
@@ -42,14 +43,26 @@ def pid(vX,vY,errorInfo,pso=None):
 	errorDY = (errorPY - errorInfo.lastErrorY)/dt
 	errorX = np.array([errorPX,errorIX,errorDX])
 	errorY = np.array([errorPY,errorIY,errorDY])
-	if pso==None:
+	# print(pso.__dict__)
+	pso.error_in_x.append(errorPX)
+	pso.error_in_y.append(errorPY)
+	if pso==None or 1:
 		# k = np.array([0,0,0]) 		#define k
-		k = np.array([0.1,0.00,0.00])
+		k = np.array([4,0.00,0.0003])
+		print("Errors X",errorX)
 		deltaVX = errorX.dot(k)
 		deltaVY = errorY.dot(k)
-
+		if pso.should_save_data:
+			print("Data saved")
+			np.savetxt("k=4d=0.0003x.txt",pso.error_in_x)
+			np.savetxt("k=4d=0.0003y.txt",pso.error_in_y)
+			# sys.exit(0)
 		vX = vX + deltaVX
 		vY = vY + deltaVY
+		errorInfo.errorIX = errorInfo.errorIX + errorInfo.errorX
+		errorInfo.errorIY = errorInfo.errorIY + errorInfo.errorY
+		errorInfo.lastErrorX = errorInfo.errorX
+		errorInfo.lastErrorY = errorInfo.errorY
 		return vX,vY
 
 	# Optimiser (PSO)

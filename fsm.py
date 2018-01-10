@@ -1,9 +1,10 @@
-import logging,os
+import logging
+import os
 from enum import Enum
 import graphviz as gv
 
 
-## @brief generic hierarchial state machine class.
+# @brief generic hierarchial state machine class.
 #
 # states can have substates.  If the machine is in a state, then it is also implicitly in that state's parent state
 # this basically provides for polymorphism/subclassing of state machines
@@ -13,10 +14,12 @@ import graphviz as gv
 # * execute_STATE
 # * on_exit_STATE
 #
-# Subclasses of StateMachine can optionally implement them and they will automatically be called at the appropriate times.
+# Subclasses of StateMachine can optionally implement them and they will
+# automatically be called at the appropriate times.
 class StateMachine(object):
-    def __init__(self, start_state,end_state):
-        #print "fsm"
+
+    def __init__(self, start_state, end_state):
+        # print "fsm"
         # stores all states in the form _state_hierarchy[state] = parent_state
         self._state_hierarchy = {}
         self._transitions = {}
@@ -28,17 +31,18 @@ class StateMachine(object):
     def start_state(self):
         return self._start_state
 
-    ## Resets the FSM back into the start state
+    # Resets the FSM back into the start state
     def restart(self):
         self.transition(self.start_state)
 
-    ## Registers a new state (which can optionally be a substate of an existing state)
+    # Registers a new state (which can optionally be a substate of an existing
+    # state)
     def add_state(self, state, parent_state=None):
         if not isinstance(state, Enum):
             raise TypeError("State should be an Enum type")
         self._state_hierarchy[state] = parent_state
 
-    ## Runs the FSM
+    # Runs the FSM
     # checks transition conditions for all edges leading away from the current state
     # if one evaluates to true, we transition to it
     # if more than one evaluates to true, we throw a RuntimeError
@@ -71,7 +75,9 @@ class StateMachine(object):
             if self.state in self._transitions:
                 for next_state, transition in self._transitions[self.state].items():
                     if transition['condition']():
+                        
                         next_states += [next_state]
+                        print(transition['name'])
 
             if len(next_states) > 1:
                 logging.warn(
@@ -83,20 +89,25 @@ class StateMachine(object):
                 self.transition(next_states[0])
 
         # if a transition occurred during the spin, we'll spin again
-        # note: this could potentially cause infinite recursion (although it shouldn't)
-        print ' :from '+str(s1)+'  to '+str(self.state)+' :'
+        # note: this could potentially cause infinite recursion (although it
+        # shouldn't)
+        # print(self._transitions[s1])
+        print ' :from ' + str(s1) + '  to ' + str(self.state) + ' :' 
+        # if s1 is not None:
+        #     print(self._transitions[s1])
 
-        if s1 != self.state :
+        if s1 != self.state:
             # print self.state is not self._end_state
             StateMachine.spin(self)
 
-    # if you add a transition that already exists, the old one will be overwritten
+    # if you add a transition that already exists, the old one will be
+    # overwritten
     def add_transition(self, from_state, to_state, condition, event_name):
         if from_state not in self._transitions:
             self._transitions[from_state] = {}
 
-        self._transitions[from_state][to_state] = {'condition' : condition,
-                                                   'name' : event_name}
+        self._transitions[from_state][to_state] = {'condition': condition,
+                                                   'name': event_name}
 
     # sets @state to the new_state given
     # calls 'on_exit_STATENAME()' if it exists
@@ -110,7 +121,8 @@ class StateMachine(object):
                     # print method_name
                     state_method = None
                     try:
-                        state_method = getattr(self, method_name)  # call the transition FROM method if it exists
+                        # call the transition FROM method if it exists
+                        state_method = getattr(self, method_name)
                     except AttributeError:
                         pass
                     if state_method is not None:
@@ -122,7 +134,8 @@ class StateMachine(object):
                 # print method_name
                 state_method = None
                 try:
-                    state_method = getattr(self, method_name)  # call the transition TO method if it exists
+                    # call the transition TO method if it exists
+                    state_method = getattr(self, method_name)
                 except AttributeError:
                     pass
                 if state_method is not None:
@@ -130,14 +143,15 @@ class StateMachine(object):
 
         self._state = new_state
 
-    # traverses the state hierarchy to see if it's in @state or one of @state's descendent states
+    # traverses the state hierarchy to see if it's in @state or one of
+    # @state's descendent states
     def is_in_state(self, state):
         return self.state_is_substate(self.state, state)
 
     def state_is_substate(self, state, possible_parent):
         ancestor = state
         while ancestor is not None:
-            if possible_parent == ancestor: 
+            if possible_parent == ancestor:
                 return True
             ancestor = self._state_hierarchy[ancestor]
 
@@ -212,9 +226,9 @@ class StateMachine(object):
         g = self.as_graphviz()
         if not os.path.exists(os.getcwd() + '/Digraph/'):
             os.mkdir(os.getcwd() + '/Digraph/')
-        g.render(os.getcwd() + '/Digraph/' + self.__class__.__name__, cleanup=True)
+        g.render(os.getcwd() + '/Digraph/' +
+                 self.__class__.__name__, cleanup=True)
 
     @property
     def state(self):
         return self._state
-

@@ -1,3 +1,4 @@
+print("imported run")
 import sys
 import os
 import rospy
@@ -16,7 +17,7 @@ v = None
 kubid = None
 expectedTraverseTime = None
 pso = None
-# pso = PSO(5,20,1000,2,1,0.5)
+pso = PSO(5,20,1000,1,1,0.5)
 errorInfo = Error()
 REPLAN = 0
 FIRST_CALL = 1
@@ -50,74 +51,92 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
         startPt = point_2d()
         startPt.x = homePos[kubid].x
         startPt.y = homePos[kubid].y
+        print("First Call")
+        print("Start Point",startPt.x,startPt.y)
+        print("target",target.x,target.y)
         findPath(startPt, target, avoid_ball)
         FIRST_CALL = 0
 
     if distance < 1.5*BOT_BALL_THRESH:
         return [0,0,0,0]
-    # print("ex = ",expectedTraverseTime) 
-    # print("t = ",t," start = ",start)
-    if (t - start< expectedTraverseTime):
-        if v.trapezoid(t - start,curPos):
-            index = v.GetExpectedPositionIndex()
-            if index == -1:
-                vX,vY,eX,eY = v.sendVelocity(v.getVelocity(),v.motionAngle[index],index)
-                vX,vY = 0,0
+    print("ex = ",expectedTraverseTime,"t -start = ",t-start) 
+    # print("t -start = ",t-start)
+    # if (t - start< expectedTraverseTime):
 
-            else:
-                vX,vY,eX,eY = v.sendVelocity(v.getVelocity(),v.motionAngle[index],index)
+
+    if v.trapezoid(t - start,curPos):
+        index = v.GetExpectedPositionIndex()
+        if index == -1:
+            vX,vY,eX,eY = v.sendVelocity(v.getVelocity(),v.motionAngle[index],index)
+            vX,vY = 0,0
 
         else:
-            # print(t-start, expectedTraverseTime)
-            if expectedTraverseTime == 'REPLAN':
-                REPLAN = 1
-            # print("Motion Not Possible")
-            vX,vY,eX,eY = 0,0,0,0
-            flag = 1
+            vX,vY,eX,eY = v.sendVelocity(v.getVelocity(),v.motionAngle[index],index)
+
     else:
-        # print("TimeOUT, REPLANNING")
+        # print(t-start, expectedTraverseTime)
+        if expectedTraverseTime == 'REPLAN':
+            REPLAN = 1
+        # print("Motion Not Possible")
         vX,vY,eX,eY = 0,0,0,0
-        errorInfo.errorIX = 0.0
-        errorInfo.errorIY = 0.0
-        errorInfo.lastErrorX = 0.0
-        errorInfo.lastErrorY = 0.0
-        startPt = point_2d()
-        startPt.x = homePos[kubid].x
-        startPt.y = homePos[kubid].y
-        findPath(startPt,target, avoid_ball)
+        flag = 1
+    # else:
+    #     # print("TimeOUT, REPLANNING")
+    #     vX,vY,eX,eY = 0,0,0,0
+    #     errorInfo.errorIX = 0.0
+    #     errorInfo.errorIY = 0.0
+    #     errorInfo.lastErrorX = 0.0
+    #     errorInfo.lastErrorY = 0.0
+    #     startPt = point_2d()
+    #     startPt.x = homePos[kubid].x
+    #     startPt.y = homePos[kubid].y
+    #     findPath(startPt,target, avoid_ball)
 
     errorMag = sqrt(pow(eX,2) + pow(eY,2))
 
-    should_replan = shouldReplan()
-    if(should_replan == True):
-        v.velocity = 0
+    # should_replan = shouldReplan()
+    # if(should_replan == True):
+    #     v.velocity = 0
         # print("v.velocity now = ",v.velocity)
     # print("entering if, should_replan = ", should_replan)
-    if  should_replan or \
-        (errorMag > 350 and distance > 1.5* BOT_BALL_THRESH) or \
-        REPLAN == 1:
-            # print("______________here____________________")
-            # print("condition 1",should_replan)
-            # print("error magnitude", errorMag)
-            # print("distance threshold",distance > 1.5* BOT_BALL_THRESH)
-            # print("condition 2",errorMag > 350 and distance > 1.5* BOT_BALL_THRESH)
-            # print("condition 3",REPLAN)
-            # print("Should Replan",should_replan)
-            # print("ErrorMag",errorMag > 350 and distance > 2*BOT_BALL_THRESH)
-            REPLAN = 1
-            startPt = point_2d()
-            startPt.x = homePos[kubid].x
-            startPt.y = homePos[kubid].y
-            findPath(startPt,target, avoid_ball)
-            return [0,0,0, REPLAN]  
-    else:
-        errorInfo.errorX = eX
-        errorInfo.errorY = eY
-        vX,vY = pid(vX,vY,errorInfo,pso)
-        botAngle = homePos[kubid].theta
-        vXBot = vX*cos(botAngle) + vY*sin(botAngle)
-        vYBot = -vX*sin(botAngle) + vY*cos(botAngle)
-        return [vXBot, vYBot, 0, REPLAN]            
+    # if  should_replan or \
+    #     (errorMag > 350 and distance > 1.5* BOT_BALL_THRESH) or \
+    #     REPLAN == 1:
+    #         # print("______________here____________________")
+    #         # print("condition 1",should_replan)
+    #         # print("error magnitude", errorMag)
+    #         # print("distance threshold",distance > 1.5* BOT_BALL_THRESH)
+    #         # print("condition 2",errorMag > 350 and distance > 1.5* BOT_BALL_THRESH)
+    #         # print("condition 3",REPLAN)
+    #         # print("Should Replan",should_replan)
+    #         # print("ErrorMag",errorMag > 350 and distance > 2*BOT_BALL_THRESH)
+    #         REPLAN = 1
+    #         startPt = point_2d()
+    #         startPt.x = homePos[kubid].x
+    #         startPt.y = homePos[kubid].y
+    #         findPath(startPt,target, avoid_ball)
+    #         return [0,0,0, REPLAN]  
+    # else:
+    # 
+    
+    errorInfo.errorX = eX
+    errorInfo.errorY = eY
+    if t - start > expectedTraverseTime:
+        pso.should_save_data = True
+        print("saving")
+    print("Send Velocity ",vX,vY)
+    vX,vY = pid(vX,vY,errorInfo,pso)
+    print("after pid Send Velocity ",vX,vY)
+    if pso.should_save_data:
+        print("here")
+        import sys
+        # sys.exit(0)
+    botAngle = homePos[kubid].theta
+    vXBot = vX*cos(botAngle) + vY*sin(botAngle)
+    vYBot = -vX*sin(botAngle) + vY*cos(botAngle)
+    errorInfo.lastErrorX = errorInfo.errorX
+    errorInfo.lastErrorY = errorInfo.errorY
+    return [vXBot, vYBot, 0, REPLAN]            
     # print("end getVelocity")    
         
 def shouldReplan():
@@ -149,6 +168,7 @@ def findPath(startPoint,end,avoid_ball=False):
     global FLAG_PATH_RECEIVED, REPLAN
     FLAG_PATH_RECEIVED = 1
     REPLAN = 1
+    print("Calculating path")
     global v,expectedTraverseTime,kubid
     global start,target
     global pso,errorInfo
@@ -158,9 +178,6 @@ def findPath(startPoint,end,avoid_ball=False):
     startPt.y = startPoint.y
     target.x = end.x
     target.y = end.y
-    # print("Start Point ",startPt.x,startPt.y)
-    # print("Target Point",target.x,target.y)
-    # print("Waiting for service")
     rospy.wait_for_service('planner')
 
     planner = rospy.ServiceProxy('planner', path_plan)
@@ -176,6 +193,6 @@ def findPath(startPoint,end,avoid_ball=False):
     expectedTraverseTime = v.getTime(v.GetPathLength())
     global time_cal
     time_cal = expectedTraverseTime
-    # pso = PSO(5,20,1000,1,1,0.5)
+    pso = PSO(5,20,1000,1,1,0.5)
     errorInfo = Error()
     # print("Path Planned")

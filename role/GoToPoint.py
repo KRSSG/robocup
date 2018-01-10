@@ -1,5 +1,7 @@
+print("Gotopoint imported")
 from enum import Enum
 import behavior
+print("Importing _gotopoint_")
 import _GoToPoint_
 import rospy
 from utils.math_functions import *
@@ -87,6 +89,7 @@ class GoToPoint(behavior.Behavior):
         super().terminate()
 
     def execute_drive(self):
+        print("Execute drive")
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
         generatingfunction = _GoToPoint_.execute(start_time,DISTANCE_THRESH)
