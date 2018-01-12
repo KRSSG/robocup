@@ -1,0 +1,12 @@
+digraph "Protobuf.GrSimReplacement.grSim_BallReplacement.isInitialized"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.GrSimReplacement.gr\lSim_BallReplacement.isInitialized",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Protobuf.GrSimReplacement.gr\lSim_RobotReplacementOrBuilder.hasX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dff/interface_protobuf_1_1_gr_sim_replacement_1_1gr_sim___robot_replacement_or_builder.html#ae99dec0226e63bb4ed94c60726e7909e"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.GrSimReplacement.gr\lSim_RobotReplacementOrBuilder.hasY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dff/interface_protobuf_1_1_gr_sim_replacement_1_1gr_sim___robot_replacement_or_builder.html#a551d43b8b716d91dae2bad095e2912f5"];
+}

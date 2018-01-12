@@ -1,0 +1,27 @@
+digraph "VarTypes::VarExternal"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="VarTypes::VarExternal",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d74/class_var_types_1_1_var_list.html",tooltip="This is the list type of the VarTypes system. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html",tooltip="The base class of the VarTypes system. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="QObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d4f/class_q_object.html"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarVal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _flags" ,fontname="Helvetica"];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _name" ,fontname="Helvetica"];
+  Node7 [label="std::string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node9 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _mutex" ,fontname="Helvetica"];
+  Node9 [label="QMutex",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" list" ,fontname="Helvetica"];
+  Node10 [label="std::vector\< VarTypes\l::VarType * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" filename" ,fontname="Helvetica"];
+}

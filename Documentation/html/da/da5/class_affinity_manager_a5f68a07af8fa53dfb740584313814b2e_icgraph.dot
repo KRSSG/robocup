@@ -1,0 +1,12 @@
+digraph "AffinityManager::parseFileUpTo"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="AffinityManager::parseFileUpTo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="AffinityManager::parseCpuInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da5/class_affinity_manager.html#a2ef32b36feba97428256f1faaa3712bd"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="AffinityManager::Affinity\lManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da5/class_affinity_manager.html#ab2d436a3ac602f39129b60897fff83ba"];
+}

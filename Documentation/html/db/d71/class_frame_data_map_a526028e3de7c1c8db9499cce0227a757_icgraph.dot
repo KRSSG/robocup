@@ -1,0 +1,22 @@
+digraph "FrameDataMap::insert"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="FrameDataMap::insert",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PluginColorThreshold\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d9e/class_plugin_color_threshold.html#ae29da5a42de8efcc35c0f64856d781ae"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PluginRunlengthEncode\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d41/class_plugin_runlength_encode.html#a9af9d0cedabb2d52b028f732b707324c"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PluginFindBlobs::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d88/class_plugin_find_blobs.html#a41ea8f1fcf4d0ca0b8119b5946fc1441"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PluginDetectRobots\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d27/class_plugin_detect_robots.html#adcea998497d6d8c3de23ec75f993d3dc"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PluginVisualize::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#a9fb83c5f31f4ad6205bada831b2547c0"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PluginDetectBalls::\lprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d5c/class_plugin_detect_balls.html#aedc36534989a26c68205855352f3e1d4"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CaptureThread::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de9/class_capture_thread.html#ace6f66e410cac572d775a968841344d5"];
+}

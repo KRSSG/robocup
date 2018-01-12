@@ -1,0 +1,14 @@
+digraph "CGraphics::_drawPatch"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CGraphics::_drawPatch",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CGraphics::_drawSphere",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#adc20f86b40f6dd10fab6f100497137f7"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CGraphics::drawSphere",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#a4c4aba4c8d342d895f3f196bf5acb73a"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PBall::draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d9b/class_p_ball.html#a16741d3fe2a0ef1019ebeea35ef465aa"];
+}

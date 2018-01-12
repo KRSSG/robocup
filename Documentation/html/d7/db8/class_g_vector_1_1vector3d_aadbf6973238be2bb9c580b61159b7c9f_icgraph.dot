@@ -1,0 +1,12 @@
+digraph "GVector::vector3d::operator-"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GVector::vector3d::\loperator-",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GVector::vector3d\<\l double \>::nonzero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/db8/class_g_vector_1_1vector3d.html#af0729e675ba7527b4303ae8552fec04f"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GVector::vector2d\<\l float \>::perp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d10/class_g_vector_1_1vector2d.html#aa6fb9399f2a7da375d4ad7ab07dc3e02",tooltip="return the perpendicular of a vector (i.e. rotated 90 deg clockwise) "];
+}

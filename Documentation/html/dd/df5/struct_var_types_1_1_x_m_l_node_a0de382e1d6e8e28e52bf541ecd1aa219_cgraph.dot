@@ -1,0 +1,12 @@
+digraph "VarTypes::XMLNode::deleteAttribute"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::XMLNode::\ldeleteAttribute",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::XMLNode::\ldeleteAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a673516bd970c19c7a1eee845e19aa76f"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::XMLNode::\lgetAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a63a980fcd642b60f109128d9a2d92b40"];
+}

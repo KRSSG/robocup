@@ -1,0 +1,12 @@
+<map id="printRobotInfo" name="printRobotInfo">
+<area shape="rect" id="node2" href="$d0/d30/class_s_s_l___detection_robot.html#a1d97bf539ab936970b87ef7227901244" title="SSL_DetectionRobot\l::confidence" alt="" coords="165,5,310,47"/>
+<area shape="rect" id="node3" href="$d0/d30/class_s_s_l___detection_robot.html#a34487c873a686b45e9fe71b52cb69278" title="SSL_DetectionRobot\l::has_orientation" alt="" coords="165,71,310,112"/>
+<area shape="rect" id="node4" href="$d0/d30/class_s_s_l___detection_robot.html#a34dd202d20152a26ab7fd5260de88396" title="SSL_DetectionRobot\l::has_robot_id" alt="" coords="165,136,310,177"/>
+<area shape="rect" id="node5" href="$d0/d30/class_s_s_l___detection_robot.html#a27c206ebea25f23efa8d366569f60c96" title="SSL_DetectionRobot\l::height" alt="" coords="165,201,310,243"/>
+<area shape="rect" id="node6" href="$d0/d30/class_s_s_l___detection_robot.html#a9e90e0537ebd1ca97636053a72e30f1b" title="SSL_DetectionRobot\l::orientation" alt="" coords="165,267,310,308"/>
+<area shape="rect" id="node7" href="$d0/d30/class_s_s_l___detection_robot.html#af7d95e01dc51fc3a10e1049f6cefd9bd" title="SSL_DetectionRobot\l::pixel_x" alt="" coords="165,332,310,373"/>
+<area shape="rect" id="node8" href="$d0/d30/class_s_s_l___detection_robot.html#a35b7ee812ade11a188742037c361a2b8" title="SSL_DetectionRobot\l::pixel_y" alt="" coords="165,397,310,439"/>
+<area shape="rect" id="node9" href="$d0/d30/class_s_s_l___detection_robot.html#a15d7fb18efdd2a2fc62761cda6c3a3d4" title="SSL_DetectionRobot\l::robot_id" alt="" coords="165,463,310,504"/>
+<area shape="rect" id="node10" href="$d0/d30/class_s_s_l___detection_robot.html#ab26732ef505b608cbf2066ed5398c04b" title="SSL_DetectionRobot::x" alt="" coords="157,529,317,555"/>
+<area shape="rect" id="node11" href="$d0/d30/class_s_s_l___detection_robot.html#a3e8b20fa95d9274aa1dbd0478d0f92e7" title="SSL_DetectionRobot::y" alt="" coords="157,579,317,606"/>
+</map>

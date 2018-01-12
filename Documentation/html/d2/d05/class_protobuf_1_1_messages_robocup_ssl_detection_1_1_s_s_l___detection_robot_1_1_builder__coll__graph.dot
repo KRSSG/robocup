@@ -1,0 +1,18 @@
+digraph "Protobuf.MessagesRobocupSslDetection.SSL_DetectionRobot.Builder"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslDetection.SSL_DetectionRobot.\lBuilder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="com::google::protobuf\l::GeneratedMessage::Builder\l\< Builder \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.MessagesRobocup\lSslDetection.SSL_DetectionRobot\lOrBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dab/interface_protobuf_1_1_messages_robocup_ssl_detection_1_1_s_s_l___detection_robot_or_builder.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MessageOrBuilder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" orientation_\nheight_\ny_\nconfidence_\nx_\npixelX_\npixelY_" ,fontname="Helvetica"];
+  Node5 [label="float",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" robotId_\nbitField0_" ,fontname="Helvetica"];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,0 +1,21 @@
+digraph "Protobuf.GrSimCommands.grSim_Robot_Command.Builder.setWheel1"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.GrSimCommands.gr\lSim_Robot_Command.Builder.setWheel1",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Client.Conection.send",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dc4/class_client_1_1_conection.html#ab60bc951fb7422421e3a246f783c3356"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Client.Interface.jButton1\lActionPerformed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/ddc/class_client_1_1_interface.html#a777051b7817d99fafc49942e8a2dd685"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Client.Interface.initComponents",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/ddc/class_client_1_1_interface.html#a9e16e6e02c811d0b0f2971becf4cba2f"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Client.Interface.Interface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/ddc/class_client_1_1_interface.html#a741e42f1fbe22236e25cfb584080fd94"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Client.Interface.main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/ddc/class_client_1_1_interface.html#a33aa2a0e42d5795ac1db82cf9a47daca"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Client.Interface.jButton2\lActionPerformed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/ddc/class_client_1_1_interface.html#a49a8bbb1d325b69df681d35b32ca2103"];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

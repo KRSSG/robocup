@@ -1,0 +1,28 @@
+digraph "grSim_RobotReplacement::InternalSerializeWithCachedSizesToArray"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="grSim_RobotReplacement\l::InternalSerializeWithCached\lSizesToArray",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="grSim_RobotReplacement::dir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#ac409ae3d9f9a9bb7bd3e7d137acef23a"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="grSim_RobotReplacement\l::has_dir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#a0c453b87b3fece57ebcad6616ced92d0"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="grSim_RobotReplacement\l::has_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#af957b1d39930964f86fb528936d94cbf"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="grSim_RobotReplacement\l::has_x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#acfcdd7fc2d61dd9e564572af73821e66"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="grSim_RobotReplacement\l::has_y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#ad6e3855d3220c7f6c68351d0c595c9fb"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="grSim_RobotReplacement\l::has_yellowteam",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#a75517bc58bf148db35c91987f5e15b88"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="grSim_RobotReplacement\l::unknown_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#a7128622825c3a0045de7f50574e34297"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="grSim_RobotReplacement::x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#a6171256fdb82fb8fb5309fb26f86936f"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="grSim_RobotReplacement::y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#aeea1c17150b7a1fca390c10cfe6224af"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="grSim_RobotReplacement\l::yellowteam",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#a8549b89c9e9e10c042f87d7d60e569da"];
+}

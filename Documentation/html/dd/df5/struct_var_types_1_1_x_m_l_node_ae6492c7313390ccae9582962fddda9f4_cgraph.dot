@@ -1,0 +1,31 @@
+digraph "VarTypes::XMLNode::guessUTF8ParsingParameterValue"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::XMLNode::\lguessUTF8ParsingParameterValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::_strnicmp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#af52f055a46a1fa71cb78a3a0077dd687"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::mmin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a79336a796427f5695c30245788a8b484"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::myIsTextUnicode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a96ef7a052862123ba3a3ffe21f4aacfa"];
+  Node4 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::myWideCharToMultiByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a6787715045c42131396c03f2c811dc59"];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::_tcscpy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a6fff4e7b88089652d2d8ade07bbe0df7"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="VarTypes::_tcsicmp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#af64b449517cf3d9ef1b19a7323bfd99c"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="VarTypes::_tcslen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a33f094a769ad68c264640d65736e12df"];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="VarTypes::_tcsnicmp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a2174205992bd64227e480b567e5a9065"];
+  Node5 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="VarTypes::_tcsstr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a9caa6f2a97f5c5e328d6d5346e42f1bf"];
+  Node5 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="VarTypes::_tfopen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a082ff12816b37e226e83fad7152c8a79"];
+}

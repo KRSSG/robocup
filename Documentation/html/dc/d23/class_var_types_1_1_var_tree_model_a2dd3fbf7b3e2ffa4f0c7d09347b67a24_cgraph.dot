@@ -1,0 +1,16 @@
+digraph "VarTypes::VarTreeModel::VarTreeModel"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::VarTreeModel\l::VarTreeModel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarTreeModel\l::resetViewOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d23/class_var_types_1_1_var_tree_model.html#a2d5c68fb85891ffb3262437c76f82498"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarTreeViewOptions\l::setColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d40/class_var_types_1_1_var_tree_view_options.html#a4e41067fa7cf92a4462f5b61b57bc5b6"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarTreeModel\l::updateHeader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d23/class_var_types_1_1_var_tree_model.html#a30bf7fc69692292201c3f2ad3cbcad42"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarTreeViewOptions\l::getColumns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d40/class_var_types_1_1_var_tree_view_options.html#a15b35fe3333f62a8650990daa3dc8afa"];
+}

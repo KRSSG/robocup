@@ -1,0 +1,14 @@
+digraph "ConfigWidget::BallSlip"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ConfigWidget::BallSlip",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MainWindow::changeBallGround\lSurface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a522401d296858c4d88d9f750da09721b"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MainWindow::customFPS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a54b84786850165c4e5466bc2e4097810"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ConfigWidget::ConfigWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d55/class_config_widget.html#a7ef900142fc1a65ef49c13f89b669820"];
+}

@@ -1,0 +1,14 @@
+digraph "Robot::shape"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Robot::shape",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d8b/listener_8cpp.html#ac7e332386e86e341c48b409c2cbe8e1c"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="distance_",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d8b/listener_8cpp.html#ad8ebde7f19a05b1932e031188de5fd24"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Planning::planSimple",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db5/class_planning.html#a744d359a25387ab5e94cfa12e302ac8e",tooltip="Set Dimensions for ompl space. "];
+}

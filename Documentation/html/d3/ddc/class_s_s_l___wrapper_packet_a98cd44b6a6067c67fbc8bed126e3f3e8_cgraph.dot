@@ -1,0 +1,36 @@
+digraph "SSL_WrapperPacket::MergeFrom"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SSL_WrapperPacket::\lMergeFrom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SSL_WrapperPacket::\ldetection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/ddc/class_s_s_l___wrapper_packet.html#a3d39a7f638ed7ed7ef54e36063ab2da0"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SSL_DetectionFrame\l::internal_default_instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/dd1/class_s_s_l___detection_frame.html#ad797433fe7d6ec9e8eb587b3162e8811"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SSL_DetectionBall::Swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d53/class_s_s_l___detection_ball.html#a381f7671916a343facc4e42d27ca197b"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SSL_DetectionBall::\lInternalSwap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d53/class_s_s_l___detection_ball.html#aa06f05deb8cce7d062877bdbb7aa19be"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="SSL_WrapperPacket::\lgeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/ddc/class_s_s_l___wrapper_packet.html#af6c6b8ad0595b3c3502caa43dfa19361"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="SSL_GeometryData::internal\l_default_instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d01/class_s_s_l___geometry_data.html#ac5ab7a05a94e8346f9c3f858b5362337"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="SSL_GeometryFieldSize\l::Swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d30/class_s_s_l___geometry_field_size.html#ae5f47673f64c375c4b43bb0a10d99c7b"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="SSL_GeometryFieldSize\l::InternalSwap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d30/class_s_s_l___geometry_field_size.html#ae1952b0a9f1b9820e7854b304052a38d"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="SSL_WrapperPacket::\lhas_detection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/ddc/class_s_s_l___wrapper_packet.html#ad95e2fcb3df9e634537f16bf4b04a7ac"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="SSL_WrapperPacket::\lhas_geometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/ddc/class_s_s_l___wrapper_packet.html#a2e7200a2acecac7c9ea2dfabaf82fb35"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="SSL_WrapperPacket::\lmutable_detection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/ddc/class_s_s_l___wrapper_packet.html#a4df31ae3dfbfa8ed7ce170c2cca69b5c"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="SSL_WrapperPacket::\lset_has_detection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/ddc/class_s_s_l___wrapper_packet.html#a0e2575ff154cbdf11b2cbc44a69dfab3"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="SSL_WrapperPacket::\lmutable_geometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/ddc/class_s_s_l___wrapper_packet.html#ad92426e30e04ce4e6c3c6fad363d01cc"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="SSL_WrapperPacket::\lset_has_geometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/ddc/class_s_s_l___wrapper_packet.html#a90a2b559777a20b5e9e6abdd44947995"];
+}

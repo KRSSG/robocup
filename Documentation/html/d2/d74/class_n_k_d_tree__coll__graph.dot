@@ -1,0 +1,32 @@
+digraph "NKDTree&lt; state_t, num_t, dim, scaled, get_next &gt;"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="NKDTree\< state_t, num\l_t, dim, scaled, get\l_next \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" query_max_dist" ,fontname="Helvetica"];
+  Node2 [label="double",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/de6/classdouble.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leaf_size\nmax_depth\nis_built" ,fontname="Helvetica"];
+  Node3 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" scale\nquery_point" ,fontname="Helvetica"];
+  Node4 [label="Vec::NVector\< num_t,\l dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d1c/class_vec_1_1_n_vector.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" v" ,fontname="Helvetica"];
+  Node5 [label="num_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" queue" ,fontname="Helvetica"];
+  Node6 [label="NKDTree\< state_t, num\l_t, dim, scaled, get\l_next \>::PriorityQueue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d43/class_n_k_d_tree_1_1_priority_queue.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="_PriorityQueue",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node8 [label="T",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" root" ,fontname="Helvetica"];
+  Node9 [label="NKDTree\< state_t, num\l_t, dim, scaled, get\l_next \>::Node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d39/struct_n_k_d_tree_1_1_node.html"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="NKDTree\< state_t, num\l_t, dim, scaled, get\l_next \>::BBox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d14/struct_n_k_d_tree_1_1_b_box.html"];
+  Node4 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" min\nmax" ,fontname="Helvetica"];
+  Node5 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" threshold" ,fontname="Helvetica"];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" states" ,fontname="Helvetica"];
+  Node11 [label="state_t *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_states\nsplit_dim" ,fontname="Helvetica"];
+  Node9 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" child" ,fontname="Helvetica"];
+}

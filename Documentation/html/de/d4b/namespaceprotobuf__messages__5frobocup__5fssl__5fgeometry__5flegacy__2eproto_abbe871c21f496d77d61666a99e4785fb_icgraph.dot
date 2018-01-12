@@ -1,0 +1,29 @@
+digraph "protobuf_messages_5frobocup_5fssl_5fgeometry_5flegacy_2eproto::protobuf_AssignDescriptors"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_5flegacy\l_2eproto::protobuf_AssignDescriptors",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_5flegacy\l_2eproto::protobuf_AssignDescriptorsOnce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d4b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__5flegacy__2eproto.html#a0a86fb646a4c03bc7481aebc0848ce68"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_5flegacy\l_2eproto::protobuf_RegisterTypes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d4b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__5flegacy__2eproto.html#aea43a2ce4cef66d740e990ea4f2f113d"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_5flegacy\l_2eproto::AddDescriptorsImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d4b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__5flegacy__2eproto.html#a23fe1f9cfacd0e411d7ab167c10b9279"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_5flegacy\l_2eproto::AddDescriptors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d4b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__5flegacy__2eproto.html#ab93a4b2f4ecd804bb944d898659f95d9"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_5flegacy\l_2eproto::StaticDescriptorInitializer\l::StaticDescriptorInitializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d20/structprotobuf__messages__5frobocup__5fssl__5fgeometry__5flegacy__2eproto_1_1_static_descriptor_initializer.html#a7cddc8c81ce898942e336d9820ecba69"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryField\lSize::descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d4b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_field_size.html#a8e617e8cf22913dbb4a26aff396367f9"];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryField\lSize::GetMetadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d4b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_field_size.html#a6aae3e8ccd1e086cd6db6f5f969776f0"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_data.html#a5ea714e17439fd819f87feb567dd0407"];
+  Node2 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::GetMetadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_data.html#a2cbe088ac660e22c29f4a19feff33901"];
+}

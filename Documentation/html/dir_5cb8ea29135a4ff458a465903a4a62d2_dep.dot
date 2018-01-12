@@ -1,0 +1,15 @@
+digraph "ssl-vision/src/app/plugins" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_87a81216c11eee846bc186429501f36c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="app" fontname="Helvetica", fontsize="10", URL="dir_87a81216c11eee846bc186429501f36c.html"]
+  dir_5cb8ea29135a4ff458a465903a4a62d2 [shape=box, label="plugins", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5cb8ea29135a4ff458a465903a4a62d2.html"];
+  }
+  dir_8c4c3cdfe414cdc54b23897da338c646 [shape=box label="shared" fillcolor="white" style="filled" color="red" URL="dir_8c4c3cdfe414cdc54b23897da338c646.html"];
+  dir_393ec94794a0f862d28a3dadfb20862c [shape=box label="gui" URL="dir_393ec94794a0f862d28a3dadfb20862c.html"];
+  dir_5cb8ea29135a4ff458a465903a4a62d2->dir_8c4c3cdfe414cdc54b23897da338c646 [headlabel="52", labeldistance=1.5 headhref="dir_000068_000029.html"];
+  dir_5cb8ea29135a4ff458a465903a4a62d2->dir_393ec94794a0f862d28a3dadfb20862c [headlabel="5", labeldistance=1.5 headhref="dir_000068_000023.html"];
+  dir_393ec94794a0f862d28a3dadfb20862c->dir_5cb8ea29135a4ff458a465903a4a62d2 [headlabel="1", labeldistance=1.5 headhref="dir_000023_000068.html"];
+  dir_393ec94794a0f862d28a3dadfb20862c->dir_8c4c3cdfe414cdc54b23897da338c646 [headlabel="23", labeldistance=1.5 headhref="dir_000023_000029.html"];
+}

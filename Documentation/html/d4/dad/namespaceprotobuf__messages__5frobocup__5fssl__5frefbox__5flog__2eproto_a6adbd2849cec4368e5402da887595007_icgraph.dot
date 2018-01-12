@@ -1,0 +1,10 @@
+digraph "protobuf_messages_5frobocup_5fssl_5frefbox_5flog_2eproto::InitDefaultsRefbox_Log"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="protobuf_messages_5frobocup\l_5fssl_5frefbox_5flog_2eproto\l::InitDefaultsRefbox_Log",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="protobuf_messages_5frobocup\l_5fssl_5frefbox_5flog_2eproto\l::InitDefaults",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dad/namespaceprotobuf__messages__5frobocup__5fssl__5frefbox__5flog__2eproto.html#abd3328f4ac13d63375090ce29d01bd2b"];
+}

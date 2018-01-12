@@ -1,0 +1,16 @@
+digraph "SSL_GeometryData::InternalSerializeWithCachedSizesToArray"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SSL_GeometryData::Internal\lSerializeWithCachedSizesToArray",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SSL_GeometryData::calib",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d01/class_s_s_l___geometry_data.html#a61aec9b4905591a734c702df1681841b"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SSL_GeometryData::calib_size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d01/class_s_s_l___geometry_data.html#a41dc4721770c53c990be6a03b51ba4ba"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SSL_GeometryData::has\l_field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d01/class_s_s_l___geometry_data.html#a9a38020e97f2129cd0d63e5c2eb01ec5"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SSL_GeometryData::unknown\l_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d01/class_s_s_l___geometry_data.html#a2536bfb94611783da06e38e3619bdc4d"];
+}

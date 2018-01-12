@@ -1,0 +1,35 @@
+digraph "SSL_GeometryFieldSize::Swap"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SSL_GeometryFieldSize\l::Swap",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SSL_GeometryFieldSize\l::internal_default_instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d30/class_s_s_l___geometry_field_size.html#a01e67cd623172f72676411c6a6a27c51"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SSL_GeometryData::field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d01/class_s_s_l___geometry_data.html#ab5200c00486fed8650b634368ed1b4fb"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ViewUpdateThread::execute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a606f4d8b9f859fbb81c0bb1fda745f24"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ViewUpdateThread::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a65149d2f3d7e9bc31fc7dbc4e57ff8fe"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ViewUpdateThread::\l~ViewUpdateThread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a5f58683f22999158962e267fcac842a2"];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="SSL_GeometryFieldSize\l::field_arcs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d30/class_s_s_l___geometry_field_size.html#a2e704e04bc2454aa6b0b1e6b3dcef3f7"];
+  Node3 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d53/ssl-vision_2src_2client_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node3 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="MyThread::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d12/class_my_thread.html#a48f2e366e852087c53705f64e1ee65c2"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="SSL_GeometryCameraCalibration\l::internal_default_instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#a349629d4dc7b28dae322a07a94785a31"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="SSL_GeometryData::internal\l_default_instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d01/class_s_s_l___geometry_data.html#ac5ab7a05a94e8346f9c3f858b5362337"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="SSL_WrapperPacket::\lgeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/ddc/class_s_s_l___wrapper_packet.html#af6c6b8ad0595b3c3502caa43dfa19361"];
+  Node12 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="SSL_WrapperPacket::\lset_allocated_geometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/ddc/class_s_s_l___wrapper_packet.html#acfa80ced643a761a8c3c5322d73f8c3b"];
+  Node12 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,10 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="QStandardItemModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d6a/class_q_standard_item_model.html"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarTreeModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d23/class_var_types_1_1_var_tree_model.html",tooltip="The &#39;item-model&#39; inheriting QStandardItemModel for displaying VarTypes in the QT4 Item-Model..."];
+}

@@ -1,0 +1,22 @@
+digraph "PRay::setPose"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PRay::setPose",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLWidget::update3DCursor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#a0308fe2b093b7cfde8cfeb4709cad434"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLWidget::mouseMoveEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#a9043bac13d6f0a5307ea5c7f9b3caa50"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GLWidget::mouseAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#ac38cb02e557b2f553c83bb49f26eb50d"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GLWidgetGraphicsView\l::mouseMoveEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d5c/class_g_l_widget_graphics_view.html#ac30c568f8421115f516cfef585a15c84"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GLWidget::wheelEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#a5702a23f7cf42d05fe55a417d810a4b6"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GLWidget::resizeGL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#ac0d2a8ecf60907a81c0d73475d851025"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="GLWidgetGraphicsView\l::wheelEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d5c/class_g_l_widget_graphics_view.html#abbbeb270c877f599e3eb42df9c333527"];
+}

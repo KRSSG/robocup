@@ -1,0 +1,18 @@
+digraph "Image::allocate"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Image::allocate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Image\< rgb \>::clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#af92032fc580a53ac5c06345bf264ce41"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Image\< rgb \>::copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#a3d96ec57076c9e5698e472d3c528c9c1"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Image\< rgb \>::copyFromRectArea",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#a8160fd6bfaf5ce50466c4d9d1a1207f2"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Image\< rgb \>::Image",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#a536802f4cad459a9654e42b680d88463"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PluginColorThreshold\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d9e/class_plugin_color_threshold.html#ae29da5a42de8efcc35c0f64856d781ae"];
+}

@@ -1,0 +1,14 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$d5/da7/class_h_a_l_1_1_serial.html#a60be93a8907d62b779bd37a434efbcdf" title="HAL::Serial::Open" alt="" coords="104,91,232,118"/>
+<area shape="rect" id="node5" href="$d5/da7/class_h_a_l_1_1_serial.html#a6376a54bd334059b716c8b23c2dc702f" title="HAL::Serial::Write" alt="" coords="487,142,615,168"/>
+<area shape="rect" id="node13" href="$d3/d5a/ssltest_8cpp.html#a7c81a79eb20fbbd7805087767d72b52b" title="vel_convert" alt="" coords="123,218,213,244"/>
+<area shape="rect" id="node3" href="$d5/da7/class_h_a_l_1_1_serial.html#ae1f308b294125c9ba16b97464d741241" title="HAL::Serial::Close" alt="" coords="294,15,425,42"/>
+<area shape="rect" id="node11" href="$df/da1/namespace_h_a_l.html#aeb185801efffc7cb2973e693dcbda4eb" title="HAL::baud_rate_to_flag" alt="" coords="280,66,439,92"/>
+<area shape="rect" id="node12" href="$df/da1/namespace_h_a_l.html#a7abbf7c73b642420ec96c8f616c06e82" title="HAL::baud_flag_to_rate" alt="" coords="280,116,439,143"/>
+<area shape="rect" id="node4" href="$d5/da7/class_h_a_l_1_1_serial.html#ab1577ef47416f180dc8ae9a182305339" title="HAL::Serial::Read" alt="" coords="929,142,1057,168"/>
+<area shape="rect" id="node6" href="$d5/da7/class_h_a_l_1_1_serial.html#ad440179230582a6e7d119e09a203a817" title="HAL::Serial::WriteByte" alt="" coords="695,66,849,92"/>
+<area shape="rect" id="node7" href="$d5/da7/class_h_a_l_1_1_serial.html#af2e5338e44464da88284e896fe55a050" title="HAL::Serial::ReadByte" alt="" coords="695,116,849,143"/>
+<area shape="rect" id="node8" href="$d5/da7/class_h_a_l_1_1_serial.html#a5a4e70249b711316c25fd87047caa158" title="HAL::Serial::ReadNBytesTimeout" alt="" coords="663,167,881,194"/>
+<area shape="rect" id="node9" href="$d5/da7/class_h_a_l_1_1_serial.html#a2dc9e61cbe107b6761b6ca768c3f861f" title="HAL::Serial::ReadByteTimeout" alt="" coords="671,218,873,244"/>
+<area shape="rect" id="node10" href="$d5/da7/class_h_a_l_1_1_serial.html#af21e0e5228a30f6bfececd51f5fa502a" title="HAL::Serial::Clear" alt="" coords="708,268,836,295"/>
+</map>

@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ImageIO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dde/class_image_i_o.html",tooltip="A class containing helper functions for reading and writing image data to/from files. "];
+}

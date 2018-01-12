@@ -1,0 +1,32 @@
+<map id="ssl&#45;vision/build/messages_robocup_ssl_geometry_legacy.pb.h" name="ssl&#45;vision/build/messages_robocup_ssl_geometry_legacy.pb.h">
+<area shape="rect" id="node2" href="$de/d0c/messages__robocup__ssl__wrapper__legacy_8pb_8h.html" title="ssl&#45;vision/build/messages\l_robocup_ssl_wrapper_legacy.pb.h" alt="" coords="743,95,969,136"/>
+<area shape="rect" id="node3" href="$d1/d5b/ssl-vision_2src_2shared_2net_2robocup__ssl__server_8h.html" title="ssl&#45;vision/src/shared\l/net/robocup_ssl_server.h" alt="" coords="770,184,942,225"/>
+<area shape="rect" id="node21" href="$d7/db2/plugin__legacypublishgeometry_8h.html" title="C++ Interface: plugin_legacypublishgeometry. " alt="" coords="1223,273,1479,315"/>
+<area shape="rect" id="node4" href="$dc/d61/gr_sim_2src_2net_2robocup__ssl__server_8cpp.html" title="grSim/src/net/robocup\l_ssl_server.cpp" alt="" coords="465,273,615,315"/>
+<area shape="rect" id="node5" href="$d1/df0/plugin__dvr_8h.html" title="C++ Interface: plugin_dvr. " alt="" coords="299,273,440,315"/>
+<area shape="rect" id="node7" href="$d1/d92/stack__robocup__ssl_8h.html" title="C++ Interface: stack_robocup_ssl. " alt="" coords="607,474,796,515"/>
+<area shape="rect" id="node8" href="$db/dc2/multistack__robocup__ssl_8h.html" title="C++ Interface: multistack_robocup_ssl. " alt="" coords="94,578,311,619"/>
+<area shape="rect" id="node24" href="$d9/db9/plugin__legacysslnetworkoutput_8h.html" title="C++ Interface: plugin_legacysslnetworkoutput. " alt="" coords="1059,370,1319,411"/>
+<area shape="rect" id="node26" href="$d8/d45/plugin__publishgeometry_8h.html" title="C++ Interface: plugin_publishgeometry. " alt="" coords="41,370,260,411"/>
+<area shape="rect" id="node29" href="$de/d28/plugin__sslnetworkoutput_8h.html" title="C++ Interface: plugin_sslnetworkoutput. " alt="" coords="639,273,862,315"/>
+<area shape="rect" id="node31" href="$d5/dc8/ssl-vision_2src_2shared_2net_2robocup__ssl__server_8cpp.html" title="ssl&#45;vision/src/shared\l/net/robocup_ssl_server.cpp" alt="" coords="887,273,1073,315"/>
+<area shape="rect" id="node6" href="$d3/dfa/moc__plugin__dvr_8cxx.html" title="ssl&#45;vision/build/src\l/app/plugins/moc_plugin\l_dvr.cxx" alt="" coords="284,363,447,419"/>
+<area shape="rect" id="node20" href="$d5/d9e/plugin__dvr_8cpp.html" title="C++ Implementation: plugin_dvr. " alt="" coords="471,370,625,411"/>
+<area shape="rect" id="node18" href="$dc/d3f/stacks_8h.html" title="A collection of single&#45;camera vision stacks. " alt="" coords="639,578,763,619"/>
+<area shape="rect" id="node19" href="$dd/d8b/stack__robocup__ssl_8cpp.html" title="C++ Implementation: stack_robocup_ssl. " alt="" coords="461,571,616,627"/>
+<area shape="rect" id="node9" href="$dc/de2/moc__multistack__robocup__ssl_8cxx.html" title="ssl&#45;vision/build/src\l/app/stacks/moc_multistack\l_robocup_ssl.cxx" alt="" coords="5,675,192,731"/>
+<area shape="rect" id="node10" href="$da/d4e/multistack__robocup__ssl_8cpp.html" title="C++ Implementation: multistack_robocup_ssl. " alt="" coords="217,675,399,731"/>
+<area shape="rect" id="node11" href="$d9/de7/multistacks_8h.html" title="A collection of useful MultiVisionStacks. " alt="" coords="517,682,664,723"/>
+<area shape="rect" id="node12" href="$d7/d16/ssl-vision_2src_2app_2gui_2mainwindow_8h.html" title="ssl&#45;vision/src/app\l/gui/mainwindow.h" alt="" coords="580,779,711,820"/>
+<area shape="rect" id="node13" href="$dd/d3a/gr_sim_2src_2main_8cpp.html" title="grSim/src/main.cpp" alt="" coords="182,875,317,902"/>
+<area shape="rect" id="node14" href="$dc/d66/gr_sim_2src_2mainwindow_8cpp.html" title="grSim/src/mainwindow.cpp" alt="" coords="341,875,520,902"/>
+<area shape="rect" id="node15" href="$d3/dd5/moc__mainwindow_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_mainwindow.cxx" alt="" coords="545,868,746,909"/>
+<area shape="rect" id="node16" href="$dc/ded/ssl-vision_2src_2app_2gui_2mainwindow_8cpp.html" title="ssl&#45;vision/src/app\l/gui/mainwindow.cpp" alt="" coords="771,868,915,909"/>
+<area shape="rect" id="node17" href="$d8/d32/ssl-vision_2src_2app_2main_8cpp.html" title="ssl&#45;vision/src/app\l/main.cpp" alt="" coords="939,868,1063,909"/>
+<area shape="rect" id="node22" href="$d1/de1/moc__plugin__legacypublishgeometry_8cxx.html" title="ssl&#45;vision/build/src\l/app/plugins/moc_plugin\l_legacypublishgeometry.cxx" alt="" coords="1393,363,1580,419"/>
+<area shape="rect" id="node23" href="$d8/d71/plugin__legacypublishgeometry_8cpp.html" title="C++ Implementation: plugin_legacypublishgeometry. " alt="" coords="1605,370,1875,411"/>
+<area shape="rect" id="node25" href="$d2/dc6/plugin__legacysslnetworkoutput_8cpp.html" title="C++ Implementation: plugin_legacysslnetworkoutput. " alt="" coords="1052,474,1327,515"/>
+<area shape="rect" id="node27" href="$df/d81/moc__plugin__publishgeometry_8cxx.html" title="ssl&#45;vision/build/src\l/app/plugins/moc_plugin\l_publishgeometry.cxx" alt="" coords="148,467,311,523"/>
+<area shape="rect" id="node28" href="$da/dcc/plugin__publishgeometry_8cpp.html" title="C++ Implementation: plugin_publishgeometry. " alt="" coords="335,474,567,515"/>
+<area shape="rect" id="node30" href="$d5/d27/plugin__sslnetworkoutput_8cpp.html" title="C++ Implementation: plugin_sslnetworkoutput. " alt="" coords="699,370,935,411"/>
+</map>

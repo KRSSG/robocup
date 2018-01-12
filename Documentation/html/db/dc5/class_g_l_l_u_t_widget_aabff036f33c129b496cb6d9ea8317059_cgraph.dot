@@ -1,0 +1,18 @@
+digraph "GLLUTWidget::samplePixel"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLLUTWidget::samplePixel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLLUTWidget::drawSample",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a8c32c3f665a66a48748ca097e06d8db3"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="LUT3D::norm2lutX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d15/class_l_u_t3_d.html#a38db3c2e9c1ef9bb08286a848a283953"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="LUT3D::norm2lutY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d15/class_l_u_t3_d.html#a915940d86b49d7c27010d242dc7b2df1"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="LUT3D::norm2lutZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d15/class_l_u_t3_d.html#a87b4a56c8ab18fc600c5d9b08b2495ee"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GLLUTWidget::redraw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#ac13c87adcd27fef6fc038a026f9e6a9b"];
+}

@@ -1,0 +1,26 @@
+<map id="ssl&#45;vision/src/app/gui/mainwindow.h" name="ssl&#45;vision/src/app/gui/mainwindow.h">
+<area shape="rect" id="node2" href="$dd/dd9/affinity__manager_8h.html" title="C++ Interface: affinity_manager. " alt="" coords="467,169,597,196"/>
+<area shape="rect" id="node14" href="$d4/d8d/ui__mainwindow_8h.html" title="ui_mainwindow.h" alt="" coords="2527,169,2649,196"/>
+<area shape="rect" id="node25" href="$d9/dcc/capture__thread_8h.html" title="C++ Interface: CaptureThread. " alt="" coords="1142,95,1261,121"/>
+<area shape="rect" id="node36" href="$d5/d4d/videowidget_8h.html" title="C++ Interface: VideoWidget. " alt="" coords="2173,95,2275,121"/>
+<area shape="rect" id="node40" href="$d8/d94/ssl-vision_2src_2app_2gui_2glwidget_8h.html" title="glwidget.h" alt="" coords="1610,169,1691,196"/>
+<area shape="rect" id="node41" href="$db/d97/_var_tree_model_8h.html" title="C++ Implementation: VarTreeModel. " alt="" coords="3019,169,3154,196"/>
+<area shape="rect" id="node42" href="$d8/d85/_var_item_8h.html" title="C++ Interface: VarItem. " alt="" coords="3407,244,3486,271"/>
+<area shape="rect" id="node43" href="$da/d9c/_var_tree_view_8h.html" title="C++ Interface: VarTreeView. " alt="" coords="2917,95,3046,121"/>
+<area shape="rect" id="node44" href="$d7/da4/gl_l_u_twidget_8h.html" title="C++ Interface: GLLUTWidget. " alt="" coords="1863,169,1969,196"/>
+<area shape="rect" id="node45" href="$d7/d92/lutwidget_8h.html" title="C++ Interface: LUTWidget. " alt="" coords="2012,95,2097,121"/>
+<area shape="rect" id="node47" href="$d3/db1/_var_x_m_l_8h.html" title="C++ Interface: VarXML. " alt="" coords="3369,95,3449,121"/>
+<area shape="rect" id="node48" href="$dc/d3f/stacks_8h.html" title="A collection of single&#45;camera vision stacks. " alt="" coords="1767,169,1839,196"/>
+<area shape="rect" id="node49" href="$dd/d69/qgetopt_8h.html" title="command line option parser " alt="" coords="3269,95,3345,121"/>
+<area shape="rect" id="node50" href="$d9/de7/multistacks_8h.html" title="A collection of useful MultiVisionStacks. " alt="" coords="1837,95,1937,121"/>
+<area shape="rect" id="node26" href="$df/dc3/capturedc1394v2_8h.html" title="C++ Interface: CaptureDC1394v2. " alt="" coords="701,169,833,196"/>
+<area shape="rect" id="node27" href="$dc/d8d/capturefromfile_8h.html" title="C++ Interface: CaptureFromFile. " alt="" coords="1415,169,1534,196"/>
+<area shape="rect" id="node28" href="$d9/df3/capturev4l_8h.html" title="C++ Interface: CaptureV4L. " alt="" coords="1084,169,1177,196"/>
+<area shape="rect" id="node29" href="$d1/d71/capture__generator_8h.html" title="C++ Interface: CaptureGenerator. " alt="" coords="1202,169,1339,196"/>
+<area shape="rect" id="node30" href="$d7/d3c/framecounter_8h.html" title="Generic framerate / frame counting class. " alt="" coords="1368,244,1477,271"/>
+<area shape="rect" id="node32" href="$d6/da4/ringbuffer_8h.html" title="C++ Interface: RingBuffer. " alt="" coords="1705,393,1791,420"/>
+<area shape="rect" id="node33" href="$d7/d97/framedata_8h.html" title="C++ Interface: FrameData. " alt="" coords="1703,319,1793,345"/>
+<area shape="rect" id="node34" href="$dc/d5b/visionstack_8h.html" title="C++ Interface: VisionStack. " alt="" coords="1699,244,1797,271"/>
+<area shape="rect" id="node35" href="$d6/df6/capturestats_8h.html" title="A class for storing capture statistics. " alt="" coords="954,169,1059,196"/>
+<area shape="rect" id="node39" href="$d8/d39/ui__videowidget_8h.html" title="ui_videowidget.h" alt="" coords="2369,169,2487,196"/>
+</map>

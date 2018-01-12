@@ -1,0 +1,27 @@
+digraph "GUI.ompl_gui.MainWindow.__init__"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GUI.ompl_gui.MainWindow.\l__init__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GUI.interfacePath.Ui\l_MainWindow.setupUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d78/class_g_u_i_1_1interface_path_1_1_ui___main_window.html#aec5e09f1331e1688a0bed04c5500d72d"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GUI.InterfacePath_ompl.Ui\l_MainWindow.setupUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d44/class_g_u_i_1_1_interface_path__ompl_1_1_ui___main_window.html#aa7a42a45bd2df16201cea46d607f2a2d"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Ui_MainWindow::setupUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd7/class_ui___main_window.html#acf4a0872c4c77d8f43a2ec66ed849b58"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Ui_MainWindow::retranslateUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd7/class_ui___main_window.html#a097dd160c3534a204904cb374412c618"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ValueVis::setupUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db0/class_value_vis.html#aeaa58ca242eb35bf8acc137dc528b2c9"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="ValueVis::ValueVis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db0/class_value_vis.html#ae088da593061c5bccd61f1c28e7d159c"];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="ValueVis::update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db0/class_value_vis.html#a42a3e663eceb29e125384b61929de880"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Ui_VideoWidget::setupUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dbf/class_ui___video_widget.html#a06ecf55490775c0f201a3a3596a55f97"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Ui_VideoWidget::retranslateUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dbf/class_ui___video_widget.html#ad9a19b0f2ad781a99963321a1e090c50"];
+}

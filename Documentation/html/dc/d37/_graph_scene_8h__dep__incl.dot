@@ -1,0 +1,13 @@
+digraph "ssl-vision/src/shared/vartypes/gui/experimental/GraphScene.h"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ssl-vision/src/shared\l/vartypes/gui/experimental\l/GraphScene.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ssl-vision/src/shared\l/vartypes/gui/experimental\l/GraphScene.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dc0/_graph_scene_8cpp.html",tooltip="C++ Implementation: GraphScene. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ssl-vision/src/shared\l/vartypes/gui/experimental\l/TimeGraphContainer.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/de2/_time_graph_container_8h.html",tooltip="C++ Interface: TimeGraphContainer. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ssl-vision/src/shared\l/vartypes/gui/experimental\l/TimeGraphContainer.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d09/_time_graph_container_8cpp.html",tooltip="C++ Implementation: TimeGraphContainer. "];
+}

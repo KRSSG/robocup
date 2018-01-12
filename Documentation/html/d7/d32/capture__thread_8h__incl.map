@@ -1,0 +1,24 @@
+<map id="ssl&#45;vision/src/app/capture_thread.h" name="ssl&#45;vision/src/app/capture_thread.h">
+<area shape="rect" id="node2" href="$df/dc3/capturedc1394v2_8h.html" title="C++ Interface: CaptureDC1394v2. " alt="" coords="980,169,1112,196"/>
+<area shape="rect" id="node18" href="$dc/d8d/capturefromfile_8h.html" title="C++ Interface: CaptureFromFile. " alt="" coords="192,169,311,196"/>
+<area shape="rect" id="node22" href="$d9/df3/capturev4l_8h.html" title="C++ Interface: CaptureV4L. " alt="" coords="1423,169,1517,196"/>
+<area shape="rect" id="node27" href="$d1/d71/capture__generator_8h.html" title="C++ Interface: CaptureGenerator. " alt="" coords="1705,95,1843,121"/>
+<area shape="rect" id="node28" href="$d7/d3c/framecounter_8h.html" title="Generic framerate / frame counting class. " alt="" coords="1893,169,2002,196"/>
+<area shape="rect" id="node38" href="$d6/da4/ringbuffer_8h.html" title="C++ Interface: RingBuffer. " alt="" coords="2460,319,2547,345"/>
+<area shape="rect" id="node40" href="$d7/d97/framedata_8h.html" title="C++ Interface: FrameData. " alt="" coords="2275,244,2366,271"/>
+<area shape="rect" id="node41" href="$dc/d5b/visionstack_8h.html" title="C++ Interface: VisionStack. " alt="" coords="2133,95,2231,121"/>
+<area shape="rect" id="node44" href="$d6/df6/capturestats_8h.html" title="A class for storing capture statistics. " alt="" coords="2443,95,2548,121"/>
+<area shape="rect" id="node45" href="$dd/dd9/affinity__manager_8h.html" title="C++ Interface: affinity_manager. " alt="" coords="2609,244,2739,271"/>
+<area shape="rect" id="node3" href="$d4/d08/captureinterface_8h.html" title="C++ Implementation: CaptureInterface. " alt="" coords="932,244,1059,271"/>
+<area shape="rect" id="node11" href="$d1/d9a/_var_types_8h.html" title="The main header for the VarTypes system. " alt="" coords="849,319,939,345"/>
+<area shape="rect" id="node6" href="$d2/d80/rawimage_8h.html" title="C++ Interface: RawImage. " alt="" coords="1913,319,2003,345"/>
+<area shape="rect" id="node8" href="$da/dd8/colors_8h.html" title="A collection of color related classes, types, and functions. " alt="" coords="1911,468,1979,495"/>
+<area shape="rect" id="node7" href="$d7/d70/image__interface_8h.html" title="C++ Interface: image_interface. " alt="" coords="2022,393,2147,420"/>
+<area shape="rect" id="node12" href="$df/de3/_var_types_instance_8h.html" title="VarTypesInstance.h" alt="" coords="830,393,969,420"/>
+<area shape="rect" id="node30" href="$d4/dfc/framelimiter_8h.html" title="framelimiter.h" alt="" coords="1767,169,1869,196"/>
+<area shape="rect" id="node33" href="$d5/db2/image_8h.html" title="C++ Interface: Image. " alt="" coords="2132,244,2200,271"/>
+<area shape="rect" id="node31" href="$dd/d45/ssl-vision_2src_2shared_2util_2timer_8h.html" title="timer.h" alt="" coords="1857,244,1920,271"/>
+<area shape="rect" id="node35" href="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html" title="util.h" alt="" coords="2222,319,2273,345"/>
+<area shape="rect" id="node36" href="$dd/d17/image__io_8h.html" title="C++ Interface: ImageIO. " alt="" coords="1862,393,1947,420"/>
+<area shape="rect" id="node42" href="$d8/de0/visionplugin_8h.html" title="C++ Interface: VisionPlugin. " alt="" coords="2026,169,2127,196"/>
+</map>

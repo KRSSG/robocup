@@ -1,0 +1,23 @@
+digraph "VarTypes::XMLNode::parseClearTag"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::XMLNode::\lparseClearTag",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::_tcslen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a33f094a769ad68c264640d65736e12df"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::_tcsstr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a9caa6f2a97f5c5e328d6d5346e42f1bf"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::XMLNode::\laddClear_priv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a09e0d993b2d6952abcf65b73061d8f0a"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::XMLNode::\laddToOrder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a8966be07a58188f95a3cee4510c73dbf"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::myRealloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a47f43809f22c37a229ee6451c4db2ede"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="VarTypes::XMLNode::\lgetClearTagTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#ac6ee40bfd9ce673c2e5d170580a3e608"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="VarTypes::stringDup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#af79aab010747d6340009c2e1d6deb9a8"];
+  Node8 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

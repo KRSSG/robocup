@@ -1,0 +1,36 @@
+digraph "Debug_AdjustBot::RequiredFieldsByteSizeFallback"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Debug_AdjustBot::Required\lFieldsByteSizeFallback",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Debug_AdjustBot::has_dir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a56588fbc4d57aa4d812e4241efd72501"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Debug_AdjustBot::has_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a82f4a15ed5bd6f562525470e24b0cf14"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Debug_AdjustBot::has_team",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a583b7c7b4cad131013ba0574df427c85"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Debug_AdjustBot::has_vx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#ac8f9cb3988c2fdd695962d9312cf63fc"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Debug_AdjustBot::has_vy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a8852b82a9cfe4f36ab08f325a7626e7f"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Debug_AdjustBot::has_vz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#af087c275569d23f47f040ac08b2d3814"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Debug_AdjustBot::has_x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#ac2f0cb0974035fef9f01eb771fd93c9f"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Debug_AdjustBot::has_y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a7ea9e204b2e01a097956c5064712e7e7"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Debug_AdjustBot::team",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a9c597339524fe792a3527c00e3070ea6"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Debug_AdjustBot::vx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#af98a21758cee194ca2799bc369c2f9d2"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Debug_AdjustBot::vy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a5db284f8f278d5f5370c25a4151453b3"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Debug_AdjustBot::vz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a969c27142e314c2e003c444fabf006ff"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Debug_AdjustBot::x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#aec045861cdf3b0ce16bd9133fe10e83e"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Debug_AdjustBot::y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a625168477412f2921ea84ab635bc2973"];
+}

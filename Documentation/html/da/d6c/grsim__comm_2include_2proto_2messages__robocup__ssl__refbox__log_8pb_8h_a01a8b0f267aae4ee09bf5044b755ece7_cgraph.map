@@ -1,0 +1,10 @@
+<map id="protobuf_InitDefaults_messages_5frobocup_5fssl_5frefbox_5flog_2eproto" name="protobuf_InitDefaults_messages_5frobocup_5fssl_5frefbox_5flog_2eproto">
+<area shape="rect" id="node2" href="$dc/d05/grsim__comm_2include_2proto_2messages__robocup__ssl__refbox__log_8pb_8cc.html#a3313e20d50668229b66f37793f2ceaa2" title="GOOGLE_PROTOBUF_DECLARE_ONCE" alt="" coords="241,5,517,32"/>
+<area shape="rect" id="node3" href="$dc/d05/grsim__comm_2include_2proto_2messages__robocup__ssl__refbox__log_8pb_8cc.html#a90a13ffd2bb2e3bd4b3fd98ad41cdae7" title="protobuf_InitDefaults\l_messages_5frobocup_5fssl\l_5frefbox_5flog_2eproto_impl" alt="" coords="283,56,475,112"/>
+<area shape="rect" id="node4" href="$d3/dd1/class_s_s_l___detection_frame.html#ad797433fe7d6ec9e8eb587b3162e8811" title="SSL_DetectionFrame\l::internal_default_instance" alt="" coords="572,27,747,69"/>
+<area shape="rect" id="node7" href="$df/d04/grsim__comm_2include_2proto_2messages__robocup__ssl__detection_8pb_8cc.html#a425d1f6fcc173f26d39e6722d666fded" title="protobuf_InitDefaults\l_messages_5frobocup_5fssl\l_5fdetection_2eproto" alt="" coords="565,92,753,148"/>
+<area shape="rect" id="node5" href="$da/d53/class_s_s_l___detection_ball.html#a381f7671916a343facc4e42d27ca197b" title="SSL_DetectionBall::Swap" alt="" coords="853,35,1026,61"/>
+<area shape="rect" id="node6" href="$da/d53/class_s_s_l___detection_ball.html#aa06f05deb8cce7d062877bdbb7aa19be" title="SSL_DetectionBall::\lInternalSwap" alt="" coords="1125,27,1265,69"/>
+<area shape="rect" id="node8" href="$df/d04/grsim__comm_2include_2proto_2messages__robocup__ssl__detection_8pb_8cc.html#a5d167962f0e8007dae5d2c3ecf88a1ec" title="GOOGLE_PROTOBUF_DECLARE_ONCE" alt="" coords="801,96,1077,123"/>
+<area shape="rect" id="node9" href="$df/d04/grsim__comm_2include_2proto_2messages__robocup__ssl__detection_8pb_8cc.html#a9c0a09515acf87179f94c434816cacd2" title="protobuf_InitDefaults\l_messages_5frobocup_5fssl\l_5fdetection_2eproto_impl" alt="" coords="845,147,1033,203"/>
+</map>

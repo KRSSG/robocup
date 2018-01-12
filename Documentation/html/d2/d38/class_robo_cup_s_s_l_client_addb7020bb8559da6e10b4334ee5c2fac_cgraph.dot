@@ -1,0 +1,16 @@
+digraph "RoboCupSSLClient::RoboCupSSLClient"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RoboCupSSLClient::RoboCup\lSSLClient",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RoboCupSSLClient::close",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d38/class_robo_cup_s_s_l_client.html#a0326052ff8366255a27fe971764d8ed9"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Net::UDP::close",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d3b/class_net_1_1_u_d_p.html#a73cb40ac411f8381b9668ca1ebeb53c2"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="port",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dc1/bot__data_8cpp.html#a6aef63a95b7e102edeaeec90790523bd"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="RoboCupSSLClient::\l~RoboCupSSLClient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d38/class_robo_cup_s_s_l_client.html#a34c2c071c45a20afbf501ab9bc081a37"];
+}

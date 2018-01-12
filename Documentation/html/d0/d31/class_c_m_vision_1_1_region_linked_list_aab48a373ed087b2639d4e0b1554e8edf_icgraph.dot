@@ -1,0 +1,14 @@
+digraph "CMVision::RegionLinkedList::setFront"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CMVision::RegionLinkedList\l::setFront",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CMVision::RegionProcessing\l::sortRegions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d54/class_c_m_vision_1_1_region_processing.html#a1f7f8a22be13e1d4e44fe35ed5acaa8a"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PluginFindBlobs::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d88/class_plugin_find_blobs.html#a41ea8f1fcf4d0ca0b8119b5946fc1441"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CMVision::ImageProcessor\l::processThresholded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/df4/class_c_m_vision_1_1_image_processor.html#a44dc920b71309ac27ead1f79292a893a"];
+}

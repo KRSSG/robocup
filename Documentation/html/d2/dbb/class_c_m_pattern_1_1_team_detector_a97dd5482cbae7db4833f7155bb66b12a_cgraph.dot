@@ -1,0 +1,22 @@
+digraph "CMPattern::TeamDetector::checkHistogram"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CMPattern::TeamDetector\l::checkHistogram",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CMVision::Histogram\l::addBox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d59/class_c_m_vision_1_1_histogram.html#aee548ba6c1f5efd9cb5506116462cf45"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Image::getPixelData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#adb1c63515c088b47f678251e4a47f677"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Image::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#afcc957626bd7f203422a2612547193f6"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Image::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#aada5318e6827064b9de69d2cf4eff2e3"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GVector::bound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a64a68732d9c3151a31337ff0c1c7e21a"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CMVision::Histogram\l::clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d59/class_c_m_vision_1_1_histogram.html#a4ddc280f4b0efd79b39d393c9397da92"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CMVision::Histogram\l::getChannel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d59/class_c_m_vision_1_1_histogram.html#ae4440da2a738fc7a361e4b037539a0c7"];
+}

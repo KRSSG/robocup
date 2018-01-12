@@ -1,0 +1,16 @@
+digraph "GlobalRandom"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="GlobalRandom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tool" ,fontname="Helvetica"];
+  Node2 [label="Random",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/de7/class_random.html",tooltip="A class implementing the Mersenne Twister RNG. "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" grand" ,fontname="Helvetica"];
+  Node3 [label="double",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/de6/classdouble.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next\nstate" ,fontname="Helvetica"];
+  Node4 [label="uint32_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" left\ngleft\nM\nN" ,fontname="Helvetica"];
+  Node5 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pinstance" ,fontname="Helvetica"];
+}

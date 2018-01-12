@@ -1,0 +1,24 @@
+digraph "NKDTree&lt; state_t, num_t, dim, scaled, get_next &gt;::QueryNode"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="NKDTree\< state_t, num\l_t, dim, scaled, get\l_next \>::QueryNode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" state" ,fontname="Helvetica"];
+  Node2 [label="state_t *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dist" ,fontname="Helvetica"];
+  Node3 [label="float",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" node" ,fontname="Helvetica"];
+  Node4 [label="NKDTree\< state_t, num\l_t, dim, scaled, get\l_next \>::Node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d39/struct_n_k_d_tree_1_1_node.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="NKDTree\< state_t, num\l_t, dim, scaled, get\l_next \>::BBox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d14/struct_n_k_d_tree_1_1_b_box.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" min\nmax" ,fontname="Helvetica"];
+  Node6 [label="Vec::NVector\< num_t,\l dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d1c/class_vec_1_1_n_vector.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" v" ,fontname="Helvetica"];
+  Node7 [label="num_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" threshold" ,fontname="Helvetica"];
+  Node2 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" states" ,fontname="Helvetica"];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_states\nsplit_dim" ,fontname="Helvetica"];
+  Node8 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" child" ,fontname="Helvetica"];
+}

@@ -1,0 +1,25 @@
+digraph "Quaternion::invert"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Quaternion::invert",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLCamera::freeLookAt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#a2b57c609d29c2241ee764bc2fe05e06a"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLCamera::setState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#aa1dfaa9938549bc9ad493b227825985e"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CameraParameters::getWorld\lLocation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/df2/class_camera_parameters.html#ae03122fd3d87203b8fa21f8264c13c37"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PluginCameraCalibration\l::detectEdgesOnSingleArc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de5/class_plugin_camera_calibration.html#afbac6cc3f5801adbe2edc77d6e1da204"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PluginCameraCalibration\l::detectEdges",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de5/class_plugin_camera_calibration.html#ad1b96969290257b3b52107f15bcd9ad7"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PluginCameraCalibration\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de5/class_plugin_camera_calibration.html#a23662c330318774c564d6ff792aa07b1"];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PluginCameraCalibration\l::detectEdgesOnSingleLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de5/class_plugin_camera_calibration.html#addebc26a36e8bace70b4fc29c3f1849b"];
+  Node8 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CameraParameters::toProto\lBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/df2/class_camera_parameters.html#a2f8deb7f55b37dddd769791692665e7f"];
+}

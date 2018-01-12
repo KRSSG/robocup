@@ -1,0 +1,25 @@
+digraph "VarTypes::VarDouble::VarDouble"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::VarDouble\l::VarDouble",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarType::\lchanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#a25814e23ce918002421797d6a1d1fba3"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarDouble\l::setDefault",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de9/class_var_types_1_1_var_double.html#a0479b8e2c8519fa908ba8171bca8641b"];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarDouble\l::setMax",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de9/class_var_types_1_1_var_double.html#abb7bd14c4f793d5dcf50d5578e9180da"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarType::lock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#ae3cc30264a849e50988b92ed305d80d2"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarType::\lunlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#aa879148410da333f6b9bf5c5e58fbad8"];
+  Node4 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="VarTypes::VarDouble\l::setMin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de9/class_var_types_1_1_var_double.html#ac462b905a3cc9c03d51a1e58906c88b7"];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

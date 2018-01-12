@@ -1,0 +1,16 @@
+digraph "Robot::Kicker::step"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Robot::Kicker::step",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Robot::getBall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d84/class_robot.html#a8ca7b39845a8917ae3b1fd1cf2691f4a"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PObject::getBodyDirection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d18/class_p_object.html#af2a0c45a02b9bfcfca0d9bb982d90a2d"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PObject::getBodyPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d18/class_p_object.html#aa490b8b18ef6a51e9816d0da40da237d"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Robot::getID",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d84/class_robot.html#aee41eb922736dbb951804ae682a1db67"];
+}

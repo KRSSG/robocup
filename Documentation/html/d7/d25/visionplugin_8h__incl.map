@@ -1,0 +1,31 @@
+<map id="ssl&#45;vision/src/app/plugins/visionplugin.h" name="ssl&#45;vision/src/app/plugins/visionplugin.h">
+<area shape="rect" id="node7" href="$d1/d9a/_var_types_8h.html" title="The main header for the VarTypes system. " alt="" coords="1545,95,1635,121"/>
+<area shape="rect" id="node37" href="$d7/d97/framedata_8h.html" title="C++ Interface: FrameData. " alt="" coords="1930,169,2021,196"/>
+<area shape="rect" id="node46" href="$d5/df4/realtimedisplaywidget_8h.html" title="C++ Interface: RealTimeDisplayWidget. " alt="" coords="2017,95,2176,121"/>
+<area shape="rect" id="node50" href="$da/de5/pixelloc_8h.html" title="A dead&#45;simple data&#45;structure describing a 2D pixel location. " alt="" coords="2201,95,2278,121"/>
+<area shape="rect" id="node8" href="$df/de3/_var_types_instance_8h.html" title="VarTypesInstance.h" alt="" coords="1351,169,1490,196"/>
+<area shape="rect" id="node9" href="$d2/d10/_var_types_factory_8h.html" title="VarTypesFactory.h" alt="" coords="1039,244,1173,271"/>
+<area shape="rect" id="node10" href="$d4/d8d/_var_type_8h.html" title="C++ Interface: VarType. " alt="" coords="1109,468,1252,495"/>
+<area shape="rect" id="node24" href="$d9/dc6/_var_string_8h.html" title="C++ Interface: VarString. " alt="" coords="1709,393,1855,420"/>
+<area shape="rect" id="node26" href="$d4/d96/_var_int_8h.html" title="C++ Interface: VarInt. " alt="" coords="1557,393,1685,420"/>
+<area shape="rect" id="node27" href="$de/de4/_var_bool_8h.html" title="C++ Interface: VarBool. " alt="" coords="929,393,1067,420"/>
+<area shape="rect" id="node28" href="$d9/d91/_var_double_8h.html" title="C++ Interface: VarDouble. " alt="" coords="699,393,854,420"/>
+<area shape="rect" id="node29" href="$d7/d17/_var_blob_8h.html" title="C++ Implementation: VarBlob. " alt="" coords="1129,319,1267,345"/>
+<area shape="rect" id="node30" href="$df/dc3/_var_list_8h.html" title="C++ Interface: VarList. " alt="" coords="300,393,435,420"/>
+<area shape="rect" id="node31" href="$de/d75/_var_string_enum_8h.html" title="C++ Interface: VarStringEnum. " alt="" coords="923,319,1105,345"/>
+<area shape="rect" id="node32" href="$d4/d13/_var_selection_8h.html" title="C++ Interface: VarSelection. " alt="" coords="681,319,848,345"/>
+<area shape="rect" id="node33" href="$d3/d58/_var_external_8h.html" title="C++ Interface: VarExternal. " alt="" coords="393,319,555,345"/>
+<area shape="rect" id="node34" href="$d1/d4e/_var_q_widget_8h.html" title="C++ Interface: VarInt. " alt="" coords="511,393,675,420"/>
+<area shape="rect" id="node35" href="$d2/dfd/_var_trigger_8h.html" title="C++ Interface: VarTrigger. " alt="" coords="1292,319,1445,345"/>
+<area shape="rect" id="node36" href="$d2/de8/_var_proto_buffer_8h.html" title="C++ Interface: VarProtoBuffer. " alt="" coords="1470,319,1649,345"/>
+<area shape="rect" id="node22" href="$d8/d4f/_var_val_8h.html" title="primitives/VarVal.h" alt="" coords="1455,543,1587,569"/>
+<area shape="rect" id="node23" href="$d5/d31/xml_parser_8h.html" title="xml/xmlParser.h" alt="" coords="1611,543,1729,569"/>
+<area shape="rect" id="node25" href="$d4/d5a/_var_string_val_8h.html" title="C++ Interface: VarStringVal. " alt="" coords="1561,468,1728,495"/>
+<area shape="rect" id="node38" href="$d6/da4/ringbuffer_8h.html" title="C++ Interface: RingBuffer. " alt="" coords="2100,244,2187,271"/>
+<area shape="rect" id="node40" href="$d2/d80/rawimage_8h.html" title="C++ Interface: RawImage. " alt="" coords="1981,393,2071,420"/>
+<area shape="rect" id="node41" href="$d7/d70/image__interface_8h.html" title="C++ Interface: image_interface. " alt="" coords="2055,468,2181,495"/>
+<area shape="rect" id="node42" href="$da/dd8/colors_8h.html" title="A collection of color related classes, types, and functions. " alt="" coords="2001,543,2069,569"/>
+<area shape="rect" id="node47" href="$d6/d23/videostats_8h.html" title="A class for storing video display statistics. " alt="" coords="2231,169,2325,196"/>
+<area shape="rect" id="node49" href="$d6/d5f/renderoptions_8h.html" title="C++ Interface: RenderOptions. " alt="" coords="2045,169,2156,196"/>
+<area shape="rect" id="node48" href="$d6/df6/capturestats_8h.html" title="A class for storing capture statistics. " alt="" coords="2225,244,2331,271"/>
+</map>

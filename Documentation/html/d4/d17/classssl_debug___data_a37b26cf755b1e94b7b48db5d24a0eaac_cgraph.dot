@@ -1,0 +1,24 @@
+digraph "sslDebug_Data::New"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sslDebug_Data::New",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sslDebug_Data::sslDebug_Data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a918a3be851611d35a03005c8fc4f3f13"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sslDebug_Data::internal\l_default_instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a6c228149dad67debe9f7bb7ff372e455"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sslDebug_Data::Swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#af803d7f7fe7f09ef001308777613478e"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="sslDebug_Data::InternalSwap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#aaa637191c2ab15c4b8bfe78c6f9b098a"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="protobuf_InitDefaults\l_sslDebug_5fData_2eproto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d3d/ssl_debug___data_8pb_8cc.html#a0070070cfa76c070921a3fc2bc7c388b"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GOOGLE_PROTOBUF_DECLARE_ONCE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d3d/ssl_debug___data_8pb_8cc.html#adf2e32c6ade40588a9ca6241ec879775"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="protobuf_InitDefaults\l_sslDebug_5fData_2eproto_impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d3d/ssl_debug___data_8pb_8cc.html#a68c73c3d75dda6d2390f18d60cbb202a"];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="sslDebug_Data::SharedCtor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a44256881743729173360fd2a035c9c96"];
+}

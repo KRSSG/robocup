@@ -1,0 +1,24 @@
+digraph "MainWindow::Quit"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MainWindow::Quit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MainWindow::closeEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a4e20a4a065fbb0e4d3532a45a0a91425"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MultiVisionStack::stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d23/class_multi_vision_stack.html#aa13a0e0ac8ab100d9f9c5f4f1ac943d3"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CaptureThread::kill",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de9/class_capture_thread.html#ad090018bf9fca28b946fd2c0fa320e15"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="MainWindow::~MainWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="MainWindow::slotSaveSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a8c3ec3691a343b558838b89d2267e74f"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="MainWindow::timerEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a9d08a694a5f9c532225754381b8011ea"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="RealTimeDisplayWidget\l::getRingBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dd2/class_real_time_display_widget.html#a18cd38ae5f56fb9919d6979b812d74b3"];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="RealTimeDisplayWidget\l::displayLoopEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dd2/class_real_time_display_widget.html#a8cc3d199a2cc7e5b9c357bb20287a2d8"];
+}

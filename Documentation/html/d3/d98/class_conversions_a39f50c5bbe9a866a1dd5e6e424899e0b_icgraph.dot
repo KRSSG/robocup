@@ -1,0 +1,56 @@
+digraph "Conversions::rgb2rgba"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Conversions::rgb2rgba",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLLUTWidget::drawSlice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a07100a3b9d0f6393532d6a441b513935"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLLUTWidget::editUndo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a33b84629c9110a05f61ed363e1c538b2"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GLLUTWidget::GLLUTWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a57401039bf068ef61c180a163316d7b4"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GLLUTWidget::editRedo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#ad3a5054e04e3fdc7019d42698dc9d15c"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GLLUTWidget::setChannel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a01eca58e66c2d4e2c47434bf0407e5fa"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="LUTWidget::selectChannel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d1a/class_l_u_t_widget.html#a89e879f260692b559fc99510fe6ceaf0"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="LUTWidget::LUTWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d1a/class_l_u_t_widget.html#a6a1aee355927bddd58b0c4edc75d7e3f"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="GLLUTWidget::drawEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#adbcd00c42146617885751c4e8ea86dba"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="GLLUTWidget::mousePressEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a815067cb8bbd9a0ad60e8a37ae7129b2"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="GLLUTWidget::mouseMoveEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#ac05da9732115359654831362f0ad9e77"];
+  Node2 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="GLLUTWidget::init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a1f10565fadb7932deca96b4991b17310"];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="GLLUTWidget::paintGL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a7169e0aa6f43533d12e700c1974fb205"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="GLLUTWidget::maskToRGBA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#ada467c21d865d7a1a71f93cc88d45b7b"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="GLLUTWidget::drawSinglePixel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a302b316294d9bef601b8c21ffa53a847"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="GLLUTWidget::drawPixel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#ab57505a7d9c48f1a094ae0cc789b31fa"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="GLLUTWidget::drawLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#aa004db28aef2749c1aa7131cea975470"];
+  Node17 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="GLLUTWidget::add_del\l_Pixel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a53d2b4e3f26e92cacbd4866a390b2f03"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="LUTWidget::add_del\l_Pixel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d1a/class_l_u_t_widget.html#a14de14d9cb88231e1ebff8133d6075b9"];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="PluginColorCalibration\l::mouseEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d0e/class_plugin_color_calibration.html#a6e78acd9a597a71b07f5b9204944f842"];
+  Node20 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="PluginColorCalibration\l::mousePressEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d0e/class_plugin_color_calibration.html#a957e9a21751a73273231cb68be0312c5"];
+  Node20 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="PluginColorCalibration\l::mouseReleaseEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d0e/class_plugin_color_calibration.html#a1d8551634ab2db95f2f54d4efe3e0117"];
+  Node20 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="PluginColorCalibration\l::mouseMoveEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d0e/class_plugin_color_calibration.html#af7444a8460c2e8fa2fe4b9cfba88f931"];
+  Node14 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

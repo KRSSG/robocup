@@ -1,0 +1,12 @@
+digraph "tactics.sample_tactic.SampleTactic.__init__"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="tactics.sample_tactic.Sample\lTactic.__init__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="fsm.StateMachine.add\l_state",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dd8/classfsm_1_1_state_machine.html#a4d0aa012c6f96933eac21fa874283dca"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="fsm.StateMachine.add\l_transition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dd8/classfsm_1_1_state_machine.html#aef1a472a386e74789966f329f8fcc585"];
+}

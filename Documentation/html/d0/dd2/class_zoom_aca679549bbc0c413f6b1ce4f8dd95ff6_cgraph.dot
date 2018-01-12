@@ -1,0 +1,18 @@
+digraph "Zoom::panRight"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Zoom::panRight",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GVector::distance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#af5b98c588be57ac262e4d3b021f01bc3"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GVector::dist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#ab4c4f9f2d8f1f0fc9e71585f43c9df8f"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Zoom::getPanX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dd2/class_zoom.html#adf083b3646861c2cc43a516398a07bb3"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Zoom::getPanY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dd2/class_zoom.html#a254ff3fcb8fadd89b222c4d8e1e73ef2"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Zoom::setPan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dd2/class_zoom.html#aa38f9217c3d27057ce2d8fdfbc9107a0"];
+}

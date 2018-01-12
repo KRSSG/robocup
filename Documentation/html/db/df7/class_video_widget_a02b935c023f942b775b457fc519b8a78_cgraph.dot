@@ -1,0 +1,18 @@
+digraph "VideoWidget::VideoWidget"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VideoWidget::VideoWidget",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VideoWidget::processVideo\lStats",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/df7/class_video_widget.html#a128553bd53280612d4b5699ebbdc4fa5"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Ui_VideoWidget::setupUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dbf/class_ui___video_widget.html#a06ecf55490775c0f201a3a3596a55f97"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Ui_VideoWidget::retranslateUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dbf/class_ui___video_widget.html#ad9a19b0f2ad781a99963321a1e090c50"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VideoWidget::toggleFullScreen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/df7/class_video_widget.html#afc07cede0492d02a8f72d01b404d2b70"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VideoWidget::toggleWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/df7/class_video_widget.html#a557b983430bb975ab2133f7134ba7423"];
+}

@@ -1,0 +1,20 @@
+digraph "CaptureBlueFox2::stringToColorTwistMode"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CaptureBlueFox2::stringTo\lColorTwistMode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CaptureBlueFox2::writeParameter\lValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d65/class_capture_blue_fox2.html#aef9ddb1b73755f0ff63b7d63dc3049c6"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CaptureBlueFox2::changed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d65/class_capture_blue_fox2.html#a56549616ef0d1789f171cd00248f0927"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CaptureBlueFox2::mvc\l_connect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d65/class_capture_blue_fox2.html#ae53752281ebb8c760231b9363f631c31"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CaptureBlueFox2::Capture\lBlueFox2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d65/class_capture_blue_fox2.html#af16c29461a9cae00ebf093e2bb9b0c36"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CaptureBlueFox2::writeAll\lParameterValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d65/class_capture_blue_fox2.html#a259150d3916b616dfc962cf7e53af1b2"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CaptureBlueFox2::startCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d65/class_capture_blue_fox2.html#a6409924a90aedccb5ce877229f6f9b24",tooltip="Initialize the interface and start capture. "];
+}

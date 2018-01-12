@@ -1,0 +1,39 @@
+digraph "CaptureFlycap::writeAllParameterValues"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CaptureFlycap::writeAllParameter\lValues",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarList::\lgetChildren",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d74/class_var_types_1_1_var_list.html#a1e8347e1bfa932c7f928effd55710462",tooltip="returns a vector of all children in the order that they occur in internally "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CaptureFlycap::writeParameter\lValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de8/class_capture_flycap.html#aa899b4340df6d7f12e5841cabdae0565"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarType::\lgetName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#a1b2c2afe68e503417551b47a643fb5c2",tooltip="Get the string label of this node. "];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="videoModeFromString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d54/capture__flycap_8cpp.html#ab8805823ac20bc195e48a14626d3c00c"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarStringEnum\l::getString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d6f/class_var_types_1_1_var_string_enum.html#a9835be5d07c2f3d7e4dc28b900ad623b"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="VarTypes::VarBoolVal\l::getBool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d0a/class_var_types_1_1_var_bool_val.html#aa06eade87e8f3799adddde73001ba94b",tooltip="return the boolean value "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="VarTypes::VarVal::lock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#a687df377b593f5ab5ac0b26d22728d4a"];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="VarTypes::VarVal::unlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#a6f1d886beb58366ce6c157b224ff26f8"];
+  Node3 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="VarTypes::VarInt::getInt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6c/class_var_types_1_1_var_int.html#a28e54804076ef060827761e22e15ab1f"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="VarTypes::VarType::lock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#ae3cc30264a849e50988b92ed305d80d2"];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="VarTypes::VarType::\lunlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#aa879148410da333f6b9bf5c5e58fbad8"];
+  Node3 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="VarTypes::VarDoubleVal\l::getDouble",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d0f/class_var_types_1_1_var_double_val.html#aa5c9acfc3658e012d84481b9292a0b12",tooltip="get the value of this data-type "];
+  Node13 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="colorFormatToPixelFormat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d54/capture__flycap_8cpp.html#afe54557202551d9bb66d705fb2b7086c"];
+  Node3 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Colors::stringToColorFormat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d36/class_colors.html#a09065d5dd12d9738bc35aadfd288d022"];
+}

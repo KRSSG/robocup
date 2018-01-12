@@ -1,0 +1,10 @@
+digraph "TimeVar::TimeVar"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TimeVar::TimeVar",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TimeVar::setData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd6/class_time_var.html#aeb34417e19af03559ba417d26d0c842c"];
+}

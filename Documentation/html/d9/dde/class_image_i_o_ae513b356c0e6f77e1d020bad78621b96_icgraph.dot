@@ -1,0 +1,14 @@
+digraph "ImageIO::copyQRGBtoRGBA"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ImageIO::copyQRGBtoRGBA",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ImageIO::readRGBA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dde/class_image_i_o.html#a991b6a12267b0b07740ef89977b9b898"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CaptureFromFile::startCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6f/class_capture_from_file.html#a341dc2f954c0470cac8b7642e434a0b2"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Image\< rgb \>::load",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#a5453c2d21bf333018fa5e371669903d0"];
+}

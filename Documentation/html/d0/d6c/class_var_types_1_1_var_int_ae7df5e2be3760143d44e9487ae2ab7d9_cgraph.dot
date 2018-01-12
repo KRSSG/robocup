@@ -1,0 +1,36 @@
+digraph "VarTypes::VarInt::setDouble"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::VarInt::setDouble",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarInt::setInt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6c/class_var_types_1_1_var_int.html#ab67d1a6bef3cd0fef96836dafdb60dca",tooltip="set the value of this node to val. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarInt::hasMin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6c/class_var_types_1_1_var_int.html#a0b7c214d2af5936730801e17d03797d6"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarType::lock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#ae3cc30264a849e50988b92ed305d80d2"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarType::\lunlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#aa879148410da333f6b9bf5c5e58fbad8"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarInt::getMin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6c/class_var_types_1_1_var_int.html#ad8819c6fc1bb76d563dcdaea1d12bdaa"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="VarTypes::VarInt::hasMax",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6c/class_var_types_1_1_var_int.html#ad417671d1b5ca85c313e9fc47c01f6b4"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="VarTypes::VarInt::getMax",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6c/class_var_types_1_1_var_int.html#ae5fba5b0ebd70c72003e63837a76e212"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="VarTypes::VarIntVal\l::setInt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dc9/class_var_types_1_1_var_int_val.html#afb8369e30c59a1004735828a7a528059",tooltip="set the value of this node to val. "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="VarTypes::VarVal::lock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#a687df377b593f5ab5ac0b26d22728d4a"];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="VarTypes::VarVal::unlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#a6f1d886beb58366ce6c157b224ff26f8"];
+  Node9 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="VarTypes::VarVal::changed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#a61bef38fdec1646a499e44ed09fe3589"];
+}

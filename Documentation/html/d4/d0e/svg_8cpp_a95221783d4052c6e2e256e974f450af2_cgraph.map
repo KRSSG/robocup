@@ -1,0 +1,13 @@
+<map id="sg_smooth" name="sg_smooth">
+<area shape="rect" id="node2" href="$d4/d0e/svg_8cpp.html#afdbd4e6c539737e6182b160e4a702f5e" title="calculate savitzky golay coefficients. " alt="" coords="140,113,212,140"/>
+<area shape="rect" id="node3" href="$d4/d0e/svg_8cpp.html#a31664809e3673eaf6cfe1ce50f5fbe0b" title="Returns the inverse of a matrix using LU&#45;decomposition. " alt="" coords="260,139,315,165"/>
+<area shape="rect" id="node12" href="$d4/d0e/svg_8cpp.html#a2642b8884ccad0743b2aef9616cf6853" title="returns the transposed matrix. " alt="" coords="494,12,573,39"/>
+<area shape="rect" id="node4" href="$d4/d0e/svg_8cpp.html#a3cc670899e3652e73974dc7d31f8b9c2" title="Solve a system of linear equations. Solves the inhomogeneous matrix problem with lu&#45;decomposition. Note that inversion may be accomplished by setting a to the identity_matrix. " alt="" coords="363,139,436,165"/>
+<area shape="rect" id="node5" href="$d4/d0e/svg_8cpp.html#a03b59151903f25290b349a97e0617c33" title="Perform backward substitution. " alt="" coords="484,113,583,140"/>
+<area shape="rect" id="node7" href="$d3/dcf/classfloat__mat.html#ac17c8b2619c87418bef78e7ff65b8358" title="use default destructor " alt="" coords="805,164,936,191"/>
+<area shape="rect" id="node8" href="$d4/d0e/svg_8cpp.html#aa2e1d1c98dd41236f58fbc4210987c65" title="Performs LU factorization in place. " alt="" coords="489,164,578,191"/>
+<area shape="rect" id="node10" href="$d4/d0e/svg_8cpp.html#aa513a3e332da5f225751a7f4499f2e6f" title="permute() orders the rows of A to match the integers in the index array. " alt="" coords="659,265,729,292"/>
+<area shape="rect" id="node11" href="$d4/d0e/svg_8cpp.html#a29a77572d1732cd5eff0cf558e248792" title="Perform forward substitution. " alt="" coords="485,63,581,89"/>
+<area shape="rect" id="node6" href="$d3/dcf/classfloat__mat.html#ab2c06ae28e57814323902fa3db6a5aff" title="get size " alt="" coords="631,63,757,89"/>
+<area shape="rect" id="node9" href="$d4/d0e/svg_8cpp.html#a1642ca3672bacd7664b198907c915b4c" title="Implicit partial pivoting. " alt="" coords="648,215,740,241"/>
+</map>

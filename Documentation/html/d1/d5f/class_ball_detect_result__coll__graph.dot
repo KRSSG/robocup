@@ -1,0 +1,19 @@
+digraph "BallDetectResult"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="BallDetectResult",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" conf" ,fontname="Helvetica"];
+  Node2 [label="float",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" reg" ,fontname="Helvetica"];
+  Node3 [label="CMVision::Region",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/deb/class_c_m_vision_1_1_region.html"];
+  Node2 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cen_x\ncen_y" ,fontname="Helvetica"];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next\ntree_next" ,fontname="Helvetica"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" iterator_id\nrun_start\narea\ny1\ny2\nx1\nx2" ,fontname="Helvetica"];
+  Node4 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" color" ,fontname="Helvetica"];
+  Node5 [label="ColorGrey\< uint8_t,\l COLOR_RAW8 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d8f/class_color_grey.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" v" ,fontname="Helvetica"];
+  Node6 [label="uint8_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,0 +1,21 @@
+digraph "velocity.profiler.Velocity.trapezoidalMotion"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="velocity.profiler.Velocity.trapezoidal\lMotion",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="velocity.profiler.Velocity.get\lVelocity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d5e/classvelocity_1_1profiler_1_1_velocity.html#a10b5396902177d5bd825f408151c3355",tooltip="Gets the velocity. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="velocity.profiler.Velocity.trapezoid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d5e/classvelocity_1_1profiler_1_1_velocity.html#a5bf8566ca2ac78cd4a2f5c22242c49f0",tooltip="Check if trapezoidal motion is possible. "];
+  Node3 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="velocity.profiler.Velocity.update\lAngle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d5e/classvelocity_1_1profiler_1_1_velocity.html#af656b7346a90b2fdbb3e68f350545f06"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="velocity.profiler.Velocity.ellipse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d5e/classvelocity_1_1profiler_1_1_velocity.html#a2879022784360c690d225f00212b7e80"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GVector::min",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a79b77964e0a1ea74cc1ca2048991fb73"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="print",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/ddd/node__class_8cpp.html#abc62c9d234b4194b3886013a7dbd1232"];
+}

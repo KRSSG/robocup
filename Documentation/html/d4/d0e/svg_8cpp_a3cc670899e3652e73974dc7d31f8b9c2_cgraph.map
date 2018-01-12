@@ -1,0 +1,9 @@
+<map id="lin_solve" name="lin_solve">
+<area shape="rect" id="node2" href="$d4/d0e/svg_8cpp.html#a03b59151903f25290b349a97e0617c33" title="Perform backward substitution. " alt="" coords="127,121,225,147"/>
+<area shape="rect" id="node3" href="$d3/dcf/classfloat__mat.html#ac17c8b2619c87418bef78e7ff65b8358" title="use default destructor " alt="" coords="448,146,579,173"/>
+<area shape="rect" id="node5" href="$d4/d0e/svg_8cpp.html#aa2e1d1c98dd41236f58fbc4210987c65" title="Performs LU factorization in place. " alt="" coords="131,171,221,198"/>
+<area shape="rect" id="node7" href="$d4/d0e/svg_8cpp.html#aa513a3e332da5f225751a7f4499f2e6f" title="permute() orders the rows of A to match the integers in the index array. " alt="" coords="302,273,371,299"/>
+<area shape="rect" id="node8" href="$d4/d0e/svg_8cpp.html#a29a77572d1732cd5eff0cf558e248792" title="Perform forward substitution. " alt="" coords="128,70,224,97"/>
+<area shape="rect" id="node4" href="$d3/dcf/classfloat__mat.html#ab2c06ae28e57814323902fa3db6a5aff" title="get size " alt="" coords="273,70,400,97"/>
+<area shape="rect" id="node6" href="$d4/d0e/svg_8cpp.html#a1642ca3672bacd7664b198907c915b4c" title="Implicit partial pivoting. " alt="" coords="291,171,383,198"/>
+</map>

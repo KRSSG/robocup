@@ -1,0 +1,30 @@
+digraph "PluginNeuralColorCalib::mousePressEvent"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PluginNeuralColorCalib\l::mousePressEvent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PluginNeuralColorCalib\l::mouseEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d7c/class_plugin_neural_color_calib.html#afc9550ad0fc5ee3d192cd64f15cb9e25"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Colors::colorFormatToString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d36/class_colors.html#a085839c597a6262301162471cef99367"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="RawImage::getColorFormat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#af6021575525cf3488c1f32599e579205"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="RawImage::getData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a3c1af19eaf1cb9fb9a5e758209d24767"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VisionPlugin::getFrameBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d1e/class_vision_plugin.html#ad4aa9f444a2e2604839e724d77b28aee",tooltip="this functions provides convenient access to the ring-buffer "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="RawImage::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a1ea4625ff40ee5bc6efbfecf474b17ea"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="NeuroWidget::getStateChannel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d12/class_neuro_widget.html#a17a2b00c3239a17396bb2960df19cf2e"];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="RawImage::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a11b26ab9a3b7a7bee8f0eeb3c567b852"];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Conversions::rgb2yuv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d98/class_conversions.html#a6a2bb7c888cdc9db276538acf1a8005f"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="GVector::bound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a64a68732d9c3151a31337ff0c1c7e21a"];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="NeuroWidget::setSamplesLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d12/class_neuro_widget.html#ac6da804b245156b0e1fcca178789f517"];
+}

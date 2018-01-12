@@ -1,0 +1,16 @@
+digraph "GlobalV4Linstance::captureFrame"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GlobalV4Linstance::\lcaptureFrame",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RawImage::getData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a3c1af19eaf1cb9fb9a5e758209d24767"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="RawImage::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a1ea4625ff40ee5bc6efbfecf474b17ea"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="RawImage::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a11b26ab9a3b7a7bee8f0eeb3c567b852"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="RawImage::setTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#ac774b70a0753a6ad4a9e39353e4954da"];
+}

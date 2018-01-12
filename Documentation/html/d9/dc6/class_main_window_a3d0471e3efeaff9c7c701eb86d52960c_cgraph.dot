@@ -1,0 +1,12 @@
+digraph "MainWindow::changeTimer"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MainWindow::changeTimer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MainWindow::getInterval",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a88c8d788d6606f719cd40c0eaf6f010b"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ConfigWidget::DesiredFPS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d55/class_config_widget.html#a4e4dbe789f4acc389ab0c5e2cb2966e2"];
+}

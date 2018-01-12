@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GlobalV4LinstanceManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d1e/class_global_v4_linstance_manager.html",tooltip="A static instance manager to provide global singleton access to GlobalV4Linstance. "];
+}

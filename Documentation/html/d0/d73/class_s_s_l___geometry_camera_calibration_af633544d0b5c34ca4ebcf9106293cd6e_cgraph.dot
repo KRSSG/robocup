@@ -1,0 +1,34 @@
+digraph "SSL_GeometryCameraCalibration::RequiredFieldsByteSizeFallback"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SSL_GeometryCameraCalibration\l::RequiredFieldsByteSizeFallback",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SSL_GeometryCameraCalibration\l::camera_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#a373965d7280a2a26dc6fd7aecbc35e8f"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SSL_GeometryCameraCalibration\l::has_camera_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#a790ef90780a15f12742dfb8139287802"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SSL_GeometryCameraCalibration\l::has_distortion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#a2e33d6a4ae7c4e0ccf1bcbbb665035fa"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SSL_GeometryCameraCalibration\l::has_focal_length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#a3040eb19ea1d2157e7763c1e443f0a72"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="SSL_GeometryCameraCalibration\l::has_principal_point_x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#a2f97c94ebc54ca221e8893a42799095c"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="SSL_GeometryCameraCalibration\l::has_principal_point_y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#aa69323b324335de72fcc816175c32840"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="SSL_GeometryCameraCalibration\l::has_q0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#a20d503ba30eb1f1b898afa69743f77ef"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="SSL_GeometryCameraCalibration\l::has_q1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#ab3734353b05707381483b83ebda64b99"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="SSL_GeometryCameraCalibration\l::has_q2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#aa917c4e1228a15a683bf758f41291fa1"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="SSL_GeometryCameraCalibration\l::has_q3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#a92933d2d38d9a6bd1df39ba22dc4a246"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="SSL_GeometryCameraCalibration\l::has_tx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#a56b198945abe6af44fbc4345dc7e20dd"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="SSL_GeometryCameraCalibration\l::has_ty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#ad0ffa28a8b76d93b058d86bf32510c97"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="SSL_GeometryCameraCalibration\l::has_tz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#acfd66837d1c82b8c2d6af29b6e032205"];
+}

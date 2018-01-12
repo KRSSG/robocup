@@ -1,0 +1,18 @@
+digraph "VarTypes::VarType::mvcEditCompleted"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::VarType::\lmvcEditCompleted",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarBool::\lsetModelData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/da5/class_var_types_1_1_var_bool.html#ab7994f1fabedd536987f392cd509df5c"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarDouble\l::setModelData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de9/class_var_types_1_1_var_double.html#a61486f95f4d728e04af3dd0625262515"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarInt::setModelData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6c/class_var_types_1_1_var_int.html#ae32fcbd5166621fe4c37b32fd92811f9"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarType::\lsetModelData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#a1d5832866826481f32c829c8a28f0828"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarItemDelegate\l::setModelData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d1c/class_var_types_1_1_var_item_delegate.html#a6dac1f1458c1aa57fd963e770c3b8b7c"];
+}

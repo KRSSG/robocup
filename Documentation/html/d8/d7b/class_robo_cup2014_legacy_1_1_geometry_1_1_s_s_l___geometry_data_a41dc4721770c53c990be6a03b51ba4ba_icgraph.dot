@@ -1,0 +1,14 @@
+digraph "RoboCup2014Legacy::Geometry::SSL_GeometryData::calib_size"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::calib_size",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::ByteSizeLong",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_data.html#a694cec46d16e35408b426312ceeec5db"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::InternalSerializeWithCachedSizes\lToArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_data.html#ac35837ea9fb0351c6c2486f0b19b88a1"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::SerializeWithCachedSizes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_data.html#a02ae149a4cad6496dc74851e2bb3d561"];
+}

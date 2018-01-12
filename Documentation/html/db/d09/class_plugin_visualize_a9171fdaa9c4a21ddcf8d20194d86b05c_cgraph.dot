@@ -1,0 +1,34 @@
+digraph "PluginVisualize::DrawSearchCorridors"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PluginVisualize::DrawSearch\lCorridors",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PluginVisualize::drawFieldArc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#aa62140a2625c54efc923f6226a5f2f84"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CameraParameters::field2image",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/df2/class_camera_parameters.html#a85837279d40b7d7ead7805c54c0edeee"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarDoubleVal\l::getDouble",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d0f/class_var_types_1_1_var_double_val.html#aa5c9acfc3658e012d84481b9292a0b12",tooltip="get the value of this data-type "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarVal::lock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#a687df377b593f5ab5ac0b26d22728d4a"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarVal::unlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#a6f1d886beb58366ce6c157b224ff26f8"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Quaternion::norm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/de3/class_quaternion.html#a20fe03fa607e61bc318925cf90b735d6"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CameraParameters::radial\lDistortion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/df2/class_camera_parameters.html#a83ed4149e93ebdc21798b6b170fabf80"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Quaternion::rotateVector\lByQuaternion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/de3/class_quaternion.html#ad8066194132551d2c8e8a71096b0d1db"];
+  Node2 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="ColorRGB::set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dff/class_color_r_g_b.html#ad81090771fc88f83d08f65b69ccc2d83"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="PluginVisualize::drawFieldLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#a05ab81cf53984e18ff63c06db13b9e35"];
+  Node11 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="GVector::max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a1223529a5f19606fa1f0bb39404a9ec3"];
+}

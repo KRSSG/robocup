@@ -1,0 +1,10 @@
+<map id="lu_factorize" name="lu_factorize">
+<area shape="rect" id="node2" href="$d4/d0e/svg_8cpp.html#a3cc670899e3652e73974dc7d31f8b9c2" title="Solve a system of linear equations. Solves the inhomogeneous matrix problem with lu&#45;decomposition. Note that inversion may be accomplished by setting a to the identity_matrix. " alt="" coords="143,31,216,57"/>
+<area shape="rect" id="node3" href="$d4/d0e/svg_8cpp.html#a31664809e3673eaf6cfe1ce50f5fbe0b" title="Returns the inverse of a matrix using LU&#45;decomposition. " alt="" coords="264,31,319,57"/>
+<area shape="rect" id="node4" href="$d4/d0e/svg_8cpp.html#acf5952bc65afce877d8c38dacfa74bb3" title="lsqr_fprime" alt="" coords="367,5,453,32"/>
+<area shape="rect" id="node6" href="$d4/d0e/svg_8cpp.html#afdbd4e6c539737e6182b160e4a702f5e" title="calculate savitzky golay coefficients. " alt="" coords="374,56,446,83"/>
+<area shape="rect" id="node5" href="$d4/d0e/svg_8cpp.html#ad079251b6263f5466f3d8aa26cdf504f" title="savitzky golay smoothed numerical derivative. " alt="" coords="501,5,600,32"/>
+<area shape="rect" id="node7" href="$d4/d0e/svg_8cpp.html#a95221783d4052c6e2e256e974f450af2" title="savitzky golay smoothing. " alt="" coords="507,56,594,83"/>
+<area shape="rect" id="node8" href="$d4/d0e/svg_8cpp.html#a6ae55d451b592f2241032b3dee413164" title="bsCallback" alt="" coords="648,56,735,83"/>
+<area shape="rect" id="node9" href="$d4/d0e/svg_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="783,56,833,83"/>
+</map>

@@ -1,0 +1,18 @@
+digraph "NeuroWidget::NeuroWidget"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="NeuroWidget::NeuroWidget",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="NeuroWidget::is_clicked\l_btn_clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d12/class_neuro_widget.html#a79864ba7c4b46a9a48f1b495eb7164e1"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="NeuroWidget::is_clicked\l_btn_loadnn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d12/class_neuro_widget.html#a55a16b92cf85ad82ba51279874e2d55c"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="NeuroWidget::is_clicked\l_btn_train",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d12/class_neuro_widget.html#ab56fc3cf8f081b8b78ff70ece61987ee"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="NeuroWidget::selectChannel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d12/class_neuro_widget.html#a5f73d594f6524df774344ccb215a6439"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="NeuroWidget::updateList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d12/class_neuro_widget.html#a4bb4663f5af060daca78a7cb31bef769"];
+}

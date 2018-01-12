@@ -1,0 +1,20 @@
+digraph "Zoom::getFlipXval"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Zoom::getFlipXval",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLWidget::mouseAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#ac38cb02e557b2f553c83bb49f26eb50d"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLWidget::myGLdraw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#aa26010e4e1bd13e50fb34deb157daee8"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GLWidget::focusOutEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#ac586a1d9d852248ab00883ef91e70784"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GLWidget::mainDraw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#ad3a2e67de73b897c27d66d8a840a892b"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GLWidget::paintEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#a655a87d2d43fca294901be07f43ac08b"];
+}

@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="FrameBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d23/class_frame_buffer.html",tooltip="A RingBuffer consisting of items of type FrameData. "];
+}

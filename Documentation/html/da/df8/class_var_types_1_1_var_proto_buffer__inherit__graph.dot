@@ -1,0 +1,19 @@
+digraph "VarTypes::VarProtoBuffer&lt; CLASS_VARVAL_TYPE, TPL_vartype_id &gt;"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::VarProtoBuffer\l\< CLASS_VARVAL_TYPE, TPL\l_vartype_id \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarTypeTemplate\l\< VarProtoBufferVal\< CLASS\l_VARVAL_TYPE, TPL_vartype_id \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d38/class_var_types_1_1_var_type_template.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html",tooltip="The base class of the VarTypes system. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="QObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d4f/class_q_object.html"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarVal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html"];
+  Node6 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarProtoBuffer\lVal\< CLASS_VARVAL_TYPE,\l TPL_vartype_id \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d1d/class_var_types_1_1_var_proto_buffer_val.html",tooltip="A Vartype that wraps around google protocol buffers. "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,16 @@
+digraph "grSim/clients" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9633864a0c91c597ca66e41734db3773 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="grSim" fontname="Helvetica", fontsize="10", URL="dir_9633864a0c91c597ca66e41734db3773.html"]
+  subgraph clusterdir_ffacb678d1bfaf0d40968b0b317503ba {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_ffacb678d1bfaf0d40968b0b317503ba.html"];
+    dir_ffacb678d1bfaf0d40968b0b317503ba [shape=plaintext label="clients"];
+    dir_6c13b7223ff500799562e3f270ded578 [shape=box label="java" color="red" fillcolor="white" style="filled" URL="dir_6c13b7223ff500799562e3f270ded578.html"];
+    dir_ae7eec407908b28d19af49077440559d [shape=box label="qt" color="black" fillcolor="white" style="filled" URL="dir_ae7eec407908b28d19af49077440559d.html"];
+  }
+  }
+  dir_9a894cd20ee05559dc2acaa48b41f107 [shape=box label="grsim_comm" fillcolor="white" style="filled" color="red" URL="dir_9a894cd20ee05559dc2acaa48b41f107.html"];
+  dir_ae7eec407908b28d19af49077440559d->dir_9a894cd20ee05559dc2acaa48b41f107 [headlabel="3", labeldistance=1.5 headhref="dir_000013_000037.html"];
+}

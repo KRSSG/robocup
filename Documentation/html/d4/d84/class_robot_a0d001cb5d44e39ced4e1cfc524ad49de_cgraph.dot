@@ -1,0 +1,23 @@
+digraph "Robot::Robot"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Robot::Robot",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PWorld::addObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d29/class_p_world.html#a349a3f5bca2e123f84537f9bacc7ab3d"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PObject::init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d18/class_p_object.html#a5d755078b304a547854a1378ba640a5f"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PObject::setVisibility",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d18/class_p_object.html#a47616bdb20992f5fea27b31d5925f2df"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Robot::Wheel::Wheel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d2c/class_robot_1_1_wheel.html#abc407517ad7df31af76139f78572e080"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PObject::setRotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d18/class_p_object.html#ace1621203e8fb9cd0353d0c0f0d4838b"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PObject::setBodyRotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d18/class_p_object.html#acfa7612aa632c8402cc7b44eb31f53a1"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PObject::setBodyPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d18/class_p_object.html#a43b4248e78b3f3934dfc329a57eb0688"];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

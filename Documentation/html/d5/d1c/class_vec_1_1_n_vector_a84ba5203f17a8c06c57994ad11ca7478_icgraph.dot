@@ -1,0 +1,14 @@
+digraph "Vec::NVector::mul"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Vec::NVector::mul",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Vec::NVector\< num_t,\l dim \>::length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d1c/class_vec_1_1_n_vector.html#a1e2e14d90f175fb0983bb4e44b81c448"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Vec::NVector\< num_t,\l dim \>::neg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d1c/class_vec_1_1_n_vector.html#aa2c2c6b71285f64db9ae81c688ff8189"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Vec::NVector\< num_t,\l dim \>::norm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d1c/class_vec_1_1_n_vector.html#aafb778f29f21d9cb8282d825b930102d"];
+}

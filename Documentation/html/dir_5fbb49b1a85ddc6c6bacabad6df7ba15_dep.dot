@@ -1,0 +1,11 @@
+digraph "ssl-vision/src/logClient" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_bcadbfb4438c878576aec4f093d74922 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_bcadbfb4438c878576aec4f093d74922.html"]
+  dir_5fbb49b1a85ddc6c6bacabad6df7ba15 [shape=box, label="logClient", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5fbb49b1a85ddc6c6bacabad6df7ba15.html"];
+  }
+  dir_8c4c3cdfe414cdc54b23897da338c646 [shape=box label="shared" fillcolor="white" style="filled" color="red" URL="dir_8c4c3cdfe414cdc54b23897da338c646.html"];
+  dir_5fbb49b1a85ddc6c6bacabad6df7ba15->dir_8c4c3cdfe414cdc54b23897da338c646 [headlabel="1", labeldistance=1.5 headhref="dir_000022_000029.html"];
+}

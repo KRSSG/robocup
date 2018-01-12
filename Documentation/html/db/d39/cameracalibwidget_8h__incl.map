@@ -1,0 +1,19 @@
+<map id="ssl&#45;vision/src/app/gui/cameracalibwidget.h" name="ssl&#45;vision/src/app/gui/cameracalibwidget.h">
+<area shape="rect" id="node5" href="$d1/d2a/camera__calibration_8h.html" title="Datatypes for camera parameters, functions for perspective transformations. " alt="" coords="2006,95,2149,121"/>
+<area shape="rect" id="node6" href="$d9/d91/_var_double_8h.html" title="C++ Interface: VarDouble. " alt="" coords="1018,169,1113,196"/>
+<area shape="rect" id="node27" href="$df/dc3/_var_list_8h.html" title="C++ Interface: VarList. " alt="" coords="1821,169,1896,196"/>
+<area shape="rect" id="node28" href="$da/d07/quaternion_8h.html" title="A Quaternion class. " alt="" coords="2229,408,2323,435"/>
+<area shape="rect" id="node37" href="$d5/d5a/field_8h.html" title="Definition of field dimensions. " alt="" coords="2049,169,2106,196"/>
+<area shape="rect" id="node45" href="$dd/d45/ssl-vision_2src_2shared_2util_2timer_8h.html" title="timer.h" alt="" coords="343,333,406,360"/>
+<area shape="rect" id="node7" href="$d4/d8d/_var_type_8h.html" title="C++ Interface: VarType. " alt="" coords="1073,251,1215,278"/>
+<area shape="rect" id="node25" href="$d0/d05/_var_double_val_8h.html" title="C++ Interface: VarDoubleVal. " alt="" coords="636,251,809,278"/>
+<area shape="rect" id="node20" href="$d8/d4f/_var_val_8h.html" title="primitives/VarVal.h" alt="" coords="565,333,697,360"/>
+<area shape="rect" id="node22" href="$d5/d31/xml_parser_8h.html" title="xml/xmlParser.h" alt="" coords="1563,333,1680,360"/>
+<area shape="rect" id="node31" href="$d8/dc0/gvector_8h.html" title="Simple vector class for 2D and 3D vectors. " alt="" coords="2146,483,2222,509"/>
+<area shape="rect" id="node33" href="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html" title="util.h" alt="" coords="2205,557,2256,584"/>
+<area shape="rect" id="node38" href="$d6/d69/field__default__constants_8h.html" title="Definition of field dimensions. " alt="" coords="1994,251,2161,278"/>
+<area shape="rect" id="node40" href="$d1/d9a/_var_types_8h.html" title="The main header for the VarTypes system. " alt="" coords="2333,251,2422,278"/>
+<area shape="rect" id="node42" href="$d1/d98/helpers_8h.html" title="Helper utility functions that generally don&#39;t fit anywhere else. " alt="" coords="1896,251,1971,278"/>
+<area shape="rect" id="node39" href="$d4/d67/geometry_8h.html" title="Meta&#45;header to include all significant geometry&#45;related classes. " alt="" coords="2141,333,2227,360"/>
+<area shape="rect" id="node41" href="$df/de3/_var_types_instance_8h.html" title="VarTypesInstance.h" alt="" coords="2308,333,2447,360"/>
+</map>

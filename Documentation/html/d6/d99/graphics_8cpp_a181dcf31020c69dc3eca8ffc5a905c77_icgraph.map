@@ -1,0 +1,13 @@
+<map id="rotxy" name="rotxy">
+<area shape="rect" id="node2" href="$dc/d90/class_c_graphics.html#a818cb3f21e6a8f7b460a8d54479bf084" title="CGraphics::getCameraForward" alt="" coords="104,90,307,117"/>
+<area shape="rect" id="node12" href="$dc/d90/class_c_graphics.html#a290aedbb892fc4e7cc876569018deb63" title="CGraphics::getCameraRight" alt="" coords="112,141,299,167"/>
+<area shape="rect" id="node3" href="$da/d10/class_g_l_widget.html#a0308fe2b093b7cfde8cfeb4709cad434" title="GLWidget::update3DCursor" alt="" coords="355,141,537,167"/>
+<area shape="rect" id="node10" href="$dc/d90/class_c_graphics.html#a5182b5c8db40ebee05e8ee6e5f8f5001" title="CGraphics::zoomCamera" alt="" coords="361,39,531,66"/>
+<area shape="rect" id="node11" href="$d4/d84/class_robot.html#a46f78f15ce03bc9b0d5a84981d4db881" title="Robot::drawLabel" alt="" coords="384,90,508,117"/>
+<area shape="rect" id="node4" href="$da/d10/class_g_l_widget.html#a5702a23f7cf42d05fe55a417d810a4b6" title="GLWidget::wheelEvent" alt="" coords="604,61,760,87"/>
+<area shape="rect" id="node7" href="$da/d10/class_g_l_widget.html#a9043bac13d6f0a5307ea5c7f9b3caa50" title="GLWidget::mouseMoveEvent" alt="" coords="585,141,779,167"/>
+<area shape="rect" id="node5" href="$d2/d5c/class_g_l_widget_graphics_view.html#abbbeb270c877f599e3eb42df9c333527" title="GLWidgetGraphicsView\l::wheelEvent" alt="" coords="828,5,989,47"/>
+<area shape="rect" id="node6" href="$da/d10/class_g_l_widget.html#ac0d2a8ecf60907a81c0d73475d851025" title="GLWidget::resizeGL" alt="" coords="839,71,979,98"/>
+<area shape="rect" id="node8" href="$d2/d5c/class_g_l_widget_graphics_view.html#ac30c568f8421115f516cfef585a15c84" title="GLWidgetGraphicsView\l::mouseMoveEvent" alt="" coords="828,128,989,169"/>
+<area shape="rect" id="node9" href="$da/d10/class_g_l_widget.html#ac38cb02e557b2f553c83bb49f26eb50d" title="GLWidget::mouseAction" alt="" coords="827,194,991,221"/>
+</map>

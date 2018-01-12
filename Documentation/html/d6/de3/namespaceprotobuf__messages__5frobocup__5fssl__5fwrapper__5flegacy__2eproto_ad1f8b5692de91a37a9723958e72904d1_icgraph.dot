@@ -1,0 +1,10 @@
+digraph "protobuf_messages_5frobocup_5fssl_5fwrapper_5flegacy_2eproto::InitDefaultsSSL_WrapperPacket"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="protobuf_messages_5frobocup\l_5fssl_5fwrapper_5flegacy\l_2eproto::InitDefaultsSSL\l_WrapperPacket",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="protobuf_messages_5frobocup\l_5fssl_5fwrapper_5flegacy\l_2eproto::InitDefaults",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de3/namespaceprotobuf__messages__5frobocup__5fssl__5fwrapper__5flegacy__2eproto.html#ae28ebaeae140baabb93f147e6a26be70"];
+}

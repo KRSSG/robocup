@@ -1,0 +1,30 @@
+<map id="ssl&#45;vision/src/shared/gl/globject.h" name="ssl&#45;vision/src/shared/gl/globject.h">
+<area shape="rect" id="node2" href="$d1/dc6/glcamera_8h.html" title="C++ Interface: GLCamera. " alt="" coords="981,95,1123,136"/>
+<area shape="rect" id="node29" href="$d3/d14/globject_8cpp.html" title="C++ Implementation: GLObject. " alt="" coords="1147,95,1290,136"/>
+<area shape="rect" id="node3" href="$d7/da4/gl_l_u_twidget_8h.html" title="C++ Interface: GLLUTWidget. " alt="" coords="907,184,1037,225"/>
+<area shape="rect" id="node28" href="$de/d48/glcamera_8cpp.html" title="C++ Implementation: GLCamera. " alt="" coords="1061,184,1203,225"/>
+<area shape="rect" id="node4" href="$db/dd9/moc__gl_l_u_twidget_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_glLUTwidget.cxx" alt="" coords="355,273,557,315"/>
+<area shape="rect" id="node5" href="$d7/d92/lutwidget_8h.html" title="C++ Interface: LUTWidget. " alt="" coords="582,273,706,315"/>
+<area shape="rect" id="node7" href="$d7/d16/ssl-vision_2src_2app_2gui_2mainwindow_8h.html" title="ssl&#45;vision/src/app\l/gui/mainwindow.h" alt="" coords="743,749,873,791"/>
+<area shape="rect" id="node23" href="$dc/d57/gl_l_u_twidget_8cpp.html" title="C++ Implementation: GLLUTWidget. " alt="" coords="1010,273,1155,315"/>
+<area shape="rect" id="node24" href="$da/dad/neurowidget_8h.html" title="C++ Implementation: NeuroWidget. " alt="" coords="1180,273,1308,315"/>
+<area shape="rect" id="node6" href="$d2/d5b/moc__lutwidget_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_lutwidget.cxx" alt="" coords="5,363,187,404"/>
+<area shape="rect" id="node13" href="$db/d70/lutwidget_8cpp.html" title="C++ Implementation: LUTWidget. " alt="" coords="494,363,618,404"/>
+<area shape="rect" id="node14" href="$da/df9/plugin__colorcalib_8h.html" title="C++ Interface: plugin_colorcalib. " alt="" coords="643,363,821,404"/>
+<area shape="rect" id="node8" href="$dd/d3a/gr_sim_2src_2main_8cpp.html" title="grSim/src/main.cpp" alt="" coords="345,846,479,873"/>
+<area shape="rect" id="node9" href="$dc/d66/gr_sim_2src_2mainwindow_8cpp.html" title="grSim/src/mainwindow.cpp" alt="" coords="504,846,683,873"/>
+<area shape="rect" id="node10" href="$d3/dd5/moc__mainwindow_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_mainwindow.cxx" alt="" coords="707,839,909,880"/>
+<area shape="rect" id="node11" href="$dc/ded/ssl-vision_2src_2app_2gui_2mainwindow_8cpp.html" title="ssl&#45;vision/src/app\l/gui/mainwindow.cpp" alt="" coords="933,839,1077,880"/>
+<area shape="rect" id="node12" href="$d8/d32/ssl-vision_2src_2app_2main_8cpp.html" title="ssl&#45;vision/src/app\l/main.cpp" alt="" coords="1102,839,1226,880"/>
+<area shape="rect" id="node15" href="$d1/d92/stack__robocup__ssl_8h.html" title="C++ Interface: stack_robocup_ssl. " alt="" coords="529,452,719,493"/>
+<area shape="rect" id="node22" href="$d7/dda/plugin__colorcalib_8cpp.html" title="C++ Implementation: plugin_colorcalib. " alt="" coords="743,452,935,493"/>
+<area shape="rect" id="node16" href="$db/dc2/multistack__robocup__ssl_8h.html" title="C++ Interface: multistack_robocup_ssl. " alt="" coords="391,549,609,590"/>
+<area shape="rect" id="node20" href="$dc/d3f/stacks_8h.html" title="A collection of single&#45;camera vision stacks. " alt="" coords="633,549,757,590"/>
+<area shape="rect" id="node21" href="$dd/d8b/stack__robocup__ssl_8cpp.html" title="C++ Implementation: stack_robocup_ssl. " alt="" coords="780,541,935,597"/>
+<area shape="rect" id="node17" href="$dc/de2/moc__multistack__robocup__ssl_8cxx.html" title="ssl&#45;vision/build/src\l/app/stacks/moc_multistack\l_robocup_ssl.cxx" alt="" coords="261,645,448,701"/>
+<area shape="rect" id="node18" href="$da/d4e/multistack__robocup__ssl_8cpp.html" title="C++ Implementation: multistack_robocup_ssl. " alt="" coords="473,645,655,701"/>
+<area shape="rect" id="node19" href="$d9/de7/multistacks_8h.html" title="A collection of useful MultiVisionStacks. " alt="" coords="680,653,827,694"/>
+<area shape="rect" id="node25" href="$d8/d88/neurowidget_8cpp.html" title="C++ Implementation: NeuroWidget. " alt="" coords="1091,363,1234,404"/>
+<area shape="rect" id="node26" href="$d4/d83/plugin__neuralcolorcalib_8h.html" title="C++ Interface: plugin_neuralcolorcalib. " alt="" coords="1259,363,1472,404"/>
+<area shape="rect" id="node27" href="$d3/dd7/plugin__neuralcolorcalib_8cpp.html" title="C++ Implementation: plugin_neuralcolorcalib, based on the plugin_colorcalib. " alt="" coords="1252,452,1479,493"/>
+</map>

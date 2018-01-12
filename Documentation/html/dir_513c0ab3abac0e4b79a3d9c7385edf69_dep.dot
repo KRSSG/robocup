@@ -1,0 +1,11 @@
+digraph "ssl-vision/build/src/app/plugins" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_dd2c3c939ca37e04676ef0e263972262 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="app" fontname="Helvetica", fontsize="10", URL="dir_dd2c3c939ca37e04676ef0e263972262.html"]
+  dir_513c0ab3abac0e4b79a3d9c7385edf69 [shape=box, label="plugins", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_513c0ab3abac0e4b79a3d9c7385edf69.html"];
+  }
+  dir_bcadbfb4438c878576aec4f093d74922 [shape=box label="src" fillcolor="white" style="filled" color="red" URL="dir_bcadbfb4438c878576aec4f093d74922.html"];
+  dir_513c0ab3abac0e4b79a3d9c7385edf69->dir_bcadbfb4438c878576aec4f093d74922 [headlabel="4", labeldistance=1.5 headhref="dir_000057_000018.html"];
+}

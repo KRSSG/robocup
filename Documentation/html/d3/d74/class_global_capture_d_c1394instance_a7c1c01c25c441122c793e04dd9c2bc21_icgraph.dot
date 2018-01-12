@@ -1,0 +1,20 @@
+digraph "GlobalCaptureDC1394instance::unlock"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GlobalCaptureDC1394instance\l::unlock",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GlobalCaptureDC1394instance\l::obtainInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d74/class_global_capture_d_c1394instance.html#afef7b7e041c0883a03b3e16fb2f8df4f"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GlobalCaptureDC1394instance\lManager::obtainInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dce/class_global_capture_d_c1394instance_manager.html#a10bc3237000099f5874398a7c09c89cd"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CaptureDC1394v2::Capture\lDC1394v2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#afc4a4932dd688dcbf070324ed3df3f93"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GlobalCaptureDC1394instance\l::removeInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d74/class_global_capture_d_c1394instance.html#a41e7e4f0a5768f22471db09419af54f8"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GlobalCaptureDC1394instance\lManager::removeInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dce/class_global_capture_d_c1394instance_manager.html#a6fb10b0858d30ccddbf0bef5cc3c0236"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CaptureDC1394v2::~Capture\lDC1394v2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#a069ec77f2f4377f3302012fda2e564d3"];
+}

@@ -1,0 +1,14 @@
+digraph "CaptureGenerator::CaptureGenerator"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CaptureGenerator::Capture\lGenerator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarList::\laddChild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d74/class_var_types_1_1_var_list.html#a1c6779a59721a6f67634f28e77d639b1",tooltip="adds a VarType item to the end of the list. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarStringEnum\l::addItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d6f/class_var_types_1_1_var_string_enum.html#a912c15d2aecb52d614d6d15e5fa2be30",tooltip="add an item to the end of the enumeration "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Colors::colorFormatToString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d36/class_colors.html#a085839c597a6262301162471cef99367"];
+}

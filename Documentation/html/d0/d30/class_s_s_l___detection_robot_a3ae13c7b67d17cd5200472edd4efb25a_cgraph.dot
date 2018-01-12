@@ -1,0 +1,30 @@
+digraph "SSL_DetectionRobot::ByteSizeLong"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SSL_DetectionRobot\l::ByteSizeLong",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SSL_DetectionRobot\l::has_height",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#a7da1b7dd7a8ceb766ec818d318796bac"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SSL_DetectionRobot\l::has_orientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#a34487c873a686b45e9fe71b52cb69278"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SSL_DetectionRobot\l::has_robot_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#a34dd202d20152a26ab7fd5260de88396"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SSL_DetectionRobot\l::RequiredFieldsByteSizeFallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#a0c83e8572ecc60cd4d2f61893d6ef7d6"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="SSL_DetectionRobot\l::has_confidence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#ac93d3192da665905bf6ef4527df2add9"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="SSL_DetectionRobot\l::has_x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#a7d2e964063b60363bbe580200c4aa8e1"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="SSL_DetectionRobot\l::has_y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#a1c6405de09273755cf791446e8fd2a3a"];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="SSL_DetectionRobot\l::has_pixel_x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#acae3258c0cd82925d17771b7db3ea9f4"];
+  Node5 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="SSL_DetectionRobot\l::has_pixel_y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#a8e9468a2315b05731e0d37f496b3ef47"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="SSL_DetectionRobot\l::robot_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#a15d7fb18efdd2a2fc62761cda6c3a3d4"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="SSL_DetectionRobot\l::unknown_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#a8e2233647fdd1542f570fa0c2157e184"];
+}

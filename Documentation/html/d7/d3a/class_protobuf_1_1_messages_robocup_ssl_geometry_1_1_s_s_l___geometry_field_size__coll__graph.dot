@@ -1,0 +1,21 @@
+digraph "Protobuf.MessagesRobocupSslGeometry.SSL_GeometryFieldSize"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryFieldSize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GeneratedMessage",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MessageOrBuilder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memoizedIsInitialized" ,fontname="Helvetica"];
+  Node5 [label="byte",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" freeKickFromDefenseDist\l_\ncenterCircleRadius\l_\ngoalWidth_\nGOAL_WALL_WIDTH\l_FIELD_NUMBER\ndefenseStretch_\nDEFENSE_STRETCH\l_FIELD_NUMBER\nFIELD_LENGTH_FIELD\l_NUMBER\nfieldWidth_\nLINE_WIDTH_FIELD\l_NUMBER\ndefenseRadius_\n..." ,fontname="Helvetica"];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" serialVersionUID" ,fontname="Helvetica"];
+  Node7 [label="long",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" defaultInstance" ,fontname="Helvetica"];
+}

@@ -1,0 +1,36 @@
+digraph "Debug_Line::New"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Debug_Line::New",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sslDebug_Data::ByteSizeLong",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a9995cb5a94ae8e2d473066b91e424305"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sslDebug_Data::Clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a21b14f0616bab90dff8c0cadca9ff838"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sslDebug_Data::CopyFrom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a8d2ec0e1951e6d9daaa3391d53f453c6"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="sslDebug_Data::InternalSerialize\lWithCachedSizesToArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a78d875bfc4cb3f47b6f81d236e68041d"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sslDebug_Data::IsInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#aa94bf517d4b52ff70fffdd94081cff49"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sslDebug_Data::MergeFrom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a16f6c38843f42702143dfcd39744ec8a"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="sslDebug_Data::MergePartial\lFromCodedStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a402ec360241c3acf95aade09bf2615e4"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="sslDebug_Data::New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a8170c3e14f84330bf98f1fb9dc036ba4"];
+  Node9 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="sslDebug_Data::Serialize\lWithCachedSizes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a09292b6f46b60653e030b8677e4a8231"];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,32 @@
+digraph "PWorld"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PWorld",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" space" ,fontname="Helvetica"];
+  Node2 [label="dSpaceID",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" g" ,fontname="Helvetica"];
+  Node3 [label="CGraphics",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _width\nsphere_quality\n_height" ,fontname="Helvetica"];
+  Node4 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" graphicDisabled" ,fontname="Helvetica"];
+  Node5 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" owner" ,fontname="Helvetica"];
+  Node6 [label="QGLWidget *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tex_ids" ,fontname="Helvetica"];
+  Node7 [label="QVector\< GLuint \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" view_xyz\nfrustum_vnear\nm_renderDepth\nview_hpr\nfrustum_right\nfrustum_bottom" ,fontname="Helvetica"];
+  Node8 [label="dReal",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" surfaces" ,fontname="Helvetica"];
+  Node9 [label="QVector\< PSurface * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" contactgroup" ,fontname="Helvetica"];
+  Node10 [label="dJointGroupID",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sur_matrix\nobjects_count" ,fontname="Helvetica"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" delta_time" ,fontname="Helvetica"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" world" ,fontname="Helvetica"];
+  Node11 [label="dWorldID",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" objects" ,fontname="Helvetica"];
+  Node12 [label="QVector\< PObject * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

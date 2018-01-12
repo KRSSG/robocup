@@ -1,0 +1,14 @@
+digraph "JogDial::offset"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="JogDial::offset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="JogDial::mouseMoveEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d7f/class_jog_dial.html#ad5df1f89cc7d6520fe68248f0646223d"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="JogDial::mouseReleaseEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d7f/class_jog_dial.html#ab8dccb76a7a0a0b4a2833045867ec0f6"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PluginDVR::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d79/class_plugin_d_v_r.html#abb58f33035d31e22b695648f00f00fc9"];
+}

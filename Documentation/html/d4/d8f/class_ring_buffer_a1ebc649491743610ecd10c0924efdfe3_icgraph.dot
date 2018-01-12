@@ -1,0 +1,12 @@
+digraph "RingBuffer::next"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RingBuffer::next",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RingBuffer\< FrameData\l \>::nextRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d8f/class_ring_buffer.html#ae86a800cee0adadbc1d027e146285151",tooltip="gets the index to the next read-bin "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="RingBuffer\< FrameData\l \>::nextWrite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d8f/class_ring_buffer.html#a57c380fbde38eee4b3ad9e1d25e3c7e9",tooltip="gets the index to the next write-bin "];
+}

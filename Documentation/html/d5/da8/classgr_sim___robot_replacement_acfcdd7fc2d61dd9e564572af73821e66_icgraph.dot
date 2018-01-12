@@ -1,0 +1,20 @@
+digraph "grSim_RobotReplacement::has_x"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="grSim_RobotReplacement\l::has_x",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="grSim_RobotReplacement\l::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#adb61fbcf4b911deb32b7ab76009294fe"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="grSim_BallReplacement\l::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db1/classgr_sim___ball_replacement.html#ab63c8711711b9817d18ad5fd1d295535"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SSLWorld::recvActions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d7f/class_s_s_l_world.html#a47a57176f6f8aa3283a6846576c7db2c"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="MainWindow::recvActions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a387f42462d1aaf94676c608d4dc014ca"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="MainWindow::reconnectCommand\lSocket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a3773663f183cdba856ae784c0dad02b4"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="MainWindow::customFPS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a54b84786850165c4e5466bc2e4097810"];
+}

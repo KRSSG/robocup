@@ -1,0 +1,14 @@
+digraph "grSim_RobotReplacement::GetMetadata"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="grSim_RobotReplacement\l::GetMetadata",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="grSim_RobotReplacement\l::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#adb61fbcf4b911deb32b7ab76009294fe"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="grSim_BallReplacement\l::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db1/classgr_sim___ball_replacement.html#ab63c8711711b9817d18ad5fd1d295535"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="grSim_Replacement::\lMaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de6/classgr_sim___replacement.html#ae625b1fd3b9f3b66a28949569654a8a8"];
+}

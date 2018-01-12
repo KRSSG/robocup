@@ -1,0 +1,19 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$d1/d4b/class_get_opt.html#a7ba8bf76e5a6c2bc75f7747b5281f65d" title="GetOpt::addShortOptSwitch" alt="" coords="104,13,289,40"/>
+<area shape="rect" id="node4" href="$d1/d4b/class_get_opt.html#a546bfd492063faed0bee07f19e4f7fd6" title="GetOpt::addSwitch" alt="" coords="130,64,263,91"/>
+<area shape="rect" id="node5" href="$d8/d32/ssl-vision_2src_2app_2main_8cpp.html#a2b444d2ae6facb7e0e5debb12c4abce5" title="HandleStop" alt="" coords="151,115,242,141"/>
+<area shape="rect" id="node15" href="$d9/dc6/class_main_window.html#a671e7e5b0a3a7a3fb1cf44c5c8377952" title="MainWindow::init" alt="" coords="135,165,258,192"/>
+<area shape="rect" id="node16" href="$d1/d4b/class_get_opt.html#ac60e4246dfa22d5058f372b90b4ae48f" title="GetOpt::parse" alt="" coords="145,216,249,243"/>
+<area shape="rect" id="node18" href="$d8/d32/ssl-vision_2src_2app_2main_8cpp.html#ae027ae7bb5d5d8c084c013d3249fd18f" title="printPathWarning" alt="" coords="135,267,258,293"/>
+<area shape="rect" id="node3" href="$d1/d4b/class_get_opt.html#a8ee7c7406eeb5e53f0059d222d3e88e9" title="GetOpt::addOption" alt="" coords="337,39,468,65"/>
+<area shape="rect" id="node6" href="$d9/dc6/class_main_window.html#a44e502225c153db20de1bb67d7b7513e" title="MainWindow::Quit" alt="" coords="338,115,467,141"/>
+<area shape="rect" id="node7" href="$d9/dc6/class_main_window.html#a4e20a4a065fbb0e4d3532a45a0a91425" title="MainWindow::closeEvent" alt="" coords="533,56,703,83"/>
+<area shape="rect" id="node11" href="$d9/dc6/class_main_window.html#a9d08a694a5f9c532225754381b8011ea" title="MainWindow::timerEvent" alt="" coords="534,115,702,141"/>
+<area shape="rect" id="node14" href="$d9/dc6/class_main_window.html#a8c3ec3691a343b558838b89d2267e74f" title="MainWindow::slotSaveSettings" alt="" coords="516,165,720,192"/>
+<area shape="rect" id="node8" href="$d9/dc6/class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7" title="MainWindow::~MainWindow" alt="" coords="768,5,956,32"/>
+<area shape="rect" id="node9" href="$dc/d23/class_multi_vision_stack.html#aa13a0e0ac8ab100d9f9c5f4f1ac943d3" title="MultiVisionStack::stop" alt="" coords="785,56,939,83"/>
+<area shape="rect" id="node10" href="$d6/de9/class_capture_thread.html#ad090018bf9fca28b946fd2c0fa320e15" title="CaptureThread::kill" alt="" coords="1004,56,1136,83"/>
+<area shape="rect" id="node12" href="$d9/dd2/class_real_time_display_widget.html#a18cd38ae5f56fb9919d6979b812d74b3" title="RealTimeDisplayWidget\l::getRingBuffer" alt="" coords="781,107,943,149"/>
+<area shape="rect" id="node13" href="$d9/dd2/class_real_time_display_widget.html#a8cc3d199a2cc7e5b9c357bb20287a2d8" title="RealTimeDisplayWidget\l::displayLoopEvent" alt="" coords="781,173,943,214"/>
+<area shape="rect" id="node17" href="$d1/d4b/class_get_opt.html#a1e221e0e911051f376ec80cd36f37b8d" title="GetOpt::setSwitch" alt="" coords="337,216,468,243"/>
+</map>

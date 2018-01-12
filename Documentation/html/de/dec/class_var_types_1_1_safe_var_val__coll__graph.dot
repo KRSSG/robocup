@@ -1,0 +1,11 @@
+digraph "VarTypes::SafeVarVal&lt; CLASS_VARVAL_TYPE &gt;"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="VarTypes::SafeVarVal\l\< CLASS_VARVAL_TYPE \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CLASS_VARVAL_TYPE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d6d/class_var_types_1_1_c_l_a_s_s___v_a_r_v_a_l___t_y_p_e.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _mutex" ,fontname="Helvetica"];
+  Node3 [label="QMutex",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

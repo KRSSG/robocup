@@ -1,0 +1,26 @@
+<map id="ssl&#45;vision/src/app/gui/neurowidget.cpp" name="ssl&#45;vision/src/app/gui/neurowidget.cpp">
+<area shape="rect" id="node3" href="$da/dad/neurowidget_8h.html" title="C++ Implementation: NeuroWidget. " alt="" coords="173,95,275,121"/>
+<area shape="rect" id="node4" href="$d7/da4/gl_l_u_twidget_8h.html" title="C++ Interface: GLLUTWidget. " alt="" coords="961,169,1068,196"/>
+<area shape="rect" id="node43" href="$d4/d82/lut3d_8h.html" title="C++ Interface: LUT3D. " alt="" coords="195,319,256,345"/>
+<area shape="rect" id="node13" href="$d5/db2/image_8h.html" title="C++ Interface: Image. " alt="" coords="1386,319,1454,345"/>
+<area shape="rect" id="node26" href="$d6/d23/videostats_8h.html" title="A class for storing video display statistics. " alt="" coords="1993,319,2087,345"/>
+<area shape="rect" id="node28" href="$d6/da4/ringbuffer_8h.html" title="C++ Interface: RingBuffer. " alt="" coords="702,393,789,420"/>
+<area shape="rect" id="node30" href="$d7/d97/framedata_8h.html" title="C++ Interface: FrameData. " alt="" coords="1033,319,1124,345"/>
+<area shape="rect" id="node32" href="$d7/d3c/framecounter_8h.html" title="Generic framerate / frame counting class. " alt="" coords="501,244,611,271"/>
+<area shape="rect" id="node33" href="$d4/d85/zoom_8h.html" title="C++ Interface: Zoom. " alt="" coords="1581,244,1646,271"/>
+<area shape="rect" id="node35" href="$d5/df4/realtimedisplaywidget_8h.html" title="C++ Interface: RealTimeDisplayWidget. " alt="" coords="1129,244,1287,271"/>
+<area shape="rect" id="node37" href="$d1/ddc/colorpicker_8h.html" title="C++ Interface: ColorPicker. " alt="" coords="1460,244,1556,271"/>
+<area shape="rect" id="node41" href="$df/dba/texture_8h.html" title="C++ Interface: glTexture. " alt="" coords="1311,244,1385,271"/>
+<area shape="rect" id="node42" href="$d1/dc6/glcamera_8h.html" title="C++ Interface: GLCamera. " alt="" coords="289,244,375,271"/>
+<area shape="rect" id="node19" href="$da/dd8/colors_8h.html" title="A collection of color related classes, types, and functions. " alt="" coords="1302,543,1370,569"/>
+<area shape="rect" id="node20" href="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html" title="util.h" alt="" coords="1703,468,1753,495"/>
+<area shape="rect" id="node21" href="$d7/d70/image__interface_8h.html" title="C++ Interface: image_interface. " alt="" coords="1273,468,1399,495"/>
+<area shape="rect" id="node22" href="$d2/d80/rawimage_8h.html" title="C++ Interface: RawImage. " alt="" coords="1157,393,1246,420"/>
+<area shape="rect" id="node23" href="$dd/d17/image__io_8h.html" title="C++ Interface: ImageIO. " alt="" coords="1541,468,1627,495"/>
+<area shape="rect" id="node24" href="$d9/d67/font_8h.html" title="font.h" alt="" coords="1458,393,1513,420"/>
+<area shape="rect" id="node25" href="$da/dd6/conversions_8h.html" title="Various color conversion operations, but NOT very optimized. " alt="" coords="1030,393,1133,420"/>
+<area shape="rect" id="node27" href="$d6/df6/capturestats_8h.html" title="A class for storing capture statistics. " alt="" coords="1987,393,2093,420"/>
+<area shape="rect" id="node34" href="$da/de5/pixelloc_8h.html" title="A dead&#45;simple data&#45;structure describing a 2D pixel location. " alt="" coords="1745,319,1823,345"/>
+<area shape="rect" id="node36" href="$d6/d5f/renderoptions_8h.html" title="C++ Interface: RenderOptions. " alt="" coords="1149,319,1259,345"/>
+<area shape="rect" id="node45" href="$d1/d9a/_var_types_8h.html" title="The main header for the VarTypes system. " alt="" coords="250,393,339,420"/>
+</map>

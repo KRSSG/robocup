@@ -1,0 +1,26 @@
+digraph "PluginVisualize::DrawSobelImage"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PluginVisualize::DrawSobel\lImage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Images::convert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d62/class_images.html#a4ced65b5fecc964844b90879e0c48d9a"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Conversions::yuv2rgb",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d98/class_conversions.html#a606bd2db67a0ec49893b2db7ee5270ed"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GVector::bound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a64a68732d9c3151a31337ff0c1c7e21a"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="RawImage::getHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a1ea4625ff40ee5bc6efbfecf474b17ea"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="RawImage::getWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a11b26ab9a3b7a7bee8f0eeb3c567b852"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Sobel::horizontalBrighter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/df0/class_sobel.html#a6f0a9def7d32405b695ee2faa15d7cc0"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Sobel::horizontalDarker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/df0/class_sobel.html#aa62736f00726a1cc418bf6a9db12efda"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Sobel::verticalBrighter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/df0/class_sobel.html#abc1dfae39d404b2de0d412a1ec5173f4"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Sobel::verticalDarker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/df0/class_sobel.html#a2e8fd1e850b656166d59ef0a3823b569"];
+}

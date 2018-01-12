@@ -1,0 +1,10 @@
+digraph "tactics.Triangle_Pass.CoordinatedPass.__str__"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="tactics.Triangle_Pass.Coordinated\lPass.__str__",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="tactics.Triangle_Pass.Coordinated\lPass.time_remaining",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/da3/classtactics_1_1_triangle___pass_1_1_coordinated_pass.html#a66a35f8d871857ba8bfd7ec1107acc64"];
+}

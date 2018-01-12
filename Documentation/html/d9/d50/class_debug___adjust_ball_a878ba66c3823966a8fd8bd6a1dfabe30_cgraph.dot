@@ -1,0 +1,28 @@
+digraph "Debug_AdjustBall::RequiredFieldsByteSizeFallback"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Debug_AdjustBall::Required\lFieldsByteSizeFallback",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Debug_AdjustBall::has_vx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#a44dbda7e6ed911c91baeb908dec93399"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Debug_AdjustBall::has_vy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#a4be6b30c0616ce7b8cf9f9d54b2ca77b"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Debug_AdjustBall::has_vz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#a9dc279071610c36c06f3667d84ead465"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Debug_AdjustBall::has_x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#ab64255ae3edf0184bada5738a24ca63e"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Debug_AdjustBall::has_y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#a9c6337e4b2a1680a466fadc34c96bbe0"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Debug_AdjustBall::vx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#a5cf8bd3576f4bcfd83e3746ac96a2864"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Debug_AdjustBall::vy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#a776533f44ec1deaab29c342bf3395d99"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Debug_AdjustBall::vz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#a7f4326d4bdaad4cc1740bcbe5adf5d9c"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Debug_AdjustBall::x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#a78b03c81e47a9fb3b9af32ecb6bbf9db"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Debug_AdjustBall::y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#af19ef7d55ba4c1533b37c51fac082e5d"];
+}

@@ -1,0 +1,54 @@
+digraph "sq"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sq",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GVector::vector2d::\lbound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d10/class_g_vector_1_1vector2d.html#a8d34f74970fdf7f83516632737850c1e",tooltip="bound vector to a maximum length "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CMPattern::MultiPatternModel\l::calcFitError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d49/class_c_m_pattern_1_1_multi_pattern_model.html#a506a70bd9435c8c99e9bfe5145b318d0"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="YUVLUT::computeLUTfromLabels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d88/class_y_u_v_l_u_t.html#a64459ba570379861598ec29bec594370",tooltip="This will clear the LUT and create a new LUT-dataset modeling a NN-lookup based solely on color label..."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CMPattern::TeamDetector\l::init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dbb/class_c_m_pattern_1_1_team_detector.html#a2fec71a2c4f6e948c8ed879c95734b3f"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PluginDetectRobots\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d27/class_plugin_detect_robots.html#adcea998497d6d8c3de23ec75f993d3dc"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="NKDTree::distFromQuery",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d60/class_n_k_d_tree.html#a7e1a496310594d7091f36c059f71e98c"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CMPattern::MultiPatternModel\l::findPattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d49/class_c_m_pattern_1_1_multi_pattern_model.html#a0b47859cd9d7ad16ebe9bde1000601d2"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CMPattern::TeamDetector\l::findRobotsByModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dbb/class_c_m_pattern_1_1_team_detector.html#ab2d57214fd03aaf6e5e70c5a1af64e01"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CMPattern::TeamDetector\l::update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dbb/class_c_m_pattern_1_1_team_detector.html#a37658e3a0620aa89360f0e5ffb1b8259"];
+  Node10 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CMPattern::TeamDetector\l::findRobotsByTeamMarkerOnly",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dbb/class_c_m_pattern_1_1_team_detector.html#a6b7f0f921dc9bafbee97d052e0377f5e"];
+  Node11 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="PluginLegacyPublishGeometry\l::GetFieldLineLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#a2cff78af90f93bac211d5d893039d373"];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="PluginLegacyPublishGeometry\l::sendGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#ab3a19abff7ed07a1980e2ba3f839b0dc"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="PluginLegacyPublishGeometry\l::slotPublishTriggered",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#a298abe557fb26dbb5e147d7e742cbe75"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="PluginLegacyPublishGeometry\l::PluginLegacyPublishGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#a1203737efb1d4913ba97729d6d4fb66b"];
+  Node13 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="PluginLegacyPublishGeometry\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#a1e8cc6b653351ad1c5230b15976cbbe5"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="PluginDetectBalls::\lprocess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d5c/class_plugin_detect_balls.html#aedc36534989a26c68205855352f3e1d4"];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="Vec::sqdist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d84/namespace_vec.html#aafbf017231a767ab8998708081771519"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="Vec::dist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d84/namespace_vec.html#af812a4b05bf66016e3ff121958f8827c"];
+  Node1 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="take_max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#a64ba1e9a20f500f30e33a2c75c816863"];
+  Node20 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="CMPattern::MultiPatternModel\l::loadMultiPatternImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d49/class_c_m_pattern_1_1_multi_pattern_model.html#ad4ca19d8abd77d6ea735bb99116c368a"];
+  Node21 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="CMPattern::Team::Team",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d8f/class_c_m_pattern_1_1_team.html#a1088734005ae643a8b048cf438b6377f"];
+}

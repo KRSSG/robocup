@@ -1,0 +1,36 @@
+<map id="logStatus" name="logStatus">
+<area shape="rect" id="node2" href="$d9/dc6/class_main_window.html#a54b84786850165c4e5466bc2e4097810" title="MainWindow::customFPS" alt="" coords="1377,171,1552,198"/>
+<area shape="rect" id="node3" href="$da/d10/class_g_l_widget.html#a43dfdc9164dfacb939a173e725651fa9" title="GLWidget::keyPressEvent" alt="" coords="143,401,320,427"/>
+<area shape="rect" id="node14" href="$d9/dc6/class_main_window.html#a138c426ef8e1c2a23a65773988a02d8f" title="MainWindow::reconnectBlue\lStatusSocket" alt="" coords="1141,55,1329,96"/>
+<area shape="rect" id="node15" href="$d9/dc6/class_main_window.html#a3773663f183cdba856ae784c0dad02b4" title="MainWindow::reconnectCommand\lSocket" alt="" coords="616,105,839,147"/>
+<area shape="rect" id="node16" href="$d9/dc6/class_main_window.html#a2188b3060fb047fad8f1a401aee1031b" title="MainWindow::reconnectVision\lSocket" alt="" coords="132,160,331,201"/>
+<area shape="rect" id="node17" href="$d9/dc6/class_main_window.html#a5746c4a7c033c1faf302c07d99787621" title="MainWindow::reconnectYellow\lStatusSocket" alt="" coords="131,225,332,267"/>
+<area shape="rect" id="node18" href="$d7/db4/class_robo_cup_s_s_l_server.html#ae3bc91be7714a1635ffa394234226d06" title="RoboCupSSLServer::send" alt="" coords="143,666,319,693"/>
+<area shape="rect" id="node35" href="$d9/dc6/class_main_window.html#abf70ab6834b8f552659edf27b9313e13" title="MainWindow::setCurrentRobot\lPosition" alt="" coords="131,291,332,332"/>
+<area shape="rect" id="node4" href="$d2/d5c/class_g_l_widget_graphics_view.html#a36685d0212d1126cdf3f4295d44ee7fd" title="GLWidgetGraphicsView\l::keyPressEvent" alt="" coords="393,452,555,493"/>
+<area shape="rect" id="node5" href="$da/d10/class_g_l_widget.html#a7fd6e2670f26ea0d6c2b45e0c5a4a5c0" title="GLWidget::callHelp" alt="" coords="407,401,541,427"/>
+<area shape="rect" id="node6" href="$da/d10/class_g_l_widget.html#a3c2a15e2dc8d00d66892a5419b95c740" title="GLWidget::redraw" alt="" coords="664,475,791,502"/>
+<area shape="rect" id="node11" href="$da/d10/class_g_l_widget.html#a9561cd3813d0bdb1b09675a9ec6eda81" title="GLWidget::GLWidget" alt="" coords="1162,450,1309,477"/>
+<area shape="rect" id="node7" href="$da/d10/class_g_l_widget.html#aa3b3f12a716b4873ec8e218ff6fbfd73" title="GLWidget::displayLoopEvent" alt="" coords="895,627,1085,654"/>
+<area shape="rect" id="node8" href="$da/d10/class_g_l_widget.html#ac38cb02e557b2f553c83bb49f26eb50d" title="GLWidget::mouseAction" alt="" coords="1383,645,1547,671"/>
+<area shape="rect" id="node9" href="$da/d10/class_g_l_widget.html#ac0d2a8ecf60907a81c0d73475d851025" title="GLWidget::resizeGL" alt="" coords="920,374,1060,401"/>
+<area shape="rect" id="node10" href="$da/d10/class_g_l_widget.html#a56ad5fa847158e2b162051e35aec3228" title="GLWidget::callZoomNormal" alt="" coords="899,425,1081,451"/>
+<area shape="rect" id="node12" href="$da/d10/class_g_l_widget.html#a0a19fee8dd3793786b5aa32f6febc41f" title="GLWidget::callZoomFit" alt="" coords="912,475,1068,502"/>
+<area shape="rect" id="node13" href="$da/d10/class_g_l_widget.html#aea03d21ab69dc3c2d7ad085c72fa7911" title="GLWidget::flipImage" alt="" coords="919,526,1061,553"/>
+<area shape="rect" id="node19" href="$d7/db4/class_robo_cup_s_s_l_server.html#a4ead6b1a983e61b88bb0d2b553ce8758" title="RoboCupSSLServer::send" alt="" coords="386,695,562,722"/>
+<area shape="rect" id="node20" href="$d7/db4/class_robo_cup_s_s_l_server.html#a0d756331a03344cf43e8988b5d327e10" title="RoboCupSSLServer::open" alt="" coords="386,801,562,827"/>
+<area shape="rect" id="node25" href="$d9/d7f/class_s_s_l_world.html#ac33c379ea009095ee408f55a8e0693f5" title="SSLWorld::sendVisionBuffer" alt="" coords="380,746,568,773"/>
+<area shape="rect" id="node30" href="$d5/db6/class_plugin_publish_geometry.html#a4134adf04d9628fca2e8d937dedf80a9" title="PluginPublishGeometry\l::sendGeometry" alt="" coords="395,564,553,605"/>
+<area shape="rect" id="node34" href="$d4/da3/class_plugin_s_s_l_network_output.html#a512f7b597b57d9d4f16a58ed8f9a1f2c" title="PluginSSLNetworkOutput\l::process" alt="" coords="389,629,559,671"/>
+<area shape="rect" id="node21" href="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a56a00cd6cb17f46826ec771388474f5e" title="MultiStackRoboCupSSL\l::UpdateServerSettings" alt="" coords="645,796,809,837"/>
+<area shape="rect" id="node22" href="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a10ecfe58e96f13357abff26a16d77a4d" title="MultiStackRoboCupSSL\l::RefreshLegacyNetworkOutput" alt="" coords="887,861,1093,903"/>
+<area shape="rect" id="node24" href="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a76f62a8929ba82ebf8d5bb610a56d397" title="MultiStackRoboCupSSL\l::RefreshNetworkOutput" alt="" coords="908,796,1072,837"/>
+<area shape="rect" id="node23" href="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a8388b0f1da4deb8131ae7d935117db05" title="MultiStackRoboCupSSL\l::MultiStackRoboCupSSL" alt="" coords="1149,828,1321,869"/>
+<area shape="rect" id="node26" href="$d9/d7f/class_s_s_l_world.html#a19a89ea3cdc5eeb4176ee4f44c3d1328" title="SSLWorld::step" alt="" coords="670,745,785,771"/>
+<area shape="rect" id="node27" href="$da/d10/class_g_l_widget.html#a655d413639cb45a511baec4d3d4b723c" title="GLWidget::step" alt="" coords="933,745,1047,771"/>
+<area shape="rect" id="node28" href="$d9/dc6/class_main_window.html#a128f71880d4b9683149023fc46fcc9f8" title="MainWindow::update" alt="" coords="1163,661,1307,687"/>
+<area shape="rect" id="node29" href="$da/d10/class_g_l_widget.html#a640b5570cb2b37724fd5b58a77339c5e" title="GLWidget::paintGL" alt="" coords="1169,729,1302,755"/>
+<area shape="rect" id="node31" href="$d5/db6/class_plugin_publish_geometry.html#ada4c3d82c7d4e71f2518bd6c70e75323" title="PluginPublishGeometry\l::slotPublishTriggered" alt="" coords="648,564,807,605"/>
+<area shape="rect" id="node33" href="$d5/db6/class_plugin_publish_geometry.html#af5088ac93beaefa0318196253ddb676d" title="PluginPublishGeometry\l::process" alt="" coords="648,629,807,671"/>
+<area shape="rect" id="node32" href="$d5/db6/class_plugin_publish_geometry.html#a9e882d196592309be7142e9bac31031a" title="PluginPublishGeometry\l::PluginPublishGeometry" alt="" coords="907,679,1073,720"/>
+</map>

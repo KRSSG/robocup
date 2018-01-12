@@ -1,0 +1,45 @@
+digraph "RoboCupSSLServer::send"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RoboCupSSLServer::send",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RoboCupSSLServer::open",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/db4/class_robo_cup_s_s_l_server.html#a0d756331a03344cf43e8988b5d327e10"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MultiStackRoboCupSSL\l::UpdateServerSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a56a00cd6cb17f46826ec771388474f5e"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MultiStackRoboCupSSL\l::RefreshLegacyNetworkOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a10ecfe58e96f13357abff26a16d77a4d"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="MultiStackRoboCupSSL\l::MultiStackRoboCupSSL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a8388b0f1da4deb8131ae7d935117db05"];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="MultiStackRoboCupSSL\l::RefreshNetworkOutput",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a76f62a8929ba82ebf8d5bb610a56d397"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PluginSSLNetworkOutput\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/da3/class_plugin_s_s_l_network_output.html#a512f7b597b57d9d4f16a58ed8f9a1f2c"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="RoboCupSSLServer::send",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/db4/class_robo_cup_s_s_l_server.html#a4ead6b1a983e61b88bb0d2b553ce8758"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="PluginPublishGeometry\l::sendGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/db6/class_plugin_publish_geometry.html#a4134adf04d9628fca2e8d937dedf80a9"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="PluginPublishGeometry\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/db6/class_plugin_publish_geometry.html#af5088ac93beaefa0318196253ddb676d"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="PluginPublishGeometry\l::slotPublishTriggered",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/db6/class_plugin_publish_geometry.html#ada4c3d82c7d4e71f2518bd6c70e75323"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="PluginPublishGeometry\l::PluginPublishGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/db6/class_plugin_publish_geometry.html#a9e882d196592309be7142e9bac31031a"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="SSLWorld::sendVisionBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d7f/class_s_s_l_world.html#ac33c379ea009095ee408f55a8e0693f5"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="SSLWorld::step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d7f/class_s_s_l_world.html#a19a89ea3cdc5eeb4176ee4f44c3d1328"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="GLWidget::step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#a655d413639cb45a511baec4d3d4b723c"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="GLWidget::paintGL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#a640b5570cb2b37724fd5b58a77339c5e"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="GLWidget::mouseAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#ac38cb02e557b2f553c83bb49f26eb50d"];
+  Node15 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="MainWindow::update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a128f71880d4b9683149023fc46fcc9f8"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="MainWindow::customFPS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a54b84786850165c4e5466bc2e4097810"];
+}

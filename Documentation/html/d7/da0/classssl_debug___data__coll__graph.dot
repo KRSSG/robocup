@@ -1,0 +1,26 @@
+digraph "sslDebug_Data"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sslDebug_Data",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Message",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id_" ,fontname="Helvetica"];
+  Node3 [label="ArenaStringPtr",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ballpos_" ,fontname="Helvetica"];
+  Node4 [label="RepeatedPtrField\< \l::Debug_AdjustBall \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" circle_" ,fontname="Helvetica"];
+  Node5 [label="RepeatedPtrField\< \l::Debug_Circle \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _has_bits_" ,fontname="Helvetica"];
+  Node6 [label="HasBits\< 1 \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _internal_metadata_" ,fontname="Helvetica"];
+  Node7 [label="InternalMetadataWithArena",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" line_" ,fontname="Helvetica"];
+  Node8 [label="RepeatedPtrField\< \l::Debug_Line \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" kBotposFieldNumber\nkCircleFieldNumber\n_cached_size_\nkLineFieldNumber\nkBallposFieldNumber\nkIdFieldNumber" ,fontname="Helvetica"];
+  Node9 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" botpos_" ,fontname="Helvetica"];
+  Node10 [label="RepeatedPtrField\< \l::Debug_AdjustBot \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

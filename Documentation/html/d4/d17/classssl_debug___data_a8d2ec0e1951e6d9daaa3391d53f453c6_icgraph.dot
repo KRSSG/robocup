@@ -1,0 +1,37 @@
+digraph "sslDebug_Data::CopyFrom"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sslDebug_Data::CopyFrom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sslDebug_Data::New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a8170c3e14f84330bf98f1fb9dc036ba4"];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Debug_Circle::New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/class_debug___circle.html#af76b71214852431e6222286c902c117f"];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Debug_Line::New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d2a/class_debug___line.html#a09bfdcbf91d3d00ba2fac272dbf5ff95"];
+  Node4 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Debug_AdjustBot::New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a82960757286deb9de834b13f5aa169c5"];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Debug_AdjustBall::New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#a257c71cf43e33bf62b04d7c84f61e70e"];
+  Node6 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sslDebug_Data::operator=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a2820787628d496b6ae34dc8fb327fc01"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Debug_Circle::operator=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/class_debug___circle.html#a1d08819a9804678cd6df3ed705287d45"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Debug_Line::operator=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d2a/class_debug___line.html#a6246405eda8af4a3438814139ef27326"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Debug_AdjustBot::operator=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#a82f681e381be094122853e46a8bf3360"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Debug_AdjustBall::operator=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#aa2f3b8c9d307083b8a95fbae948f69ad"];
+}

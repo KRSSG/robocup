@@ -1,0 +1,14 @@
+digraph "SSL_FieldLineSegment::IsInitialized"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SSL_FieldLineSegment\l::IsInitialized",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SSL_FieldLineSegment\l::has_p1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dad/class_s_s_l___field_line_segment.html#a38f504dadf3e9f416cf07d1988a6b9f0"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SSL_FieldLineSegment\l::has_p2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dad/class_s_s_l___field_line_segment.html#a2555df7b9e0140270ccd44869fa088fc"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Vector2f::IsInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc2/class_vector2f.html#a01b4d4820f667a947d7dd9f940edc994"];
+}

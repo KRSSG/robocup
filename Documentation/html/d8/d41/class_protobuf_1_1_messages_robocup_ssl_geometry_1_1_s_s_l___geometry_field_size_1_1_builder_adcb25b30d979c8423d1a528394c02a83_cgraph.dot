@@ -1,0 +1,36 @@
+digraph "Protobuf.MessagesRobocupSslGeometry.SSL_GeometryFieldSize.Builder.isInitialized"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSize.Builder.isInitialized",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasBoundaryWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#a632bcdf84f1c70af3aa543551e30070e"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasCenterCircleRadius",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#a5b916c4fbae274265c41300de8fa82cb"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasDefenseRadius",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#a6e95cfe120d73aa8be677156d4f3ac0d"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasDefenseStretch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#aca7382c69d18d9824b064443c5335daf"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasFieldLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#a6efa6c942c6dfe7d6b75ec24e628ae47"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasFieldWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#abdc6bbb2036812ca0fb38b3a31150de1"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasFreeKickFromDefenseDist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#a31f7c5197700e2b8a8ac386dd1361a70"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasGoalDepth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#a4cf76f84e71fa4fb0e807e4492dc4469"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasGoalWallWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#aac477d689e4048151836c857c7f16b63"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasGoalWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#ac265d9c5081e7dd733fe925c9485fe41"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasLineWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#a6b188531210204e326321a6f5bbb4a6b"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasPenaltyLineFromSpotDist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#ab6bfbf53a8f869a91243fb610c7305d0"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasPenaltySpotFromField\lLineDist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#aa808af8b71f2ca6d421cb00a58f56cd8"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasRefereeWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d25/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_or_builder.html#a6957d39b3849790e5c0e36f6885cbc22"];
+}

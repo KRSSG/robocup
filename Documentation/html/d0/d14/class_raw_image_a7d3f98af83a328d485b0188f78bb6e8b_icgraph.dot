@@ -1,0 +1,20 @@
+digraph "RawImage::setWidth"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RawImage::setWidth",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Image\< rgb \>::copyToRawImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#a840019e008329b5d6f4637b6b64e7bf4"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CaptureFromFile::getFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6f/class_capture_from_file.html#af722f4833a1570f3e0761b262b76e5ba"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CaptureFromFile::isCapturing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6f/class_capture_from_file.html#a412b2db19259e85e8ba5a46f30a923db"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CaptureFlycap::getFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de8/class_capture_flycap.html#aa019a4441b46c1cdaf92707f7730b6b8"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CaptureBlueFox2::getFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d65/class_capture_blue_fox2.html#ad229f955fc021d0fc98b2cdc229884bb"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CaptureDC1394v2::getFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#a523235c9ef030a056849132f800c13a6"];
+}

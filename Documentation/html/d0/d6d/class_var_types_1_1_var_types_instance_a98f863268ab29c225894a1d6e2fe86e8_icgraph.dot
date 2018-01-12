@@ -1,0 +1,43 @@
+digraph "VarTypes::VarTypesInstance::VarTypesInstance"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::VarTypesInstance\l::VarTypesInstance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarTypesInstance\l::getFactory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6d/class_var_types_1_1_var_types_instance.html#a408eb4228a2ef962ccaa16cf2c3fd012"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarType::\lreadChildrenHelper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#abc6e10025322f3fc5e0e0802c5a5f8d2",tooltip="A helper function to read a list of children from XML and convert it to a vector of VarType nodes..."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarExternal\l::loadExternal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/de2/class_var_types_1_1_var_external.html#a8cdbf72cd88b965326168362d9d2dc5e"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarExternal\l::readChildren",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/de2/class_var_types_1_1_var_external.html#a17094bd8f47407726cbe388e091e9bef"];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarXML::read",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd1/class_var_types_1_1_var_x_m_l.html#ae7fd42e8b53c47ef87c368af79afdb72"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="VarTypes::VarVal::getTypeName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#abc2a5951015efe1d6296bf376504e015",tooltip="Get the string label of the type of this VarType node. "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="VarTypes::VarItem::\lupdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d53/class_var_types_1_1_var_item.html#aebc587487c49136eb2a51310e6865583"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="VarTypes::VarItem::\lchangeUpdate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d53/class_var_types_1_1_var_item.html#a8163a34045b5f0918823018880cdc7bc"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="VarTypes::VarItem::\lupdateTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d53/class_var_types_1_1_var_item.html#a0da9af66a611802faae29021f3d75c6a"];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="VarTypes::VarTreeModel\l::setRootItems",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d23/class_var_types_1_1_var_tree_model.html#a34ebcd06d19488d763949d481b3234d2"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="ConfigWidget::ConfigWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d55/class_config_widget.html#a7ef900142fc1a65ef49c13f89b669820"];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="MainWindow::MainWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a0479fec4bd069aebecfbb8f5511c40f9"];
+  Node11 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="VarTypes::VarTreeModel\l::setRootItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d23/class_var_types_1_1_var_tree_model.html#a4ee822fd0b894779c13a1fb7e2a0f37b"];
+  Node8 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="VarTypes::VarItem::\lVarItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d53/class_var_types_1_1_var_item.html#a26ac4f171e3ec17780055c74be6be1f9"];
+  Node15 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="VarTypes::VarType::\lwriteXML",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#a8fb4eee4c500b4010bda44705fcf7a96",tooltip="Write the contents of this VarType node to an XMLNode. "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="VarTypes::VarTypesInstance\l::setFactory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6d/class_var_types_1_1_var_types_instance.html#abd820f89f642dcff700f9191c8b595ed"];
+}

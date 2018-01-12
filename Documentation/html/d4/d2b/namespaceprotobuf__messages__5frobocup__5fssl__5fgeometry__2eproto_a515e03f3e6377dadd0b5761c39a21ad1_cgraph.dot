@@ -1,0 +1,14 @@
+digraph "protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::InitDefaultsVector2f"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaultsVector2f",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GOOGLE_PROTOBUF_DECLARE_ONCE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d34/grsim__comm_2include_2proto_2messages__robocup__ssl__geometry_8pb_8cc.html#ab62e58f219471a884ff8331c119d4c66"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaultsVector2fImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__2eproto.html#a71e243c6dc08d40aa31dc3bc0c3827b5"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Vector2f::InitAsDefaultInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc2/class_vector2f.html#a504e2bf8a27ffcd91bfca0c496e0fbb8"];
+}

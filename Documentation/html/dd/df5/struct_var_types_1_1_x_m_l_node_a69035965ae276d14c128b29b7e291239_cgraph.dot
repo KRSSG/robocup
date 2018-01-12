@@ -1,0 +1,21 @@
+digraph "VarTypes::XMLNode::updateText_WOSD"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::XMLNode::\lupdateText_WOSD",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::XMLNode::\laddText_WOSD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a00472ecab4e15d6e4cd43922d2c91831"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::XMLNode::\laddText_priv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#af97726ce50d91fb4687b71f42920fa05"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::XMLNode::\laddToOrder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a8966be07a58188f95a3cee4510c73dbf"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::myRealloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a47f43809f22c37a229ee6451c4db2ede"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::XMLNode::\lindexText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#ac642aae0929164e1a8ffaf1d28625501"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="VarTypes::XMLNode::\lupdateText_WOSD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#ac94f11bf0b9f2e1f2fc369f56f567857"];
+  Node7 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

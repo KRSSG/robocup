@@ -1,0 +1,40 @@
+<map id="ssl&#45;vision/src/app/stacks/multistack_robocup_ssl.cpp" name="ssl&#45;vision/src/app/stacks/multistack_robocup_ssl.cpp">
+<area shape="rect" id="node2" href="$db/dc2/multistack__robocup__ssl_8h.html" title="C++ Interface: multistack_robocup_ssl. " alt="" coords="3166,109,3301,151"/>
+<area shape="rect" id="node4" href="$d4/de9/multivisionstack_8h.html" title="C++ Interface: MultiVisionStack. " alt="" coords="297,273,423,300"/>
+<area shape="rect" id="node17" href="$d1/d92/stack__robocup__ssl_8h.html" title="C++ Interface: stack_robocup_ssl. " alt="" coords="3369,199,3511,225"/>
+<area shape="rect" id="node21" href="$d5/d5a/field_8h.html" title="Definition of field dimensions. " alt="" coords="3429,587,3486,613"/>
+<area shape="rect" id="node36" href="$d6/d39/plugin__detect__balls_8h.html" title="C++ Interface: plugin_detect_balls. " alt="" coords="1619,348,1763,375"/>
+<area shape="rect" id="node43" href="$dc/d90/cmpattern__teamdetector_8h.html" title="C++ Interface: teamdetector. " alt="" coords="2549,348,2723,375"/>
+<area shape="rect" id="node48" href="$d8/d45/plugin__publishgeometry_8h.html" title="C++ Interface: plugin_publishgeometry. " alt="" coords="4622,430,4791,457"/>
+<area shape="rect" id="node9" href="$d1/d9a/_var_types_8h.html" title="The main header for the VarTypes system. " alt="" coords="2922,669,3011,695"/>
+<area shape="rect" id="node11" href="$d7/d97/framedata_8h.html" title="C++ Interface: FrameData. " alt="" coords="416,669,507,695"/>
+<area shape="rect" id="node12" href="$d5/df4/realtimedisplaywidget_8h.html" title="C++ Interface: RealTimeDisplayWidget. " alt="" coords="1087,587,1246,613"/>
+<area shape="rect" id="node13" href="$da/de5/pixelloc_8h.html" title="A dead&#45;simple data&#45;structure describing a 2D pixel location. " alt="" coords="857,587,935,613"/>
+<area shape="rect" id="node14" href="$d9/dcc/capture__thread_8h.html" title="C++ Interface: CaptureThread. " alt="" coords="499,348,618,375"/>
+<area shape="rect" id="node10" href="$df/de3/_var_types_instance_8h.html" title="VarTypesInstance.h" alt="" coords="2907,751,3045,777"/>
+<area shape="rect" id="node15" href="$dc/d5b/visionstack_8h.html" title="C++ Interface: VisionStack. " alt="" coords="600,430,699,457"/>
+<area shape="rect" id="node16" href="$d8/de0/visionplugin_8h.html" title="C++ Interface: VisionPlugin. " alt="" coords="2573,512,2675,539"/>
+<area shape="rect" id="node18" href="$d4/d82/lut3d_8h.html" title="C++ Interface: LUT3D. " alt="" coords="2428,587,2489,613"/>
+<area shape="rect" id="node20" href="$d1/d2a/camera__calibration_8h.html" title="Datatypes for camera parameters, functions for perspective transformations. " alt="" coords="3757,512,3899,539"/>
+<area shape="rect" id="node26" href="$d1/df0/plugin__dvr_8h.html" title="C++ Interface: plugin_dvr. " alt="" coords="4506,430,4598,457"/>
+<area shape="rect" id="node29" href="$da/df9/plugin__colorcalib_8h.html" title="C++ Interface: plugin_colorcalib. " alt="" coords="723,430,853,457"/>
+<area shape="rect" id="node30" href="$da/d18/plugin__cameracalib_8h.html" title="C++ Interface: plugin_cameracalib. " alt="" coords="3503,430,3647,457"/>
+<area shape="rect" id="node31" href="$d6/dde/plugin__visualize_8h.html" title="C++ Interface: plugin_visualize. " alt="" coords="3303,430,3428,457"/>
+<area shape="rect" id="node33" href="$d7/d46/plugin__colorthreshold_8h.html" title="C++ Interface: plugin_colorthreshold. " alt="" coords="876,430,1031,457"/>
+<area shape="rect" id="node34" href="$d6/d61/plugin__runlength__encode_8h.html" title="C++ Interface: plugin_runlength_encode. " alt="" coords="1409,430,1585,457"/>
+<area shape="rect" id="node35" href="$d3/d30/plugin__find__blobs_8h.html" title="C++ Interface: plugin_find_blobs. " alt="" coords="3095,430,3228,457"/>
+<area shape="rect" id="node42" href="$d6/d37/plugin__detect__robots_8h.html" title="C++ Interface: plugin_detect_robots. " alt="" coords="2031,273,2185,300"/>
+<area shape="rect" id="node47" href="$de/d28/plugin__sslnetworkoutput_8h.html" title="C++ Interface: plugin_sslnetworkoutput. " alt="" coords="3772,430,3945,457"/>
+<area shape="rect" id="node49" href="$d9/db9/plugin__legacysslnetworkoutput_8h.html" title="C++ Interface: plugin_legacysslnetworkoutput. " alt="" coords="3979,348,4189,375"/>
+<area shape="rect" id="node50" href="$d7/db2/plugin__legacypublishgeometry_8h.html" title="C++ Interface: plugin_legacypublishgeometry. " alt="" coords="4122,430,4329,457"/>
+<area shape="rect" id="node22" href="$d6/d69/field__default__constants_8h.html" title="Definition of field dimensions. " alt="" coords="3289,669,3455,695"/>
+<area shape="rect" id="node23" href="$d1/d98/helpers_8h.html" title="Helper utility functions that generally don&#39;t fit anywhere else. " alt="" coords="3156,669,3231,695"/>
+<area shape="rect" id="node28" href="$d5/db2/image_8h.html" title="C++ Interface: Image. " alt="" coords="2729,587,2797,613"/>
+<area shape="rect" id="node32" href="$d4/df1/cmvision__region_8h.html" title="C++ Interface: cmvision_region. " alt="" coords="2219,512,2346,539"/>
+<area shape="rect" id="node38" href="$d7/d0d/field__filter_8h.html" title="A filter based on field location. " alt="" coords="2930,430,3019,457"/>
+<area shape="rect" id="node39" href="$d0/d34/cmvision__histogram_8h.html" title="C++ Interface: cmvision_histogram. " alt="" coords="1761,430,1911,457"/>
+<area shape="rect" id="node40" href="$d5/d1a/vis__util_8h.html" title="Vision support functions. " alt="" coords="1989,512,2064,539"/>
+<area shape="rect" id="node41" href="$da/d94/_var_notifier_8h.html" title="VarNotifier.h" alt="" coords="1071,512,1166,539"/>
+<area shape="rect" id="node44" href="$de/d0b/cmpattern__team_8h.html" title="C++ Interface: team. " alt="" coords="1157,430,1283,457"/>
+<area shape="rect" id="node45" href="$de/dec/cmpattern__pattern_8h.html" title="C++ Interface: pattern. " alt="" coords="2513,430,2652,457"/>
+</map>

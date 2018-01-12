@@ -1,0 +1,18 @@
+digraph "CMPattern::Marker::reset"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CMPattern::Marker::\lreset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CMPattern::MultiPatternModel\l::loadSinglePatternImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d49/class_c_m_pattern_1_1_multi_pattern_model.html#aa1ae63073c7e67231b602938fb5b16a7"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CMPattern::Marker::\lMarker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d02/class_c_m_pattern_1_1_marker.html#ad09b3d5d1bdbde27d2ce0f45ca507515"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CMPattern::Pattern\l::Pattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d67/class_c_m_pattern_1_1_pattern.html#a6ebb5f76fe324728e617b62fa862dbce"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CMPattern::MultiPatternModel\l::PatternDetectionResult\l::PatternDetectionResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d18/class_c_m_pattern_1_1_multi_pattern_model_1_1_pattern_detection_result.html#a1c82a14ed19755af6ea737d1797954b6"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CMPattern::MultiPatternModel\l::PatternFitParameters::PatternFit\lParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db3/class_c_m_pattern_1_1_multi_pattern_model_1_1_pattern_fit_parameters.html#aa4f24086a757908ffc0efd68fae947a2"];
+}

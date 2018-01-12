@@ -1,0 +1,19 @@
+digraph "VarTypes::XMLNode::createXMLString"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::XMLNode::\lcreateXMLString",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::XMLNode::\lCreateXMLStringR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a90716e65ba8b8633572b41654a754112"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::charmemset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a4e56a48a705434f3b626c25ac1354095"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::_tcscpy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a6fff4e7b88089652d2d8ade07bbe0df7"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::lengthXMLString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a9174633a1fde3b62729de285fe4756c1"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::toXMLString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a9897a2d71d93b68074df9f32d77f5eb8"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

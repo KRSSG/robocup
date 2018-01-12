@@ -1,0 +1,20 @@
+digraph "grSim_Commands::ByteSizeLong"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="grSim_Commands::ByteSizeLong",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="grSim_Commands::Required\lFieldsByteSizeFallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d13/classgr_sim___commands.html#ada1bf1a3324d3893c0e6ce6a1ac4bf34"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="grSim_Commands::has\l_timestamp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d13/classgr_sim___commands.html#adbf9e39ef110cab516868130f79ce562"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="grSim_Commands::has\l_isteamyellow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d13/classgr_sim___commands.html#aaa2ff87f1d74235838c70e67916dc2ab"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="grSim_Commands::robot\l_commands",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d13/classgr_sim___commands.html#a169443838efbf7a1ec780fb3300c8eee"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="grSim_Commands::robot\l_commands_size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d13/classgr_sim___commands.html#a8f37baa92a87f9d6ae305e318e50641c"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="grSim_Commands::unknown\l_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d13/classgr_sim___commands.html#a9515959a93e9bbbc9d67317059406f95"];
+}

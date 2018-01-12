@@ -1,0 +1,17 @@
+<map id="list" name="list">
+<area shape="rect" id="node2" href="$d7/dc1/bot__data_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="92,323,143,350"/>
+<area shape="rect" id="node3" href="$d5/da7/class_h_a_l_1_1_serial.html#a60be93a8907d62b779bd37a434efbcdf" title="HAL::Serial::Open" alt="" coords="195,222,323,249"/>
+<area shape="rect" id="node5" href="$d5/da7/class_h_a_l_1_1_serial.html#ab1577ef47416f180dc8ae9a182305339" title="HAL::Serial::Read" alt="" coords="1025,146,1153,173"/>
+<area shape="rect" id="node14" href="$d7/dc1/bot__data_8cpp.html#a6aef63a95b7e102edeaeec90790523bd" title="port" alt="" coords="237,349,281,375"/>
+<area shape="rect" id="node15" href="$d8/d2d/namespacerole_1_1___go_to_point.html#acd26dac0b181365494930d91d624cd76" title="role._GoToPoint.init" alt="" coords="191,399,328,426"/>
+<area shape="rect" id="node4" href="$d5/da7/class_h_a_l_1_1_serial.html#ae1f308b294125c9ba16b97464d741241" title="HAL::Serial::Close" alt="" coords="390,121,521,147"/>
+<area shape="rect" id="node12" href="$df/da1/namespace_h_a_l.html#aeb185801efffc7cb2973e693dcbda4eb" title="HAL::baud_rate_to_flag" alt="" coords="376,197,535,223"/>
+<area shape="rect" id="node13" href="$df/da1/namespace_h_a_l.html#a7abbf7c73b642420ec96c8f616c06e82" title="HAL::baud_flag_to_rate" alt="" coords="376,247,535,274"/>
+<area shape="rect" id="node6" href="$d5/da7/class_h_a_l_1_1_serial.html#a6376a54bd334059b716c8b23c2dc702f" title="HAL::Serial::Write" alt="" coords="583,121,711,147"/>
+<area shape="rect" id="node7" href="$d5/da7/class_h_a_l_1_1_serial.html#ad440179230582a6e7d119e09a203a817" title="HAL::Serial::WriteByte" alt="" coords="791,45,945,71"/>
+<area shape="rect" id="node8" href="$d5/da7/class_h_a_l_1_1_serial.html#af2e5338e44464da88284e896fe55a050" title="HAL::Serial::ReadByte" alt="" coords="791,95,945,122"/>
+<area shape="rect" id="node9" href="$d5/da7/class_h_a_l_1_1_serial.html#a5a4e70249b711316c25fd87047caa158" title="HAL::Serial::ReadNBytesTimeout" alt="" coords="759,146,977,173"/>
+<area shape="rect" id="node10" href="$d5/da7/class_h_a_l_1_1_serial.html#a2dc9e61cbe107b6761b6ca768c3f861f" title="HAL::Serial::ReadByteTimeout" alt="" coords="767,197,969,223"/>
+<area shape="rect" id="node11" href="$d5/da7/class_h_a_l_1_1_serial.html#af21e0e5228a30f6bfececd51f5fa502a" title="HAL::Serial::Clear" alt="" coords="804,247,932,274"/>
+<area shape="rect" id="node16" href="$dc/ddd/node__class_8cpp.html#abc62c9d234b4194b3886013a7dbd1232" title="print" alt="" coords="432,399,479,426"/>
+</map>

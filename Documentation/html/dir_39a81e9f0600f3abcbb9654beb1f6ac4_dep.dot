@@ -1,0 +1,13 @@
+digraph "ssl-vision/src/shared/vartypes/primitives" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_25b428b3261c7de910dea312ae7155ee {
+    graph [ bgcolor="#ddddee", pencolor="black", label="vartypes" fontname="Helvetica", fontsize="10", URL="dir_25b428b3261c7de910dea312ae7155ee.html"]
+  dir_39a81e9f0600f3abcbb9654beb1f6ac4 [shape=box, label="primitives", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_39a81e9f0600f3abcbb9654beb1f6ac4.html"];
+  }
+  dir_d077de4524a6bfd100d06ba596a3d49e [shape=box label="xml" URL="dir_d077de4524a6bfd100d06ba596a3d49e.html"];
+  dir_e103aa55346def1c0e6c9803171f61bd [shape=box label="gui" fillcolor="white" style="filled" color="red" URL="dir_e103aa55346def1c0e6c9803171f61bd.html"];
+  dir_39a81e9f0600f3abcbb9654beb1f6ac4->dir_d077de4524a6bfd100d06ba596a3d49e [headlabel="1", labeldistance=1.5 headhref="dir_000079_000080.html"];
+  dir_39a81e9f0600f3abcbb9654beb1f6ac4->dir_e103aa55346def1c0e6c9803171f61bd [headlabel="1", labeldistance=1.5 headhref="dir_000079_000077.html"];
+}

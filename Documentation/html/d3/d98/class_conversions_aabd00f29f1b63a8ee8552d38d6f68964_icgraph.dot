@@ -1,0 +1,20 @@
+digraph "Conversions::uyvy2rgb"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Conversions::uyvy2rgb",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PluginCameraCalibration\l::detectEdges",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de5/class_plugin_camera_calibration.html#ad1b96969290257b3b52107f15bcd9ad7"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PluginCameraCalibration\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de5/class_plugin_camera_calibration.html#a23662c330318774c564d6ff792aa07b1"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PluginVisualize::DrawCamera\lImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#a68638173df5332c29d7b9fcd1c6bca22"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PluginVisualize::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#a9fb83c5f31f4ad6205bada831b2547c0"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Conversions::rgb2yuv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d98/class_conversions.html#a7dc053d1a9d09a279a39d4e4159216df"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PluginDVR::slotMovieSave",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d79/class_plugin_d_v_r.html#af5c0c6a293e0f2349132ac40e3f143ea"];
+}

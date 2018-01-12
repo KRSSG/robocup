@@ -1,0 +1,11 @@
+<map id="HandleStop" name="HandleStop">
+<area shape="rect" id="node2" href="$d9/dc6/class_main_window.html#a44e502225c153db20de1bb67d7b7513e" title="MainWindow::Quit" alt="" coords="144,115,273,141"/>
+<area shape="rect" id="node3" href="$d9/dc6/class_main_window.html#a4e20a4a065fbb0e4d3532a45a0a91425" title="MainWindow::closeEvent" alt="" coords="338,56,509,83"/>
+<area shape="rect" id="node7" href="$d9/dc6/class_main_window.html#a9d08a694a5f9c532225754381b8011ea" title="MainWindow::timerEvent" alt="" coords="339,115,507,141"/>
+<area shape="rect" id="node10" href="$d9/dc6/class_main_window.html#a8c3ec3691a343b558838b89d2267e74f" title="MainWindow::slotSaveSettings" alt="" coords="321,165,525,192"/>
+<area shape="rect" id="node4" href="$d9/dc6/class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7" title="MainWindow::~MainWindow" alt="" coords="573,5,761,32"/>
+<area shape="rect" id="node5" href="$dc/d23/class_multi_vision_stack.html#aa13a0e0ac8ab100d9f9c5f4f1ac943d3" title="MultiVisionStack::stop" alt="" coords="591,56,744,83"/>
+<area shape="rect" id="node6" href="$d6/de9/class_capture_thread.html#ad090018bf9fca28b946fd2c0fa320e15" title="CaptureThread::kill" alt="" coords="809,56,941,83"/>
+<area shape="rect" id="node8" href="$d9/dd2/class_real_time_display_widget.html#a18cd38ae5f56fb9919d6979b812d74b3" title="RealTimeDisplayWidget\l::getRingBuffer" alt="" coords="586,107,749,149"/>
+<area shape="rect" id="node9" href="$d9/dd2/class_real_time_display_widget.html#a8cc3d199a2cc7e5b9c357bb20287a2d8" title="RealTimeDisplayWidget\l::displayLoopEvent" alt="" coords="586,173,749,214"/>
+</map>

@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GlobalCaptureDC1394instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d74/class_global_capture_d_c1394instance.html",tooltip="A singleton provider of a dc1394 lib context used for capturing with multiple threads. "];
+}

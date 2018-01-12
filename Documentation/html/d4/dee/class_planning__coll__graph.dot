@@ -1,0 +1,13 @@
+digraph "Planning"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Planning",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xgoal\nyBottom\nygoal\nxRight\nxLeft\nystart\nxstart\nr\nyc\nxc\n..." ,fontname="Helvetica"];
+  Node2 [label="double",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/de6/classdouble.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" numObstacles\nmaxWidth_\nselector\nmaxHeight_" ,fontname="Helvetica"];
+  Node3 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ss_" ,fontname="Helvetica"];
+  Node4 [label="SimpleSetupPtr",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,0 +1,20 @@
+digraph "grSim_BallReplacement::ByteSizeLong"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="grSim_BallReplacement\l::ByteSizeLong",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="grSim_BallReplacement\l::RequiredFieldsByteSizeFallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db1/classgr_sim___ball_replacement.html#ad6ab25ae197b4ae25974961d35d74bfb"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="grSim_BallReplacement\l::has_x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db1/classgr_sim___ball_replacement.html#a130b729e91eec4324588c75e168fecb2"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="grSim_BallReplacement\l::has_y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db1/classgr_sim___ball_replacement.html#a1ed78699ee35336421e7b3258ca4f7ae"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="grSim_BallReplacement\l::has_vx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db1/classgr_sim___ball_replacement.html#aaca81bb1d4cc555efcd082f38ec44c2e"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="grSim_BallReplacement\l::has_vy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db1/classgr_sim___ball_replacement.html#a5da0c073a501b6860a3aa7e84cbcc31b"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="grSim_BallReplacement\l::unknown_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db1/classgr_sim___ball_replacement.html#a0c2d3f160d92af99935bb7c66410de25"];
+}

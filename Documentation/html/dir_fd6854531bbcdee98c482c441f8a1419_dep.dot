@@ -1,0 +1,9 @@
+digraph "grSim/include/physics" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d15b3a11243ff7d2a1de12d9629d9058 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="include" fontname="Helvetica", fontsize="10", URL="dir_d15b3a11243ff7d2a1de12d9629d9058.html"]
+  dir_fd6854531bbcdee98c482c441f8a1419 [shape=box, label="physics", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_fd6854531bbcdee98c482c441f8a1419.html"];
+  }
+}

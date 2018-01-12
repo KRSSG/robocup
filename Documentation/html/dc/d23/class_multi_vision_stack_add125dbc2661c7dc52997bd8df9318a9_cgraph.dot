@@ -1,0 +1,12 @@
+digraph "MultiVisionStack::~MultiVisionStack"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MultiVisionStack::\l~MultiVisionStack",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MultiVisionStack::stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d23/class_multi_vision_stack.html#aa13a0e0ac8ab100d9f9c5f4f1ac943d3"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CaptureThread::kill",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de9/class_capture_thread.html#ad090018bf9fca28b946fd2c0fa320e15"];
+}

@@ -1,0 +1,37 @@
+<map id="robotIndex" name="robotIndex">
+<area shape="rect" id="node2" href="$d9/dc6/class_main_window.html#a106655f6f0d5b07c7d57d63cdd83f67c" title="MainWindow::changeCurrent\lRobot" alt="" coords="669,171,860,213"/>
+<area shape="rect" id="node3" href="$d9/dc6/class_main_window.html#a54b84786850165c4e5466bc2e4097810" title="MainWindow::customFPS" alt="" coords="932,179,1107,205"/>
+<area shape="rect" id="node4" href="$d9/dc6/class_main_window.html#ab730d775e9f93f24e96bdf10a3977e57" title="MainWindow::changeCurrentTeam" alt="" coords="383,243,605,269"/>
+<area shape="rect" id="node5" href="$da/d10/class_g_l_widget.html#a43dfdc9164dfacb939a173e725651fa9" title="GLWidget::keyPressEvent" alt="" coords="147,471,324,497"/>
+<area shape="rect" id="node16" href="$da/d10/class_g_l_widget.html#afe86ff7b9c410e1385566fca04e948d0" title="GLWidget::lockCameraToRobot" alt="" coords="661,805,869,832"/>
+<area shape="rect" id="node19" href="$da/d10/class_g_l_widget.html#a9adc19f9b265b9928df71234d9811523" title="GLWidget::moveCurrentRobot" alt="" coords="136,903,335,929"/>
+<area shape="rect" id="node21" href="$da/d10/class_g_l_widget.html#aee4d669d1eabc2668e81de32e4c3561d" title="GLWidget::moveRobotHere" alt="" coords="403,856,585,883"/>
+<area shape="rect" id="node22" href="$da/d10/class_g_l_widget.html#a640b5570cb2b37724fd5b58a77339c5e" title="GLWidget::paintGL" alt="" coords="427,521,561,548"/>
+<area shape="rect" id="node23" href="$d9/d7f/class_s_s_l_world.html#a47a57176f6f8aa3283a6846576c7db2c" title="SSLWorld::recvActions" alt="" coords="156,300,315,327"/>
+<area shape="rect" id="node26" href="$da/d10/class_g_l_widget.html#ad6994da2d74a615b87fce3e1d72b6cd1" title="GLWidget::reform" alt="" coords="431,601,557,628"/>
+<area shape="rect" id="node29" href="$da/d10/class_g_l_widget.html#a99d8b0a93b753bc60992ff465b34623b" title="GLWidget::resetCurrentRobot" alt="" coords="138,1004,333,1031"/>
+<area shape="rect" id="node30" href="$da/d10/class_g_l_widget.html#ae9dfc92aeb33f08384e5a23e07d10c8f" title="GLWidget::resetRobot" alt="" coords="159,677,311,704"/>
+<area shape="rect" id="node31" href="$dd/da7/class_robots_fomation.html#af8c90dba30b7a2fa051bbfdceb19c459" title="RobotsFomation::resetRobots" alt="" coords="137,623,334,649"/>
+<area shape="rect" id="node32" href="$d9/dc6/class_main_window.html#abf70ab6834b8f552659edf27b9313e13" title="MainWindow::setCurrentRobot\lPosition" alt="" coords="664,354,865,395"/>
+<area shape="rect" id="node33" href="$da/d10/class_g_l_widget.html#a6a4ddaa8f71f2b06247cce721ccc90e1" title="GLWidget::switchRobotOnOff" alt="" coords="137,736,333,763"/>
+<area shape="rect" id="node34" href="$da/d10/class_g_l_widget.html#a29c722f87b1ee441f030148e1bc20e72" title="GLWidget::unselectRobot" alt="" coords="149,953,321,980"/>
+<area shape="rect" id="node35" href="$d9/dc6/class_main_window.html#a128f71880d4b9683149023fc46fcc9f8" title="MainWindow::update" alt="" coords="422,19,566,45"/>
+<area shape="rect" id="node36" href="$d9/dc6/class_main_window.html#ae46c23698a8f948fe75c640192191d17" title="MainWindow::updateRobotLabel" alt="" coords="659,69,870,96"/>
+<area shape="rect" id="node6" href="$d2/d5c/class_g_l_widget_graphics_view.html#a36685d0212d1126cdf3f4295d44ee7fd" title="GLWidgetGraphicsView\l::keyPressEvent" alt="" coords="413,405,575,446"/>
+<area shape="rect" id="node7" href="$da/d10/class_g_l_widget.html#a7fd6e2670f26ea0d6c2b45e0c5a4a5c0" title="GLWidget::callHelp" alt="" coords="427,471,561,497"/>
+<area shape="rect" id="node8" href="$da/d10/class_g_l_widget.html#a3c2a15e2dc8d00d66892a5419b95c740" title="GLWidget::redraw" alt="" coords="701,471,828,497"/>
+<area shape="rect" id="node13" href="$da/d10/class_g_l_widget.html#a9561cd3813d0bdb1b09675a9ec6eda81" title="GLWidget::GLWidget" alt="" coords="1179,479,1325,505"/>
+<area shape="rect" id="node9" href="$da/d10/class_g_l_widget.html#aa3b3f12a716b4873ec8e218ff6fbfd73" title="GLWidget::displayLoopEvent" alt="" coords="924,555,1115,581"/>
+<area shape="rect" id="node10" href="$da/d10/class_g_l_widget.html#ac38cb02e557b2f553c83bb49f26eb50d" title="GLWidget::mouseAction" alt="" coords="937,656,1101,683"/>
+<area shape="rect" id="node11" href="$da/d10/class_g_l_widget.html#ac0d2a8ecf60907a81c0d73475d851025" title="GLWidget::resizeGL" alt="" coords="949,403,1089,429"/>
+<area shape="rect" id="node12" href="$da/d10/class_g_l_widget.html#a56ad5fa847158e2b162051e35aec3228" title="GLWidget::callZoomNormal" alt="" coords="928,453,1111,480"/>
+<area shape="rect" id="node14" href="$da/d10/class_g_l_widget.html#a0a19fee8dd3793786b5aa32f6febc41f" title="GLWidget::callZoomFit" alt="" coords="941,504,1097,531"/>
+<area shape="rect" id="node15" href="$da/d10/class_g_l_widget.html#aea03d21ab69dc3c2d7ad085c72fa7911" title="GLWidget::flipImage" alt="" coords="949,605,1090,632"/>
+<area shape="rect" id="node17" href="$da/d10/class_g_l_widget.html#ad3e2c0a887e2335be75b585b73889b41" title="GLWidget::GLWidget" alt="" coords="946,721,1093,748"/>
+<area shape="rect" id="node18" href="$da/d10/class_g_l_widget.html#a83016effcc53812c6bd1905b84aeb99d" title="GLWidget::setObjectName" alt="" coords="1163,721,1341,748"/>
+<area shape="rect" id="node20" href="$da/d10/class_g_l_widget.html#a53e9b408bfffea55c313b47139aab25f" title="GLWidget::keyReleaseEvent" alt="" coords="399,929,589,956"/>
+<area shape="rect" id="node24" href="$d9/dc6/class_main_window.html#a387f42462d1aaf94676c608d4dc014ca" title="MainWindow::recvActions" alt="" coords="407,299,581,325"/>
+<area shape="rect" id="node25" href="$d9/dc6/class_main_window.html#a3773663f183cdba856ae784c0dad02b4" title="MainWindow::reconnectCommand\lSocket" alt="" coords="653,289,876,330"/>
+<area shape="rect" id="node27" href="$da/d10/class_g_l_widget.html#a62823a9c350a15b254301c9ee6d339e1" title="GLWidget::blueRobotsMenu\lTriggered" alt="" coords="671,573,858,614"/>
+<area shape="rect" id="node28" href="$da/d10/class_g_l_widget.html#a8f362a814392f9061ac753929cdd0a44" title="GLWidget::yellowRobotsMenu\lTriggered" alt="" coords="665,638,864,679"/>
+</map>

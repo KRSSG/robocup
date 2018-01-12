@@ -1,0 +1,41 @@
+digraph "CMPattern::MultiPatternModel"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="CMPattern::MultiPatternModel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" used" ,fontname="Helvetica"];
+  Node2 [label="CMPattern::MultiPatternModel\l::ColorsUsed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dee/class_c_m_pattern_1_1_multi_pattern_model_1_1_colors_used.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" n" ,fontname="Helvetica"];
+  Node3 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" used" ,fontname="Helvetica"];
+  Node4 [label="uint8_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" marker_max_dist" ,fontname="Helvetica"];
+  Node5 [label="float",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num_patterns" ,fontname="Helvetica"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" patterns" ,fontname="Helvetica"];
+  Node6 [label="CMPattern::Pattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d67/class_c_m_pattern_1_1_pattern.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" markers" ,fontname="Helvetica"];
+  Node7 [label="CMPattern::Marker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d02/class_c_m_pattern_1_1_marker.html"];
+  Node7 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ,fontname="Helvetica"];
+  Node5 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" conf\ndist\nheight\nnext_angle_dist\narea\nnext_dist\nangle" ,fontname="Helvetica"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" reg" ,fontname="Helvetica"];
+  Node8 [label="CMVision::Region",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/deb/class_c_m_vision_1_1_region.html"];
+  Node5 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cen_x\ncen_y" ,fontname="Helvetica"];
+  Node8 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next\ntree_next" ,fontname="Helvetica"];
+  Node3 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" iterator_id\nrun_start\narea\ny1\ny2\nx1\nx2" ,fontname="Helvetica"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" color" ,fontname="Helvetica"];
+  Node9 [label="ColorGrey\< uint8_t,\l COLOR_RAW8 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d8f/class_color_grey.html"];
+  Node4 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" v" ,fontname="Helvetica"];
+  Node10 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" loc" ,fontname="Helvetica"];
+  Node10 [label="GVector::vector2d\<\l float \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d10/class_g_vector_1_1vector2d.html"];
+  Node5 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" x\ny" ,fontname="Helvetica"];
+  Node9 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id" ,fontname="Helvetica"];
+  Node11 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pattern" ,fontname="Helvetica"];
+  Node11 [label="uint64_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" height" ,fontname="Helvetica"];
+  Node10 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" marker_mean" ,fontname="Helvetica"];
+  Node3 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" robot_id\nnum_markers" ,fontname="Helvetica"];
+  Node12 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" enabled" ,fontname="Helvetica"];
+  Node12 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

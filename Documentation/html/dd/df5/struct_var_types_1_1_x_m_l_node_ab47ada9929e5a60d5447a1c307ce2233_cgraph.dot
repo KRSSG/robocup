@@ -1,0 +1,16 @@
+digraph "VarTypes::XMLNode::addAttribute"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::XMLNode::\laddAttribute",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::XMLNode::\laddAttribute_priv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a3e232fc678d725142dbf685a4eb7c83f"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::myRealloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a47f43809f22c37a229ee6451c4db2ede"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::stringDup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#af79aab010747d6340009c2e1d6deb9a8"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::_tcslen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dde/namespace_var_types.html#a33f094a769ad68c264640d65736e12df"];
+}

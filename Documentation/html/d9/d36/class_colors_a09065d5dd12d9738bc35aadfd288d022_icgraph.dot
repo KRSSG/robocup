@@ -1,0 +1,42 @@
+digraph "Colors::stringToColorFormat"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Colors::stringToColorFormat",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CaptureGenerator::copyAnd\lConvertFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d4a/class_capture_generator.html#a3d21588be0f7c41def195ee54e2eabac"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CaptureGenerator::isCapturing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d4a/class_capture_generator.html#add12e8bde9e8156b1de4a71647228937"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CaptureFromFile::copyAnd\lConvertFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6f/class_capture_from_file.html#a4f4075bfd4bc4e999563ccd03ae7091b"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CaptureFromFile::isCapturing",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d6f/class_capture_from_file.html#a412b2db19259e85e8ba5a46f30a923db"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CaptureFlycap::copyAndConvert\lFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de8/class_capture_flycap.html#a4f19bdca9385ba3adb037e54da0ec82e"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CaptureV4L::copyAndConvert\lFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a6bbde1de0a82943957dec308a3e035ed"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CaptureDC1394v2::copyAnd\lConvertFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#a4b042d3d26dcf23965c784b38598edae"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CaptureBlueFox2::getFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d65/class_capture_blue_fox2.html#ad229f955fc021d0fc98b2cdc229884bb"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CaptureBlueFox2::startCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d65/class_capture_blue_fox2.html#a6409924a90aedccb5ce877229f6f9b24",tooltip="Initialize the interface and start capture. "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CaptureV4L::startCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a8ef5f5e7d9613e4363b38985327f0419",tooltip="Initialize the interface and start capture. "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CaptureDC1394v2::startCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#aa5de4131abf2ec1629ed290e1731c496",tooltip="Initialize the interface and start capture. "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CaptureFlycap::writeParameter\lValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de8/class_capture_flycap.html#aa899b4340df6d7f12e5841cabdae0565"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CaptureFlycap::changed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de8/class_capture_flycap.html#a0f6528c9fcaa9242fe86e0669579d703"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CaptureFlycap::mvc\l_connect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de8/class_capture_flycap.html#aa161072cccb5d198d5881627478ee028"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CaptureFlycap::CaptureFlycap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de8/class_capture_flycap.html#aa1c4dd54baba8f63b4e5a707f08a05b4"];
+  Node13 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="CaptureFlycap::writeAllParameter\lValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de8/class_capture_flycap.html#a92d0fefd35e2070d98c943884b939068"];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="CaptureFlycap::startCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de8/class_capture_flycap.html#a8228ab6e3ef85896ec9843dca6433bfb",tooltip="Initialize the interface and start capture. "];
+}

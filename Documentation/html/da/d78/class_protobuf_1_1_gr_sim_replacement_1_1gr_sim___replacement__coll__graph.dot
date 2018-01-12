@@ -1,0 +1,31 @@
+digraph "Protobuf.GrSimReplacement.grSim_Replacement"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.GrSimReplacement.gr\lSim_Replacement",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GeneratedMessage",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.GrSimReplacement.gr\lSim_ReplacementOrBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/de6/interface_protobuf_1_1_gr_sim_replacement_1_1gr_sim___replacement_or_builder.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MessageOrBuilder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ball_" ,fontname="Helvetica"];
+  Node5 [label="Protobuf.GrSimReplacement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/de8/class_protobuf_1_1_gr_sim_replacement.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" internal_static_grSim\l_Replacement_descriptor\ninternal_static_grSim\l_RobotReplacement_descriptor\ninternal_static_grSim_BallReplacement\l_descriptor" ,fontname="Helvetica"];
+  Node6 [label="static com.google.protobuf.\lDescriptors.Descriptor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" internal_static_grSim\l_RobotReplacement_fieldAccessor\lTable\ninternal_static_grSim\l_Replacement_fieldAccessorTable\ninternal_static_grSim_BallReplacement\l_fieldAccessorTable" ,fontname="Helvetica"];
+  Node7 [label="static com.google.protobuf.\lGeneratedMessage.FieldAccessorTable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" descriptor" ,fontname="Helvetica"];
+  Node8 [label="static com.google.protobuf.\lDescriptors.FileDescriptor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" defaultInstance" ,fontname="Helvetica"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memoizedIsInitialized" ,fontname="Helvetica"];
+  Node9 [label="byte",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" robots_" ,fontname="Helvetica"];
+  Node10 [label="java.util.List\< Protobuf.\lGrSimReplacement.Protobuf.GrSim\lReplacement.grSim_RobotReplacement \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ROBOTS_FIELD_NUMBER\nbitField0_\nBALL_FIELD_NUMBER\nmemoizedSerializedSize" ,fontname="Helvetica"];
+  Node11 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" serialVersionUID" ,fontname="Helvetica"];
+  Node12 [label="long",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

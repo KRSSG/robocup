@@ -1,0 +1,30 @@
+digraph "Protobuf.MessagesRobocupSslGeometry.SSL_GeometryData.Builder"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryData.\lBuilder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="com::google::protobuf\l::GeneratedMessage::Builder\l\< Builder \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryData\lOrBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d94/interface_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_data_or_builder.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MessageOrBuilder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" calibBuilder_" ,fontname="Helvetica"];
+  Node5 [label="com.google.protobuf.Repeated\lFieldBuilder\< Protobuf.Messages\lRobocupSslGeometry.Protobuf.Messages\lRobocupSslGeometry.SSL_GeometryCameraCalibration,\l Protobuf.MessagesRobocupSslGeometry.Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryCameraCalibration.Protobuf.MessagesRobocupSsl\lGeometry.SSL_GeometryData.Builder, Protobuf.MessagesRobocupSslGeometry.Protobuf.\lMessagesRobocupSslGeometry.SSL_GeometryCameraCalibrationOrBuilder \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fieldBuilder_" ,fontname="Helvetica"];
+  Node6 [label="com.google.protobuf.Single\lFieldBuilder\< Protobuf.Messages\lRobocupSslGeometry.Protobuf.Messages\lRobocupSslGeometry.SSL_GeometryFieldSize,\l Protobuf.MessagesRobocupSslGeometry.Protobuf.Messages\lRobocupSslGeometry.SSL_GeometryFieldSize.Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryData.Builder, Protobuf.MessagesRobocupSslGeometry.Protobuf.\lMessagesRobocupSslGeometry.SSL_GeometryFieldSizeOrBuilder \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bitField0_" ,fontname="Helvetica"];
+  Node7 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" field_" ,fontname="Helvetica"];
+  Node8 [label="Protobuf.MessagesRobocup\lSslGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d1b/class_protobuf_1_1_messages_robocup_ssl_geometry.html"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" internal_static_SSL\l_GeometryData_descriptor\ninternal_static_SSL_Geometry\lCameraCalibration_descriptor\ninternal_static_SSL_GeometryFieldSize\l_descriptor" ,fontname="Helvetica"];
+  Node9 [label="static com.google.protobuf.\lDescriptors.Descriptor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" internal_static_SSL\l_GeometryCameraCalibration\l_fieldAccessorTable\ninternal_static_SSL_GeometryData\l_fieldAccessorTable\ninternal_static_SSL_GeometryFieldSize\l_fieldAccessorTable" ,fontname="Helvetica"];
+  Node10 [label="static com.google.protobuf.\lGeneratedMessage.FieldAccessorTable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" descriptor" ,fontname="Helvetica"];
+  Node11 [label="static com.google.protobuf.\lDescriptors.FileDescriptor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" calib_" ,fontname="Helvetica"];
+  Node12 [label="java.util.List\< Protobuf.\lMessagesRobocupSslGeometry.Protobuf.\lMessagesRobocupSslGeometry.SSL\l_GeometryCameraCalibration \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

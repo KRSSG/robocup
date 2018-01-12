@@ -1,0 +1,9 @@
+<map id="nearCallback" name="nearCallback">
+<area shape="rect" id="node2" href="$de/d29/class_p_world.html#a0457c8d18f7d675c8fa43ea603fb7355" title="PWorld::step" alt="" coords="152,31,251,57"/>
+<area shape="rect" id="node3" href="$d9/d7f/class_s_s_l_world.html#a19a89ea3cdc5eeb4176ee4f44c3d1328" title="SSLWorld::step" alt="" coords="299,31,413,57"/>
+<area shape="rect" id="node4" href="$da/d10/class_g_l_widget.html#a655d413639cb45a511baec4d3d4b723c" title="GLWidget::step" alt="" coords="461,31,575,57"/>
+<area shape="rect" id="node5" href="$d9/dc6/class_main_window.html#a128f71880d4b9683149023fc46fcc9f8" title="MainWindow::update" alt="" coords="623,5,767,32"/>
+<area shape="rect" id="node7" href="$da/d10/class_g_l_widget.html#a640b5570cb2b37724fd5b58a77339c5e" title="GLWidget::paintGL" alt="" coords="628,56,761,83"/>
+<area shape="rect" id="node6" href="$d9/dc6/class_main_window.html#a54b84786850165c4e5466bc2e4097810" title="MainWindow::customFPS" alt="" coords="815,5,989,32"/>
+<area shape="rect" id="node8" href="$da/d10/class_g_l_widget.html#ac38cb02e557b2f553c83bb49f26eb50d" title="GLWidget::mouseAction" alt="" coords="820,56,984,83"/>
+</map>

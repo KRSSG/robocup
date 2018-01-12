@@ -1,0 +1,22 @@
+digraph "Vector2f::New"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Vector2f::New",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Vector2f::Vector2f",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc2/class_vector2f.html#a3db9a868c58bc809e5e09a88d65a77ec"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaultsVector2f",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__2eproto.html#a515e03f3e6377dadd0b5761c39a21ad1"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GOOGLE_PROTOBUF_DECLARE_ONCE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d34/grsim__comm_2include_2proto_2messages__robocup__ssl__geometry_8pb_8cc.html#ab62e58f219471a884ff8331c119d4c66"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaultsVector2fImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__2eproto.html#a71e243c6dc08d40aa31dc3bc0c3827b5"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Vector2f::InitAsDefaultInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc2/class_vector2f.html#a504e2bf8a27ffcd91bfca0c496e0fbb8"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Vector2f::internal\l_default_instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc2/class_vector2f.html#a9ad0ac7dc2cb7390e25f1e16bb9d3237"];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Vector2f::SharedCtor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc2/class_vector2f.html#a5126cda8f2179cc1e7a50e18b11a372a"];
+}

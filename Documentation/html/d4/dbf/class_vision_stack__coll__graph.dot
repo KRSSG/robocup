@@ -1,0 +1,41 @@
+digraph "VisionStack"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="VisionStack",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" settings" ,fontname="Helvetica"];
+  Node2 [label="VarTypes::VarList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d74/class_var_types_1_1_var_list.html",tooltip="This is the list type of the VarTypes system. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html",tooltip="The base class of the VarTypes system. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="QObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d4f/class_q_object.html"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarVal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _flags" ,fontname="Helvetica"];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _name" ,fontname="Helvetica"];
+  Node7 [label="std::string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node9 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _mutex" ,fontname="Helvetica"];
+  Node9 [label="QMutex",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" list" ,fontname="Helvetica"];
+  Node10 [label="std::vector\< VarTypes\l::VarType * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" stack" ,fontname="Helvetica"];
+  Node11 [label="std::vector\< VisionPlugin * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node12 [label="VisionPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d1e/class_vision_plugin.html",tooltip="A base class for general vision processing plugin. "];
+  Node4 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" time_proc\ntime_post" ,fontname="Helvetica"];
+  Node13 [label="double",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/de6/classdouble.html"];
+  Node14 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" buffer" ,fontname="Helvetica"];
+  Node14 [label="FrameBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d23/class_frame_buffer.html",tooltip="A RingBuffer consisting of items of type FrameData. "];
+  Node15 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" visualize\nshared\nenabled" ,fontname="Helvetica"];
+  Node15 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mutex" ,fontname="Helvetica"];
+  Node16 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" opts" ,fontname="Helvetica"];
+  Node16 [label="RenderOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d7d/class_render_options.html",tooltip="A class with visualization parameters. "];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ,fontname="Helvetica"];
+}
