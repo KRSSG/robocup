@@ -8,5 +8,5 @@ digraph "velocity.run_w.Get_Omega"
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="GVector::abs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a9ad98c3a0469b46d6d9437dace1bdaff"];
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="utils.math_functions.normalize\l_angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d83/namespaceutils_1_1math__functions.html#a6d17f1067560e91c7ebb2c5b069e927d"];
+  Node3 [label="utils.functions.normalize\l_angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d83/namespaceutils_1_1math__functions.html#a6d17f1067560e91c7ebb2c5b069e927d"];
 }

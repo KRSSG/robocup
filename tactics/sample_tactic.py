@@ -1,5 +1,5 @@
 from role import GoToBall,GoToPoint
-from utils.math_functions import *
+from utils.functions import *
 from utils.config import *
 from utils.geometry import Vector2D
 

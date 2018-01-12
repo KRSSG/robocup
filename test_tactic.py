@@ -1,6 +1,6 @@
 import rospy,sys
 from utils.geometry import Vector2D
-from utils.math_functions import *
+from utils.functions import *
 from krssg_ssl_msgs.msg import point_2d
 from krssg_ssl_msgs.msg import BeliefState
 from krssg_ssl_msgs.msg import gr_Commands
@@ -9,7 +9,7 @@ from krssg_ssl_msgs.msg import BeliefState
 from multiprocessing import Process
 from kubs import kubs
 from math import atan2,pi
-from utils.math_functions import *
+from utils.functions import *
 # import CoPass
 
 from tactics import  sample_tactic, CoPass

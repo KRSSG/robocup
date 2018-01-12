@@ -8,7 +8,7 @@ try:
 except:
     import _GoToPoint_
 import rospy
-from utils.math_functions import *
+from utils.functions import *
 from utils.config import *
 
 class GoToPoint(behavior.Behavior):

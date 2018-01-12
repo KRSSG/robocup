@@ -2,7 +2,7 @@ import behavior
 from role import GoToPoint,GoToBall
 import enum
 import math
-from utils.math_functions import *
+from utils.functions import *
 from utils.config import *
 import memcache
 import os

@@ -6,7 +6,7 @@ digraph "role.GoToBall.GoToBall.execute_fine_approach"
   rankdir="LR";
   Node1 [label="role.GoToBall.GoToBall.execute\l_fine_approach",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="utils.math_functions.vicinity\l_points",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d83/namespaceutils_1_1math__functions.html#add6f7ce093f2084ecc440852873cbf79"];
+  Node2 [label="utils.functions.vicinity\l_points",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d83/namespaceutils_1_1math__functions.html#add6f7ce093f2084ecc440852873cbf79"];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="utils.math_functions.dist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d83/namespaceutils_1_1math__functions.html#a75d840d8cbf719630bbb23997efdbb0e"];
+  Node3 [label="utils.functions.dist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d83/namespaceutils_1_1math__functions.html#a75d840d8cbf719630bbb23997efdbb0e"];
 }

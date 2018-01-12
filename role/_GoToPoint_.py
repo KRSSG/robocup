@@ -15,7 +15,7 @@ from krssg_ssl_msgs.msg import gr_Commands
 from krssg_ssl_msgs.msg import gr_Robot_Command
 from utils.geometry import Vector2D
 from utils.config import *
-from utils.math_functions import *
+from utils.functions import *
 import math
 
 import memcache

@@ -1,6 +1,6 @@
 import behavior
 import enum
-from utils.math_functions import *
+from utils.functions import *
 from utils.config import *
 
 ## lines up with the ball and the target, then drives up and kicks

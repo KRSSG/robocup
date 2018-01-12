@@ -1,7 +1,7 @@
 import cmd_node
 import rospy
 from krssg_ssl_msgs.msg import BeliefState
-from utils.math_functions import kub_has_ball
+from utils.functions import kub_has_ball
 
 ##
 ## @brief      Class for kubs.

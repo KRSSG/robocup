@@ -26,7 +26,7 @@ var hierarchy =
     [ "object", null, [
       [ "GUI.interfacePath.Ui_MainWindow", "class_g_u_i_1_1interface_path_1_1_ui___main_window.html", null ],
       [ "GUI.InterfacePath_ompl.Ui_MainWindow", "class_g_u_i_1_1_interface_path__ompl_1_1_ui___main_window.html", null ],
-      [ "utils.math_functions.Circle", "classutils_1_1math__functions_1_1_circle.html", null ]
+      [ "utils.functions.Circle", "classutils_1_1math__functions_1_1_circle.html", null ]
     ] ],
     [ "velocity.pso.Particle", "classvelocity_1_1pso_1_1_particle.html", null ],
     [ "Utils::Point< T >", "struct_utils_1_1_point.html", null ],
@@ -61,7 +61,7 @@ var hierarchy =
       [ "role.skills_union.TurnToPointP", "classrole_1_1skills__union_1_1_turn_to_point_p.html", null ],
       [ "role.skills_union.VelocityP", "classrole_1_1skills__union_1_1_velocity_p.html", null ],
       [ "utils.geometry.Vector2D", "classutils_1_1geometry_1_1_vector2_d.html", null ],
-      [ "utils.math_functions.Line", "classutils_1_1math__functions_1_1_line.html", null ],
+      [ "utils.functions.Line", "classutils_1_1math__functions_1_1_line.html", null ],
       [ "utils.tactics_union.AttackSupportP", "classutils_1_1tactics__union_1_1_attack_support_p.html", null ],
       [ "utils.tactics_union.BlockP", "classutils_1_1tactics__union_1_1_block_p.html", null ],
       [ "utils.tactics_union.ClearP", "classutils_1_1tactics__union_1_1_clear_p.html", null ],

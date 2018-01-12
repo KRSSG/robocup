@@ -15,7 +15,7 @@
 <area shape="rect" id="node15" href="$classrole_1_1skills__union_1_1_turn_to_point_p.html" title="role.skills_union.TurnTo\lPointP" alt="" coords="149,756,309,797"/>
 <area shape="rect" id="node16" href="$classrole_1_1skills__union_1_1_velocity_p.html" title="role.skills_union.VelocityP" alt="" coords="142,822,317,849"/>
 <area shape="rect" id="node17" href="$classutils_1_1geometry_1_1_vector2_d.html" title="utils.geometry.Vector2D" alt="" coords="148,873,311,899"/>
-<area shape="rect" id="node18" href="$classutils_1_1math__functions_1_1_line.html" title="utils.math_functions.Line" alt="" coords="146,923,313,950"/>
+<area shape="rect" id="node18" href="$classutils_1_1math__functions_1_1_line.html" title="utils.functions.Line" alt="" coords="146,923,313,950"/>
 <area shape="rect" id="node19" href="$classutils_1_1tactics__union_1_1_attack_support_p.html" title="utils.tactics_union.Attack\lSupportP" alt="" coords="145,975,314,1016"/>
 <area shape="rect" id="node20" href="$classutils_1_1tactics__union_1_1_block_p.html" title="utils.tactics_union.BlockP" alt="" coords="143,1041,316,1067"/>
 <area shape="rect" id="node21" href="$classutils_1_1tactics__union_1_1_clear_p.html" title="utils.tactics_union.ClearP" alt="" coords="144,1091,315,1118"/>

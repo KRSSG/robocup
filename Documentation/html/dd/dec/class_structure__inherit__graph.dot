@@ -38,7 +38,7 @@ digraph "Structure"
   Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node17 [label="utils.geometry.Vector2D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dba/classutils_1_1geometry_1_1_vector2_d.html"];
   Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node18 [label="utils.math_functions.Line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d10/classutils_1_1math__functions_1_1_line.html"];
+  Node18 [label="utils.functions.Line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d10/classutils_1_1math__functions_1_1_line.html"];
   Node1 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node19 [label="utils.tactics_union.Attack\lSupportP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/df7/classutils_1_1tactics__union_1_1_attack_support_p.html"];
   Node1 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

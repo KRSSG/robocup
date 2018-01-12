@@ -14,7 +14,7 @@ digraph "GVector::min"
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="BBox::BBox2D::add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d51/struct_b_box_1_1_b_box2_d.html#afa5b6f4fd8b2d9f0d212778b0d509c6b"];
   Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="utils.math_functions.Line.angle\l_with_line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d10/classutils_1_1math__functions_1_1_line.html#a078c0937cc407e1b01813332604e2891"];
+  Node6 [label="utils.functions.Line.angle\l_with_line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d10/classutils_1_1math__functions_1_1_line.html#a078c0937cc407e1b01813332604e2891"];
   Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 [label="PluginLegacySSLNetworkOutput\l::DoubleSizeToSingleSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d12/class_plugin_legacy_s_s_l_network_output.html#a7b435c767841cd9d9c9d570ec23bbd6e"];
   Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

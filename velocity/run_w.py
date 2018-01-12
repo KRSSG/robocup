@@ -1,5 +1,5 @@
 from utils.config import MAX_BOT_OMEGA,MIN_BOT_OMEGA,ROTATION_FACTOR
-from utils.math_functions import *
+from utils.functions import *
 
 def Get_Omega(kub_id, totalAngle, homePos):
 
