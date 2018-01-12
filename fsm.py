@@ -39,6 +39,7 @@ class StateMachine(object):
     # state)
     def add_state(self, state, parent_state=None):
         if not isinstance(state, Enum):
+            print type(state)
             raise TypeError("State should be an Enum type")
         self._state_hierarchy[state] = parent_state
 

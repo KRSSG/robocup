@@ -4,14 +4,14 @@
 ##
 import rospy
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import time
-<<<<<<< HEAD
+
 import sys
-=======
+
 from utils.config import *
 from utils.geometry import *
->>>>>>> triangle_tested
+
 dt = 0.001
 
 # try:
@@ -126,16 +126,7 @@ def pid(vX,vY,errorInfo,pso=None):
 				pso.currIter = currIter + 1
 				# print("Current Iteration #", pso.currIter)
 
-		if pso.currIter%20 == 0:
-			plt.plot(pso.errors)
-			plt.savefig('pid_img/img/myfig_'+str(i)+'.png')
-			# print("____________________________File Saved______________________________________",i)
-			# if i%100 == 0:
-			k_values = ','.join(map(str,pso.bestGlobalK))
-			# f.write(k_values)	
 
-			# np.save("pid_img/values/pid_"+str(i)+".txt",pso.bestGlobalK)
-			i += 1
 
 
 

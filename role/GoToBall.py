@@ -12,14 +12,13 @@ class GoToBall(behavior.Behavior):
         course_approach = 2
         fine_approach = 3
 
-    def __init__(self,avoid_ball=True,continuous=False):
+    def __init__(self,execute_fine_approach=False,continuous=False):
 
         super(GoToBall,self).__init__()
 
         self.name = "GoToBall"
 
     	self.power = 7.0
-        self.avoid_ball = avoid_ball
 
         self.initial_target_dist_thresh = DISTANCE_THRESH/3
         self.ball_dist_thresh = BOT_BALL_THRESH
@@ -39,7 +38,8 @@ class GoToBall(behavior.Behavior):
             GoToBall.State.setup,lambda: True,'immediately')
 
         self.add_transition(GoToBall.State.setup,
-            GoToBall.State.fine_approach,lambda: self.ball_in_vicinity(),'ball_in_vicinity')
+            GoToBall.State.fine_approach,lambda: self.ball_in_vicinity() or execute_fine_approach,'ball_in_vicinity')
+
 
         self.add_transition(GoToBall.State.setup,
             GoToBall.State.course_approach,lambda: self.target_present(),'setup')
@@ -101,7 +101,7 @@ class GoToBall(behavior.Behavior):
     def execute_course_approach(self):
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-        generatingfunction = _GoToPoint_.execute(start_time,self.initial_target_dist_thresh,self.avoid_ball)
+        generatingfunction = _GoToPoint_.execute(start_time,self.initial_target_dist_thresh,True)
         for gf in generatingfunction:
             self.kub,target_point = gf
             self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)

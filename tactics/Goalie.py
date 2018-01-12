@@ -38,42 +38,26 @@ class Goalie(behavior.Behavior):
                         "save now")
         
 
-        # loaded_states = [s for s in Goalie.State if s != Goalie.State.peace]
+    def GoToPoint(self,point,theta):
 
-        # # if ball is invalid, peace
-        # for state in loaded_states:
-        #     self.add_transition(
-        #         state, Goalie.State.peace, lambda: self._any_to_peace(),
-        #         "peace")
     def add_kub(self,kub):
         self.kub = kub
 
     def _peace_to_protect(self):
         state = shared.get('state')
-        print
-        print " in _peace_to_protect"
-        print
         return (state.ballVel.x < -self.MIN_VEL or state.ballPos.x<=0) 
 
     def _any_to_peace(self):
         state = shared.get('state')
-        print
-        print "_any_to_peace"
-        print
         return (state.ballVel.x >= 0 and state.ballPos.x>=0)
 
     def _protect_to_clear(self):
         state = shared.get('state')
-        print
-        print "state ball pos x",state.ballPos.x, OUR_GOAL_MAXX,(state.ballPos.x < OUR_GOAL_MAXX)
-        print
         return (state.ballPos.x < -HALF_FIELD_MAXX + OUR_GOAL_MAXX)
 
     # note that execute_running() gets called BEFORE any of the execute_SUBSTATE methods gets called
 
     def execute_peace(self):
-        # os.system("clear && clear")
-        print "In peace ----------------------"
         if self.kub != None:
             self.GTP = GoToPoint.GoToPoint()
             self.GTP.add_kub(self.kub)
@@ -81,17 +65,13 @@ class Goalie(behavior.Behavior):
             self.GTP.spin()
 
     def execute_clear(self):
-        # os.system("clear && clear")
-        print "In clear ----------------------"
-        self.gtB = GoToBall.GoToBall(avoid_ball = False)
+        self.gtB = GoToBall.GoToBall(execute_fine_approach = False)
         self.gtB.add_kub(self.kub)
         state = shared.get('state')
         self.gtB.add_theta(theta=normalize_angle(math.pi + angle_diff(state.ballPos,state.homePos[self.kub.kubs_id])))
         self.gtB.spin()
 
     def execute_protect(self):
-        # os.system("clear && clear")
-        print "In protect ----------------------"
         state = shared.get('state')
         expected_y = goalie_expected_y(state, self.kub.kubs_id)
         self.GTP = GoToPoint.GoToPoint()

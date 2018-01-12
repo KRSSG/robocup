@@ -43,7 +43,7 @@ start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
 # rospy.Subscriber('/belief_state', BeliefState, BS_callback, queue_size=1000)
 
 while True:
-		
+	state=shared.get('state')	
 	if state:
 		function(0,state)
 		# break
