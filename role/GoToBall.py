@@ -19,6 +19,8 @@ class GoToBall(behavior.Behavior):
         self.name = "GoToBall"
 
     	self.power = 7.0
+        
+        self.execute_fine_approach = execute_fine_approach
 
         self.initial_target_dist_thresh = DISTANCE_THRESH/3
         self.ball_dist_thresh = BOT_BALL_THRESH
@@ -38,7 +40,7 @@ class GoToBall(behavior.Behavior):
             GoToBall.State.setup,lambda: True,'immediately')
 
         self.add_transition(GoToBall.State.setup,
-            GoToBall.State.fine_approach,lambda: self.ball_in_vicinity() or execute_fine_approach,'ball_in_vicinity')
+            GoToBall.State.fine_approach,lambda: self.ball_in_vicinity() or self.execute_fine_approach,'ball_in_vicinity')
 
 
         self.add_transition(GoToBall.State.setup,
@@ -66,7 +68,7 @@ class GoToBall(behavior.Behavior):
         self.theta = theta
     
     def target_present(self):
-        return not ball_in_front_of_bot(self.kub) and self.target_point is not None
+        return not ball_in_front_of_bot(self.kub) and self.target_point is not None and not self.execute_fine_approach
 
     def at_target_point(self):
         return vicinity_points(self.target_point,self.kub.get_pos(),thresh= self.initial_target_dist_thresh)
