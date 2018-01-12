@@ -1,9 +1,11 @@
 import behavior
 import traceback
 import logging
-import re
 import sys
+import time
+from multiprocessing.dummy import Pool as ThreadPool
 
+n_threads = 2
 
 ## A composite behavior is one that has 0+ named subbehaviors
 # this class has methods for making it easy to work with and manage subbehaviors
@@ -15,6 +17,16 @@ class CompositeBehavior(behavior.Behavior):
     # FIXME: what if a subbehavior of @bhvr is required, but this is not?
     # FIXME: how do priorities work?
     # FIXME: how do nested priorities work?
+    
+    ##
+    ## @brief      Adds a subbehavior in composite behavior
+    ##
+    ## @param      bhvr      Behavior Instance
+    ## @param      name      Name of Subbehavior, to be used for identification
+    ## @param      required  TO BE IMPLEMENTED
+    ## @param      priority  TO BE IMPLEMENTED
+    ##
+    ##
     def add_subbehavior(self,
                         bhvr,
                         name,
@@ -58,7 +70,6 @@ class CompositeBehavior(behavior.Behavior):
         for name in subbehaviorNames:
             self.remove_subbehavior(name)
 
-    ## Returns a list of all subbehaviors
     def all_subbehaviors(self) :
         return [
             self._subbehavior_info[name]['behavior']
@@ -70,32 +81,63 @@ class CompositeBehavior(behavior.Behavior):
             [bhvr.is_done_running() for bhvr in self.all_subbehaviors()])
 
     ## Override StateMachine.spin() so we can call spin() on subbehaviors
+
+    ##
+    ## @brief      Spin Composite Behavior,execute all behaviors inside composite behavior
+    ##
+    ## All behavior inside Composite behavior instance is executed using threading.
+    ## If subbehavior inside Composite behavior is Composite subbehavior, then spin_cb() is used
+    ## else spin().
+    ## 
+    ## @see Behavior::spin()
+    ##
     def spin_cb(self):
         self.spin()
-        # spin each subbehavior
-        for name in list(self._subbehavior_info.keys()):
-            info = self._subbehavior_info[name]
-            bhvr = info['behavior']
+        states = []
+        def function_process(name):
+            save_stdout = sys.stdout
+            sys.stdout = open('./debug/'+ str(name) + '.txt','w')
+            try:
+                print("here____")
+                print 'Starting behaviour: {} at {}'.format(name,time.time())
+                info = self._subbehavior_info[name]
+                bhvr = info['behavior']
+                print("Behavior",bhvr)
 
-            # multi-robot behaviors always get spun
-            # only spin single robot behaviors when they have a robot
-            should_spin = True
+                # multi-robot behaviors always get spun
+                # only spin single robot behaviors when they have a robot
+                should_spin = True
 
+                # try executing the subbehavior
+                # if it throws an exception, catch it and pass it to the exception handler, which subclasses can override
+                if should_spin:
+                    try:
+                        # print("Behavior name",bhvr)
+                        if issubclass(bhvr.__class__, CompositeBehavior):
+                            bhvr.spin_cb()
+                        else:
+                            bhvr.spin()
+                    except:
+                        exc = sys.exc_info()[0]
+                        self.handle_subbehavior_exception(name, exc)
+            finally:
+                sys.stdout = save_stdout
 
-            # try executing the subbehavior
-            # if it throws an exception, catch it and pass it to the exception handler, which subclasses can override
-            if should_spin:
-                try:
-                    bhvr.spin()
-                    print bhvr.name
-                except:
-                    exc = sys.exc_info()[0]
-                    self.handle_subbehavior_exception(name, exc)
+        print 'Starting {} at {}'.format(n_threads, time.time())
+
+        n_threads = len(self._subbehavior_info.keys())
+        pool = ThreadPool(n_threads)
+        pool.map(function_process, list(self._subbehavior_info.keys()))
+        pool.close() 
+        pool.join()
+
+        print 'Completed at {}'.format(time.time())
+
 
     ## Override point for exception handling
-    # this is called whenever a subbehavior throws an exception during spin()
-    # subclasses of CompositeBehavior can override this to perform custom actions, such as removing the offending subbehavior
-    # the default implementation logs the exception and re-raises it
+    ## this is called whenever a subbehavior throws an exception during spin()
+    ## subclasses of CompositeBehavior can override this to perform custom actions, such as removing the offending subbehavior
+    ## the default implementation logs the exception and re-raises it
     def handle_subbehavior_exception(self, name, exception):
         # We only call this inside the above except
         #pylint: disable=misplaced-bare-raise
@@ -117,9 +159,9 @@ class CompositeBehavior(behavior.Behavior):
             reqs[name] = r
         return reqs
 
-    # assignments is a tree with the same structure as that returned by role_requirements()
-    # the only difference is that leaf nodes are (RoleRequirements, OurRobot) tuples
-    # instead of just RoleRequirements
+    ## assignments is a tree with the same structure as that returned by role_requirements()
+    ## the only difference is that leaf nodes are (RoleRequirements, OurRobot) tuples
+    ## instead of just RoleRequirements
     def assign_roles(self, assignments):
         for name, subtree in assignments.items():
             self.subbehavior_with_name(name).assign_roles(subtree)
