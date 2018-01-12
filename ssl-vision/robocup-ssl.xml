@@ -1364,7 +1364,7 @@
 					80.000000
 				</Var>
 				<Var name="distortion" type="double" minval="0.000000" maxval="2.000000">
-					0.270000
+					0.240000
 				</Var>
 				<Var name="q0" type="double" minval="" maxval="">
 					0.700000
@@ -1385,7 +1385,7 @@
 					0.000000
 				</Var>
 				<Var name="tz" type="double" minval="0.000000" maxval="5000.000000">
-					4332.000000
+					4393.000000
 				</Var>
 			</Var>
 			<Var name="Calibration Parameters" type="list">

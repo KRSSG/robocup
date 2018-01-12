@@ -26,6 +26,7 @@ long long int currT;
 
 // std::vector<krssg_ssl_msgs::point_2d> path_points;
 std::vector<krssg_ssl_msgs::point_2d> v;
+int MY_BOT_ID;
 // krssg_ssl_msgs::planner_path points;
 // krssg_ssl_msgs::point_2d point_, initial_p, final_p;
 ros::Publisher pub;
@@ -129,7 +130,7 @@ bool path(krssg_ssl_msgs::path_plan::Request &req,
     v.push_back(ballPos);
 
 
-  Planning planning(v,v.size(),gui_msgs);
+  Planning planning(v,v.size(),gui_msgs, BOT_ID);
   planning.planSimple();
   planning.plan(start.x*BS_TO_OMPL,start.y*BS_TO_OMPL,
                 target.x*BS_TO_OMPL,target.y*BS_TO_OMPL);

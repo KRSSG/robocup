@@ -4,6 +4,18 @@ from ctypes import *
 from geometry import Vector2D
 from config import *
 
+def ball_in_our_dbox(state):
+    ballPos = Vector2D(int(state.ballPos.x), int(state.ballPos.y))
+    if ballPos.x > -HALF_FIELD_MAXX+DBOX_WIDTH :
+        return False
+    dbox_point1 = Vector2D(-HALF_FIELD_MAXX,DBOX_SMALLER_LENGTH/2)
+    dbox_point2 = Vector2D(-HALF_FIELD_MAXX,-DBOX_SMALLER_LENGTH/2)
+    if ballPos.dist(dbox_point1) < DBOX_RADIUS or ballPos.dist(dbox_point2) < DBOX_RADIUS :
+        return True
+    elif -DBOX_SMALLER_LENGTH/2 <= ballPos.y and ballPos.y <= DBOX_SMALLER_LENGTH/2 :
+        return True
+    else :
+        return False
 
 class Circle(object):
 
@@ -277,3 +289,10 @@ def kub_has_ball(state, kub_id):
                         state.ballPos.x - state.homePos[kub_id].x)
     return vicinity_theta(theta1, theta2, thresh=0.25) and vicinity_points(state.homePos[kub_id],
                         state.ballPos, thresh=BOT_RADIUS * 1.5)
+
+def goalie_expected_y(state, kub_id):
+    try:
+        time = math.fabs((state.homePos[kub_id].x - state.ballPos.x) // state.ballVel.x)
+    except: time = 0.0
+    expected_y = time * state.ballVel.y + state.ballPos.y
+    return expected_y

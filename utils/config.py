@@ -1,5 +1,5 @@
 # Includes all the global parameters as in 'ssl_common/conig.h'
-GRSIM = True
+GRSIM = False
 
 def SELECT(sim_param, ssl_param):
     if GRSIM:     #Parameters for the simulator
@@ -17,7 +17,7 @@ CENTER_X                     = SELECT(0, 0)
 CENTER_Y                     = SELECT(0, 0)
 HALF_FIELD_MAXX              = SELECT(3000, 2975)   #actual 225 (rugged surace at end)
 HALF_FIELD_MAXY              = SELECT(2000, 2050)
-OUR_GOAL_MAXYX				 = SELECT(340,340)
+OUR_GOAL_MAXX				 = SELECT(340,340)
 OUR_GOAL_MAXY                = SELECT(360,600)
 OUR_GOAL_MINY                = SELECT(-360, -600)
 OPP_GOAL_MAXY                = SELECT(600, 600)
@@ -60,12 +60,13 @@ MAX_WHEEL_SPEED            = SELECT(2000, 100)                 #mm/s
 MAX_BOT_LINEAR_ACC         = SELECT(1000, 100)                 #mm/s/s
 MAX_BOT_LINEAR_VEL_CHANGE  = SELECT(10, 3)
 
-FFV 					  = SELECT(0.5,10.0)
+
+FFV 					  = SELECT(1.0,20.0)
 FFA 					  = SELECT(1.0,5.0)
 
 #MAX_BOT_ACCELERATION       = SELECT(900, 900) as per sudo  
-MAX_BOT_ACCELERATION       = SELECT(1000*FFA, 1000*FFA)  
-MAX_BOT_SPEED              = SELECT(1800*FFV, 80.0*FFV)           #mm
+MAX_BOT_ACCELERATION       = SELECT(1000.0*FFA, 1000*FFA)  
+MAX_BOT_SPEED              = SELECT(1800.0*FFV, 80.0*FFV)           #mm
 MIN_BOT_SPEED              = SELECT(5, 30)                      #mm/s
 MAX_BOT_OMEGA              = SELECT(0.5, 0.5)                     #rad/s//2
 MIN_BOT_OMEGA              = SELECT(0.15,0.15)                    #rad/s

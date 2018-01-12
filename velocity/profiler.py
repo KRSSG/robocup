@@ -86,7 +86,7 @@ class Velocity():
 		# print(velX,velY,angle,index,self.motionAngle[index])
 		errorX = self.path[index].x - self.currPosition.x
 		errorY = self.path[index].y - self.currPosition.y
-		# print(velX,velY,errorX,errorY)
+		print(index,self.path[index].x,self.currPosition.x,errorX,errorY)
 		return velX, velY, errorX, errorY
 	##
 	## @brief      Get index of current position of kub in path list.
