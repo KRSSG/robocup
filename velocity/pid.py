@@ -47,7 +47,7 @@ def pid(vX,vY,errorInfo,pso=None):
 	if pso==None:
 		# k = np.array([0,0,0]) 		#define k
 		k = np.array([3.5,0.00001,0.0003])
-		print("PID applied")
+		# print("PID applied")
 		deltaVX = errorX.dot(k)
 		deltaVY = errorY.dot(k)
 		errorInfo.errorIX = errorInfo.errorIX + errorInfo.errorX
@@ -64,7 +64,7 @@ def pid(vX,vY,errorInfo,pso=None):
 			velocity_angle = math.atan2(vY,vX)
 			vX = MAX_BOT_SPEED*math.cos(velocity_angle)
 			vY = MAX_BOT_SPEED*math.sin(velocity_angle)
-			print("________________Velocity Clipped________________")
+			# print("________________Velocity Clipped________________")
 		return vX,vY
 
 	# Optimiser (PSO)
@@ -82,7 +82,7 @@ def pid(vX,vY,errorInfo,pso=None):
 		# pid_tune.ic = k[1]
 		# pid_tune.dc = k[2]
 		# pid_tu.publish(pid_tune)
-		print("pid constants ", k)
+		# print("pid constants ", k)
 
 		deltaVX = errorX.dot(k)
 		deltaVY = errorY.dot(k)
@@ -121,12 +121,12 @@ def pid(vX,vY,errorInfo,pso=None):
 			# print("Particle #", pso.currParticle)
 			if pso.currParticle == 0:
 				pso.currIter = currIter + 1
-				print("Current Iteration #", pso.currIter)
+				# print("Current Iteration #", pso.currIter)
 
 		if pso.currIter%20 == 0:
 			plt.plot(pso.errors)
 			plt.savefig('pid_img/img/myfig_'+str(i)+'.png')
-			print("____________________________File Saved______________________________________",i)
+			# print("____________________________File Saved______________________________________",i)
 			# if i%100 == 0:
 			k_values = ','.join(map(str,pso.bestGlobalK))
 			# f.write(k_values)	

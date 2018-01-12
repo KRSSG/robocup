@@ -1,0 +1,17 @@
+digraph Goalie {
+	failed [label="behavior::failed" shape=ellipse]
+	completed [label="behavior::completed" shape=ellipse]
+	start [label="behavior::start" shape=diamond]
+	cancelled [label="behavior::cancelled" shape=ellipse]
+	subgraph cluster_0 {
+		graph [label="behavior::running" style=dotted]
+		protect [label="tactics.Goalie::protect" shape=ellipse]
+		peace [label="tactics.Goalie::peace" shape=ellipse]
+		clear [label="tactics.Goalie::clear" shape=ellipse]
+	}
+	start -> peace [label=immediately decorate=True]
+	protect -> clear [label="save now" decorate=True]
+	protect -> peace [label=peace decorate=True]
+	peace -> protect [label="ball is valid" decorate=True]
+	clear -> peace [label=peace decorate=True]
+}

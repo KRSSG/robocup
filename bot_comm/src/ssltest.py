@@ -101,7 +101,8 @@ def gr_Commands_CB(msg):
         buf[i] = 0
 
     for i in range(0,6):    
-    	buf[5*i+1],   buf[5*i+2],  buf[5*i+3],  buf[5*i+4] = vel_convert([0,-50,0])
+        # pass
+    	buf[5*i+1],   buf[5*i+2],  buf[5*i+3],  buf[5*i+4] = vel_convert([0,-60,0])
     # buf[1],   buf[2],  buf[3],  buf[4] = vel_convert([0,-50,0])
     now_time = time.time()
     # print now_time- prev_time

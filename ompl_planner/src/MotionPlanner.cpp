@@ -42,7 +42,7 @@ void Planning::init(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::p
   yTop=HALF_FIELD_MAXY_OMPL;
   yBottom=-HALF_FIELD_MAXY_OMPL;
   selector=gui_msgs.max_iteration;
-
+  n--;
   numObstacles = n;
   xc = new double[numObstacles];
   yc = new double[numObstacles];
@@ -123,7 +123,7 @@ bool Planning::plan(int start_row, int start_col, int goal_row, int goal_col){
     cout<<"__FUNC_END__"<<endl;
     return true;
   }
-  return false;
+  return false ;
 }
 
 

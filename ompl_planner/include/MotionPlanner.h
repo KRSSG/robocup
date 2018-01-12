@@ -44,8 +44,8 @@ using namespace std;
 #define HALF_FIELD_MAXY 3000
 #define HALF_FIELD_MAXX_OMPL HALF_FIELD_MAXX*BS_TO_OMPL
 #define HALF_FIELD_MAXY_OMPL HALF_FIELD_MAXY*BS_TO_OMPL
-#define self_radius 120*BS_TO_OMPL
-#define obs_radius 120*BS_TO_OMPL
+#define self_radius 270*BS_TO_OMPL
+#define obs_radius 257*BS_TO_OMPL
 
 template<typename T>
 boost::shared_ptr<T> make_shared_ptr(std::shared_ptr<T>& ptr)
