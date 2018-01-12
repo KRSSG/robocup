@@ -28,11 +28,11 @@ int windowSize = 50;
 std::vector<krssg_ssl_msgs::point_2d> publishingPoint;
 
 
-Planning::Planning(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs){
-  init(v,n,gui_msgs);
+Planning::Planning(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs, int BOT_ID){
+  init(v,n,gui_msgs, BOT_ID);
 }
 
-void Planning::init(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs)
+void Planning::init(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs, int BOT_ID)
 {
 
   // stepSize=gui_msgs.step_size;
@@ -48,9 +48,15 @@ void Planning::init(vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::p
   xc = new double[numObstacles];
   yc = new double[numObstacles];
 
-  for(int i=0;i<n;i++){
-    xc[i] = v[i+1].x;
-    yc[i] = v[i+1].y;
+
+  for(int i=0, j=0;i<n;i++, j++){
+    if(j==BOT_ID)
+    {
+      i--;
+      continue;
+    }
+    xc[i] = v[j].x;
+    yc[i] = v[j].y;
   }
 
 }
@@ -119,7 +125,7 @@ bool Planning::plan(int start_row, int start_col, int goal_row, int goal_col){
     cout<<"__FUNC_END__"<<endl;
     return true;
   }
-  return false;
+  return false ;
 }
 
 

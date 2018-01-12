@@ -12,13 +12,14 @@ class GoToBall(behavior.Behavior):
         course_approach = 2
         fine_approach = 3
 
-    def __init__(self,continuous=False):
+    def __init__(self,avoid_ball=True,continuous=False):
 
         super(GoToBall,self).__init__()
 
         self.name = "GoToBall"
 
     	self.power = 7.0
+        self.avoid_ball = avoid_ball
 
         self.initial_target_dist_thresh = DISTANCE_THRESH/3
         self.ball_dist_thresh = BOT_BALL_THRESH
@@ -100,7 +101,7 @@ class GoToBall(behavior.Behavior):
     def execute_course_approach(self):
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-        generatingfunction = _GoToPoint_.execute(start_time,self.initial_target_dist_thresh,True)
+        generatingfunction = _GoToPoint_.execute(start_time,self.initial_target_dist_thresh,self.avoid_ball)
         for gf in generatingfunction:
             self.kub,target_point = gf
             self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)

@@ -6,7 +6,12 @@ import rospy
 import numpy as np
 import matplotlib.pyplot as plt
 import time
+<<<<<<< HEAD
 import sys
+=======
+from utils.config import *
+from utils.geometry import *
+>>>>>>> triangle_tested
 dt = 0.001
 
 # try:
@@ -80,7 +85,7 @@ def pid(vX,vY,errorInfo,pso=None):
 		# pid_tune.ic = k[1]
 		# pid_tune.dc = k[2]
 		# pid_tu.publish(pid_tune)
-		print("pid constants ", k)
+		# print("pid constants ", k)
 
 		deltaVX = errorX.dot(k)
 		deltaVY = errorY.dot(k)
@@ -119,12 +124,12 @@ def pid(vX,vY,errorInfo,pso=None):
 			# print("Particle #", pso.currParticle)
 			if pso.currParticle == 0:
 				pso.currIter = currIter + 1
-				print("Current Iteration #", pso.currIter)
+				# print("Current Iteration #", pso.currIter)
 
 		if pso.currIter%20 == 0:
 			plt.plot(pso.errors)
 			plt.savefig('pid_img/img/myfig_'+str(i)+'.png')
-			print("____________________________File Saved______________________________________",i)
+			# print("____________________________File Saved______________________________________",i)
 			# if i%100 == 0:
 			k_values = ','.join(map(str,pso.bestGlobalK))
 			# f.write(k_values)	

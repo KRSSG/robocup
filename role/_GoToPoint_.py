@@ -92,7 +92,7 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
             else:
                 vx_end,vy_end = vx,vy
 
-            if abs(kub.state.homePos[kub.kubs_id].theta-rotate)<ROTATION_FACTOR:
+            if abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate))<ROTATION_FACTOR:
                 kub.turn(0)
                 print("Angle completed")
                 FLAG_turn = True

@@ -17,7 +17,7 @@ CENTER_X                     = SELECT(0, 0)
 CENTER_Y                     = SELECT(0, 0)
 HALF_FIELD_MAXX              = SELECT(3000, 2975)   #actual 225 (rugged surace at end)
 HALF_FIELD_MAXY              = SELECT(2000, 2050)
-OUR_GOAL_MAXYX				 = SELECT(340,340)
+OUR_GOAL_MAXX				 = SELECT(340,340)
 OUR_GOAL_MAXY                = SELECT(360,600)
 OUR_GOAL_MINY                = SELECT(-360, -600)
 OPP_GOAL_MAXY                = SELECT(600, 600)
@@ -60,7 +60,8 @@ MAX_WHEEL_SPEED            = SELECT(2000, 100)                 #mm/s
 MAX_BOT_LINEAR_ACC         = SELECT(1000, 100)                 #mm/s/s
 MAX_BOT_LINEAR_VEL_CHANGE  = SELECT(10, 3)
 
-FFV 					  = SELECT(4,15.0)
+
+FFV 					  = SELECT(1.0,20.0)
 FFA 					  = SELECT(1.0,5.0)
 
 #MAX_BOT_ACCELERATION       = SELECT(900, 900) as per sudo  

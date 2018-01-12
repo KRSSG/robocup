@@ -44,8 +44,8 @@ using namespace std;
 #define HALF_FIELD_MAXY 3000
 #define HALF_FIELD_MAXX_OMPL HALF_FIELD_MAXX*BS_TO_OMPL
 #define HALF_FIELD_MAXY_OMPL HALF_FIELD_MAXY*BS_TO_OMPL
-#define self_radius 120*BS_TO_OMPL
-#define obs_radius 120*BS_TO_OMPL
+#define self_radius 270*BS_TO_OMPL
+#define obs_radius 257*BS_TO_OMPL
 
 template<typename T>
 boost::shared_ptr<T> make_shared_ptr(std::shared_ptr<T>& ptr)
@@ -70,8 +70,8 @@ class Planning{
      * @param[in]  n         Total Number of Bots
      * @param[in]  gui_msgs  msg from gui node
      */
-    Planning(std::vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs);
-    void init(std::vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs);
+    Planning(std::vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs, int BOT_ID);
+    void init(std::vector<krssg_ssl_msgs::point_2d> &v,int n, krssg_ssl_msgs::point_SF gui_msgs, int BOT_ID);
     
     /**
  * @brief      Determines if ompl state is valid.

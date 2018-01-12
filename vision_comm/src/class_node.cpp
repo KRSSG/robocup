@@ -1,7 +1,9 @@
 #include "class_node.hpp"
-
 #include <climits>
 #include <string>
+
+const int HALF_FIELD_MAXX = 3000;
+const int HALF_FIELD_MAXY = 2000;
 
 bool is_valid(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vmsg) {
    if(vmsg->robots_yellow.size() == 0 && vmsg->robots_blue.size() == 0)
@@ -11,7 +13,8 @@ bool is_valid(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vmsg) {
    return true;
 }
 
-BeliefState::BeliefState() {}
+BeliefState::BeliefState() {   
+}
 
 BeliefState::BeliefState(bool isteamyellow) {
    this->prev_msg = NULL;
@@ -134,6 +137,16 @@ void BeliefState::initialise() {
    this->ballVel = Pose2D();
    this->awayVel = vector<Pose2D>(6,Pose2D());
    this->homeVel = vector<Pose2D>(6,Pose2D());
+
+   for (int i=0; i<awayPos.size(); i++)
+   {
+      awayPos[i].x = HALF_FIELD_MAXX + 50.0;
+      awayPos[i].y = HALF_FIELD_MAXY + 50.0;
+      homePos[i].x = HALF_FIELD_MAXX + 50.0;
+      homePos[i].y = HALF_FIELD_MAXY + 50.0;
+   }
+   ballPos.x = HALF_FIELD_MAXX + 50.0;
+   ballPos.y = HALF_FIELD_MAXY + 50.0;
 
    this->ballDetected = false;
    this->homeDetected = vector<bool>(6,0);
