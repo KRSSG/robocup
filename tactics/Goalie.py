@@ -39,6 +39,7 @@ class Goalie(behavior.Behavior):
         
 
     def GoToPoint(self,point,theta):
+        pass
 
     def add_kub(self,kub):
         self.kub = kub
