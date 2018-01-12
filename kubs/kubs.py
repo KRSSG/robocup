@@ -15,7 +15,6 @@ class kubs:
     ##
     
     def __init__(self, kubs_id,state, pub):
-        print "in kubs0"
         self.kubs_id = kubs_id
         self.pos = state.homePos[kubs_id]
         self.vx = 0
@@ -26,7 +25,6 @@ class kubs:
         self.power = False
         self.state = state
         # self.kubsBelief()
-        print "in kubs"
         self.pub = pub
         self.c=0
     ##
