@@ -1,0 +1,14 @@
+digraph "ConfigWidget::loadRobotsSettings"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ConfigWidget::loadRobots\lSettings",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ConfigWidget::BlueTeam",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d55/class_config_widget.html#a71f1039599904b115ada5a73da0adc89"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ConfigWidget::loadRobotSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d55/class_config_widget.html#a079a255c3042a8db8ac1717d6bf37899"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ConfigWidget::YellowTeam",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d55/class_config_widget.html#a446b67f07f5c7b884eb191423579476a"];
+}

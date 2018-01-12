@@ -1,0 +1,14 @@
+digraph "RoboCup2014Legacy::Wrapper::SSL_WrapperPacket::has_detection"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RoboCup2014Legacy::\lWrapper::SSL_WrapperPacket\l::has_detection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RoboCup2014Legacy::\lWrapper::SSL_WrapperPacket\l::ByteSizeLong",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d23/class_robo_cup2014_legacy_1_1_wrapper_1_1_s_s_l___wrapper_packet.html#add0e3ac0ab3f998665a3edaef1c129a3"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="RoboCup2014Legacy::\lWrapper::SSL_WrapperPacket\l::IsInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d23/class_robo_cup2014_legacy_1_1_wrapper_1_1_s_s_l___wrapper_packet.html#abe3dc76d1b2d1526f4a9bc5890e6d85d"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="RoboCup2014Legacy::\lWrapper::SSL_WrapperPacket\l::SSL_WrapperPacket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d23/class_robo_cup2014_legacy_1_1_wrapper_1_1_s_s_l___wrapper_packet.html#ad1bcf434675a399c90a0a897586f5b84"];
+}

@@ -1,0 +1,10 @@
+digraph "sslDebug_Data::sslDebug_Data"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sslDebug_Data::sslDebug_Data",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sslDebug_Data::New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a37b26cf755b1e94b7b48db5d24a0eaac"];
+}

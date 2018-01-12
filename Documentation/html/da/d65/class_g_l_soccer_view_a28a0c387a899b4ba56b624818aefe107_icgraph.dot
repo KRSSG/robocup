@@ -1,0 +1,18 @@
+digraph "GLSoccerView::recomputeProjection"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLSoccerView::recomputeProjection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLSoccerView::mouseMoveEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d65/class_g_l_soccer_view.html#acf5064ec3428673c18b632021958a1a0"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLSoccerView::resetView",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d65/class_g_l_soccer_view.html#ad3d291e6d054d19315466a31296337df"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GLSoccerView::keyPressEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d65/class_g_l_soccer_view.html#ab42658b7cd663c75aaa7661c86380098"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GLSoccerView::resizeGL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d65/class_g_l_soccer_view.html#aa989df68ae116ddc549beb177c0b0b25"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GLSoccerView::wheelEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d65/class_g_l_soccer_view.html#ac06ddb6e79367a2fefe1f6f2d1d1e543"];
+}

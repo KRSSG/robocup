@@ -1,0 +1,19 @@
+<map id="port" name="port">
+<area shape="rect" id="node2" href="$d7/db4/class_robo_cup_s_s_l_server.html#a6352c8d8b993718bb3637bd6d6630e54" title="RoboCupSSLServer::change_port" alt="" coords="97,5,316,32"/>
+<area shape="rect" id="node5" href="$d2/d38/class_robo_cup_s_s_l_client.html#a20eacafbf899d068bc48c330d18a0cea" title="RoboCupSSLClient::changePort" alt="" coords="101,56,312,83"/>
+<area shape="rect" id="node6" href="$d7/dc1/bot__data_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="181,107,232,133"/>
+<area shape="rect" id="node7" href="$de/d3b/class_net_1_1_u_d_p.html#a3a87f279ba80b36263f7efc346d2fa64" title="Net::UDP::wait" alt="" coords="411,120,523,147"/>
+<area shape="rect" id="node8" href="$d9/d7f/class_s_s_l_world.html#a47a57176f6f8aa3283a6846576c7db2c" title="SSLWorld::recvActions" alt="" coords="127,208,286,235"/>
+<area shape="rect" id="node11" href="$d2/d38/class_robo_cup_s_s_l_client.html#addb7020bb8559da6e10b4334ee5c2fac" title="RoboCupSSLClient::RoboCup\lSSLClient" alt="" coords="107,259,306,301"/>
+<area shape="rect" id="node12" href="$d7/db4/class_robo_cup_s_s_l_server.html#a848493e0c5ed6dcc755e1c14c215ec54" title="RoboCupSSLServer::RoboCup\lSSLServer" alt="" coords="105,325,308,366"/>
+<area shape="rect" id="node13" href="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a56a00cd6cb17f46826ec771388474f5e" title="MultiStackRoboCupSSL\l::UpdateServerSettings" alt="" coords="125,390,289,431"/>
+<area shape="rect" id="node17" href="$d3/db9/class_net_1_1_address.html#a3f7c71b3a947edf785d6e516fc57ae90" title="Net::Address::~Address" alt="" coords="125,456,288,483"/>
+<area shape="rect" id="node18" href="$de/d3b/class_net_1_1_u_d_p.html#ac8fd690e740a82408d8fb81b90174466" title="Net::UDP::~UDP" alt="" coords="144,507,269,533"/>
+<area shape="rect" id="node3" href="$d9/dc6/class_main_window.html#a2188b3060fb047fad8f1a401aee1031b" title="MainWindow::reconnectVision\lSocket" alt="" coords="631,41,829,82"/>
+<area shape="rect" id="node4" href="$d9/dc6/class_main_window.html#a54b84786850165c4e5466bc2e4097810" title="MainWindow::customFPS" alt="" coords="889,108,1064,135"/>
+<area shape="rect" id="node9" href="$d9/dc6/class_main_window.html#a387f42462d1aaf94676c608d4dc014ca" title="MainWindow::recvActions" alt="" coords="380,196,555,223"/>
+<area shape="rect" id="node10" href="$d9/dc6/class_main_window.html#a3773663f183cdba856ae784c0dad02b4" title="MainWindow::reconnectCommand\lSocket" alt="" coords="619,161,841,202"/>
+<area shape="rect" id="node14" href="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a10ecfe58e96f13357abff26a16d77a4d" title="MultiStackRoboCupSSL\l::RefreshLegacyNetworkOutput" alt="" coords="364,357,571,398"/>
+<area shape="rect" id="node16" href="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a76f62a8929ba82ebf8d5bb610a56d397" title="MultiStackRoboCupSSL\l::RefreshNetworkOutput" alt="" coords="385,422,549,463"/>
+<area shape="rect" id="node15" href="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a8388b0f1da4deb8131ae7d935117db05" title="MultiStackRoboCupSSL\l::MultiStackRoboCupSSL" alt="" coords="644,389,816,430"/>
+</map>

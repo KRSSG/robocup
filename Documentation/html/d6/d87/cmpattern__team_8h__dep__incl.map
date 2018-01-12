@@ -1,0 +1,22 @@
+<map id="ssl&#45;vision/src/shared/cmpattern/cmpattern_team.h" name="ssl&#45;vision/src/shared/cmpattern/cmpattern_team.h">
+<area shape="rect" id="node2" href="$d1/d0a/moc__cmpattern__team_8cxx.html" title="ssl&#45;vision/build/src\l/shared/cmpattern/moc\l_cmpattern_team.cxx" alt="" coords="337,109,493,165"/>
+<area shape="rect" id="node3" href="$dc/d90/cmpattern__teamdetector_8h.html" title="C++ Interface: teamdetector. " alt="" coords="517,109,664,165"/>
+<area shape="rect" id="node18" href="$d6/d37/plugin__detect__robots_8h.html" title="C++ Interface: plugin_detect_robots. " alt="" coords="786,213,934,269"/>
+<area shape="rect" id="node21" href="$d8/d42/cmpattern__team_8cpp.html" title="C++ Implementation: team. " alt="" coords="739,109,885,165"/>
+<area shape="rect" id="node4" href="$d1/d92/stack__robocup__ssl_8h.html" title="C++ Interface: stack_robocup_ssl. " alt="" coords="408,325,597,366"/>
+<area shape="rect" id="node5" href="$db/dc2/multistack__robocup__ssl_8h.html" title="C++ Interface: multistack_robocup_ssl. " alt="" coords="199,429,417,470"/>
+<area shape="rect" id="node17" href="$dd/dc8/moc__cmpattern__teamdetector_8cxx.html" title="ssl&#45;vision/build/src\l/shared/cmpattern/moc\l_cmpattern_teamdetector.cxx" alt="" coords="396,213,591,269"/>
+<area shape="rect" id="node20" href="$db/d5a/cmpattern__teamdetector_8cpp.html" title="C++ Implementation: teamdetector. " alt="" coords="615,213,761,269"/>
+<area shape="rect" id="node15" href="$dc/d3f/stacks_8h.html" title="A collection of single&#45;camera vision stacks. " alt="" coords="441,429,565,470"/>
+<area shape="rect" id="node16" href="$dd/d8b/stack__robocup__ssl_8cpp.html" title="C++ Implementation: stack_robocup_ssl. " alt="" coords="588,421,743,477"/>
+<area shape="rect" id="node6" href="$dc/de2/moc__multistack__robocup__ssl_8cxx.html" title="ssl&#45;vision/build/src\l/app/stacks/moc_multistack\l_robocup_ssl.cxx" alt="" coords="5,525,192,581"/>
+<area shape="rect" id="node7" href="$da/d4e/multistack__robocup__ssl_8cpp.html" title="C++ Implementation: multistack_robocup_ssl. " alt="" coords="217,525,399,581"/>
+<area shape="rect" id="node8" href="$d9/de7/multistacks_8h.html" title="A collection of useful MultiVisionStacks. " alt="" coords="424,533,571,574"/>
+<area shape="rect" id="node9" href="$d7/d16/ssl-vision_2src_2app_2gui_2mainwindow_8h.html" title="ssl&#45;vision/src/app\l/gui/mainwindow.h" alt="" coords="487,629,617,671"/>
+<area shape="rect" id="node10" href="$dd/d3a/gr_sim_2src_2main_8cpp.html" title="grSim/src/main.cpp" alt="" coords="89,726,223,753"/>
+<area shape="rect" id="node11" href="$dc/d66/gr_sim_2src_2mainwindow_8cpp.html" title="grSim/src/mainwindow.cpp" alt="" coords="248,726,427,753"/>
+<area shape="rect" id="node12" href="$d3/dd5/moc__mainwindow_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_mainwindow.cxx" alt="" coords="451,719,653,760"/>
+<area shape="rect" id="node13" href="$dc/ded/ssl-vision_2src_2app_2gui_2mainwindow_8cpp.html" title="ssl&#45;vision/src/app\l/gui/mainwindow.cpp" alt="" coords="677,719,821,760"/>
+<area shape="rect" id="node14" href="$d8/d32/ssl-vision_2src_2app_2main_8cpp.html" title="ssl&#45;vision/src/app\l/main.cpp" alt="" coords="846,719,970,760"/>
+<area shape="rect" id="node19" href="$dc/d1c/plugin__detect__robots_8cpp.html" title="C++ Implementation: plugin_detect_robots. " alt="" coords="786,317,934,373"/>
+</map>

@@ -1,0 +1,16 @@
+digraph "Protobuf.MessagesRobocupSslWrapper.SSL_WrapperPacket.Builder.isInitialized"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslWrapper.SSL_WrapperPacket.\lBuilder.isInitialized",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Protobuf.MessagesRobocup\lSslWrapper.SSL_WrapperPacket\lOrBuilder.getDetection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd3/interface_protobuf_1_1_messages_robocup_ssl_wrapper_1_1_s_s_l___wrapper_packet_or_builder.html#a71374618bdff83b59a1e2669eb5bbe29"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.MessagesRobocup\lSslWrapper.SSL_WrapperPacket\lOrBuilder.getGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd3/interface_protobuf_1_1_messages_robocup_ssl_wrapper_1_1_s_s_l___wrapper_packet_or_builder.html#a50cd9fb0cf93873ea3b9d3d4f742fbd5"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Protobuf.MessagesRobocup\lSslWrapper.SSL_WrapperPacket\lOrBuilder.hasDetection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd3/interface_protobuf_1_1_messages_robocup_ssl_wrapper_1_1_s_s_l___wrapper_packet_or_builder.html#a2752cdd3e854b27464a8619111a29667"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Protobuf.MessagesRobocup\lSslWrapper.SSL_WrapperPacket\lOrBuilder.hasGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd3/interface_protobuf_1_1_messages_robocup_ssl_wrapper_1_1_s_s_l___wrapper_packet_or_builder.html#acb24d3dd3e06cae1a889423503bc1b47"];
+}

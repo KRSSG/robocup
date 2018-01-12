@@ -1,0 +1,12 @@
+digraph "VisionPlugin::mousePressEvent"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VisionPlugin::mousePress\lEvent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VisionStack::mousePressEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/db3/class_vision_stack.html#a298053e2a5624b67aea25da8a42b7c70"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLWidget::mouseAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#ac38cb02e557b2f553c83bb49f26eb50d"];
+}

@@ -1,0 +1,16 @@
+digraph "GLWidget::step"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLWidget::step",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLWidget::paintGL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#a640b5570cb2b37724fd5b58a77339c5e"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLWidget::mouseAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#ac38cb02e557b2f553c83bb49f26eb50d"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MainWindow::update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a128f71880d4b9683149023fc46fcc9f8"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="MainWindow::customFPS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a54b84786850165c4e5466bc2e4097810"];
+}

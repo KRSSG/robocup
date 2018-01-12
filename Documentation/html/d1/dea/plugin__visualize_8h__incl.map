@@ -1,0 +1,32 @@
+<map id="ssl&#45;vision/src/app/plugins/plugin_visualize.h" name="ssl&#45;vision/src/app/plugins/plugin_visualize.h">
+<area shape="rect" id="node2" href="$d8/de0/visionplugin_8h.html" title="C++ Interface: VisionPlugin. " alt="" coords="523,95,624,121"/>
+<area shape="rect" id="node24" href="$d5/db2/image_8h.html" title="C++ Interface: Image. " alt="" coords="1468,251,1536,278"/>
+<area shape="rect" id="node32" href="$da/dd6/conversions_8h.html" title="Various color conversion operations, but NOT very optimized. " alt="" coords="1362,333,1465,360"/>
+<area shape="rect" id="node34" href="$d4/d82/lut3d_8h.html" title="C++ Interface: LUT3D. " alt="" coords="983,251,1044,278"/>
+<area shape="rect" id="node36" href="$d4/df1/cmvision__region_8h.html" title="C++ Interface: cmvision_region. " alt="" coords="1232,95,1358,121"/>
+<area shape="rect" id="node41" href="$d1/d2a/camera__calibration_8h.html" title="Datatypes for camera parameters, functions for perspective transformations. " alt="" coords="1998,95,2141,121"/>
+<area shape="rect" id="node45" href="$d5/d5a/field_8h.html" title="Definition of field dimensions. " alt="" coords="1788,169,1845,196"/>
+<area shape="rect" id="node8" href="$d1/d9a/_var_types_8h.html" title="The main header for the VarTypes system. " alt="" coords="736,333,825,360"/>
+<area shape="rect" id="node10" href="$d7/d97/framedata_8h.html" title="C++ Interface: FrameData. " alt="" coords="280,251,371,278"/>
+<area shape="rect" id="node20" href="$d5/df4/realtimedisplaywidget_8h.html" title="C++ Interface: RealTimeDisplayWidget. " alt="" coords="121,169,280,196"/>
+<area shape="rect" id="node23" href="$da/de5/pixelloc_8h.html" title="A dead&#45;simple data&#45;structure describing a 2D pixel location. " alt="" coords="414,169,491,196"/>
+<area shape="rect" id="node9" href="$df/de3/_var_types_instance_8h.html" title="VarTypesInstance.h" alt="" coords="735,408,874,435"/>
+<area shape="rect" id="node11" href="$d6/da4/ringbuffer_8h.html" title="C++ Interface: RingBuffer. " alt="" coords="237,333,324,360"/>
+<area shape="rect" id="node13" href="$d2/d80/rawimage_8h.html" title="C++ Interface: RawImage. " alt="" coords="1002,333,1092,360"/>
+<area shape="rect" id="node14" href="$d7/d70/image__interface_8h.html" title="C++ Interface: image_interface. " alt="" coords="1050,408,1175,435"/>
+<area shape="rect" id="node15" href="$da/dd8/colors_8h.html" title="A collection of color related classes, types, and functions. " alt="" coords="1229,483,1297,509"/>
+<area shape="rect" id="node21" href="$d6/d23/videostats_8h.html" title="A class for storing video display statistics. " alt="" coords="27,251,120,278"/>
+<area shape="rect" id="node22" href="$d6/d5f/renderoptions_8h.html" title="C++ Interface: RenderOptions. " alt="" coords="145,251,256,278"/>
+<area shape="rect" id="node28" href="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html" title="util.h" alt="" coords="1692,408,1743,435"/>
+<area shape="rect" id="node30" href="$dd/d17/image__io_8h.html" title="C++ Interface: ImageIO. " alt="" coords="1474,408,1559,435"/>
+<area shape="rect" id="node31" href="$d9/d67/font_8h.html" title="font.h" alt="" coords="1781,333,1836,360"/>
+<area shape="rect" id="node37" href="$d4/d67/geometry_8h.html" title="Meta&#45;header to include all significant geometry&#45;related classes. " alt="" coords="2048,333,2134,360"/>
+<area shape="rect" id="node39" href="$df/de6/nkdtree_8h.html" title="NKD&#45;Tree. " alt="" coords="1560,251,1636,278"/>
+<area shape="rect" id="node40" href="$de/df1/cmvision__threshold_8h.html" title="C++ Interface: cmvision_threshold. " alt="" coords="1108,169,1253,196"/>
+<area shape="rect" id="node38" href="$da/d07/quaternion_8h.html" title="A Quaternion class. " alt="" coords="2084,408,2178,435"/>
+<area shape="rect" id="node42" href="$d9/d91/_var_double_8h.html" title="C++ Interface: VarDouble. " alt="" coords="1920,169,2075,196"/>
+<area shape="rect" id="node43" href="$df/dc3/_var_list_8h.html" title="C++ Interface: VarList. " alt="" coords="2262,169,2397,196"/>
+<area shape="rect" id="node50" href="$dd/d45/ssl-vision_2src_2shared_2util_2timer_8h.html" title="timer.h" alt="" coords="2284,251,2346,278"/>
+<area shape="rect" id="node46" href="$d6/d69/field__default__constants_8h.html" title="Definition of field dimensions. " alt="" coords="1858,251,2025,278"/>
+<area shape="rect" id="node47" href="$d1/d98/helpers_8h.html" title="Helper utility functions that generally don&#39;t fit anywhere else. " alt="" coords="2064,483,2139,509"/>
+</map>

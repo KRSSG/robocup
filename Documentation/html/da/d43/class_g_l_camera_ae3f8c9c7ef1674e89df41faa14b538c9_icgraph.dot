@@ -1,0 +1,28 @@
+digraph "GLCamera::getDistance"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLCamera::getDistance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLCamera::mouseAction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#a8b515ebf74f1521716a77ff6bdc141d6"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLCamera::mousePressEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#af1e30ac79cbcb4526644a19c6ad83cde"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GLLUTWidget::mousePressEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a815067cb8bbd9a0ad60e8a37ae7129b2"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GLCamera::mouseReleaseEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#adfd6dab7aeac6fc78294994f097bca21"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GLLUTWidget::mouseRelease\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a06b83f0af3a9184f08acfb301921fb28"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GLCamera::mouseMoveEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#a596921691063ab17775cd025ba301302"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="GLLUTWidget::mouseMoveEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#ac05da9732115359654831362f0ad9e77"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="GLCamera::setState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#aa1dfaa9938549bc9ad493b227825985e"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="GLCamera::wheelEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#a2192144e7b936879db18ac5a676f8331"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="GLLUTWidget::wheelEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a14c543da2ee05af5c64e885374b0f018"];
+}

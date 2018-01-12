@@ -1,0 +1,15 @@
+digraph "VarTypes::VarTreeModel"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="VarTypes::VarTreeModel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="QStandardItemModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d6a/class_q_standard_item_model.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" opts" ,fontname="Helvetica"];
+  Node3 [label="VarTypes::VarTreeViewOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d40/class_var_types_1_1_var_tree_view_options.html",tooltip="An internal set of rendering parameters used by the VarTypes view-model. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cols" ,fontname="Helvetica"];
+  Node4 [label="std::vector\< GuiColumnFlag \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node5 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

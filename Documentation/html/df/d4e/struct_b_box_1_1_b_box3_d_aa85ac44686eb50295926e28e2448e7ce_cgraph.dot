@@ -1,0 +1,20 @@
+digraph "BBox::BBox3D::set"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="BBox::BBox3D::set",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="BBox::BBox3D::add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d4e/struct_b_box_1_1_b_box3_d.html#a5e9f14964937375a7a4d2cbafd7b3b73"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GVector::max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a1223529a5f19606fa1f0bb39404a9ec3"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GVector::min",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a79b77964e0a1ea74cc1ca2048991fb73"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="BBox::BBox3D::expand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d4e/struct_b_box_1_1_b_box3_d.html#a29f28a281ec0815a4346a1d24247182c"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="BBox::BBox3D::merge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d4e/struct_b_box_1_1_b_box3_d.html#ac101900147c6610f65d64d12ff50fd6f"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,18 @@
+digraph "CaptureFromFile::getFrame"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CaptureFromFile::getFrame",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RawImage::setColorFormat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#ae31fbd81eb34ec7b6368965b3e570cb8"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="RawImage::setData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a031b824497c98ccc69d3d540cf12bffa"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="RawImage::setHeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a6d60f9b1510af9ce1d91dbc9d1128362"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="RawImage::setTime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#ac774b70a0753a6ad4a9e39353e4954da"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="RawImage::setWidth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a7d3f98af83a328d485b0188f78bb6e8b"];
+}

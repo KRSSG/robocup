@@ -1,0 +1,28 @@
+digraph "Protobuf.MessagesRobocupSslRefboxLog.Log_Frame.Builder"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslRefboxLog.Log_Frame.Builder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="com::google::protobuf\l::GeneratedMessage::Builder\l\< Builder \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.MessagesRobocup\lSslRefboxLog.Log_FrameOrBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d35/interface_protobuf_1_1_messages_robocup_ssl_refbox_log_1_1_log___frame_or_builder.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MessageOrBuilder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" frameBuilder_" ,fontname="Helvetica"];
+  Node5 [label="com.google.protobuf.Single\lFieldBuilder\< Protobuf.Messages\lRobocupSslDetection.SSL_DetectionFrame,\l Protobuf.MessagesRobocupSslDetection.SSL\l_DetectionFrame.Protobuf.MessagesRobocupSslRefboxLog.\lLog_Frame.Builder, Protobuf.MessagesRobocupSslDetection.SSL\l_DetectionFrameOrBuilder \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bitField0_" ,fontname="Helvetica"];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" refboxCmd_" ,fontname="Helvetica"];
+  Node7 [label="java.lang.Object",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" frame_" ,fontname="Helvetica"];
+  Node8 [label="Protobuf.MessagesRobocup\lSslDetection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/db3/class_protobuf_1_1_messages_robocup_ssl_detection.html"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" internal_static_SSL\l_DetectionFrame_descriptor\ninternal_static_SSL_Detection\lRobot_descriptor\ninternal_static_SSL_DetectionBall\l_descriptor" ,fontname="Helvetica"];
+  Node9 [label="static com.google.protobuf.\lDescriptors.Descriptor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" internal_static_SSL\l_DetectionRobot_fieldAccessor\lTable\ninternal_static_SSL\l_DetectionBall_fieldAccessor\lTable\ninternal_static_SSL\l_DetectionFrame_fieldAccessorTable" ,fontname="Helvetica"];
+  Node10 [label="static com.google.protobuf.\lGeneratedMessage.FieldAccessorTable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" descriptor" ,fontname="Helvetica"];
+  Node11 [label="static com.google.protobuf.\lDescriptors.FileDescriptor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

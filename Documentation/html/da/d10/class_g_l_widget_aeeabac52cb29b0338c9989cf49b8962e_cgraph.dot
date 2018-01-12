@@ -1,0 +1,20 @@
+digraph "GLWidget::changeCameraMode"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLWidget::changeCameraMode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ConfigWidget::Field\l_Length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d55/class_config_widget.html#ad6dcd940c26e1f4d8f10de1d7db126dd"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ConfigWidget::Field\l_Margin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d55/class_config_widget.html#a43d3d15e6eea246fa0d910f46e18aa37"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ConfigWidget::Field\l_Width",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d55/class_config_widget.html#a52dd005ffaa605f06c17dc45d87e44f8"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CGraphics::getViewpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#ab704f0d19aad88178516b729e95e8d82"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CGraphics::setViewpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#afbda4f5be9204802873f9a3d04d04cec"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CGraphics::wrapCameraAngles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#a335713d4cde6ff4f263342635b96448c"];
+}

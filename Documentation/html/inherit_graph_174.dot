@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::VarBase64",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d08/class_var_types_1_1_var_base64.html",tooltip="A singleton wrapper to XMLParserBase64Tool. "];
+}

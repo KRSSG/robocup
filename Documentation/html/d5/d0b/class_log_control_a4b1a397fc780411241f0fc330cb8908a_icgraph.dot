@@ -1,0 +1,39 @@
+digraph "LogControl::update_play_speed"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="LogControl::update\l_play_speed",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="LogControl::log_backward",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d0b/class_log_control.html#a79e7e2a6c6d9b748b9a17100ba7b77b1"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="LogControl::log_faster",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d0b/class_log_control.html#ad7b0e679d9d9043be4a1abfc4c47c81e"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="LogControl::log_forward",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d0b/class_log_control.html#a9994920a5248857dcac18affdf72497b"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="LogControl::log_pause",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d0b/class_log_control.html#a4965da3ef33207aba3c0c002d8d77c83"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="LogControl::log_play",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d0b/class_log_control.html#a2d5737ebfb790e8fe2b57b25a8d17961"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="LogControl::log_slower",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d0b/class_log_control.html#aa9e019cec979dda79765d6ffa7fffebd"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="LogControl::reset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d0b/class_log_control.html#a2192a5f4f176f68b55c776365b047a16"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="ViewUpdateThread::end\l_play_record",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a78be31a0b123cada7c4cea395f8c6ee4"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="ViewUpdateThread::execute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a606f4d8b9f859fbb81c0bb1fda745f24"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="ViewUpdateThread::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a65149d2f3d7e9bc31fc7dbc4e57ff8fe"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="ViewUpdateThread::\l~ViewUpdateThread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a5f58683f22999158962e267fcac842a2"];
+  Node9 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="ViewUpdateThread::playLogfile\lPressed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#aaebb8d0af97137c9ec6147819ab304ed"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="ViewUpdateThread::ViewUpdate\lThread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a39177c92f69911f0dba02dfe627e393c"];
+  Node8 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="LogControl::LogControl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d0b/class_log_control.html#a6a4354c821e74429cc537a566e6b3ad2"];
+  Node8 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="ViewUpdateThread::start\l_play_record",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a3aacf2cbde4a2c248b9ee2ccd6cb9299"];
+  Node16 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

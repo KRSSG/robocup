@@ -1,0 +1,11 @@
+digraph "GLObject"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="GLObject",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html",tooltip="An OpenGL camera class. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLSmoothCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/df7/class_g_l_smooth_camera.html",tooltip="A smoothly animated OpenGL camera class. "];
+}

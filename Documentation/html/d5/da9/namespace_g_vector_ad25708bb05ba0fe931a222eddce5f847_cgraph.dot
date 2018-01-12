@@ -1,0 +1,12 @@
+digraph "GVector::intersection"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GVector::intersection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GVector::vector2d::\langle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d10/class_g_vector_1_1vector2d.html#a51c907ec8fdce7d2aea0b1eb82bc895f",tooltip="calculate the clockwise angle from <1,0> "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GVector::vector2d::\lrotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d10/class_g_vector_1_1vector2d.html#a55016d64cdbd6beb74fa35a0f5b8133c",tooltip="return vector rotated by angle a "];
+}

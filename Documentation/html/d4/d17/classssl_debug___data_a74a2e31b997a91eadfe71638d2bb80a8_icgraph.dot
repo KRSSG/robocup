@@ -1,0 +1,20 @@
+digraph "sslDebug_Data::clear_botpos"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="sslDebug_Data::clear\l_botpos",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sslDebug_Data::GetMetadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#a0c56bd42dc56416e9bd0dd687a2a1bc9"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sslDebug_Data::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d17/classssl_debug___data.html#aa8d8e8e0f131010a25015e208fede665"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Debug_Circle::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/class_debug___circle.html#a7b5ceeb4768c0f0264a6d04f9807b6ac"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Debug_Line::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d2a/class_debug___line.html#a6bcb9eb1320cc6c36c3190e6f5897b34"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Debug_AdjustBot::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/dd5/class_debug___adjust_bot.html#ae441f7fe60a8f06cb3e6ed69df0a5e11"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Debug_AdjustBall::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d50/class_debug___adjust_ball.html#a53d8a323f12d045abe892af357b9bcfc"];
+}

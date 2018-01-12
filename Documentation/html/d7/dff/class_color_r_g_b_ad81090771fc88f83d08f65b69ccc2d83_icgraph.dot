@@ -1,0 +1,31 @@
+digraph "ColorRGB::set"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ColorRGB::set",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PluginVisualize::DrawBlobs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#a002825252fa6e6b4880e556ff34e6a6b"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PluginVisualize::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#a9fb83c5f31f4ad6205bada831b2547c0"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PluginVisualize::DrawCamera\lCalibration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#ab3fcd2e261ae04a35cd6733611ddc64d"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PluginVisualize::drawFieldArc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#aa62140a2625c54efc923f6226a5f2f84"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PluginVisualize::DrawCalibration\lResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#ab85fbfb2a0d815753bf4010d34b989c1"];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PluginVisualize::DrawSearch\lCorridors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#a9171fdaa9c4a21ddcf8d20194d86b05c"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PluginVisualize::DrawDetected\lEdges",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#af0ff2f0cd3c6a901c87ac3a21fbe0149"];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="PluginVisualize::drawFieldLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#a05ab81cf53984e18ff63c06db13b9e35"];
+  Node9 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Conversions::rgba2rgb",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d98/class_conversions.html#af20a91eebf5318f778137711b25c126f"];
+}

@@ -1,0 +1,22 @@
+digraph "CameraParameters::CalibrationData"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CameraParameters::CalibrationData",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" radius\ntheta1\ntheta2" ,fontname="Helvetica"];
+  Node2 [label="double",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/de6/classdouble.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" straightLine" ,fontname="Helvetica"];
+  Node3 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" imgPts" ,fontname="Helvetica"];
+  Node4 [label="std::vector\< std::pair\l\< GVector::GVector::vector2d\l\< double \>, bool \> \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node5 [label="pair\< GVector::GVector\l::vector2d\< double \>,\l bool \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" alphas" ,fontname="Helvetica"];
+  Node6 [label="std::vector\< double \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" center\np1\np2" ,fontname="Helvetica"];
+  Node7 [label="GVector::vector3d\<\l double \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/db8/class_g_vector_1_1vector3d.html"];
+  Node2 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" x\ny\nz" ,fontname="Helvetica"];
+}

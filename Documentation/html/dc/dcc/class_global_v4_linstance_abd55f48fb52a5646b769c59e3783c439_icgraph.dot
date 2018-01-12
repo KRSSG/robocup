@@ -1,0 +1,27 @@
+digraph "GlobalV4Linstance::getControl"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GlobalV4Linstance::\lgetControl",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CaptureV4L::readParameter\lProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a6e5bbb2219f75bb0e1efa54611a82a3d"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CaptureV4L::readAllParameter\lProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a4cbafb341ff4c87805d098868be36982"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CaptureV4L::startCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a8ef5f5e7d9613e4363b38985327f0419",tooltip="Initialize the interface and start capture. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CaptureV4L::readParameter\lValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a446168ca5f7a66eb96d7da1b095e9875"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CaptureV4L::changed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a9033ff464396574cc37c5a6a75e81d1e"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CaptureV4L::mvc_connect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a694a5545fce5a0c02e7e09db6eb5431d"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CaptureV4L::CaptureV4L",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a60e140b264be90f6029fc874c57cb6b1"];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CaptureV4L::readAllParameter\lValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#ac58d2fa318d01e96767a5275fb770ae1"];
+  Node9 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CaptureV4L::stopCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a313d666c787b2b307416d9221cfda1c4",tooltip="Stop Capture. "];
+}

@@ -1,0 +1,38 @@
+digraph "float_mat::nr_cols"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="float_mat::nr_cols",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lu_backsubst",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#a03b59151903f25290b349a97e0617c33",tooltip="Perform backward substitution. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lin_solve",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#a3cc670899e3652e73974dc7d31f8b9c2",tooltip="Solve a system of linear equations. Solves the inhomogeneous matrix problem with lu-decomposition. Note that inversion may be accomplished by setting a to the identity_matrix. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="invert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#a31664809e3673eaf6cfe1ce50f5fbe0b",tooltip="Returns the inverse of a matrix using LU-decomposition. "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lsqr_fprime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#acf5952bc65afce877d8c38dacfa74bb3"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sg_derivative",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#ad079251b6263f5466f3d8aa26cdf504f",tooltip="savitzky golay smoothed numerical derivative. "];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sg_coeff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#afdbd4e6c539737e6182b160e4a702f5e",tooltip="calculate savitzky golay coefficients. "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="sg_smooth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#a95221783d4052c6e2e256e974f450af2",tooltip="savitzky golay smoothing. "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="bsCallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#a6ae55d451b592f2241032b3dee413164"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="lu_factorize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#aa2e1d1c98dd41236f58fbc4210987c65",tooltip="Performs LU factorization in place. "];
+  Node11 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="lu_forwsubst",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#a29a77572d1732cd5eff0cf558e248792",tooltip="Perform forward substitution. "];
+  Node12 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="operator*",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#ac6718d5ef17136bb0c3067deb0c72aea",tooltip="matrix multiplication. "];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="transpose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d0e/svg_8cpp.html#a2642b8884ccad0743b2aef9616cf6853",tooltip="returns the transposed matrix. "];
+  Node14 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

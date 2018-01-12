@@ -1,0 +1,27 @@
+digraph "protobuf_messages_5frobocup_5fssl_5fwrapper_5flegacy_2eproto::GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="protobuf_messages_5frobocup\l_5fssl_5fwrapper_5flegacy\l_2eproto::GOOGLE_PROTOBUF\l_ATTRIBUTE_SECTION_VARIABLE",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="protobuf_messages_5frobocup\l_5fssl_5fwrapper_5flegacy\l_2eproto::AddDescriptorsImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de3/namespaceprotobuf__messages__5frobocup__5fssl__5fwrapper__5flegacy__2eproto.html#a656fc0a51aa128b2de08a2156fcbfbd3"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="protobuf_messages_5frobocup\l_5fssl_5fwrapper_5flegacy\l_2eproto::AddDescriptors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de3/namespaceprotobuf__messages__5frobocup__5fssl__5fwrapper__5flegacy__2eproto.html#a8be635c20af48e8a4265181f2dc978e8"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="protobuf_messages_5frobocup\l_5fssl_5fwrapper_5flegacy\l_2eproto::protobuf_AssignDescriptors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de3/namespaceprotobuf__messages__5frobocup__5fssl__5fwrapper__5flegacy__2eproto.html#ad6870add0fd8e5bec22593ac5253aefe"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="protobuf_messages_5frobocup\l_5fssl_5fwrapper_5flegacy\l_2eproto::protobuf_AssignDescriptorsOnce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de3/namespaceprotobuf__messages__5frobocup__5fssl__5fwrapper__5flegacy__2eproto.html#a3486f0cb0a5b9d0e2dba5063837676de"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="protobuf_messages_5frobocup\l_5fssl_5fwrapper_5flegacy\l_2eproto::protobuf_RegisterTypes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de3/namespaceprotobuf__messages__5frobocup__5fssl__5fwrapper__5flegacy__2eproto.html#a3d35fa5e2ff2967f0777e61c41e23a63"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="RoboCup2014Legacy::\lWrapper::SSL_WrapperPacket\l::descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d23/class_robo_cup2014_legacy_1_1_wrapper_1_1_s_s_l___wrapper_packet.html#a9b623003bab2077cab8a90273e0b5453"];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="RoboCup2014Legacy::\lWrapper::SSL_WrapperPacket\l::GetMetadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d23/class_robo_cup2014_legacy_1_1_wrapper_1_1_s_s_l___wrapper_packet.html#a2c389424893fbf15b2d37bdc10066880"];
+  Node3 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="protobuf_messages_5frobocup\l_5fssl_5fwrapper_5flegacy\l_2eproto::StaticDescriptorInitializer\l::StaticDescriptorInitializer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d33/structprotobuf__messages__5frobocup__5fssl__5fwrapper__5flegacy__2eproto_1_1_static_descriptor_initializer.html#ae33d8b2281babb29d68a436543a0883f"];
+}

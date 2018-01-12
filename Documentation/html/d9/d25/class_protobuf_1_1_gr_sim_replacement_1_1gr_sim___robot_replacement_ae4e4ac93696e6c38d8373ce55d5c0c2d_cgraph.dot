@@ -1,0 +1,18 @@
+digraph "Protobuf.GrSimReplacement.grSim_RobotReplacement.isInitialized"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.GrSimReplacement.gr\lSim_RobotReplacement.isInitialized",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Protobuf.GrSimReplacement.gr\lSim_RobotReplacementOrBuilder.hasDir",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dff/interface_protobuf_1_1_gr_sim_replacement_1_1gr_sim___robot_replacement_or_builder.html#a02be4f72014686db8f99e3f246f4c036"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.GrSimReplacement.gr\lSim_RobotReplacementOrBuilder.hasId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dff/interface_protobuf_1_1_gr_sim_replacement_1_1gr_sim___robot_replacement_or_builder.html#a08394df839dd337b14f4bb769f081105"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Protobuf.GrSimReplacement.gr\lSim_RobotReplacementOrBuilder.hasX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dff/interface_protobuf_1_1_gr_sim_replacement_1_1gr_sim___robot_replacement_or_builder.html#ae99dec0226e63bb4ed94c60726e7909e"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Protobuf.GrSimReplacement.gr\lSim_RobotReplacementOrBuilder.hasY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dff/interface_protobuf_1_1_gr_sim_replacement_1_1gr_sim___robot_replacement_or_builder.html#a551d43b8b716d91dae2bad095e2912f5"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Protobuf.GrSimReplacement.gr\lSim_RobotReplacementOrBuilder.has\lYellowteam",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dff/interface_protobuf_1_1_gr_sim_replacement_1_1gr_sim___robot_replacement_or_builder.html#acd77239301243340a550cfe467d49982"];
+}

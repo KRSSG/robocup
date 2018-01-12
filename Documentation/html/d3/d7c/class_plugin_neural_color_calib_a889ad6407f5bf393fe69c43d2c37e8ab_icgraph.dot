@@ -1,0 +1,10 @@
+digraph "PluginNeuralColorCalib::Clear"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PluginNeuralColorCalib\l::Clear",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PluginNeuralColorCalib\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d7c/class_plugin_neural_color_calib.html#abe1ff40a019895ddb8b4a11b04d4fe99"];
+}

@@ -1,0 +1,22 @@
+digraph "RoboCup2014Legacy::Geometry::SSL_GeometryData::MergeFrom"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::MergeFrom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::CopyFrom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_data.html#a310bab5141f45efe0415044aff92286c"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="RoboCupSSLServer::sendLegacy\lMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/db4/class_robo_cup_s_s_l_server.html#a9121316925f5e0288abc1f1bfe8c5fdf"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PluginLegacySSLNetworkOutput\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d12/class_plugin_legacy_s_s_l_network_output.html#a116c5e954b7ba8159da292af1a9d56ae"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PluginLegacyPublishGeometry\l::sendGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#ab3a19abff7ed07a1980e2ba3f839b0dc"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PluginLegacyPublishGeometry\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#a1e8cc6b653351ad1c5230b15976cbbe5"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PluginLegacyPublishGeometry\l::slotPublishTriggered",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#a298abe557fb26dbb5e147d7e742cbe75"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PluginLegacyPublishGeometry\l::PluginLegacyPublishGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#a1203737efb1d4913ba97729d6d4fb66b"];
+}

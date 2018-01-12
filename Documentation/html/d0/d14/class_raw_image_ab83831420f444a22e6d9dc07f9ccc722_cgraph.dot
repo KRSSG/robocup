@@ -1,0 +1,12 @@
+digraph "RawImage::getNumBytes"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RawImage::getNumBytes",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RawImage::computeImageSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a8b54701df9dc9d0d024b959966ec3714"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="RawImage::getNumPixels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d14/class_raw_image.html#a2033593c1e2cdaecf0be4c6b7dad3d92"];
+}

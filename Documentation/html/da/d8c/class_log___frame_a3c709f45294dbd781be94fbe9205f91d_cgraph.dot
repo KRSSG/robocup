@@ -1,0 +1,12 @@
+digraph "Log_Frame::Log_Frame"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Log_Frame::Log_Frame",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Log_Frame::has_frame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d8c/class_log___frame.html#ac19f879726af3c9bafaaf6a1eb5e94da"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Log_Frame::has_refbox_cmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d8c/class_log___frame.html#ac86fc7db38caafb8a48363479cd5291a"];
+}

@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLText::Glyph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d44/struct_g_l_text_1_1_glyph.html"];
+}

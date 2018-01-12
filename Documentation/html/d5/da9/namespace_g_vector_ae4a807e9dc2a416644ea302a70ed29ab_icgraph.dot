@@ -1,0 +1,14 @@
+digraph "GVector::shortest_angle"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GVector::shortest_angle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLCamera::lookAt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#ac3b34c8cc66811a43b8cfb01e0ad1891"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLCamera::setState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#aa1dfaa9938549bc9ad493b227825985e"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GLSmoothCamera::step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/df7/class_g_l_smooth_camera.html#add439f1b02e8e3a95367f6640ebeb173"];
+}

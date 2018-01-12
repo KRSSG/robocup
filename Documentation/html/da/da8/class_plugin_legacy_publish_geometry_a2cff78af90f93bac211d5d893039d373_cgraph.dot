@@ -1,0 +1,20 @@
+digraph "PluginLegacyPublishGeometry::GetFieldLineLength"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PluginLegacyPublishGeometry\l::GetFieldLineLength",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarDoubleVal\l::getDouble",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d0f/class_var_types_1_1_var_double_val.html#aa5c9acfc3658e012d84481b9292a0b12",tooltip="get the value of this data-type "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarVal::lock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#a687df377b593f5ab5ac0b26d22728d4a"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarVal::unlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#a6f1d886beb58366ce6c157b224ff26f8"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GetFieldLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d71/plugin__legacypublishgeometry_8cpp.html#af299c1ef234322ecde9c3653d5539cbe"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#a3b1068ff735e10f55f41821d89366a33"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="cube",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#aa6b59015782f26bdfcd1b9660fb471e2"];
+}

@@ -1,0 +1,17 @@
+digraph "velocity.profiler.Velocity.ellipse"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="velocity.profiler.Velocity.ellipse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="velocity.profiler.Velocity.update\lAngle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d5e/classvelocity_1_1profiler_1_1_velocity.html#af656b7346a90b2fdbb3e68f350545f06"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="velocity.profiler.Velocity.trapezoid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d5e/classvelocity_1_1profiler_1_1_velocity.html#a5bf8566ca2ac78cd4a2f5c22242c49f0",tooltip="Check if trapezoidal motion is possible. "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="velocity.profiler.Velocity.get\lVelocity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d5e/classvelocity_1_1profiler_1_1_velocity.html#a10b5396902177d5bd825f408151c3355",tooltip="Gets the velocity. "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="velocity.profiler.Velocity.trapezoidal\lMotion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d5e/classvelocity_1_1profiler_1_1_velocity.html#a7a402878e8f3431e05ea5db3c6528c68",tooltip="Check if Trapezoidal motion is possible. "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

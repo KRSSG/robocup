@@ -1,0 +1,16 @@
+digraph "SSL_DetectionBall::confidence"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SSL_DetectionBall::\lconfidence",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ViewUpdateThread::execute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a606f4d8b9f859fbb81c0bb1fda745f24"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ViewUpdateThread::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a65149d2f3d7e9bc31fc7dbc4e57ff8fe"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ViewUpdateThread::\l~ViewUpdateThread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/db5/class_view_update_thread.html#a5f58683f22999158962e267fcac842a2"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d53/ssl-vision_2src_2client_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+}

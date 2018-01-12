@@ -1,0 +1,14 @@
+digraph "SSL_GeometryFieldSize::descriptor"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SSL_GeometryFieldSize\l::descriptor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SSL_GeometryFieldSize\l::mutable_unknown_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d30/class_s_s_l___geometry_field_size.html#aabac6caab2fb7062c49f41bb0d7607a6"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SSL_GeometryCameraCalibration\l::mutable_unknown_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d73/class_s_s_l___geometry_camera_calibration.html#a0e957e6326e792dd06baba2197fb6ea2"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SSL_GeometryData::mutable\l_unknown_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d01/class_s_s_l___geometry_data.html#a10245a92e4e961f8bb3dc7c7354d38c0"];
+}

@@ -1,0 +1,20 @@
+digraph "protobuf_messages_5frobocup_5fssl_5fgeometry_2eproto::InitDefaults"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaults",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaultsSSL_FieldCicularArc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__2eproto.html#a69b258df72cc31a38030d3227e36e8d1"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaultsSSL_FieldLineSegment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__2eproto.html#a896e767b0ce19a9a451befa9df9e7246"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaultsSSL_GeometryCameraCalibration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__2eproto.html#a0787c4230e727ee8a9a5290347c73a53"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaultsSSL_GeometryData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__2eproto.html#a5135d4ac6b00963f089c74c441e023b5"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaultsSSL_GeometryFieldSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__2eproto.html#a50dcacc4293002f8245afd4a713618b4"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="protobuf_messages_5frobocup\l_5fssl_5fgeometry_2eproto\l::InitDefaultsVector2f",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d2b/namespaceprotobuf__messages__5frobocup__5fssl__5fgeometry__2eproto.html#a515e03f3e6377dadd0b5761c39a21ad1"];
+}

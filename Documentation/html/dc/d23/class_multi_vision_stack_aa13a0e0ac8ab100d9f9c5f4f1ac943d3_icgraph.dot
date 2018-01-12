@@ -1,0 +1,20 @@
+digraph "MultiVisionStack::stop"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MultiVisionStack::stop",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="MainWindow::closeEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a4e20a4a065fbb0e4d3532a45a0a91425"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="MainWindow::Quit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc6/class_main_window.html#a44e502225c153db20de1bb67d7b7513e"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="HandleStop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d32/ssl-vision_2src_2app_2main_8cpp.html#a2b444d2ae6facb7e0e5debb12c4abce5"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d32/ssl-vision_2src_2app_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="MultiStackRoboCupSSL\l::~MultiStackRoboCupSSL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d9b/class_multi_stack_robo_cup_s_s_l.html#a9b3c99f347fffd3dc911495dbf6ad517"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="MultiVisionStack::\l~MultiVisionStack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d23/class_multi_vision_stack.html#add125dbc2661c7dc52997bd8df9318a9"];
+}

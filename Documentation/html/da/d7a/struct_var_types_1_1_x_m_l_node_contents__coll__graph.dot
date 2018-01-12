@@ -1,0 +1,31 @@
+digraph "VarTypes::XMLNodeContents"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="VarTypes::XMLNodeContents",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" type" ,fontname="Helvetica"];
+  Node2 [label="enum",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" text" ,fontname="Helvetica"];
+  Node3 [label="char",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" clear" ,fontname="Helvetica"];
+  Node4 [label="VarTypes::XMLClear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d53/struct_var_types_1_1_x_m_l_clear.html"];
+  Node3 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lpszOpenTag\nlpszCloseTag\nlpszValue" ,fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" attrib" ,fontname="Helvetica"];
+  Node5 [label="VarTypes::XMLAttribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d7f/struct_var_types_1_1_x_m_l_attribute.html"];
+  Node3 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lpszName\nlpszValue" ,fontname="Helvetica"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" child" ,fontname="Helvetica"];
+  Node6 [label="VarTypes::XMLNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" emptyXMLClear" ,fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" emptyXMLAttribute" ,fontname="Helvetica"];
+  Node6 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" emptyXMLNode" ,fontname="Helvetica"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" d" ,fontname="Helvetica"];
+  Node7 [label="VarTypes::XMLNode::\lXMLNodeDataTag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d50/struct_var_types_1_1_x_m_l_node_1_1_x_m_l_node_data_tag.html"];
+  Node3 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pText\nisDeclaration\nlpszName" ,fontname="Helvetica"];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pClear" ,fontname="Helvetica"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pOrder\nnClear\nnChild\nnText\nnAttribute\nref_count" ,fontname="Helvetica"];
+  Node8 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pAttribute" ,fontname="Helvetica"];
+  Node6 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pChild" ,fontname="Helvetica"];
+  Node7 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pParent" ,fontname="Helvetica"];
+}

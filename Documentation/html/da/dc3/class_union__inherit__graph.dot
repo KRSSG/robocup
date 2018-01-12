@@ -1,0 +1,11 @@
+digraph "Union"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Union",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="role.skills_union.SParam",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d23/classrole_1_1skills__union_1_1_s_param.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="utils.tactics_union.Param",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d61/classutils_1_1tactics__union_1_1_param.html"];
+}

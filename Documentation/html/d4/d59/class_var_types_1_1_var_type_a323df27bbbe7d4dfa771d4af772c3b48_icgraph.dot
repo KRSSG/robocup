@@ -1,0 +1,36 @@
+digraph "VarTypes::VarType::setName"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::VarType::\lsetName",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarType::\lreadChildrenHelper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#abc6e10025322f3fc5e0e0802c5a5f8d2",tooltip="A helper function to read a list of children from XML and convert it to a vector of VarType nodes..."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarExternal\l::loadExternal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/de2/class_var_types_1_1_var_external.html#a8cdbf72cd88b965326168362d9d2dc5e"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarExternal\l::readChildren",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/de2/class_var_types_1_1_var_external.html#a17094bd8f47407726cbe388e091e9bef"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarXML::read",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd1/class_var_types_1_1_var_x_m_l.html#ae7fd42e8b53c47ef87c368af79afdb72"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="FieldLine::Rename",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dda/class_field_line.html#aa80bfb6dff20a1f193a2f5192fa59076"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="FieldLine::FieldLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dda/class_field_line.html#a79ae2a1a90b2e9a4e99c9dfdd8d1a758"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="FieldLine::FromVarList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dda/class_field_line.html#a56c616c2ef61e3b01a0f447169d7215d"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="RoboCupField::ProcessNew\lFieldLines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d6f/class_robo_cup_field.html#ac083672b835425e21fb31bf4ec744e7d"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="FieldCircularArc::Rename",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d15/class_field_circular_arc.html#a6f84458113d5c39f4eeb6ca25d991eaa"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="FieldCircularArc::FieldCircularArc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d15/class_field_circular_arc.html#a7b1748e638b8b13f34706a387907db2f"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="RoboCupField::loadDefaults\lRoboCup2012",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d6f/class_robo_cup_field.html#ae63ccc61dbed228337309a84df2d1ec1"];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="RoboCupField::ResizeFieldArcs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d6f/class_robo_cup_field.html#a87c30986ddf7b9db9a8c8232b869080c"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CMPattern::Team::slotTeam\lNameChanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d8f/class_c_m_pattern_1_1_team.html#a74a836834ea72c98a0428b46b9097f3b"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CMPattern::Team::Team",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d8f/class_c_m_pattern_1_1_team.html#a1088734005ae643a8b048cf438b6377f"];
+}

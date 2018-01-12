@@ -1,0 +1,28 @@
+digraph "StackRoboCupSSL::StackRoboCupSSL"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="StackRoboCupSSL::StackRobo\lCupSSL",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PluginPublishGeometry\l::addCameraParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/db6/class_plugin_publish_geometry.html#a7f3aa81c568adbf9db7136894d56deac"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VisionPlugin::lock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d1e/class_vision_plugin.html#aa2c1e8154280af786e0a683fc2dacd48"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VisionPlugin::unlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d1e/class_vision_plugin.html#aad346bc1f6d4ea4930df2f07b9eed6d8"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PluginLegacyPublishGeometry\l::addCameraParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#aa69fd5cb8edcc6a04b8645d7c53e029e"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarList::\laddChild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d74/class_var_types_1_1_var_list.html#a1c6779a59721a6f67634f28e77d639b1",tooltip="adds a VarType item to the end of the list. "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="LUT3D::addDerivedLUT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d15/class_l_u_t3_d.html#a6503725b43973252f8d52f8565b10301"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="LUT3D::getSettings",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d15/class_l_u_t3_d.html#a5d456f7e194125ac2f662e068f62887c"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="LUT3D::loadRoboCupChannels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d15/class_l_u_t3_d.html#a57b55708ede19ad11cedd04338897df9"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="PluginVisualize::setThresholdingLUT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#a9d1769a237a8a72de3b1276b047259da"];
+}

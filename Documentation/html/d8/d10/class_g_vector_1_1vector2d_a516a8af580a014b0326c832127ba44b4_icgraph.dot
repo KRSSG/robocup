@@ -1,0 +1,44 @@
+digraph "GVector::vector2d::set"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GVector::vector2d::set",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GVector::vector2d::\lbound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d10/class_g_vector_1_1vector2d.html#a8d34f74970fdf7f83516632737850c1e",tooltip="bound vector to a maximum length "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CMPattern::MultiPatternModel\l::findPattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d49/class_c_m_pattern_1_1_multi_pattern_model.html#a0b47859cd9d7ad16ebe9bde1000601d2"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CMPattern::TeamDetector\l::findRobotsByModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dbb/class_c_m_pattern_1_1_team_detector.html#ab2d57214fd03aaf6e5e70c5a1af64e01"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CMPattern::TeamDetector\l::update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/dbb/class_c_m_pattern_1_1_team_detector.html#a37658e3a0620aa89360f0e5ffb1b8259"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PluginDetectRobots\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d27/class_plugin_detect_robots.html#adcea998497d6d8c3de23ec75f993d3dc"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="NKDTree::getOnlyNearest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d60/class_n_k_d_tree.html#a9f7b5c80548b9aedf1ea449bc5bc23c4"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CMPattern::Marker::\lreset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d02/class_c_m_pattern_1_1_marker.html#ad4a8e548ec0c37c14384fe556fa245cd"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CMPattern::MultiPatternModel\l::loadSinglePatternImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d49/class_c_m_pattern_1_1_multi_pattern_model.html#aa1ae63073c7e67231b602938fb5b16a7"];
+  Node8 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CMPattern::Marker::\lMarker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d02/class_c_m_pattern_1_1_marker.html#ad09b3d5d1bdbde27d2ce0f45ca507515"];
+  Node8 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CMPattern::Pattern\l::Pattern",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d67/class_c_m_pattern_1_1_pattern.html#a6ebb5f76fe324728e617b62fa862dbce"];
+  Node8 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CMPattern::MultiPatternModel\l::PatternDetectionResult\l::PatternDetectionResult",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d18/class_c_m_pattern_1_1_multi_pattern_model_1_1_pattern_detection_result.html#a1c82a14ed19755af6ea737d1797954b6"];
+  Node8 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CMPattern::MultiPatternModel\l::PatternFitParameters::PatternFit\lParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db3/class_c_m_pattern_1_1_multi_pattern_model_1_1_pattern_fit_parameters.html#aa4f24086a757908ffc0efd68fae947a2"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CMPattern::MultiPatternModel\l::PatternDetectionResult::reset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d18/class_c_m_pattern_1_1_multi_pattern_model_1_1_pattern_detection_result.html#a64aa4e999f2f2c2016b429dc7990725a"];
+  Node14 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="GVector::segment_near_line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#ad345efca1ac3faf9884565d16a46532c"];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CMPattern::Marker::set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d02/class_c_m_pattern_1_1_marker.html#aa72d2f0aa62a5a1fb84c5492f3ef9e11"];
+  Node16 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="GLSoccerView::updateDetection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d65/class_g_l_soccer_view.html#a10fb2c66bcda8a965dce36434bfe3a0a"];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="MyThread::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d12/class_my_thread.html#a48f2e366e852087c53705f64e1ee65c2"];
+}

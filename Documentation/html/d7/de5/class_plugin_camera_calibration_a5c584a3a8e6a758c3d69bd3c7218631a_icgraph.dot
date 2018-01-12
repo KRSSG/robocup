@@ -1,0 +1,17 @@
+digraph "PluginCameraCalibration::sanitizeSobel"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PluginCameraCalibration\l::sanitizeSobel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PluginCameraCalibration\l::detectEdgesOnSingleArc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de5/class_plugin_camera_calibration.html#afbac6cc3f5801adbe2edc77d6e1da204"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PluginCameraCalibration\l::detectEdges",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de5/class_plugin_camera_calibration.html#ad1b96969290257b3b52107f15bcd9ad7"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PluginCameraCalibration\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de5/class_plugin_camera_calibration.html#a23662c330318774c564d6ff792aa07b1"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PluginCameraCalibration\l::detectEdgesOnSingleLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/de5/class_plugin_camera_calibration.html#addebc26a36e8bace70b4fc29c3f1849b"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

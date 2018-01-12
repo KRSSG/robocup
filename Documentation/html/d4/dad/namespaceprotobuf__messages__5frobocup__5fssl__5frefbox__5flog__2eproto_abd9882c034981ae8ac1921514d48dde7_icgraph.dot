@@ -1,0 +1,23 @@
+digraph "protobuf_messages_5frobocup_5fssl_5frefbox_5flog_2eproto::InitDefaultsLog_FrameImpl"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="protobuf_messages_5frobocup\l_5fssl_5frefbox_5flog_2eproto\l::InitDefaultsLog_FrameImpl",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="protobuf_messages_5frobocup\l_5fssl_5frefbox_5flog_2eproto\l::InitDefaultsLog_Frame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dad/namespaceprotobuf__messages__5frobocup__5fssl__5frefbox__5flog__2eproto.html#aef301de1aceeffdd6d5205a9b9346491"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Log_Frame::InitAsDefault\lInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d8c/class_log___frame.html#a4527e10e9dcdb77b87edf65115e0f628"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="protobuf_messages_5frobocup\l_5fssl_5frefbox_5flog_2eproto\l::InitDefaults",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dad/namespaceprotobuf__messages__5frobocup__5fssl__5frefbox__5flog__2eproto.html#abd3328f4ac13d63375090ce29d01bd2b"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="protobuf_messages_5frobocup\l_5fssl_5frefbox_5flog_2eproto\l::InitDefaultsRefbox_LogImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dad/namespaceprotobuf__messages__5frobocup__5fssl__5frefbox__5flog__2eproto.html#ac64137e00c06b68ff9a3f318aef43928"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="protobuf_messages_5frobocup\l_5fssl_5frefbox_5flog_2eproto\l::InitDefaultsRefbox_Log",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dad/namespaceprotobuf__messages__5frobocup__5fssl__5frefbox__5flog__2eproto.html#a6adbd2849cec4368e5402da887595007"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Refbox_Log::InitAsDefault\lInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dfa/class_refbox___log.html#ae440d8b648e951ca4bee66fe885ef70a"];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

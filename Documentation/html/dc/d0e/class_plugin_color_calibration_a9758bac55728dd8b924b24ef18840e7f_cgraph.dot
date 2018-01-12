@@ -1,0 +1,14 @@
+digraph "PluginColorCalibration::getControlWidget"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PluginColorCalibration\l::getControlWidget",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="LUTWidget::getGLLUTWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d1a/class_l_u_t_widget.html#ad60b935a034f9ad5e7dfec802ade3762"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VisionPlugin::slotKeyPress\lEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d1e/class_vision_plugin.html#a22ed5a496d9e47febf48af8406afa349"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VisionPlugin::keyPressEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d1e/class_vision_plugin.html#a60f2f54618f1f8b2831f6ba07f75187b"];
+}

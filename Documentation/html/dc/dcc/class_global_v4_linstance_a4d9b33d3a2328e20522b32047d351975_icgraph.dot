@@ -1,0 +1,26 @@
+digraph "GlobalV4Linstance::removeInstance"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GlobalV4Linstance::\lremoveInstance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GlobalV4LinstanceManager\l::removeInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d1e/class_global_v4_linstance_manager.html#aa80f2f14e260085b5555057bb1bc3681"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GlobalV4LinstanceManager\l::removeInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d1e/class_global_v4_linstance_manager.html#ae6a21006fe044889877535545d893012"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GlobalV4LinstanceManager\l::enumerateInstances",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d1e/class_global_v4_linstance_manager.html#a08622dea006c7576e47296ff196a4de7"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CaptureV4L::CaptureV4L",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a60e140b264be90f6029fc874c57cb6b1"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CaptureV4L::resetBus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#af72f82577d8b997148a3a75afe9b9530"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GlobalV4Linstance::\lobtainInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dcc/class_global_v4_linstance.html#ad465a8d542dddf393be8701483413684"];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CaptureV4L::~CaptureV4L",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a6838be7567e6f28bc91236f93c63d892"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CaptureV4L::startCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d36/class_capture_v4_l.html#a8ef5f5e7d9613e4363b38985327f0419",tooltip="Initialize the interface and start capture. "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="GlobalV4Linstance::\l~GlobalV4Linstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dcc/class_global_v4_linstance.html#a0e3040c3c602f5bca671521fd63a54eb"];
+}

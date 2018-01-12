@@ -1,0 +1,10 @@
+digraph "Protobuf.MessagesRobocupSslRefboxLog.Log_Frame.initFields"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslRefboxLog.Log_Frame.initFields",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Protobuf.MessagesRobocup\lSslDetection.SSL_DetectionFrame.get\lDefaultInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d21/class_protobuf_1_1_messages_robocup_ssl_detection_1_1_s_s_l___detection_frame.html#a1012e261077ccc63b4518c8e2d86aa6a"];
+}

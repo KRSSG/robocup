@@ -1,0 +1,30 @@
+digraph "behavior.Behavior"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="behavior.Behavior",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="fsm.StateMachine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/dd8/classfsm_1_1_state_machine.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="object",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/dd8/classobject.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="composite_behavior.Composite\lBehavior",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d31/classcomposite__behavior_1_1_composite_behavior.html",tooltip="A composite behavior is one that has 0+ named subbehaviors this class has methods for making it easy ..."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="role.pass_receive.PassReceive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dde/classrole_1_1pass__receive_1_1_pass_receive.html"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="tactics.CoPass.CoordinatedPass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d46/classtactics_1_1_co_pass_1_1_coordinated_pass.html",tooltip="This handles passing from one bot to another Simply run it and set it&#39;s receive point, the rest is handled for you It starts out by assigning a kicker and a receiver and instructing them to lineup for the pass Once they&#39;re aligned, the kicker kicks and the receiver adjusts itself based on the ball&#39;s movement Note: due to mechanical limitations, a kicker often gets stuck trying to adjust its angle while it&#39;s just outside of it&#39;s aim error threshold. "];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="tactics.sample_tactic.Sample\lTactic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dad/classtactics_1_1sample__tactic_1_1_sample_tactic.html"];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="tactics.Triangle_Pass.CoordinatedPass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/da3/classtactics_1_1_triangle___pass_1_1_coordinated_pass.html",tooltip="This handles passing from one bot to another Simply run it and set it&#39;s receive point, the rest is handled for you It starts out by assigning a kicker and a receiver and instructing them to lineup for the pass Once they&#39;re aligned, the kicker kicks and the receiver adjusts itself based on the ball&#39;s movement Note: due to mechanical limitations, a kicker often gets stuck trying to adjust its angle while it&#39;s just outside of it&#39;s aim error threshold. "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="role.GoToBall.GoToBall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d1f/classrole_1_1_go_to_ball_1_1_go_to_ball.html"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="role.GoToPoint.GoToPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dc3/classrole_1_1_go_to_point_1_1_go_to_point.html"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="role.Kick.Kick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d70/classrole_1_1_kick_1_1_kick.html",tooltip="lines up with the ball and the target, then drives up and kicks this differs from PivotKick which get..."];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="tactics.Goalie.Goalie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d7c/classtactics_1_1_goalie_1_1_goalie.html"];
+}

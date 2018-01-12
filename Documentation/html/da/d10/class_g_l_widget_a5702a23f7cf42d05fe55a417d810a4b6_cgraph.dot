@@ -1,0 +1,29 @@
+digraph "GLWidget::wheelEvent"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLWidget::wheelEvent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CGraphics::isGraphicsEnabled",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#ae40f067c0f749c7c65e672fb7cfc1abe"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLWidget::update3DCursor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d10/class_g_l_widget.html#a0308fe2b093b7cfde8cfeb4709cad434"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CGraphics::getCameraForward",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#a818cb3f21e6a8f7b460a8d54479bf084"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rotxy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d99/graphics_8cpp.html#a181dcf31020c69dc3eca8ffc5a905c77"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CGraphics::getCameraRight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#a290aedbb892fc4e7cc876569018deb63"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CGraphics::getFrustum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#a7f9c6182d2c37bc60302cf5d94563387"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CGraphics::getViewpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#ab704f0d19aad88178516b729e95e8d82"];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="PRay::setPose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d77/class_p_ray.html#a072e6e0090178b19225996ee3f32cdb5"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CGraphics::zoomCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#a5182b5c8db40ebee05e8ee6e5f8f5001"];
+  Node10 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

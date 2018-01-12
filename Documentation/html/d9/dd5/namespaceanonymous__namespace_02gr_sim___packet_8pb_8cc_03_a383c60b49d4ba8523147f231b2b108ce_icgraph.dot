@@ -1,0 +1,33 @@
+digraph "anonymous_namespace{grSim_Packet::pb::cc}::protobuf_AssignDescriptorsOnce"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="anonymous_namespace\l\{grSim_Packet::pb::cc\}\l::protobuf_AssignDescriptorsOnce",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="grSim_Packet::descriptor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/db5/classgr_sim___packet.html#a7b47a09ab956e4d498c7c27ceb90088a"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="grSim_Packet::mutable\l_unknown_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/db5/classgr_sim___packet.html#a99d1e6ccf7d03df2c49c55557c33d8b5"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="grSim_Packet::MergePartial\lFromCodedStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/db5/classgr_sim___packet.html#ab8cf6157b27cdbf8f645d0ca2b0ac051"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="grSim_Packet::New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/db5/classgr_sim___packet.html#a31e29a827a331a0785441fc5d3f05fa8"];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="grSim_Packet::GetMetadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/db5/classgr_sim___packet.html#a3408db4788627de262ea584aaac1626d"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="grSim_Packet::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/db5/classgr_sim___packet.html#a1586f89f68f4f71677b65fa6b9dcb944"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="anonymous_namespace\l\{grSim_Packet::pb::cc\}\l::protobuf_RegisterTypes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dd5/namespaceanonymous__namespace_02gr_sim___packet_8pb_8cc_03.html#af633f7fcc16c745364cc6308d0da95f0"];
+  Node8 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="protobuf_AddDesc_grSim\l_5fPacket_2eproto_impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d11/gr_sim___packet_8pb_8cc.html#a8d4a2af5cc390cd356537cc8c985fb84"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="protobuf_AddDesc_grSim\l_5fPacket_2eproto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d23/gr_sim___packet_8pb_8h.html#acdb4c3d5c9e85db3a3c1c00d12185091"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="anonymous_namespace\l\{grSim_Packet::pb::cc\}\l::protobuf_AssignDescriptors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/dd5/namespaceanonymous__namespace_02gr_sim___packet_8pb_8cc_03.html#ad63c2c0d36024e2675f43e5ccd16a8e9"];
+  Node11 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="StaticDescriptorInitializer\l_grSim_5fPacket_2eproto\l::StaticDescriptorInitializer\l_grSim_5fPacket_2eproto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de3/struct_static_descriptor_initializer__gr_sim__5f_packet__2eproto.html#a6f3e5821b8ada0316276699dfb0674ad"];
+}

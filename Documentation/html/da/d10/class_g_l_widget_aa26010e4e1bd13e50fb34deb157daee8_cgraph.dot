@@ -1,0 +1,20 @@
+digraph "GLWidget::myGLdraw"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLWidget::myGLdraw",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="FrameDataMap::get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d71/class_frame_data_map.html#afd413bf943754d195c11e868b49dd974"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Zoom::getFlipXval",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dd2/class_zoom.html#a63dfb82fbe239e038b6ea727b11eafbf"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Zoom::getFlipYval",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dd2/class_zoom.html#a0e539d3446f2ea3a56c03f6db7152d00"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Zoom::getZoom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dd2/class_zoom.html#a91cb38928e897d562cc0b961ec12f643"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Zoom::setup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dd2/class_zoom.html#af602700bc3d584430205e25bc1d6382b"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Zoom::zoom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/dd2/class_zoom.html#a60de232bb1050d6468ed805b5b35e1ee"];
+}

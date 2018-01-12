@@ -1,0 +1,10 @@
+digraph "Vec::NVector::copy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Vec::NVector::copy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Vec::NVector\< num_t,\l dim \>::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d1c/class_vec_1_1_n_vector.html#aa05540cb4bb73d56adc0435dc2f2a0a4"];
+}

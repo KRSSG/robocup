@@ -1,0 +1,16 @@
+digraph "Protobuf.MessagesRobocupSslDetection.SSL_DetectionBallOrBuilder.hasPixelX"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslDetection.SSL_DetectionBall\lOrBuilder.hasPixelX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Protobuf.MessagesRobocup\lSslDetection.SSL_DetectionBall.is\lInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d68/class_protobuf_1_1_messages_robocup_ssl_detection_1_1_s_s_l___detection_ball.html#af5195ea866a6e945d711f815634f7e82"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.MessagesRobocup\lSslDetection.SSL_DetectionBall.\lBuilder.isInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d55/class_protobuf_1_1_messages_robocup_ssl_detection_1_1_s_s_l___detection_ball_1_1_builder.html#a2db90ed407a02933062f64744c2f5ea3"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Protobuf.MessagesRobocup\lSslDetection.SSL_DetectionRobot.is\lInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc1/class_protobuf_1_1_messages_robocup_ssl_detection_1_1_s_s_l___detection_robot.html#a802ca40342d4584df92dc59d5c52b847"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Protobuf.MessagesRobocup\lSslDetection.SSL_DetectionRobot.\lBuilder.isInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/dd9/class_protobuf_1_1_messages_robocup_ssl_detection_1_1_s_s_l___detection_robot_1_1_builder.html#a386ce5c58bed7b9f52a18f7cef849feb"];
+}

@@ -1,0 +1,10 @@
+digraph "role.Kick.Kick.use_chipper"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="role.Kick.Kick.use\l_chipper",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="role.Kick.Kick.use\l_chipper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d70/classrole_1_1_kick_1_1_kick.html#ac52de78575b293b37e3dcc47719f5cd4",tooltip="If false, uses straight kicker, if true, uses chipper (if available) Default: False. "];
+}

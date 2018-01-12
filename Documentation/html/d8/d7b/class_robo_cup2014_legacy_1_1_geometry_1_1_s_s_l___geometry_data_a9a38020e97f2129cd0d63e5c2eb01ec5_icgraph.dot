@@ -1,0 +1,18 @@
+digraph "RoboCup2014Legacy::Geometry::SSL_GeometryData::has_field"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::has_field",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::ByteSizeLong",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_data.html#a694cec46d16e35408b426312ceeec5db"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::IsInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_data.html#a253a48225c3e3197f6f1ddaff1efda1d"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="RoboCup2014Legacy::\lWrapper::SSL_WrapperPacket\l::IsInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d23/class_robo_cup2014_legacy_1_1_wrapper_1_1_s_s_l___wrapper_packet.html#abe3dc76d1b2d1526f4a9bc5890e6d85d"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::MergeFrom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_data.html#a3f8118e44d84b70f802c580fa5413aa1"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryData\l::SSL_GeometryData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d7b/class_robo_cup2014_legacy_1_1_geometry_1_1_s_s_l___geometry_data.html#a13f0845dafdaa9f50cd34eb0f42b3b6a"];
+}

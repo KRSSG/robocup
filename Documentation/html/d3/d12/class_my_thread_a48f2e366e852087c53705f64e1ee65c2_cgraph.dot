@@ -1,0 +1,22 @@
+digraph "MyThread::run"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MyThread::run",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RoboCupSSLClient::open",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d38/class_robo_cup_s_s_l_client.html#a18dece023f75a8d893d26db8ac66c7cb"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="RoboCupSSLClient::close",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d38/class_robo_cup_s_s_l_client.html#a0326052ff8366255a27fe971764d8ed9"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="RoboCupSSLClient::receive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d38/class_robo_cup_s_s_l_client.html#a927e2a465a6b8637f9e47419feb8573e"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Sleep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d45/ssl-vision_2src_2shared_2util_2timer_8h.html#aa21c6a362f98ff604bb77163df30427a"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GLSoccerView::updateDetection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d65/class_g_l_soccer_view.html#a10fb2c66bcda8a965dce36434bfe3a0a"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GVector::vector2d::set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d10/class_g_vector_1_1vector2d.html#a516a8af580a014b0326c832127ba44b4",tooltip="set the components of the vector "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="GLSoccerView::updateField\lGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d65/class_g_l_soccer_view.html#a70b79c66b00f4e17cbc4a92cd68f0063"];
+}

@@ -1,0 +1,10 @@
+<map id="ssl&#45;vision/src/app/gui/realtimedisplaywidget.h" name="ssl&#45;vision/src/app/gui/realtimedisplaywidget.h">
+<area shape="rect" id="node2" href="$d7/d97/framedata_8h.html" title="C++ Interface: FrameData. " alt="" coords="123,95,214,121"/>
+<area shape="rect" id="node3" href="$d6/da4/ringbuffer_8h.html" title="C++ Interface: RingBuffer. " alt="" coords="13,169,100,196"/>
+<area shape="rect" id="node13" href="$d6/d23/videostats_8h.html" title="A class for storing video display statistics. " alt="" coords="238,95,331,121"/>
+<area shape="rect" id="node15" href="$d6/d5f/renderoptions_8h.html" title="C++ Interface: RenderOptions. " alt="" coords="356,95,467,121"/>
+<area shape="rect" id="node5" href="$d2/d80/rawimage_8h.html" title="C++ Interface: RawImage. " alt="" coords="124,169,213,196"/>
+<area shape="rect" id="node6" href="$d7/d70/image__interface_8h.html" title="C++ Interface: image_interface. " alt="" coords="106,244,231,271"/>
+<area shape="rect" id="node7" href="$da/dd8/colors_8h.html" title="A collection of color related classes, types, and functions. " alt="" coords="184,319,252,345"/>
+<area shape="rect" id="node14" href="$d6/df6/capturestats_8h.html" title="A class for storing capture statistics. " alt="" coords="308,169,413,196"/>
+</map>

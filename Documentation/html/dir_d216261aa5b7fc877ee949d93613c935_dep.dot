@@ -1,0 +1,16 @@
+digraph "ssl-vision/build" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8a37fb72858324e0476265f1c6db5619 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="ssl-vision" fontname="Helvetica", fontsize="10", URL="dir_8a37fb72858324e0476265f1c6db5619.html"]
+  subgraph clusterdir_d216261aa5b7fc877ee949d93613c935 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d216261aa5b7fc877ee949d93613c935.html"];
+    dir_d216261aa5b7fc877ee949d93613c935 [shape=plaintext label="build"];
+    dir_f7a3e55fe262c410180f80d3e2895ecc [shape=box label="CMakeFiles" color="red" fillcolor="white" style="filled" URL="dir_f7a3e55fe262c410180f80d3e2895ecc.html"];
+    dir_a49cecc66fdceb7d4453556c25e0fcad [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_a49cecc66fdceb7d4453556c25e0fcad.html"];
+  }
+  }
+  dir_bcadbfb4438c878576aec4f093d74922 [shape=box label="src" fillcolor="white" style="filled" color="red" URL="dir_bcadbfb4438c878576aec4f093d74922.html"];
+  dir_a49cecc66fdceb7d4453556c25e0fcad->dir_bcadbfb4438c878576aec4f093d74922 [headlabel="43", labeldistance=1.5 headhref="dir_000054_000018.html"];
+}

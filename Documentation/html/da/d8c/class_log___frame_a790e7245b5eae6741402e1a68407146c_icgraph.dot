@@ -1,0 +1,19 @@
+digraph "Log_Frame::InternalSerializeWithCachedSizesToArray"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Log_Frame::InternalSerialize\lWithCachedSizesToArray",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Log_Frame::New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d8c/class_log___frame.html#a8e19f7f80745e7531e41f14b90be1d04"];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Refbox_Log::New",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dfa/class_refbox___log.html#a57c5c7284c1535cf08a4779d18e8ad6b"];
+  Node3 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Log_Frame::SerializeWith\lCachedSizesToArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d8c/class_log___frame.html#acaaec743c56761446b96254b12ff7a6b"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Refbox_Log::SerializeWith\lCachedSizesToArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dfa/class_refbox___log.html#af3cba68f368bcdb06195a8685ed4f0a3"];
+}

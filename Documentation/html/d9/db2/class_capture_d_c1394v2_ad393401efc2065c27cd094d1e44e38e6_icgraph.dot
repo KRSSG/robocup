@@ -1,0 +1,20 @@
+digraph "CaptureDC1394v2::readParameterValues"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CaptureDC1394v2::readParameter\lValues",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CaptureDC1394v2::changed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#a6d69748c8c223923dd7b19e0fd126a36"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CaptureDC1394v2::mvc\l_connect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#a4dd2211f320a3512c8f0e613f59534fa"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CaptureDC1394v2::Capture\lDC1394v2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#afc4a4932dd688dcbf070324ed3df3f93"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CaptureDC1394v2::readAll\lParameterValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#ab7938b9ad29338d70c4770fa1155cd8d"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CaptureDC1394v2::startCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#aa5de4131abf2ec1629ed290e1731c496",tooltip="Initialize the interface and start capture. "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CaptureDC1394v2::stopCapture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/db2/class_capture_d_c1394v2.html#a134af9830a3320a239b0c8f14b2adc07",tooltip="Stop Capture. "];
+}

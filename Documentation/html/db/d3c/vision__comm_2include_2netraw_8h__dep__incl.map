@@ -1,0 +1,22 @@
+<map id="vision_comm/include/netraw.h" name="vision_comm/include/netraw.h">
+<area shape="rect" id="node2" href="$dc/d77/vision__comm_2include_2robocup__ssl__client_8h.html" title="vision_comm/include\l/robocup_ssl_client.h" alt="" coords="647,95,793,136"/>
+<area shape="rect" id="node21" href="$db/d21/vision__comm_2src_2netraw_8cpp.html" title="vision_comm/src/netraw.cpp" alt="" coords="817,102,1007,129"/>
+<area shape="rect" id="node3" href="$d5/d9f/gr_sim_2src_2net_2robocup__ssl__client_8cpp.html" title="grSim/src/net/robocup\l_ssl_client.cpp" alt="" coords="181,184,331,225"/>
+<area shape="rect" id="node4" href="$d1/da5/soccerview_8h.html" title="C++ Interface: GLSoccerView. " alt="" coords="356,184,511,225"/>
+<area shape="rect" id="node8" href="$d5/d2b/_graphics_primitives_8h.html" title="ssl&#45;vision/src/logClient\l/GraphicsPrimitives.h" alt="" coords="643,184,797,225"/>
+<area shape="rect" id="node13" href="$dd/d3b/_client_threading_8h.html" title="C++ Interface: ViewUpdateThread. " alt="" coords="528,281,683,322"/>
+<area shape="rect" id="node18" href="$d1/d53/ssl-vision_2src_2client_2main_8cpp.html" title="ssl&#45;vision/src/client\l/main.cpp" alt="" coords="822,184,957,225"/>
+<area shape="rect" id="node19" href="$d2/d88/vision__comm_2src_2robocup__ssl__client_8cpp.html" title="vision_comm/src/robocup\l_ssl_client.cpp" alt="" coords="981,184,1152,225"/>
+<area shape="rect" id="node20" href="$d0/d27/vision__node_8cpp.html" title="vision_comm/src/vision\l_node.cpp" alt="" coords="1177,184,1335,225"/>
+<area shape="rect" id="node5" href="$d7/d3d/moc__soccerview_8cxx.html" title="ssl&#45;vision/build/src\l/graphicalClient/moc\l_soccerview.cxx" alt="" coords="363,273,504,329"/>
+<area shape="rect" id="node6" href="$d5/daf/ssl-vision_2src_2graphical_client_2main_8cpp.html" title="ssl&#45;vision/src/graphical\lClient/main.cpp" alt="" coords="5,281,160,322"/>
+<area shape="rect" id="node7" href="$d2/dfb/soccerview_8cpp.html" title="C++ Implementation: GLSoccerView. " alt="" coords="184,281,339,322"/>
+<area shape="rect" id="node9" href="$d7/db4/_central_window_8h.html" title="C++ Implementation: CentralWindow. " alt="" coords="1001,377,1156,419"/>
+<area shape="rect" id="node16" href="$d6/d68/moc___graphics_primitives_8cxx.html" title="ssl&#45;vision/build/src\l/logClient/moc_GraphicsPrimitives.cxx" alt="" coords="707,281,955,322"/>
+<area shape="rect" id="node17" href="$de/df4/_graphics_primitives_8cpp.html" title="C++ Implementation: Robot, SoccerView. " alt="" coords="978,281,1139,322"/>
+<area shape="rect" id="node10" href="$df/da4/moc___central_window_8cxx.html" title="ssl&#45;vision/build/src\l/logClient/moc_CentralWindow.cxx" alt="" coords="751,467,977,508"/>
+<area shape="rect" id="node11" href="$d8/d87/_central_window_8cpp.html" title="ssl&#45;vision/src/logClient\l/CentralWindow.cpp" alt="" coords="1001,467,1156,508"/>
+<area shape="rect" id="node12" href="$da/d2b/ssl-vision_2src_2log_client_2main_8cpp.html" title="ssl&#45;vision/src/logClient\l/main.cpp" alt="" coords="1180,467,1335,508"/>
+<area shape="rect" id="node14" href="$dd/dd9/moc___client_threading_8cxx.html" title="ssl&#45;vision/build/src\l/logClient/moc_ClientThreading.cxx" alt="" coords="373,377,603,419"/>
+<area shape="rect" id="node15" href="$d5/dca/_client_threading_8cpp.html" title="C++ Implementation: ViewUpdateThread. " alt="" coords="627,377,781,419"/>
+</map>

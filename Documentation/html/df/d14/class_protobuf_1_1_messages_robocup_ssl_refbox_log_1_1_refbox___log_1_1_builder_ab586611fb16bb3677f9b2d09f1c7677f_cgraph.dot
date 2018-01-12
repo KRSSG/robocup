@@ -1,0 +1,14 @@
+digraph "Protobuf.MessagesRobocupSslRefboxLog.Refbox_Log.Builder.mergeFrom"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslRefboxLog.Refbox_Log.Builder.mergeFrom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Protobuf.MessagesRobocup\lSslRefboxLog.Refbox_Log.Builder.\lBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d14/class_protobuf_1_1_messages_robocup_ssl_refbox_log_1_1_refbox___log_1_1_builder.html#a4b5bb024845c5a61675e392bd0a4f12b"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.MessagesRobocup\lSslRefboxLog.Log_Frame.newBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/df6/class_protobuf_1_1_messages_robocup_ssl_refbox_log_1_1_log___frame.html#a4d427b0596b4a6e32ad8cbde95646100"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Protobuf.MessagesRobocup\lSslRefboxLog.Log_Frame.Builder.create",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/ddb/class_protobuf_1_1_messages_robocup_ssl_refbox_log_1_1_log___frame_1_1_builder.html#ae2bec8acc99600dbb7763d3e1086ef53"];
+}

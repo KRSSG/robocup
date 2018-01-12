@@ -1,0 +1,24 @@
+digraph "SSL_DetectionRobot::New"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SSL_DetectionRobot::New",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SSL_DetectionRobot\l::SSL_DetectionRobot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#ad0b7939296d1b47d27d993620cab18a5"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SSL_DetectionRobot\l::internal_default_instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#a36bb7a2fba77dedba30bb2bb7fb547d0"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SSL_DetectionBall::Swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d53/class_s_s_l___detection_ball.html#a381f7671916a343facc4e42d27ca197b"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SSL_DetectionBall::\lInternalSwap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d53/class_s_s_l___detection_ball.html#aa06f05deb8cce7d062877bdbb7aa19be"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="protobuf_InitDefaults\l_messages_5frobocup_5fssl\l_5fdetection_2eproto",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d04/grsim__comm_2include_2proto_2messages__robocup__ssl__detection_8pb_8cc.html#a425d1f6fcc173f26d39e6722d666fded"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GOOGLE_PROTOBUF_DECLARE_ONCE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d04/grsim__comm_2include_2proto_2messages__robocup__ssl__detection_8pb_8cc.html#a5d167962f0e8007dae5d2c3ecf88a1ec"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="protobuf_InitDefaults\l_messages_5frobocup_5fssl\l_5fdetection_2eproto_impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d04/grsim__comm_2include_2proto_2messages__robocup__ssl__detection_8pb_8cc.html#a9c0a09515acf87179f94c434816cacd2"];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="SSL_DetectionRobot\l::SharedCtor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d30/class_s_s_l___detection_robot.html#aedc677f471d4214ab033f217de997d40"];
+}

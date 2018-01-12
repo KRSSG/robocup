@@ -1,0 +1,24 @@
+digraph "Protobuf.GrSimCommands.grSim_Robot_Command.isInitialized"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.GrSimCommands.gr\lSim_Robot_Command.isInitialized",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Protobuf.GrSimCommands.gr\lSim_Robot_CommandOrBuilder.hasId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d97/interface_protobuf_1_1_gr_sim_commands_1_1gr_sim___robot___command_or_builder.html#a3d35245cc62732b282e02e868d077317"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.GrSimCommands.gr\lSim_Robot_CommandOrBuilder.has\lKickspeedx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d97/interface_protobuf_1_1_gr_sim_commands_1_1gr_sim___robot___command_or_builder.html#affdbc1ba1578472fad640be37929a412"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Protobuf.GrSimCommands.gr\lSim_Robot_CommandOrBuilder.has\lKickspeedz",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d97/interface_protobuf_1_1_gr_sim_commands_1_1gr_sim___robot___command_or_builder.html#ad451148b12072761b1430a8af9f18eea"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Protobuf.GrSimCommands.gr\lSim_Robot_CommandOrBuilder.has\lSpinner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d97/interface_protobuf_1_1_gr_sim_commands_1_1gr_sim___robot___command_or_builder.html#aef91eb5493da408ae7095987bf25b0cd"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Protobuf.GrSimCommands.gr\lSim_Robot_CommandOrBuilder.has\lVelangular",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d97/interface_protobuf_1_1_gr_sim_commands_1_1gr_sim___robot___command_or_builder.html#a3300127857f93967ec106104849892a0"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Protobuf.GrSimCommands.gr\lSim_Robot_CommandOrBuilder.has\lVelnormal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d97/interface_protobuf_1_1_gr_sim_commands_1_1gr_sim___robot___command_or_builder.html#a2c357128224a9c567a52e4b0c76b02c7"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Protobuf.GrSimCommands.gr\lSim_Robot_CommandOrBuilder.has\lVeltangent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d97/interface_protobuf_1_1_gr_sim_commands_1_1gr_sim___robot___command_or_builder.html#a4baffad9942fedc04d2233d44a760b1d"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Protobuf.GrSimCommands.gr\lSim_Robot_CommandOrBuilder.has\lWheelsspeed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d97/interface_protobuf_1_1_gr_sim_commands_1_1gr_sim___robot___command_or_builder.html#a933323529485fd8891ae54d6dc2e3954"];
+}

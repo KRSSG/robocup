@@ -1,0 +1,32 @@
+digraph "HAL::Serial::Open"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="HAL::Serial::Open",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="HAL::baud_flag_to_rate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/da1/namespace_h_a_l.html#a7abbf7c73b642420ec96c8f616c06e82"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="HAL::baud_rate_to_flag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/da1/namespace_h_a_l.html#aeb185801efffc7cb2973e693dcbda4eb"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="HAL::Serial::Close",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da7/class_h_a_l_1_1_serial.html#ae1f308b294125c9ba16b97464d741241"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="HAL::Serial::Read",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da7/class_h_a_l_1_1_serial.html#ab1577ef47416f180dc8ae9a182305339"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="HAL::Serial::Write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da7/class_h_a_l_1_1_serial.html#a6376a54bd334059b716c8b23c2dc702f"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="HAL::Serial::WriteByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da7/class_h_a_l_1_1_serial.html#ad440179230582a6e7d119e09a203a817"];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="HAL::Serial::ReadByte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da7/class_h_a_l_1_1_serial.html#af2e5338e44464da88284e896fe55a050"];
+  Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="HAL::Serial::ReadNBytesTimeout",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da7/class_h_a_l_1_1_serial.html#a5a4e70249b711316c25fd87047caa158"];
+  Node9 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="HAL::Serial::ReadByteTimeout",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da7/class_h_a_l_1_1_serial.html#a2dc9e61cbe107b6761b6ca768c3f861f"];
+  Node10 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="HAL::Serial::Clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da7/class_h_a_l_1_1_serial.html#af21e0e5228a30f6bfececd51f5fa502a"];
+}

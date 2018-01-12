@@ -1,0 +1,12 @@
+digraph "SSLWorld::allocVector"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SSLWorld::allocVector",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Vector2f::set_x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc2/class_vector2f.html#a5cb1a69279bf3dd995d60841e5b5633a"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Vector2f::set_y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dc2/class_vector2f.html#a615e1e53172ea225a144dae33c4767d0"];
+}

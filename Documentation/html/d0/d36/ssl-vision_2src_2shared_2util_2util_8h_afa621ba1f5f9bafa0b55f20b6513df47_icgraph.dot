@@ -1,0 +1,20 @@
+digraph "angle_mod"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="angle_mod",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="abs_bound_angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#ac75886602b0c8434aff478fa529851ce"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="avg_angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#a2bc606c7d1e77c85584a14b58305b649"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="angle_dist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#a8afc59400f569190d53df0f6df0308a9"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="any_bits_set",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#a7013bdf3f1a841137a431df8f5d215f5"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PluginLegacySSLNetworkOutput\l::DoubleSizeToSingleSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d12/class_plugin_legacy_s_s_l_network_output.html#a7b435c767841cd9d9c9d570ec23bbd6e"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GVector::vertex_angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a5aae402913c703f159b05d7b19f1c2e7"];
+}

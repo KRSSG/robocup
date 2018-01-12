@@ -1,0 +1,30 @@
+digraph "PluginDVRWidget"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="PluginDVRWidget",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="QWidget",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" box_dvr" ,fontname="Helvetica"];
+  Node3 [label="QWidget *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" jog" ,fontname="Helvetica"];
+  Node4 [label="JogDial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d7f/class_jog_dial.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _spacing\n_offset\n_viewSpan" ,fontname="Helvetica"];
+  Node5 [label="float",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _x" ,fontname="Helvetica"];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mutex" ,fontname="Helvetica"];
+  Node7 [label="QMutex",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" layout_main\nlayout_dvr" ,fontname="Helvetica"];
+  Node8 [label="QVBoxLayout",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" label_info" ,fontname="Helvetica"];
+  Node9 [label="QLabel *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" box_rec\nbox_seek\nbox_mode" ,fontname="Helvetica"];
+  Node10 [label="QGroupBox *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" layout_mode\nlayout_seek\nlayout_rec" ,fontname="Helvetica"];
+  Node11 [label="QHBoxLayout *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" btn_seek_live\nbtn_mode_off\nbtn_rec_rec\nbtn_seek_pause\nbtn_seek_play\nbtn_mode_record\nbtn_seek_end\nbtn_seek_frame_back\nbtn_rec_save\nbtn_pause_refresh\n..." ,fontname="Helvetica"];
+  Node12 [label="QToolButton *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

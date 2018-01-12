@@ -1,0 +1,20 @@
+digraph "GLCamera::wheelEvent"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLCamera::wheelEvent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLCamera::getDistance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#ae3f8c9c7ef1674e89df41faa14b538c9"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GVector::max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a1223529a5f19606fa1f0bb39404a9ec3"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GVector::min",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a79b77964e0a1ea74cc1ca2048991fb73"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GLCamera::setDistance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d43/class_g_l_camera.html#a5e5fef419320e3b30dcfec46cccb27bf"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GVector::distance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#af5b98c588be57ac262e4d3b021f01bc3"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GVector::dist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#ab4c4f9f2d8f1f0fc9e71585f43c9df8f"];
+}

@@ -1,0 +1,14 @@
+digraph "avg_angle"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="avg_angle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="abs_bound_angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#ac75886602b0c8434aff478fa529851ce"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="abs_bound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#abb2118786bf3c218f27762e1c7aebc8b"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="angle_mod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#afa621ba1f5f9bafa0b55f20b6513df47"];
+}

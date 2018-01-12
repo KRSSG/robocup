@@ -1,0 +1,52 @@
+digraph "LUT3D"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="LUT3D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="QObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d4f/class_q_object.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" v_settings" ,fontname="Helvetica"];
+  Node3 [label="VarTypes::VarList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d74/class_var_types_1_1_var_list.html",tooltip="This is the list type of the VarTypes system. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html",tooltip="The base class of the VarTypes system. "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarVal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _flags" ,fontname="Helvetica"];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _name" ,fontname="Helvetica"];
+  Node7 [label="std::string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="std::basic_string\<\l char \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip="STL class. "];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _mutex" ,fontname="Helvetica"];
+  Node9 [label="QMutex",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" list" ,fontname="Helvetica"];
+  Node10 [label="std::vector\< VarTypes\l::VarType * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" derived_LUTs" ,fontname="Helvetica"];
+  Node11 [label="std::vector\< LUT3D * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" v_blob" ,fontname="Helvetica"];
+  Node12 [label="VarTypes::VarBlob",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/dac/class_var_types_1_1_var_blob.html",tooltip="A Vartype for storing binary data. "];
+  Node4 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _dsize_limited" ,fontname="Helvetica"];
+  Node13 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node14 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _dpointer" ,fontname="Helvetica"];
+  Node14 [label="uint8_t",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node15 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _dsize" ,fontname="Helvetica"];
+  Node15 [label="long",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Z_SHIFT_PLUS_16\nTOTAL_BITS\nX_SHIFT\nY_SHIFT\nZ_BITS\nY_SHIFT_PLUS\l_8\nZ_SHIFT\nY_BITS\nX_BITS\nLUT_SIZE\n..." ,fontname="Helvetica"];
+  Node14 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" LUT" ,fontname="Helvetica"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mutex" ,fontname="Helvetica"];
+  Node16 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" channels" ,fontname="Helvetica"];
+  Node16 [label="std::vector\< LUTChannel \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node17 -> Node16 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node17 [label="LUTChannel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/d66/class_l_u_t_channel.html",tooltip="A text and color-label for a channel used in the LUT3D class. "];
+  Node18 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" draw_color" ,fontname="Helvetica"];
+  Node18 [label="ColorRGB\< unsigned\l char, COLOR_RGB8 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/dff/class_color_r_g_b.html"];
+  Node19 -> Node18 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" g\nr\nb" ,fontname="Helvetica"];
+  Node19 [label="unsigned char",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" label" ,fontname="Helvetica"];
+}

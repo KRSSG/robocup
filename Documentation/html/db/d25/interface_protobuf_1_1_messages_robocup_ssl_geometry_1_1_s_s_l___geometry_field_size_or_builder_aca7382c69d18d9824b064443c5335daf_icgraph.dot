@@ -1,0 +1,12 @@
+digraph "Protobuf.MessagesRobocupSslGeometry.SSL_GeometryFieldSizeOrBuilder.hasDefenseStretch"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSizeOrBuilder.hasDefenseStretch",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSize.isInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d07/class_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size.html#aaa8e581d011781e80e99e1ad0a58f2d7"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.MessagesRobocup\lSslGeometry.SSL_GeometryField\lSize.Builder.isInitialized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d41/class_protobuf_1_1_messages_robocup_ssl_geometry_1_1_s_s_l___geometry_field_size_1_1_builder.html#adcb25b30d979c8423d1a528394c02a83"];
+}

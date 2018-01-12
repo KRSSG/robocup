@@ -1,0 +1,14 @@
+digraph "grSim_Packet::grSim_Packet"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="grSim_Packet::grSim\l_Packet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="grSim_Packet::has_commands",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/db5/classgr_sim___packet.html#a1d8ff8109c642a1faab29a6fc4b6bb53"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="grSim_Packet::has_debuginfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/db5/classgr_sim___packet.html#a36d28a1340dc6b59f047ed45e01adfde"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="grSim_Packet::has_replacement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/db5/classgr_sim___packet.html#ad0a738e8174ef42182b65cf66bb6e548"];
+}

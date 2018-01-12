@@ -1,0 +1,20 @@
+digraph "PluginDetectRobots::PluginDetectRobots"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PluginDetectRobots\l::PluginDetectRobots",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarNotifier\l::addRecursive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d76/class_var_types_1_1_var_notifier.html#ac9d0d00248b6c89fa7c6c442c07b963c"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarNotifier\l::internalNonMutexedAddItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d76/class_var_types_1_1_var_notifier.html#a42be374c312175ef9ba09b592837097d"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarNotifier\l::changeSlot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d76/class_var_types_1_1_var_notifier.html#adbd7a8ce14f161a0d918c407a8d3fbf8"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarNotifier\l::hasChanged",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d76/class_var_types_1_1_var_notifier.html#a7b06b17b727bf4119011a81d15b7798d",tooltip="This will report true if any events have happened and reset the event counter. "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarType::\lgetChildren",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d59/class_var_types_1_1_var_type.html#a0ffcbb6662d2e9f1590b3f0387a458e2"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="LUT3D::getChannelID",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d15/class_l_u_t3_d.html#a54c839ae356a9a9cbe913d84b775f125"];
+}

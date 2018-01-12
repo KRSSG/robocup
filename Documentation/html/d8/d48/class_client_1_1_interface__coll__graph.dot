@@ -1,0 +1,34 @@
+digraph "Client.Interface"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Client.Interface",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="javax::swing::JFrame",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" jComboBox1" ,fontname="Helvetica"];
+  Node3 [label="javax.swing.JComboBox",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" jLabel3\njLabel4\njLabel5\njLabel6\njLabel7\njLabel8\njLabel9\njLabel10\njLabel11\njLabel12\n..." ,fontname="Helvetica"];
+  Node4 [label="javax.swing.JLabel",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" conection" ,fontname="Helvetica"];
+  Node5 [label="Client.Conection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/dc4/class_client_1_1_conection.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ds" ,fontname="Helvetica"];
+  Node6 [label="DatagramSocket",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" kickspeedx\nwheel1\nvelx\nwheel2\nvely\nkickspeedz\nwheel3\nvelz\nwheel4\ntimeStamp\n..." ,fontname="Helvetica"];
+  Node7 [label="float",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" buffer2" ,fontname="Helvetica"];
+  Node8 [label="byte",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" port\nid\nenvio" ,fontname="Helvetica"];
+  Node9 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ip" ,fontname="Helvetica"];
+  Node10 [label="String",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wheelSpeed\nspinner\nteamYellow" ,fontname="Helvetica"];
+  Node11 [label="boolean",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" jCheckBox1\njCheckBox2" ,fontname="Helvetica"];
+  Node12 [label="javax.swing.JCheckBox",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" jTextField1\njTextField2\njTextField3\njTextField4\njTextField5\njTextField6\njTextField7\njTextField8\njTextField9\njTextField10\n..." ,fontname="Helvetica"];
+  Node13 [label="javax.swing.JTextField",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node14 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" jButton1\njButton2" ,fontname="Helvetica"];
+  Node14 [label="javax.swing.JButton",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

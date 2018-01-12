@@ -1,0 +1,51 @@
+<map id="ssl&#45;vision/src/app/videostats.h" name="ssl&#45;vision/src/app/videostats.h">
+<area shape="rect" id="node2" href="$d7/da4/gl_l_u_twidget_8h.html" title="C++ Interface: GLLUTWidget. " alt="" coords="442,184,572,225"/>
+<area shape="rect" id="node23" href="$d5/df4/realtimedisplaywidget_8h.html" title="C++ Interface: RealTimeDisplayWidget. " alt="" coords="2944,95,3126,136"/>
+<area shape="rect" id="node24" href="$d8/d94/ssl-vision_2src_2app_2gui_2glwidget_8h.html" title="ssl&#45;vision/src/app\l/gui/glwidget.h" alt="" coords="3048,385,3172,426"/>
+<area shape="rect" id="node48" href="$d5/d4d/videowidget_8h.html" title="C++ Interface: VideoWidget. " alt="" coords="3413,95,3540,136"/>
+<area shape="rect" id="node3" href="$db/dd9/moc__gl_l_u_twidget_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_glLUTwidget.cxx" alt="" coords="218,281,420,322"/>
+<area shape="rect" id="node4" href="$d7/d92/lutwidget_8h.html" title="C++ Interface: LUTWidget. " alt="" coords="445,281,569,322"/>
+<area shape="rect" id="node6" href="$d7/d16/ssl-vision_2src_2app_2gui_2mainwindow_8h.html" title="ssl&#45;vision/src/app\l/gui/mainwindow.h" alt="" coords="2571,749,2702,791"/>
+<area shape="rect" id="node18" href="$dc/d57/gl_l_u_twidget_8cpp.html" title="C++ Implementation: GLLUTWidget. " alt="" coords="48,281,193,322"/>
+<area shape="rect" id="node19" href="$da/dad/neurowidget_8h.html" title="C++ Implementation: NeuroWidget. " alt="" coords="1092,281,1220,322"/>
+<area shape="rect" id="node5" href="$d2/d5b/moc__lutwidget_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_lutwidget.cxx" alt="" coords="54,385,235,426"/>
+<area shape="rect" id="node12" href="$db/d70/lutwidget_8cpp.html" title="C++ Implementation: LUTWidget. " alt="" coords="310,385,434,426"/>
+<area shape="rect" id="node13" href="$da/df9/plugin__colorcalib_8h.html" title="C++ Interface: plugin_colorcalib. " alt="" coords="459,385,638,426"/>
+<area shape="rect" id="node7" href="$dd/d3a/gr_sim_2src_2main_8cpp.html" title="grSim/src/main.cpp" alt="" coords="2173,846,2308,873"/>
+<area shape="rect" id="node8" href="$dc/d66/gr_sim_2src_2mainwindow_8cpp.html" title="grSim/src/mainwindow.cpp" alt="" coords="2332,846,2511,873"/>
+<area shape="rect" id="node9" href="$d3/dd5/moc__mainwindow_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_mainwindow.cxx" alt="" coords="2536,839,2737,880"/>
+<area shape="rect" id="node10" href="$dc/ded/ssl-vision_2src_2app_2gui_2mainwindow_8cpp.html" title="ssl&#45;vision/src/app\l/gui/mainwindow.cpp" alt="" coords="2762,839,2906,880"/>
+<area shape="rect" id="node11" href="$d8/d32/ssl-vision_2src_2app_2main_8cpp.html" title="ssl&#45;vision/src/app\l/main.cpp" alt="" coords="2930,839,3054,880"/>
+<area shape="rect" id="node14" href="$d1/d92/stack__robocup__ssl_8h.html" title="C++ Interface: stack_robocup_ssl. " alt="" coords="1514,481,1703,523"/>
+<area shape="rect" id="node17" href="$d7/dda/plugin__colorcalib_8cpp.html" title="C++ Implementation: plugin_colorcalib. " alt="" coords="452,481,644,523"/>
+<area shape="rect" id="node15" href="$db/dc2/multistack__robocup__ssl_8h.html" title="C++ Interface: multistack_robocup_ssl. " alt="" coords="2349,571,2566,612"/>
+<area shape="rect" id="node16" href="$d9/de7/multistacks_8h.html" title="A collection of useful MultiVisionStacks. " alt="" coords="2563,660,2710,701"/>
+<area shape="rect" id="node20" href="$d8/d88/neurowidget_8cpp.html" title="C++ Implementation: NeuroWidget. " alt="" coords="1210,385,1353,426"/>
+<area shape="rect" id="node21" href="$d4/d83/plugin__neuralcolorcalib_8h.html" title="C++ Interface: plugin_neuralcolorcalib. " alt="" coords="2172,385,2386,426"/>
+<area shape="rect" id="node22" href="$d3/dd7/plugin__neuralcolorcalib_8cpp.html" title="C++ Implementation: plugin_neuralcolorcalib, based on the plugin_colorcalib. " alt="" coords="2166,481,2392,523"/>
+<area shape="rect" id="node28" href="$d8/de0/visionplugin_8h.html" title="C++ Interface: VisionPlugin. " alt="" coords="1873,184,2024,225"/>
+<area shape="rect" id="node45" href="$d4/de9/multivisionstack_8h.html" title="C++ Interface: MultiVisionStack. " alt="" coords="2590,481,2765,523"/>
+<area shape="rect" id="node47" href="$da/dbf/realtimedisplaywidget_8cpp.html" title="C++ Implementation: RealTimeDisplayWidget. " alt="" coords="3098,184,3295,225"/>
+<area shape="rect" id="node25" href="$d2/d51/gr_sim_2src_2glwidget_8cpp.html" title="grSim/src/glwidget.cpp" alt="" coords="2790,489,2944,515"/>
+<area shape="rect" id="node26" href="$d9/d85/moc__glwidget_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_glwidget.cxx" alt="" coords="2969,481,3146,523"/>
+<area shape="rect" id="node27" href="$dc/d65/ssl-vision_2src_2app_2gui_2glwidget_8cpp.html" title="ssl&#45;vision/src/app\l/gui/glwidget.cpp" alt="" coords="3170,481,3294,523"/>
+<area shape="rect" id="node29" href="$d1/df0/plugin__dvr_8h.html" title="C++ Interface: plugin_dvr. " alt="" coords="1823,281,1964,322"/>
+<area shape="rect" id="node31" href="$d7/db2/plugin__legacypublishgeometry_8h.html" title="C++ Interface: plugin_legacypublishgeometry. " alt="" coords="1492,281,1748,322"/>
+<area shape="rect" id="node32" href="$d9/db9/plugin__legacysslnetworkoutput_8h.html" title="C++ Interface: plugin_legacysslnetworkoutput. " alt="" coords="1478,385,1738,426"/>
+<area shape="rect" id="node33" href="$d8/d45/plugin__publishgeometry_8h.html" title="C++ Interface: plugin_publishgeometry. " alt="" coords="2410,385,2628,426"/>
+<area shape="rect" id="node34" href="$df/d6d/moc__visionplugin_8cxx.html" title="ssl&#45;vision/build/src\l/app/plugins/moc_visionplugin.cxx" alt="" coords="2039,281,2260,322"/>
+<area shape="rect" id="node35" href="$dc/d5b/visionstack_8h.html" title="C++ Interface: VisionStack. " alt="" coords="2826,281,2972,322"/>
+<area shape="rect" id="node36" href="$da/d18/plugin__cameracalib_8h.html" title="C++ Interface: plugin_cameracalib. " alt="" coords="662,385,856,426"/>
+<area shape="rect" id="node37" href="$d7/d46/plugin__colorthreshold_8h.html" title="C++ Interface: plugin_colorthreshold. " alt="" coords="880,385,1084,426"/>
+<area shape="rect" id="node38" href="$d6/d39/plugin__detect__balls_8h.html" title="C++ Interface: plugin_detect_balls. " alt="" coords="2653,377,2801,433"/>
+<area shape="rect" id="node39" href="$d6/d37/plugin__detect__robots_8h.html" title="C++ Interface: plugin_detect_robots. " alt="" coords="2000,377,2148,433"/>
+<area shape="rect" id="node40" href="$d3/d30/plugin__find__blobs_8h.html" title="C++ Interface: plugin_find_blobs. " alt="" coords="746,273,879,329"/>
+<area shape="rect" id="node41" href="$d6/d61/plugin__runlength__encode_8h.html" title="C++ Interface: plugin_runlength_encode. " alt="" coords="903,273,1068,329"/>
+<area shape="rect" id="node42" href="$de/d28/plugin__sslnetworkoutput_8h.html" title="C++ Interface: plugin_sslnetworkoutput. " alt="" coords="1245,281,1468,322"/>
+<area shape="rect" id="node43" href="$d6/dde/plugin__visualize_8h.html" title="C++ Interface: plugin_visualize. " alt="" coords="2626,281,2801,322"/>
+<area shape="rect" id="node44" href="$df/d66/visionplugin_8cpp.html" title="C++ Implementation: VisionPlugin. " alt="" coords="2285,281,2449,322"/>
+<area shape="rect" id="node30" href="$d3/dfa/moc__plugin__dvr_8cxx.html" title="ssl&#45;vision/build/src\l/app/plugins/moc_plugin\l_dvr.cxx" alt="" coords="1812,377,1975,433"/>
+<area shape="rect" id="node46" href="$d5/d47/multivisionstack_8cpp.html" title="C++ Implementation: MultiVisionStack. " alt="" coords="2590,571,2778,612"/>
+<area shape="rect" id="node49" href="$d3/db9/moc__videowidget_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_videowidget.cxx" alt="" coords="3420,184,3618,225"/>
+<area shape="rect" id="node50" href="$df/d2a/videowidget_8cpp.html" title="C++ Implementation: VideoWidget. " alt="" coords="3642,184,3783,225"/>
+</map>

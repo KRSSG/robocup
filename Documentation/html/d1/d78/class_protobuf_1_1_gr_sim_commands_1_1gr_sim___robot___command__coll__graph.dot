@@ -1,0 +1,25 @@
+digraph "Protobuf.GrSimCommands.grSim_Robot_Command"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.GrSimCommands.gr\lSim_Robot_Command",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GeneratedMessage",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.GrSimCommands.gr\lSim_Robot_CommandOrBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d97/interface_protobuf_1_1_gr_sim_commands_1_1gr_sim___robot___command_or_builder.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MessageOrBuilder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" kickspeedz_\nvelnormal_\nwheel1_\nwheel2_\nwheel3_\nwheel4_\nvelangular\l_\nveltangent\l_\nkickspeedx_" ,fontname="Helvetica"];
+  Node5 [label="float",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memoizedIsInitialized" ,fontname="Helvetica"];
+  Node6 [label="byte",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" WHEEL4_FIELD_NUMBER\nVELTANGENT_FIELD_NUMBER\nWHEELSSPEED_FIELD_NUMBER\nSPINNER_FIELD_NUMBER\nVELNORMAL_FIELD_NUMBER\nbitField0_\nWHEEL1_FIELD_NUMBER\nKICKSPEEDZ_FIELD_NUMBER\nVELANGULAR_FIELD_NUMBER\nKICKSPEEDX_FIELD_NUMBER\n..." ,fontname="Helvetica"];
+  Node7 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" defaultInstance" ,fontname="Helvetica"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" serialVersionUID" ,fontname="Helvetica"];
+  Node8 [label="long",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" spinner_\nwheelsspeed_" ,fontname="Helvetica"];
+  Node9 [label="boolean",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

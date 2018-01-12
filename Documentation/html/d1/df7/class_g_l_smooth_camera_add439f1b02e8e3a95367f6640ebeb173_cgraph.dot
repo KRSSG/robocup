@@ -1,0 +1,27 @@
+digraph "GLSmoothCamera::step"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLSmoothCamera::step",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Quaternion::blend",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/de3/class_quaternion.html#ae9a3b97131e24b09386e955c39d4343c"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Quaternion::getZvector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/de3/class_quaternion.html#ac335cf6d64849d8473825481c955d038"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GVector::vector3d::\llength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/db8/class_g_vector_1_1vector3d.html#ac515c7de87f98e36d38036e42c968a82"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GVector::shortest_angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#ae4a807e9dc2a416644ea302a70ed29ab"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GVector::max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a114727fb21b993496f39d5412acde8eb"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GVector::max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a1223529a5f19606fa1f0bb39404a9ec3"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="GVector::min",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a32aee6e7f3233302356a035de09300ae"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="GVector::min",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a79b77964e0a1ea74cc1ca2048991fb73"];
+  Node5 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="GVector::vector3d::dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/db8/class_g_vector_1_1vector3d.html#af9ba531c9d36ca2e0dc80065bd19b9da"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

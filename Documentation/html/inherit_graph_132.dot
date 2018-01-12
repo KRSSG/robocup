@@ -1,0 +1,10 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="QItemDelegate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d54/class_q_item_delegate.html"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarItemDelegate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d1c/class_var_types_1_1_var_item_delegate.html",tooltip="The &#39;item-delegate&#39; inheriting QItemDelegate for displaying VarTypes in the QT4 Item-Model. "];
+}

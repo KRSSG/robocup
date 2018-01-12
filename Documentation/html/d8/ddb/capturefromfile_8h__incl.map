@@ -1,0 +1,29 @@
+<map id="ssl&#45;vision/src/shared/capture/capturefromfile.h" name="ssl&#45;vision/src/shared/capture/capturefromfile.h">
+<area shape="rect" id="node2" href="$d4/d08/captureinterface_8h.html" title="C++ Implementation: CaptureInterface. " alt="" coords="303,95,430,121"/>
+<area shape="rect" id="node11" href="$d1/d9a/_var_types_8h.html" title="The main header for the VarTypes system. " alt="" coords="1221,169,1310,196"/>
+<area shape="rect" id="node5" href="$d2/d80/rawimage_8h.html" title="C++ Interface: RawImage. " alt="" coords="281,169,370,196"/>
+<area shape="rect" id="node7" href="$da/dd8/colors_8h.html" title="A collection of color related classes, types, and functions. " alt="" coords="281,319,349,345"/>
+<area shape="rect" id="node6" href="$d7/d70/image__interface_8h.html" title="C++ Interface: image_interface. " alt="" coords="195,244,320,271"/>
+<area shape="rect" id="node12" href="$df/de3/_var_types_instance_8h.html" title="VarTypesInstance.h" alt="" coords="1196,244,1335,271"/>
+<area shape="rect" id="node13" href="$d2/d10/_var_types_factory_8h.html" title="VarTypesFactory.h" alt="" coords="1199,319,1332,345"/>
+<area shape="rect" id="node14" href="$d4/d8d/_var_type_8h.html" title="C++ Interface: VarType. " alt="" coords="833,543,975,569"/>
+<area shape="rect" id="node28" href="$d9/dc6/_var_string_8h.html" title="C++ Interface: VarString. " alt="" coords="1379,468,1525,495"/>
+<area shape="rect" id="node30" href="$d4/d96/_var_int_8h.html" title="C++ Interface: VarInt. " alt="" coords="1549,468,1677,495"/>
+<area shape="rect" id="node33" href="$de/de4/_var_bool_8h.html" title="C++ Interface: VarBool. " alt="" coords="861,468,1000,495"/>
+<area shape="rect" id="node36" href="$d9/d91/_var_double_8h.html" title="C++ Interface: VarDouble. " alt="" coords="1912,468,2067,495"/>
+<area shape="rect" id="node39" href="$d7/d17/_var_blob_8h.html" title="C++ Implementation: VarBlob. " alt="" coords="408,468,547,495"/>
+<area shape="rect" id="node41" href="$df/dc3/_var_list_8h.html" title="C++ Interface: VarList. " alt="" coords="1753,468,1887,495"/>
+<area shape="rect" id="node42" href="$de/d75/_var_string_enum_8h.html" title="C++ Interface: VarStringEnum. " alt="" coords="1357,393,1539,420"/>
+<area shape="rect" id="node43" href="$d4/d13/_var_selection_8h.html" title="C++ Interface: VarSelection. " alt="" coords="1041,393,1207,420"/>
+<area shape="rect" id="node44" href="$d3/d58/_var_external_8h.html" title="C++ Interface: VarExternal. " alt="" coords="1711,393,1873,420"/>
+<area shape="rect" id="node45" href="$d1/d4e/_var_q_widget_8h.html" title="C++ Interface: VarInt. " alt="" coords="571,468,735,495"/>
+<area shape="rect" id="node46" href="$d2/dfd/_var_trigger_8h.html" title="C++ Interface: VarTrigger. " alt="" coords="811,393,965,420"/>
+<area shape="rect" id="node47" href="$d2/de8/_var_proto_buffer_8h.html" title="C++ Interface: VarProtoBuffer. " alt="" coords="1176,468,1355,495"/>
+<area shape="rect" id="node24" href="$d8/d4f/_var_val_8h.html" title="primitives/VarVal.h" alt="" coords="1385,617,1517,644"/>
+<area shape="rect" id="node26" href="$d5/d31/xml_parser_8h.html" title="xml/xmlParser.h" alt="" coords="245,617,363,644"/>
+<area shape="rect" id="node29" href="$d4/d5a/_var_string_val_8h.html" title="C++ Interface: VarStringVal. " alt="" coords="1339,543,1506,569"/>
+<area shape="rect" id="node31" href="$df/d23/_var_int_val_8h.html" title="C++ Interface: VarIntVal. " alt="" coords="1531,543,1677,569"/>
+<area shape="rect" id="node34" href="$d2/d6b/_var_bool_val_8h.html" title="C++ Interface: VarBoolVal. " alt="" coords="999,543,1158,569"/>
+<area shape="rect" id="node37" href="$d0/d05/_var_double_val_8h.html" title="C++ Interface: VarDoubleVal. " alt="" coords="1752,543,1925,569"/>
+<area shape="rect" id="node40" href="$dd/d0c/_var_base64_8h.html" title="C++ Interface: VarBase64. " alt="" coords="353,543,450,569"/>
+</map>

@@ -1,0 +1,20 @@
+digraph "Debug_Circle::has_x"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Debug_Circle::has_x",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Debug_Circle::GetMetadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/class_debug___circle.html#adf0406bb307c4d21ed30597940f3ae85"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Debug_Circle::InternalSerialize\lWithCachedSizesToArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/class_debug___circle.html#a3ea2ec3a6b6ccb1887e249864a990d6a"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Debug_Circle::MergeFrom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/class_debug___circle.html#ac298488f5fd75b96adc0c82dfa36bad4"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Debug_Circle::RequiredFields\lByteSizeFallback",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/class_debug___circle.html#a9c2317dba4b57b4319bfc7f8a29a4b3a"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Debug_Circle::ByteSizeLong",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/class_debug___circle.html#a470e98c489355d8bcb558c2a14a9d962"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Debug_Circle::SerializeWith\lCachedSizes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d75/class_debug___circle.html#ac3e03e1d734688698838bdfb3375cda6"];
+}

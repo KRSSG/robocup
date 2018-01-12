@@ -1,0 +1,12 @@
+digraph "CGraphics::zoomCamera"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CGraphics::zoomCamera",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CGraphics::getCameraForward",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d90/class_c_graphics.html#a818cb3f21e6a8f7b460a8d54479bf084"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rotxy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/d99/graphics_8cpp.html#a181dcf31020c69dc3eca8ffc5a905c77"];
+}

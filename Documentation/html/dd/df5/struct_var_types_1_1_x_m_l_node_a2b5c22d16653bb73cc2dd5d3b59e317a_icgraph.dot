@@ -1,0 +1,25 @@
+digraph "VarTypes::XMLNode::maybeAddTxT"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::XMLNode::\lmaybeAddTxT",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::XMLNode::\lParseXMLElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#abf5cf181da87518047ad51d7c0e45d1f"];
+  Node2 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::XMLNode::\lparseString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a112ce71bcafb4e03a4a6d8f909f3a3de"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::XMLNode::\lparseFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a55f5fb016d367b3b883f30d8aaa98c3e"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::XMLNode::\lopenFileHelper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/df5/struct_var_types_1_1_x_m_l_node.html#a094bff6322584b5cbec7c0cffab2204e"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarExternal\l::loadExternal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/de2/class_var_types_1_1_var_external.html#a8cdbf72cd88b965326168362d9d2dc5e"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="VarTypes::VarExternal\l::readChildren",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d3/de2/class_var_types_1_1_var_external.html#a17094bd8f47407726cbe388e091e9bef"];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="VarTypes::VarXML::write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd1/class_var_types_1_1_var_x_m_l.html#af0414326f9aa704922bc9447d7bd73ee",tooltip="write a vector of VarType nodes (and all of their children) to an xml file "];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="VarTypes::VarXML::read",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd1/class_var_types_1_1_var_x_m_l.html#ae7fd42e8b53c47ef87c368af79afdb72"];
+}

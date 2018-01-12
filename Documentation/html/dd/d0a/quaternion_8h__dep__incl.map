@@ -1,0 +1,51 @@
+<map id="ssl&#45;vision/src/shared/util/quaternion.h" name="ssl&#45;vision/src/shared/util/quaternion.h">
+<area shape="rect" id="node2" href="$d4/d67/geometry_8h.html" title="Meta&#45;header to include all significant geometry&#45;related classes. " alt="" coords="2726,95,2869,136"/>
+<area shape="rect" id="node24" href="$d1/d2a/camera__calibration_8h.html" title="Datatypes for camera parameters, functions for perspective transformations. " alt="" coords="1690,370,1857,411"/>
+<area shape="rect" id="node3" href="$d1/da5/soccerview_8h.html" title="C++ Interface: GLSoccerView. " alt="" coords="2558,273,2712,315"/>
+<area shape="rect" id="node7" href="$df/d7d/gltext_8h.html" title="C++ Implementation: GLText. " alt="" coords="2720,184,2875,225"/>
+<area shape="rect" id="node9" href="$de/d0b/cmpattern__team_8h.html" title="C++ Interface: team. " alt="" coords="3546,467,3692,523"/>
+<area shape="rect" id="node15" href="$d6/d69/field__default__constants_8h.html" title="Definition of field dimensions. " alt="" coords="1926,184,2118,225"/>
+<area shape="rect" id="node41" href="$d4/df1/cmvision__region_8h.html" title="C++ Interface: cmvision_region. " alt="" coords="2926,370,3112,411"/>
+<area shape="rect" id="node45" href="$db/dfd/globject_8h.html" title="C++ Interface: GLObject. " alt="" coords="2969,184,3112,225"/>
+<area shape="rect" id="node46" href="$d1/dc6/glcamera_8h.html" title="C++ Interface: GLCamera. " alt="" coords="3136,273,3278,315"/>
+<area shape="rect" id="node50" href="$d2/d47/sobel_8h.html" title="Some functions for edge detection. " alt="" coords="2305,474,2448,515"/>
+<area shape="rect" id="node4" href="$d7/d3d/moc__soccerview_8cxx.html" title="ssl&#45;vision/build/src\l/graphicalClient/moc\l_soccerview.cxx" alt="" coords="2736,363,2878,419"/>
+<area shape="rect" id="node5" href="$d5/daf/ssl-vision_2src_2graphical_client_2main_8cpp.html" title="ssl&#45;vision/src/graphical\lClient/main.cpp" alt="" coords="2558,370,2712,411"/>
+<area shape="rect" id="node6" href="$d2/dfb/soccerview_8cpp.html" title="C++ Implementation: GLSoccerView. " alt="" coords="2328,370,2483,411"/>
+<area shape="rect" id="node8" href="$dd/da7/gltext_8cpp.html" title="ssl&#45;vision/src/graphical\lClient/gltext.cpp" alt="" coords="2736,273,2891,315"/>
+<area shape="rect" id="node10" href="$d1/d0a/moc__cmpattern__team_8cxx.html" title="ssl&#45;vision/build/src\l/shared/cmpattern/moc\l_cmpattern_team.cxx" alt="" coords="3546,571,3702,627"/>
+<area shape="rect" id="node11" href="$dc/d90/cmpattern__teamdetector_8h.html" title="C++ Interface: teamdetector. " alt="" coords="2854,571,3000,627"/>
+<area shape="rect" id="node13" href="$d6/d37/plugin__detect__robots_8h.html" title="C++ Interface: plugin_detect_robots. " alt="" coords="2853,675,3001,731"/>
+<area shape="rect" id="node14" href="$d8/d42/cmpattern__team_8cpp.html" title="C++ Implementation: team. " alt="" coords="3727,571,3874,627"/>
+<area shape="rect" id="node12" href="$d1/d92/stack__robocup__ssl_8h.html" title="C++ Interface: stack_robocup_ssl. " alt="" coords="2219,779,2408,820"/>
+<area shape="rect" id="node16" href="$d5/d2b/_graphics_primitives_8h.html" title="ssl&#45;vision/src/logClient\l/GraphicsPrimitives.h" alt="" coords="1771,273,1926,315"/>
+<area shape="rect" id="node17" href="$d5/d5a/field_8h.html" title="Definition of field dimensions. " alt="" coords="1950,273,2093,315"/>
+<area shape="rect" id="node38" href="$da/d13/camera__calibration_8cpp.html" title="ssl&#45;vision/src/shared\l/util/camera_calibration.cpp" alt="" coords="342,474,523,515"/>
+<area shape="rect" id="node39" href="$d4/dd0/field_8cpp.html" title="Field markings management. " alt="" coords="2161,370,2304,411"/>
+<area shape="rect" id="node40" href="$de/de1/field__default__constants_8cpp.html" title="ssl&#45;vision/src/shared\l/util/field_default_constants.cpp" alt="" coords="1357,370,1564,411"/>
+<area shape="rect" id="node18" href="$da/d18/plugin__cameracalib_8h.html" title="C++ Interface: plugin_cameracalib. " alt="" coords="1956,578,2149,619"/>
+<area shape="rect" id="node20" href="$d9/db9/plugin__legacysslnetworkoutput_8h.html" title="C++ Interface: plugin_legacysslnetworkoutput. " alt="" coords="1116,578,1376,619"/>
+<area shape="rect" id="node21" href="$de/d28/plugin__sslnetworkoutput_8h.html" title="C++ Interface: plugin_sslnetworkoutput. " alt="" coords="2058,474,2281,515"/>
+<area shape="rect" id="node22" href="$d6/dde/plugin__visualize_8h.html" title="C++ Interface: plugin_visualize. " alt="" coords="2696,474,2870,515"/>
+<area shape="rect" id="node19" href="$dd/d74/plugin__cameracalib_8cpp.html" title="C++ Implementation: plugin_cameracalib. " alt="" coords="2044,682,2250,723"/>
+<area shape="rect" id="node23" href="$d5/d52/plugin__visualize_8cpp.html" title="C++ Implementation: plugin_visualize. " alt="" coords="2428,578,2616,619"/>
+<area shape="rect" id="node25" href="$dc/d19/cameracalibwidget_8h.html" title="C++ Interface: CameraCalibrationWidget. " alt="" coords="1284,474,1450,515"/>
+<area shape="rect" id="node28" href="$d1/df0/plugin__dvr_8h.html" title="C++ Interface: plugin_dvr. " alt="" coords="547,474,688,515"/>
+<area shape="rect" id="node31" href="$d7/db2/plugin__legacypublishgeometry_8h.html" title="C++ Interface: plugin_legacypublishgeometry. " alt="" coords="1526,474,1782,515"/>
+<area shape="rect" id="node34" href="$d8/d45/plugin__publishgeometry_8h.html" title="C++ Interface: plugin_publishgeometry. " alt="" coords="712,474,931,515"/>
+<area shape="rect" id="node36" href="$de/dec/cmpattern__pattern_8h.html" title="C++ Interface: pattern. " alt="" coords="2946,467,3092,523"/>
+<area shape="rect" id="node37" href="$d6/d39/plugin__detect__balls_8h.html" title="C++ Interface: plugin_detect_balls. " alt="" coords="2524,467,2672,523"/>
+<area shape="rect" id="node26" href="$d8/dd3/moc__cameracalibwidget_8cxx.html" title="ssl&#45;vision/build/src\l/app/gui/moc_cameracalibwidget.cxx" alt="" coords="650,578,887,619"/>
+<area shape="rect" id="node27" href="$da/df7/cameracalibwidget_8cpp.html" title="ssl&#45;vision/src/app\l/gui/cameracalibwidget.cpp" alt="" coords="912,578,1092,619"/>
+<area shape="rect" id="node29" href="$d3/dfa/moc__plugin__dvr_8cxx.html" title="ssl&#45;vision/build/src\l/app/plugins/moc_plugin\l_dvr.cxx" alt="" coords="47,571,210,627"/>
+<area shape="rect" id="node30" href="$d5/d9e/plugin__dvr_8cpp.html" title="C++ Implementation: plugin_dvr. " alt="" coords="234,578,388,619"/>
+<area shape="rect" id="node32" href="$d1/de1/moc__plugin__legacypublishgeometry_8cxx.html" title="ssl&#45;vision/build/src\l/app/plugins/moc_plugin\l_legacypublishgeometry.cxx" alt="" coords="1450,571,1636,627"/>
+<area shape="rect" id="node33" href="$d8/d71/plugin__legacypublishgeometry_8cpp.html" title="C++ Implementation: plugin_legacypublishgeometry. " alt="" coords="1661,578,1932,619"/>
+<area shape="rect" id="node35" href="$df/d81/moc__plugin__publishgeometry_8cxx.html" title="ssl&#45;vision/build/src\l/app/plugins/moc_plugin\l_publishgeometry.cxx" alt="" coords="463,571,626,627"/>
+<area shape="rect" id="node42" href="$d3/d30/plugin__find__blobs_8h.html" title="C++ Interface: plugin_find_blobs. " alt="" coords="3384,675,3518,731"/>
+<area shape="rect" id="node43" href="$d6/d61/plugin__runlength__encode_8h.html" title="C++ Interface: plugin_runlength_encode. " alt="" coords="3139,675,3304,731"/>
+<area shape="rect" id="node44" href="$d7/da1/cmvision__region_8cpp.html" title="C++ Implementation: cmvision_region. " alt="" coords="3218,474,3420,515"/>
+<area shape="rect" id="node49" href="$d3/d14/globject_8cpp.html" title="C++ Implementation: GLObject. " alt="" coords="2969,273,3112,315"/>
+<area shape="rect" id="node47" href="$d7/da4/gl_l_u_twidget_8h.html" title="C++ Interface: GLLUTWidget. " alt="" coords="3303,370,3434,411"/>
+<area shape="rect" id="node48" href="$de/d48/glcamera_8cpp.html" title="C++ Implementation: GLCamera. " alt="" coords="3137,370,3280,411"/>
+</map>

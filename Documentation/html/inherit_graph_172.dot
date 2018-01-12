@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::ALLXMLClearTag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d03/struct_var_types_1_1_a_l_l_x_m_l_clear_tag.html"];
+}

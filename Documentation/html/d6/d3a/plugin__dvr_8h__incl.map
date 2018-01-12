@@ -1,0 +1,26 @@
+<map id="ssl&#45;vision/src/app/plugins/plugin_dvr.h" name="ssl&#45;vision/src/app/plugins/plugin_dvr.h">
+<area shape="rect" id="node2" href="$d8/de0/visionplugin_8h.html" title="C++ Interface: VisionPlugin. " alt="" coords="545,95,646,121"/>
+<area shape="rect" id="node8" href="$d1/d9a/_var_types_8h.html" title="The main header for the VarTypes system. " alt="" coords="812,251,901,278"/>
+<area shape="rect" id="node12" href="$d2/d80/rawimage_8h.html" title="C++ Interface: RawImage. " alt="" coords="1488,333,1577,360"/>
+<area shape="rect" id="node22" href="$d1/d2a/camera__calibration_8h.html" title="Datatypes for camera parameters, functions for perspective transformations. " alt="" coords="1303,95,1445,121"/>
+<area shape="rect" id="node43" href="$d5/db2/image_8h.html" title="C++ Interface: Image. " alt="" coords="1864,251,1932,278"/>
+<area shape="rect" id="node50" href="$da/d59/jog__dial_8h.html" title="C++ Interface: JogDial. " alt="" coords="98,95,175,121"/>
+<area shape="rect" id="node10" href="$d7/d97/framedata_8h.html" title="C++ Interface: FrameData. " alt="" coords="559,251,650,278"/>
+<area shape="rect" id="node17" href="$d5/df4/realtimedisplaywidget_8h.html" title="C++ Interface: RealTimeDisplayWidget. " alt="" coords="360,169,519,196"/>
+<area shape="rect" id="node20" href="$da/de5/pixelloc_8h.html" title="A dead&#45;simple data&#45;structure describing a 2D pixel location. " alt="" coords="594,169,671,196"/>
+<area shape="rect" id="node9" href="$df/de3/_var_types_instance_8h.html" title="VarTypesInstance.h" alt="" coords="787,333,926,360"/>
+<area shape="rect" id="node11" href="$d6/da4/ringbuffer_8h.html" title="C++ Interface: RingBuffer. " alt="" coords="479,333,565,360"/>
+<area shape="rect" id="node13" href="$d7/d70/image__interface_8h.html" title="C++ Interface: image_interface. " alt="" coords="1639,408,1765,435"/>
+<area shape="rect" id="node14" href="$da/dd8/colors_8h.html" title="A collection of color related classes, types, and functions. " alt="" coords="1768,483,1836,509"/>
+<area shape="rect" id="node18" href="$d6/d23/videostats_8h.html" title="A class for storing video display statistics. " alt="" coords="255,251,349,278"/>
+<area shape="rect" id="node19" href="$d6/d5f/renderoptions_8h.html" title="C++ Interface: RenderOptions. " alt="" coords="373,251,484,278"/>
+<area shape="rect" id="node23" href="$d9/d91/_var_double_8h.html" title="C++ Interface: VarDouble. " alt="" coords="1213,169,1367,196"/>
+<area shape="rect" id="node24" href="$df/dc3/_var_list_8h.html" title="C++ Interface: VarList. " alt="" coords="1392,169,1527,196"/>
+<area shape="rect" id="node25" href="$da/d07/quaternion_8h.html" title="A Quaternion class. " alt="" coords="1551,169,1645,196"/>
+<area shape="rect" id="node27" href="$d5/d5a/field_8h.html" title="Definition of field dimensions. " alt="" coords="979,169,1036,196"/>
+<area shape="rect" id="node29" href="$dd/d45/ssl-vision_2src_2shared_2util_2timer_8h.html" title="timer.h" alt="" coords="1777,251,1840,278"/>
+<area shape="rect" id="node46" href="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html" title="util.h" alt="" coords="2069,408,2119,435"/>
+<area shape="rect" id="node47" href="$dd/d17/image__io_8h.html" title="C++ Interface: ImageIO. " alt="" coords="1839,408,1925,435"/>
+<area shape="rect" id="node48" href="$d9/d67/font_8h.html" title="font.h" alt="" coords="2301,333,2356,360"/>
+<area shape="rect" id="node49" href="$da/dd6/conversions_8h.html" title="Various color conversion operations, but NOT very optimized. " alt="" coords="1891,333,1993,360"/>
+</map>

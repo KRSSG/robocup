@@ -1,0 +1,34 @@
+digraph "Protobuf.MessagesRobocupSslWrapper.SSL_WrapperPacket"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Protobuf.MessagesRobocup\lSslWrapper.SSL_WrapperPacket",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GeneratedMessage",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Protobuf.MessagesRobocup\lSslWrapper.SSL_WrapperPacket\lOrBuilder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dd3/interface_protobuf_1_1_messages_robocup_ssl_wrapper_1_1_s_s_l___wrapper_packet_or_builder.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MessageOrBuilder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" defaultInstance" ,fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memoizedIsInitialized" ,fontname="Helvetica"];
+  Node5 [label="byte",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" DETECTION_FIELD_NUMBER\nbitField0_\nGEOMETRY_FIELD_NUMBER\nmemoizedSerializedSize" ,fontname="Helvetica"];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" geometry_" ,fontname="Helvetica"];
+  Node7 [label="Protobuf.MessagesRobocup\lSslGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/d1b/class_protobuf_1_1_messages_robocup_ssl_geometry.html"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" internal_static_SSL\l_GeometryData_descriptor\ninternal_static_SSL_Geometry\lCameraCalibration_descriptor\ninternal_static_SSL_GeometryFieldSize\l_descriptor" ,fontname="Helvetica"];
+  Node8 [label="static com.google.protobuf.\lDescriptors.Descriptor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" internal_static_SSL\l_GeometryCameraCalibration\l_fieldAccessorTable\ninternal_static_SSL_GeometryData\l_fieldAccessorTable\ninternal_static_SSL_GeometryFieldSize\l_fieldAccessorTable" ,fontname="Helvetica"];
+  Node9 [label="static com.google.protobuf.\lGeneratedMessage.FieldAccessorTable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" descriptor" ,fontname="Helvetica"];
+  Node10 [label="static com.google.protobuf.\lDescriptors.FileDescriptor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" serialVersionUID" ,fontname="Helvetica"];
+  Node11 [label="long",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" detection_" ,fontname="Helvetica"];
+  Node12 [label="Protobuf.MessagesRobocup\lSslDetection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/db3/class_protobuf_1_1_messages_robocup_ssl_detection.html"];
+  Node8 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" internal_static_SSL\l_DetectionFrame_descriptor\ninternal_static_SSL_Detection\lRobot_descriptor\ninternal_static_SSL_DetectionBall\l_descriptor" ,fontname="Helvetica"];
+  Node9 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" internal_static_SSL\l_DetectionRobot_fieldAccessor\lTable\ninternal_static_SSL\l_DetectionBall_fieldAccessor\lTable\ninternal_static_SSL\l_DetectionFrame_fieldAccessorTable" ,fontname="Helvetica"];
+  Node10 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" descriptor" ,fontname="Helvetica"];
+}

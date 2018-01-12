@@ -1,0 +1,24 @@
+digraph "CMVision::RegionProcessing::extractRegions"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CMVision::RegionProcessing\l::extractRegions",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CMVision::RegionList\l::getMaxRegions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d42/class_c_m_vision_1_1_region_list.html#a7657c1fc152c50000e0dde0ffe835cea"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CMVision::RegionList\l::getRegionArrayPointer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d42/class_c_m_vision_1_1_region_list.html#a65151b5f3e55f9f2c872c3c97743b755"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CMVision::RunList::\lgetRunArrayPointer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d9d/class_c_m_vision_1_1_run_list.html#a679d27dbef6439e188fc87d1efd0a2eb"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CMVision::RunList::\lgetUsedRuns",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d9d/class_c_m_vision_1_1_run_list.html#ab305f5b3453475ae1a454848288b09b9"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GVector::max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a1223529a5f19606fa1f0bb39404a9ec3"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GVector::min",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a79b77964e0a1ea74cc1ca2048991fb73"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CMVision::RegionProcessing\l::rangeSum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d54/class_c_m_vision_1_1_region_processing.html#abc0007f3348b9eec0260cade9c22afb6"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CMVision::RegionList\l::setUsedRegions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d42/class_c_m_vision_1_1_region_list.html#a917c5857ef8f9054148b76c1d23f36ce"];
+}

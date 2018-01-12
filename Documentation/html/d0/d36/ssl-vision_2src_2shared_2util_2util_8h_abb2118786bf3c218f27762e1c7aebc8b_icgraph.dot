@@ -1,0 +1,14 @@
+digraph "abs_bound"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="abs_bound",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="abs_bound_angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#ac75886602b0c8434aff478fa529851ce"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="avg_angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#a2bc606c7d1e77c85584a14b58305b649"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="bound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html#a473179b72c15124c962e7b47dd95a5c8"];
+}

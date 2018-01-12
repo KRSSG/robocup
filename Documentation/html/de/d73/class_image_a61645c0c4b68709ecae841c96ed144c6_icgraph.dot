@@ -1,0 +1,40 @@
+digraph "Image::getNumPixels"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Image::getNumPixels",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Image\< rgb \>::binarizeChanneled\lImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#ab27c31019e5f919a381206a127cd6efd"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Image\< rgb \>::binarizeGrey\lImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#ab16df712a735e02235045ef29d4f194c"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CMVisionThreshold::\lcolorizeImageFromThresholding",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dfa/class_c_m_vision_threshold.html#aa39ea00aad3c3d423c0bfb62d8e0675b"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Image\< rgb \>::convertToIntensity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#a4055118ac0732d575a5a18e7dfd923a2"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PluginVisualize::DrawThresholded\lImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#aa69fe5960ee518fe76baac262667cfc5"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PluginVisualize::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d09/class_plugin_visualize.html#a9fb83c5f31f4ad6205bada831b2547c0"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Image\< rgb \>::fillColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#a609a8c36ef9bc6ec242544f82b2fe451"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Image\< rgb \>::subtract",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$de/d73/class_image.html#a65effd0b4448bc9d9254ca078b39e4de"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CMVisionThreshold::\lthresholdImageRGB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dfa/class_c_m_vision_threshold.html#a8210ba3eb28f88f1fe28365aad98223a"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="PluginColorThreshold\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d9e/class_plugin_color_threshold.html#ae29da5a42de8efcc35c0f64856d781ae"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CMVisionThreshold::\lthresholdImageYUV422_UYVY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dfa/class_c_m_vision_threshold.html#ad4da4b4d2722cfb057e66a82449b6ca7"];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CMVision::ImageProcessor\l::processYUV422_UYVY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/df4/class_c_m_vision_1_1_image_processor.html#a7b59b169b46023805e236fa111980dc9"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CMVisionThreshold::\lthresholdImageYUV444",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dfa/class_c_m_vision_threshold.html#aedf6dafa855e0bc213ec60ab7a07c85b"];
+  Node14 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="CMVision::ImageProcessor\l::processYUV444",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/df4/class_c_m_vision_1_1_image_processor.html#af46987a468b109e9c3e834d442f18b4b"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="CMPattern::MultiPatternModel\l::loadSinglePatternImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d1/d49/class_c_m_pattern_1_1_multi_pattern_model.html#aa1ae63073c7e67231b602938fb5b16a7"];
+}

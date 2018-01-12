@@ -1,0 +1,19 @@
+digraph "LUT3D::getPointerPreshrunk"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="LUT3D::getPointerPreshrunk",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GLLUTWidget::UndoState\l::restore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d14/class_g_l_l_u_t_widget_1_1_undo_state.html#a615068cfe4d41469c2b9ecea2675aa7c"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLLUTWidget::editRedo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#ad3a5054e04e3fdc7019d42698dc9d15c"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GLLUTWidget::GLLUTWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a57401039bf068ef61c180a163316d7b4"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GLLUTWidget::editUndo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dc5/class_g_l_l_u_t_widget.html#a33b84629c9110a05f61ed363e1c538b2"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GLLUTWidget::UndoState\l::UndoState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d14/class_g_l_l_u_t_widget_1_1_undo_state.html#ab9112b753ee2e66aa46f6eaa5223668f"];
+}

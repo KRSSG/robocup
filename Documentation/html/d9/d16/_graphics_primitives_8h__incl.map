@@ -1,0 +1,28 @@
+<map id="ssl&#45;vision/src/logClient/GraphicsPrimitives.h" name="ssl&#45;vision/src/logClient/GraphicsPrimitives.h">
+<area shape="rect" id="node12" href="$d6/d69/field__default__constants_8h.html" title="Definition of field dimensions. " alt="" coords="1253,95,1420,121"/>
+<area shape="rect" id="node14" href="$d5/d5a/field_8h.html" title="Definition of field dimensions. " alt="" coords="1308,169,1365,196"/>
+<area shape="rect" id="node36" href="$d4/d67/geometry_8h.html" title="Meta&#45;header to include all significant geometry&#45;related classes. " alt="" coords="2773,557,2860,584"/>
+<area shape="rect" id="node15" href="$d1/d9a/_var_types_8h.html" title="The main header for the VarTypes system. " alt="" coords="1499,251,1588,278"/>
+<area shape="rect" id="node33" href="$d1/d98/helpers_8h.html" title="Helper utility functions that generally don&#39;t fit anywhere else. " alt="" coords="1075,333,1150,360"/>
+<area shape="rect" id="node16" href="$df/de3/_var_types_instance_8h.html" title="VarTypesInstance.h" alt="" coords="1493,333,1631,360"/>
+<area shape="rect" id="node17" href="$d2/d10/_var_types_factory_8h.html" title="VarTypesFactory.h" alt="" coords="1567,408,1701,435"/>
+<area shape="rect" id="node18" href="$d4/d8d/_var_type_8h.html" title="C++ Interface: VarType. " alt="" coords="1821,632,1964,659"/>
+<area shape="rect" id="node22" href="$d9/dc6/_var_string_8h.html" title="C++ Interface: VarString. " alt="" coords="1981,557,2127,584"/>
+<area shape="rect" id="node23" href="$d4/d96/_var_int_8h.html" title="C++ Interface: VarInt. " alt="" coords="1549,557,1677,584"/>
+<area shape="rect" id="node24" href="$de/de4/_var_bool_8h.html" title="C++ Interface: VarBool. " alt="" coords="1386,557,1525,584"/>
+<area shape="rect" id="node25" href="$d9/d91/_var_double_8h.html" title="C++ Interface: VarDouble. " alt="" coords="1701,557,1855,584"/>
+<area shape="rect" id="node26" href="$d7/d17/_var_blob_8h.html" title="C++ Implementation: VarBlob. " alt="" coords="1671,483,1810,509"/>
+<area shape="rect" id="node27" href="$df/dc3/_var_list_8h.html" title="C++ Interface: VarList. " alt="" coords="1125,557,1260,584"/>
+<area shape="rect" id="node28" href="$de/d75/_var_string_enum_8h.html" title="C++ Interface: VarStringEnum. " alt="" coords="2074,483,2255,509"/>
+<area shape="rect" id="node29" href="$d4/d13/_var_selection_8h.html" title="C++ Interface: VarSelection. " alt="" coords="1328,483,1495,509"/>
+<area shape="rect" id="node30" href="$d3/d58/_var_external_8h.html" title="C++ Interface: VarExternal. " alt="" coords="1091,483,1252,509"/>
+<area shape="rect" id="node31" href="$d1/d4e/_var_q_widget_8h.html" title="C++ Interface: VarInt. " alt="" coords="1835,483,1999,509"/>
+<area shape="rect" id="node32" href="$d2/dfd/_var_trigger_8h.html" title="C++ Interface: VarTrigger. " alt="" coords="2280,483,2433,509"/>
+<area shape="rect" id="node37" href="$d8/dc0/gvector_8h.html" title="Simple vector class for 2D and 3D vectors. " alt="" coords="2953,707,3029,733"/>
+<area shape="rect" id="node42" href="$d0/d2b/geomalgo_8h.html" title="A collection of geometry algorithms. " alt="" coords="2872,632,2961,659"/>
+<area shape="rect" id="node43" href="$d8/d06/bbox_8h.html" title="Classes and data&#45;structures representing bounding boxes. " alt="" coords="2610,632,2671,659"/>
+<area shape="rect" id="node44" href="$d1/d12/range_8h.html" title="Template&#45;based class representing a numeric range. " alt="" coords="2696,632,2761,659"/>
+<area shape="rect" id="node45" href="$da/d07/quaternion_8h.html" title="A Quaternion class. " alt="" coords="3037,632,3130,659"/>
+<area shape="rect" id="node48" href="$d7/def/pose_8h.html" title="Pose Class Definitions. " alt="" coords="2786,632,2847,659"/>
+<area shape="rect" id="node39" href="$d0/d36/ssl-vision_2src_2shared_2util_2util_8h.html" title="util.h" alt="" coords="2997,781,3047,808"/>
+</map>

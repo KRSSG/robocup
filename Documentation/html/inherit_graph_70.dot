@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLLUTWidget::EditState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/d4f/class_g_l_l_u_t_widget_1_1_edit_state.html"];
+}

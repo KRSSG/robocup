@@ -1,0 +1,10 @@
+digraph "LUTWidget::sampleImage"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="LUTWidget::sampleImage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PluginColorCalibration\l::keyPressEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d0e/class_plugin_color_calibration.html#a458dafdaa2221c1d7878bbfd28f46db1"];
+}

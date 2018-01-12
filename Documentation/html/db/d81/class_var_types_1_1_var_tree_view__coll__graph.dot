@@ -1,0 +1,33 @@
+digraph "VarTypes::VarTreeView"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::VarTreeView",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="QWidget",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tw" ,fontname="Helvetica"];
+  Node3 [label="QTreeView *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" search_result" ,fontname="Helvetica"];
+  Node4 [label="QList\< VarTypes::VarItem * \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" l" ,fontname="Helvetica"];
+  Node5 [label="QVBoxLayout",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" delegate" ,fontname="Helvetica"];
+  Node6 [label="VarTypes::VarItemDelegate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d1c/class_var_types_1_1_var_item_delegate.html",tooltip="The &#39;item-delegate&#39; inheriting QItemDelegate for displaying VarTypes in the QT4 Item-Model. "];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="QItemDelegate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/d54/class_q_item_delegate.html"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" result_idx" ,fontname="Helvetica"];
+  Node8 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" model" ,fontname="Helvetica"];
+  Node9 [label="VarTypes::VarTreeModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dc/d23/class_var_types_1_1_var_tree_model.html",tooltip="The &#39;item-model&#39; inheriting QStandardItemModel for displaying VarTypes in the QT4 Item-Model..."];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="QStandardItemModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d6a/class_q_standard_item_model.html"];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" opts" ,fontname="Helvetica"];
+  Node11 [label="VarTypes::VarTreeViewOptions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/d40/class_var_types_1_1_var_tree_view_options.html",tooltip="An internal set of rendering parameters used by the VarTypes view-model. "];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cols" ,fontname="Helvetica"];
+  Node12 [label="std::vector\< GuiColumnFlag \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elements" ,fontname="Helvetica"];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" search_edit" ,fontname="Helvetica"];
+  Node13 [label="QLineEdit *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

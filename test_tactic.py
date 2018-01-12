@@ -10,28 +10,37 @@ from multiprocessing import Process
 from kubs import kubs
 from math import atan2,pi
 from utils.math_functions import *
+# import CoPass
 
-from tactics import  sample_tactic
+from tactics import  sample_tactic, CoPass
 
 pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
 import memcache
 shared = memcache.Client(['127.0.0.1:11211'],debug=False)
 
-# flag = True
 def function(id_,state):
-	global flag
-	kub = kubs.kubs(id_,state,pub)
-	# print(kub.kubs_id)
-	g_fsm = sample_tactic.SampleTactic()
-	# print(kub.kubs_id+1)
-	g_fsm.add_kub(kub)
-	# print(kub.kubs_id+2)
+	reciever = kubs.kubs(0,state,pub)
+	receive_point = Vector2D(HALF_FIELD_MAXX/2, HALF_FIELD_MAXY/3)
+	kicker = kubs.kubs(1,state,pub)
+	pr_fsm = CoPass.CoordinatedPass(skillreceiver=reciever, skillkicker=kicker)
+	pr_fsm.receive_point = receive_point
+	pr_fsm.as_graphviz()
+	pr_fsm.write_diagram_png()
+	pr_fsm.spin_cb()
+	# global flag
+	# 
+	# kub = kubs.kubs(id_,state,pub)
+	# # print(kub.kubs_id)
+	# g_fsm = sample_tactic.SampleTactic()
+	# # print(kub.kubs_id+1)
+	# g_fsm.add_kub(kub)
+	# # print(kub.kubs_id+2)
 
-	g_fsm.as_graphviz()
-	g_fsm.write_diagram_png()
-	g_fsm.spin_cb()
-	# print(kub.kubs_id+3)
+	# g_fsm.as_graphviz()
+	# g_fsm.write_diagram_png()
+	# g_fsm.spin_cb()
+	# # print(kub.kubs_id+3)
 
 
 def BS_callback(state):

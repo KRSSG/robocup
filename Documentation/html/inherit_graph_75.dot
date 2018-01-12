@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GlobalCaptureDC1394instance\lManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/dce/class_global_capture_d_c1394instance_manager.html",tooltip="A static instance manager to provide global singleton access to GlobalCaptureDC1394instance. "];
+}

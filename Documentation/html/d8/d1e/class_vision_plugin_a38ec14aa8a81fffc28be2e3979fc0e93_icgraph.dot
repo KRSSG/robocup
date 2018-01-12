@@ -1,0 +1,14 @@
+digraph "VisionPlugin::setTimePostProcessing"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VisionPlugin::setTimePost\lProcessing",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VisionStack::postProcess",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/db3/class_vision_stack.html#a81e61b00f7ae56bb8b681e3306acf394"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CaptureThread::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de9/class_capture_thread.html#ace6f66e410cac572d775a968841344d5"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VisionPlugin::VisionPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/d1e/class_vision_plugin.html#a732d5007ed001ecad62ce169f8f788f1"];
+}

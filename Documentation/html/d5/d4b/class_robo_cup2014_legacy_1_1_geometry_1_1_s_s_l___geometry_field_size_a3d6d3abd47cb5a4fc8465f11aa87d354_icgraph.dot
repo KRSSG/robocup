@@ -1,0 +1,16 @@
+digraph "RoboCup2014Legacy::Geometry::SSL_GeometryFieldSize::set_defense_stretch"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RoboCup2014Legacy::\lGeometry::SSL_GeometryField\lSize::set_defense_stretch",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PluginLegacyPublishGeometry\l::sendGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#ab3a19abff7ed07a1980e2ba3f839b0dc"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PluginLegacyPublishGeometry\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#a1e8cc6b653351ad1c5230b15976cbbe5"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PluginLegacyPublishGeometry\l::slotPublishTriggered",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#a298abe557fb26dbb5e147d7e742cbe75"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PluginLegacyPublishGeometry\l::PluginLegacyPublishGeometry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/da8/class_plugin_legacy_publish_geometry.html#a1203737efb1d4913ba97729d6d4fb66b"];
+}

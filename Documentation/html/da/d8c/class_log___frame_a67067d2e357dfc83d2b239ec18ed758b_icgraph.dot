@@ -1,0 +1,14 @@
+digraph "Log_Frame::set_has_refbox_cmd"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Log_Frame::set_has\l_refbox_cmd",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Log_Frame::mutable\l_refbox_cmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d8c/class_log___frame.html#a5011f1a8f88ff3c67d24f60ed4fa0453"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Log_Frame::set_allocated\l_refbox_cmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d8c/class_log___frame.html#a2e816936010780c6a24a8a183e6b9018"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Log_Frame::set_refbox_cmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d8c/class_log___frame.html#aa30d745c17b5df54f5c128dc12a5309c"];
+}

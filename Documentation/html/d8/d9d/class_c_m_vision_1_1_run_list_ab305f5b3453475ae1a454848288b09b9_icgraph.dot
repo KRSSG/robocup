@@ -1,0 +1,20 @@
+digraph "CMVision::RunList::getUsedRuns"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CMVision::RunList::\lgetUsedRuns",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CMVision::RegionProcessing\l::connectComponents",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d54/class_c_m_vision_1_1_region_processing.html#af660306f092cf8fa71d266fa5ad1d4c0"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PluginFindBlobs::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d88/class_plugin_find_blobs.html#a41ea8f1fcf4d0ca0b8119b5946fc1441"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CMVision::ImageProcessor\l::processThresholded",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/df4/class_c_m_vision_1_1_image_processor.html#a44dc920b71309ac27ead1f79292a893a"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CMVision::RegionProcessing\l::extractRegions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d7/d54/class_c_m_vision_1_1_region_processing.html#acea0393b8dcf268a49768be357b9ff18"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PluginRunlengthEncode\l::process",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d41/class_plugin_runlength_encode.html#a9af9d0cedabb2d52b028f732b707324c"];
+}

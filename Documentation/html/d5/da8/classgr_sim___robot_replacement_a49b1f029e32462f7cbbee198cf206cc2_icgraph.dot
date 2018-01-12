@@ -1,0 +1,14 @@
+digraph "grSim_RobotReplacement::descriptor"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="grSim_RobotReplacement\l::descriptor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="grSim_RobotReplacement\l::mutable_unknown_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da8/classgr_sim___robot_replacement.html#ae783b9b1de6b2384086c36cd7f7816d4"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="grSim_BallReplacement\l::mutable_unknown_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d2/db1/classgr_sim___ball_replacement.html#ab967000f2a8b93376c99dcd51827aab4"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="grSim_Replacement::\lmutable_unknown_fields",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/de6/classgr_sim___replacement.html#a158d95820c6bf7e468ac023c186902b9"];
+}

@@ -1,0 +1,31 @@
+digraph "GetOpt"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GetOpt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" aname" ,fontname="Helvetica"];
+  Node2 [label="QString",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" setOptions" ,fontname="Helvetica"];
+  Node3 [label="QMap\< QString, int \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" currArg\nnumOptArgs\nnumReqArgs" ,fontname="Helvetica"];
+  Node4 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" options" ,fontname="Helvetica"];
+  Node5 [label="QLinkedList\< GetOpt\l::Option \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" optArg\nreqArg" ,fontname="Helvetica"];
+  Node6 [label="GetOpt::Option",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/dfe/struct_get_opt_1_1_option.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" type" ,fontname="Helvetica"];
+  Node7 [label="OptionType",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lname\nstringValue\ndef" ,fontname="Helvetica"];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sname" ,fontname="Helvetica"];
+  Node8 [label="char",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" @3" ,fontname="Helvetica"];
+  Node9 [label="anonymous:@3",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" listValue" ,fontname="Helvetica"];
+  Node10 [label="QStringList *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" boolValue" ,fontname="Helvetica"];
+  Node11 [label="bool",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" args" ,fontname="Helvetica"];
+  Node12 [label="QStringList",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

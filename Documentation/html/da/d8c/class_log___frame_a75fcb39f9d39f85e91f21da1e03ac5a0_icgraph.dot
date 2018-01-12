@@ -1,0 +1,12 @@
+digraph "Log_Frame::GetMetadata"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Log_Frame::GetMetadata",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Log_Frame::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d8c/class_log___frame.html#a645fa09514b65c1760d53dcdce085fd9"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Refbox_Log::MaybeArenaPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$df/dfa/class_refbox___log.html#addbbff3ec1e3dce0b00e452be99bc0db"];
+}

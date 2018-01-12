@@ -1,0 +1,18 @@
+digraph "VarTypes::VarVal::getTypeName"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="VarTypes::VarVal::getTypeName",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="VarTypes::VarTypesInstance\l::getFactory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6d/class_var_types_1_1_var_types_instance.html#a408eb4228a2ef962ccaa16cf2c3fd012"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="VarTypes::VarTypesInstance\l::VarTypesInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d0/d6d/class_var_types_1_1_var_types_instance.html#a98f863268ab29c225894a1d6e2fe86e8"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="VarTypes::VarVal::getType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d6/de8/class_var_types_1_1_var_val.html#a055099df08f318d6b870271687972c01",tooltip="Get the type of this VarType node. "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="VarTypes::VarTypesFactory\l::typeToString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dd8/class_var_types_1_1_var_types_factory.html#a86b348b8b216141ce17d80b3278562d9"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="VarTypes::VarTypesFactory\l::userTypeToString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$db/dd8/class_var_types_1_1_var_types_factory.html#a479a8bf234b780cdbe9b4184e63cdb04"];
+}

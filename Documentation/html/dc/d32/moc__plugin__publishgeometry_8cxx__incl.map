@@ -1,0 +1,28 @@
+<map id="ssl&#45;vision/build/src/app/plugins/moc_plugin_publishgeometry.cxx" name="ssl&#45;vision/build/src/app/plugins/moc_plugin_publishgeometry.cxx">
+<area shape="rect" id="node2" href="$d8/d45/plugin__publishgeometry_8h.html" title="C++ Interface: plugin_publishgeometry. " alt="" coords="986,109,1205,151"/>
+<area shape="rect" id="node3" href="$d8/de0/visionplugin_8h.html" title="C++ Interface: VisionPlugin. " alt="" coords="510,273,611,300"/>
+<area shape="rect" id="node9" href="$d1/d9a/_var_types_8h.html" title="The main header for the VarTypes system. " alt="" coords="796,355,885,382"/>
+<area shape="rect" id="node34" href="$d1/d2a/camera__calibration_8h.html" title="Datatypes for camera parameters, functions for perspective transformations. " alt="" coords="1501,199,1644,225"/>
+<area shape="rect" id="node21" href="$d7/d97/framedata_8h.html" title="C++ Interface: FrameData. " alt="" coords="317,437,407,464"/>
+<area shape="rect" id="node28" href="$d5/df4/realtimedisplaywidget_8h.html" title="C++ Interface: RealTimeDisplayWidget. " alt="" coords="177,355,336,382"/>
+<area shape="rect" id="node32" href="$da/de5/pixelloc_8h.html" title="A dead&#45;simple data&#45;structure describing a 2D pixel location. " alt="" coords="643,355,721,382"/>
+<area shape="rect" id="node10" href="$df/de3/_var_types_instance_8h.html" title="VarTypesInstance.h" alt="" coords="1062,437,1201,464"/>
+<area shape="rect" id="node11" href="$d2/d10/_var_types_factory_8h.html" title="VarTypesFactory.h" alt="" coords="1123,512,1257,539"/>
+<area shape="rect" id="node12" href="$d4/d8d/_var_type_8h.html" title="C++ Interface: VarType. " alt="" coords="1065,661,1208,688"/>
+<area shape="rect" id="node17" href="$d9/d91/_var_double_8h.html" title="C++ Interface: VarDouble. " alt="" coords="1334,587,1489,613"/>
+<area shape="rect" id="node20" href="$df/dc3/_var_list_8h.html" title="C++ Interface: VarList. " alt="" coords="1175,587,1309,613"/>
+<area shape="rect" id="node18" href="$d0/d05/_var_double_val_8h.html" title="C++ Interface: VarDoubleVal. " alt="" coords="1435,661,1609,688"/>
+<area shape="rect" id="node22" href="$d6/da4/ringbuffer_8h.html" title="C++ Interface: RingBuffer. " alt="" coords="228,512,315,539"/>
+<area shape="rect" id="node24" href="$d2/d80/rawimage_8h.html" title="C++ Interface: RawImage. " alt="" coords="409,512,499,539"/>
+<area shape="rect" id="node25" href="$d7/d70/image__interface_8h.html" title="C++ Interface: image_interface. " alt="" coords="333,587,458,613"/>
+<area shape="rect" id="node26" href="$da/dd8/colors_8h.html" title="A collection of color related classes, types, and functions. " alt="" coords="440,661,508,688"/>
+<area shape="rect" id="node29" href="$d6/d23/videostats_8h.html" title="A class for storing video display statistics. " alt="" coords="141,437,234,464"/>
+<area shape="rect" id="node31" href="$d6/d5f/renderoptions_8h.html" title="C++ Interface: RenderOptions. " alt="" coords="5,437,116,464"/>
+<area shape="rect" id="node30" href="$d6/df6/capturestats_8h.html" title="A class for storing capture statistics. " alt="" coords="99,512,204,539"/>
+<area shape="rect" id="node35" href="$da/d07/quaternion_8h.html" title="A Quaternion class. " alt="" coords="1747,273,1841,300"/>
+<area shape="rect" id="node40" href="$d5/d5a/field_8h.html" title="Definition of field dimensions. " alt="" coords="1067,273,1124,300"/>
+<area shape="rect" id="node45" href="$dd/d45/ssl-vision_2src_2shared_2util_2timer_8h.html" title="timer.h" alt="" coords="1687,661,1749,688"/>
+<area shape="rect" id="node38" href="$d8/dc0/gvector_8h.html" title="Simple vector class for 2D and 3D vectors. " alt="" coords="1815,355,1891,382"/>
+<area shape="rect" id="node41" href="$d6/d69/field__default__constants_8h.html" title="Definition of field dimensions. " alt="" coords="1012,355,1179,382"/>
+<area shape="rect" id="node42" href="$d1/d98/helpers_8h.html" title="Helper utility functions that generally don&#39;t fit anywhere else. " alt="" coords="829,437,903,464"/>
+</map>

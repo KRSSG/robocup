@@ -1,0 +1,12 @@
+digraph "MainWindow::updateRobotLabel"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="MainWindow::updateRobotLabel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RobotWidget::changeRobot\lOnOff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d9/d58/class_robot_widget.html#a4b2358e6238ad0ecd33e9f7ec5c7fa19"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="robotIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d4/d4c/sslworld_8h.html#adc28e5d519f95cbce6aed7c31e2053a0"];
+}

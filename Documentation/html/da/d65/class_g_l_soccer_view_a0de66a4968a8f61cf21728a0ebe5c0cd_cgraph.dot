@@ -1,0 +1,16 @@
+digraph "GLSoccerView::GLSoccerView"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GLSoccerView::GLSoccerView",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GVector::max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d5/da9/namespace_g_vector.html#a1223529a5f19606fa1f0bb39404a9ec3"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GLSoccerView::redraw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d65/class_g_l_soccer_view.html#ace81557f8b104354326d5477e5f49a02"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GetTimeSec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dd/d45/ssl-vision_2src_2shared_2util_2timer_8h.html#aed5e107931778acf0dec4d53809130b4"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GLSoccerView::sizeHint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$da/d65/class_g_l_soccer_view.html#abc9163351434c8fa5438c7697dbd551b"];
+}

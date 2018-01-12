@@ -1,0 +1,21 @@
+<map id="protobuf_InitDefaults_grSim_5fPacket_2eproto_impl" name="protobuf_InitDefaults_grSim_5fPacket_2eproto_impl">
+<area shape="rect" id="node2" href="$d4/d17/classssl_debug___data.html#a6c228149dad67debe9f7bb7ff372e455" title="sslDebug_Data::internal\l_default_instance" alt="" coords="274,5,437,47"/>
+<area shape="rect" id="node5" href="$d0/d13/classgr_sim___commands.html#a3098a0a4b94dd42c3be0f6b4bedbf663" title="grSim_Commands::internal\l_default_instance" alt="" coords="265,71,445,112"/>
+<area shape="rect" id="node8" href="$d0/de6/classgr_sim___replacement.html#a06c10c9606d45b42974d31bb43fcb204" title="grSim_Replacement::\linternal_default_instance" alt="" coords="841,176,1008,217"/>
+<area shape="rect" id="node11" href="$dc/d7f/gr_sim___commands_8pb_8cc.html#a2f7dca3b7b526e3d2806f08457d45345" title="protobuf_InitDefaults\l_grSim_5fCommands_2eproto" alt="" coords="256,188,455,229"/>
+<area shape="rect" id="node14" href="$d5/d9f/gr_sim___replacement_8pb_8cc.html#a1aa297f1fda5abc2ecd022372381811c" title="protobuf_InitDefaults\l_grSim_5fReplacement\l_2eproto" alt="" coords="276,290,435,346"/>
+<area shape="rect" id="node18" href="$de/d3d/ssl_debug___data_8pb_8cc.html#a0070070cfa76c070921a3fc2bc7c388b" title="protobuf_InitDefaults\l_sslDebug_5fData_2eproto" alt="" coords="265,428,445,469"/>
+<area shape="rect" id="node3" href="$d4/d17/classssl_debug___data.html#af803d7f7fe7f09ef001308777613478e" title="sslDebug_Data::Swap" alt="" coords="564,13,717,39"/>
+<area shape="rect" id="node4" href="$d4/d17/classssl_debug___data.html#aaa637191c2ab15c4b8bfe78c6f9b098a" title="sslDebug_Data::InternalSwap" alt="" coords="827,13,1023,39"/>
+<area shape="rect" id="node6" href="$d1/d68/classgr_sim___robot___command.html#a3308bdb23be31e83cb52dee2b25e000e" title="grSim_Robot_Command\l::Swap" alt="" coords="558,71,723,112"/>
+<area shape="rect" id="node7" href="$d1/d68/classgr_sim___robot___command.html#a7b3aa15368c13307afb9bda35340540b" title="grSim_Robot_Command\l::InternalSwap" alt="" coords="842,71,1007,112"/>
+<area shape="rect" id="node9" href="$d5/da8/classgr_sim___robot_replacement.html#abd95074604ac37e6efea260e8a420dc1" title="grSim_RobotReplacement\l::Swap" alt="" coords="1071,249,1245,291"/>
+<area shape="rect" id="node10" href="$d5/da8/classgr_sim___robot_replacement.html#a2965b7738fd7b8b18b3bc4fb90972e17" title="grSim_RobotReplacement\l::InternalSwap" alt="" coords="1293,249,1468,291"/>
+<area shape="rect" id="node12" href="$dc/d7f/gr_sim___commands_8pb_8cc.html#a1d3ccec64057afcccc8385041a5b5df7" title="GOOGLE_PROTOBUF_DECLARE_ONCE" alt="" coords="503,187,779,214"/>
+<area shape="rect" id="node13" href="$dc/d7f/gr_sim___commands_8pb_8cc.html#a77c7a50cc00a4980dd12286d5065de88" title="protobuf_InitDefaults\l_grSim_5fCommands_2eproto_impl" alt="" coords="526,239,755,280"/>
+<area shape="rect" id="node15" href="$d5/d9f/gr_sim___replacement_8pb_8cc.html#ab3f7cea136644b490ce480f734b0fb54" title="GOOGLE_PROTOBUF_DECLARE_ONCE" alt="" coords="503,305,779,331"/>
+<area shape="rect" id="node16" href="$d5/d9f/gr_sim___replacement_8pb_8cc.html#a71a77741fa159d1aa6a82bbd246a85be" title="protobuf_InitDefaults\l_grSim_5fReplacement\l_2eproto_impl" alt="" coords="561,355,720,411"/>
+<area shape="rect" id="node17" href="$d2/db1/classgr_sim___ball_replacement.html#aa8563d85634520324f3b5f9f8791d381" title="grSim_BallReplacement\l::internal_default_instance" alt="" coords="837,321,1012,363"/>
+<area shape="rect" id="node19" href="$de/d3d/ssl_debug___data_8pb_8cc.html#adf2e32c6ade40588a9ca6241ec879775" title="GOOGLE_PROTOBUF_DECLARE_ONCE" alt="" coords="503,435,779,462"/>
+<area shape="rect" id="node20" href="$de/d3d/ssl_debug___data_8pb_8cc.html#a68c73c3d75dda6d2390f18d60cbb202a" title="protobuf_InitDefaults\l_sslDebug_5fData_2eproto_impl" alt="" coords="535,487,746,528"/>
+</map>

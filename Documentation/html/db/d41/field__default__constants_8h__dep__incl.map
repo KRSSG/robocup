@@ -1,0 +1,51 @@
+<map id="ssl&#45;vision/src/shared/util/field_default_constants.h" name="ssl&#45;vision/src/shared/util/field_default_constants.h">
+<area shape="rect" id="node2" href="$d1/da5/soccerview_8h.html" title="C++ Interface: GLSoccerView. " alt="" coords="260,95,415,136"/>
+<area shape="rect" id="node5" href="$d2/dfb/soccerview_8cpp.html" title="C++ Implementation: GLSoccerView. " alt="" coords="349,191,504,233"/>
+<area shape="rect" id="node6" href="$d5/d2b/_graphics_primitives_8h.html" title="ssl&#45;vision/src/logClient\l/GraphicsPrimitives.h" alt="" coords="3047,95,3201,136"/>
+<area shape="rect" id="node16" href="$d5/d5a/field_8h.html" title="Definition of field dimensions. " alt="" coords="1607,95,1750,136"/>
+<area shape="rect" id="node47" href="$da/d13/camera__calibration_8cpp.html" title="ssl&#45;vision/src/shared\l/util/camera_calibration.cpp" alt="" coords="699,295,880,337"/>
+<area shape="rect" id="node48" href="$d4/dd0/field_8cpp.html" title="Field markings management. " alt="" coords="2374,191,2517,233"/>
+<area shape="rect" id="node49" href="$de/de1/field__default__constants_8cpp.html" title="ssl&#45;vision/src/shared\l/util/field_default_constants.cpp" alt="" coords="2541,191,2747,233"/>
+<area shape="rect" id="node3" href="$d7/d3d/moc__soccerview_8cxx.html" title="ssl&#45;vision/build/src\l/graphicalClient/moc\l_soccerview.cxx" alt="" coords="5,184,147,240"/>
+<area shape="rect" id="node4" href="$d5/daf/ssl-vision_2src_2graphical_client_2main_8cpp.html" title="ssl&#45;vision/src/graphical\lClient/main.cpp" alt="" coords="171,191,325,233"/>
+<area shape="rect" id="node7" href="$d7/db4/_central_window_8h.html" title="C++ Implementation: CentralWindow. " alt="" coords="3141,295,3296,337"/>
+<area shape="rect" id="node11" href="$dd/d3b/_client_threading_8h.html" title="C++ Interface: ViewUpdateThread. " alt="" coords="3300,191,3455,233"/>
+<area shape="rect" id="node14" href="$d6/d68/moc___graphics_primitives_8cxx.html" title="ssl&#45;vision/build/src\l/logClient/moc_GraphicsPrimitives.cxx" alt="" coords="2772,191,3020,233"/>
+<area shape="rect" id="node15" href="$de/df4/_graphics_primitives_8cpp.html" title="C++ Implementation: Robot, SoccerView. " alt="" coords="3043,191,3205,233"/>
+<area shape="rect" id="node8" href="$df/da4/moc___central_window_8cxx.html" title="ssl&#45;vision/build/src\l/logClient/moc_CentralWindow.cxx" alt="" coords="2891,399,3117,441"/>
+<area shape="rect" id="node9" href="$d8/d87/_central_window_8cpp.html" title="ssl&#45;vision/src/logClient\l/CentralWindow.cpp" alt="" coords="3141,399,3296,441"/>
+<area shape="rect" id="node10" href="$da/d2b/ssl-vision_2src_2log_client_2main_8cpp.html" title="ssl&#45;vision/src/logClient\l/main.cpp" alt="" coords="3320,399,3475,441"/>
+<area shape="rect" id="node12" href="$dd/dd9/moc___client_threading_8cxx.html" title="ssl&#45;vision/build/src\l/logClient/moc_ClientThreading.cxx" alt="" coords="3499,295,3728,337"/>
+<area shape="rect" id="node13" href="$d5/dca/_client_threading_8cpp.html" title="C++ Implementation: ViewUpdateThread. " alt="" coords="3320,295,3475,337"/>
+<area shape="rect" id="node17" href="$d1/d92/stack__robocup__ssl_8h.html" title="C++ Interface: stack_robocup_ssl. " alt="" coords="1593,607,1783,649"/>
+<area shape="rect" id="node18" href="$db/dc2/multistack__robocup__ssl_8h.html" title="C++ Interface: multistack_robocup_ssl. " alt="" coords="1117,711,1334,753"/>
+<area shape="rect" id="node25" href="$dc/d90/cmpattern__teamdetector_8h.html" title="C++ Interface: teamdetector. " alt="" coords="811,392,957,448"/>
+<area shape="rect" id="node30" href="$d6/db8/moc__field_8cxx.html" title="ssl&#45;vision/build/src\l/shared/util/moc_field.cxx" alt="" coords="1225,191,1396,233"/>
+<area shape="rect" id="node31" href="$da/d18/plugin__cameracalib_8h.html" title="C++ Interface: plugin_cameracalib. " alt="" coords="1597,399,1790,441"/>
+<area shape="rect" id="node33" href="$d9/db9/plugin__legacysslnetworkoutput_8h.html" title="C++ Interface: plugin_legacysslnetworkoutput. " alt="" coords="1915,399,2175,441"/>
+<area shape="rect" id="node35" href="$de/d28/plugin__sslnetworkoutput_8h.html" title="C++ Interface: plugin_sslnetworkoutput. " alt="" coords="2221,295,2443,337"/>
+<area shape="rect" id="node37" href="$d6/dde/plugin__visualize_8h.html" title="C++ Interface: plugin_visualize. " alt="" coords="2467,295,2642,337"/>
+<area shape="rect" id="node40" href="$d1/d2a/camera__calibration_8h.html" title="Datatypes for camera parameters, functions for perspective transformations. " alt="" coords="1522,191,1689,233"/>
+<area shape="rect" id="node50" href="$d7/d0d/field__filter_8h.html" title="A filter based on field location. " alt="" coords="1126,295,1269,337"/>
+<area shape="rect" id="node23" href="$dc/d3f/stacks_8h.html" title="A collection of single&#45;camera vision stacks. " alt="" coords="1643,711,1767,753"/>
+<area shape="rect" id="node24" href="$dd/d8b/stack__robocup__ssl_8cpp.html" title="C++ Implementation: stack_robocup_ssl. " alt="" coords="1465,704,1620,760"/>
+<area shape="rect" id="node19" href="$dc/de2/moc__multistack__robocup__ssl_8cxx.html" title="ssl&#45;vision/build/src\l/app/stacks/moc_multistack\l_robocup_ssl.cxx" alt="" coords="1123,808,1309,864"/>
+<area shape="rect" id="node20" href="$da/d4e/multistack__robocup__ssl_8cpp.html" title="C++ Implementation: multistack_robocup_ssl. " alt="" coords="1334,808,1517,864"/>
+<area shape="rect" id="node21" href="$d9/de7/multistacks_8h.html" title="A collection of useful MultiVisionStacks. " alt="" coords="1581,815,1728,857"/>
+<area shape="rect" id="node22" href="$d7/d16/ssl-vision_2src_2app_2gui_2mainwindow_8h.html" title="ssl&#45;vision/src/app\l/gui/mainwindow.h" alt="" coords="1700,912,1831,953"/>
+<area shape="rect" id="node26" href="$dd/dc8/moc__cmpattern__teamdetector_8cxx.html" title="ssl&#45;vision/build/src\l/shared/cmpattern/moc\l_cmpattern_teamdetector.cxx" alt="" coords="481,496,676,552"/>
+<area shape="rect" id="node27" href="$d6/d37/plugin__detect__robots_8h.html" title="C++ Interface: plugin_detect_robots. " alt="" coords="922,496,1070,552"/>
+<area shape="rect" id="node29" href="$db/d5a/cmpattern__teamdetector_8cpp.html" title="C++ Implementation: teamdetector. " alt="" coords="700,496,847,552"/>
+<area shape="rect" id="node28" href="$dc/d1c/plugin__detect__robots_8cpp.html" title="C++ Implementation: plugin_detect_robots. " alt="" coords="922,600,1070,656"/>
+<area shape="rect" id="node32" href="$dd/d74/plugin__cameracalib_8cpp.html" title="C++ Implementation: plugin_cameracalib. " alt="" coords="1726,503,1933,545"/>
+<area shape="rect" id="node34" href="$d2/dc6/plugin__legacysslnetworkoutput_8cpp.html" title="C++ Implementation: plugin_legacysslnetworkoutput. " alt="" coords="2109,503,2384,545"/>
+<area shape="rect" id="node36" href="$d5/d27/plugin__sslnetworkoutput_8cpp.html" title="C++ Implementation: plugin_sslnetworkoutput. " alt="" coords="2199,399,2435,441"/>
+<area shape="rect" id="node38" href="$d8/d94/ssl-vision_2src_2app_2gui_2glwidget_8h.html" title="ssl&#45;vision/src/app\l/gui/glwidget.h" alt="" coords="2266,607,2390,649"/>
+<area shape="rect" id="node39" href="$d5/d52/plugin__visualize_8cpp.html" title="C++ Implementation: plugin_visualize. " alt="" coords="2561,399,2749,441"/>
+<area shape="rect" id="node41" href="$dc/d19/cameracalibwidget_8h.html" title="C++ Interface: CameraCalibrationWidget. " alt="" coords="1497,295,1663,337"/>
+<area shape="rect" id="node42" href="$d1/df0/plugin__dvr_8h.html" title="C++ Interface: plugin_dvr. " alt="" coords="1509,503,1651,545"/>
+<area shape="rect" id="node43" href="$d7/db2/plugin__legacypublishgeometry_8h.html" title="C++ Interface: plugin_legacypublishgeometry. " alt="" coords="1840,295,2096,337"/>
+<area shape="rect" id="node44" href="$d8/d45/plugin__publishgeometry_8h.html" title="C++ Interface: plugin_publishgeometry. " alt="" coords="1095,503,1313,545"/>
+<area shape="rect" id="node45" href="$de/dec/cmpattern__pattern_8h.html" title="C++ Interface: pattern. " alt="" coords="955,288,1101,344"/>
+<area shape="rect" id="node46" href="$d6/d39/plugin__detect__balls_8h.html" title="C++ Interface: plugin_detect_balls. " alt="" coords="1338,496,1486,552"/>
+</map>
