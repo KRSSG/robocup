@@ -9,6 +9,6 @@ def BS_callback(state):
 	shared.set('state',state)
 	print state
 
-rospy.init_node('node',anonymous=False)
+rospy.init_node('BSnode',anonymous=False)
 rospy.Subscriber('/belief_state', BeliefState, BS_callback, queue_size=1000)
 rospy.spin()

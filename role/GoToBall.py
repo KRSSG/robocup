@@ -12,7 +12,7 @@ class GoToBall(behavior.Behavior):
         course_approach = 2
         fine_approach = 3
 
-    def __init__(self,force_fine_approach=False,continuous=False):
+    def __init__(self,continuous=False):
 
         super(GoToBall,self).__init__()
 
@@ -22,9 +22,9 @@ class GoToBall(behavior.Behavior):
 
         self.target_point = None
         
-        self.force_fine_approach = force_fine_approach
 
         self.initial_target_dist_thresh = DISTANCE_THRESH/3
+
         self.ball_dist_thresh = BOT_BALL_THRESH
 
         self.behavior_failed = False
@@ -42,11 +42,11 @@ class GoToBall(behavior.Behavior):
             GoToBall.State.setup,lambda: True,'immediately')
 
         self.add_transition(GoToBall.State.setup,
-            GoToBall.State.fine_approach,lambda: self.force_execute_fine_approach,'ball_in_vicinity')
+            GoToBall.State.fine_approach,lambda: self.ball_in_vicinity(),'ball_in_vicinity')
 
 
         self.add_transition(GoToBall.State.setup,
-            GoToBall.State.course_approach,lambda: self.target_present(),'setup')
+            GoToBall.State.course_approach,lambda: not self.ball_in_vicinity(),'setup')
 
         self.add_transition(GoToBall.State.course_approach,
             GoToBall.State.fine_approach,lambda:self.at_target_point(),'complete')
@@ -69,18 +69,15 @@ class GoToBall(behavior.Behavior):
     def add_theta(self,theta):
         self.theta = theta
     
-    def target_present(self):
-        return not ball_in_front_of_bot(self.kub) and self.target_point is not None and not self.force_fine_approach
+    # def target_present(self):
+    #     return not ball_in_front_of_bot(self.kub) and self.target_point is not None 
 
     def at_target_point(self):
         return vicinity_points(self.target_point,self.kub.get_pos(),thresh= self.initial_target_dist_thresh)
 
-    def force_execute_fine_approach(self):
-        return self.ball_in_vicinity() or self.force_fine_approach
 
     def ball_in_vicinity(self):
         if ball_in_front_of_bot(self.kub):
-            self.target_point = None
             return True
         return False
 

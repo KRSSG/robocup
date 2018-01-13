@@ -32,6 +32,7 @@ class GoToPoint(behavior.Behavior):
         self.name = "GoToPoint"
 
         self.behavior_failed = False
+        self.DISTANCE_THRESH = DISTANCE_THRESH
 
         self.add_state(GoToPoint.State.setup,
             behavior.Behavior.State.running)
@@ -74,7 +75,7 @@ class GoToPoint(behavior.Behavior):
 
     def at_new_point(self):
         #print (dist(self.target_point,self.new_point),210)
-        return dist(self.target_point,self.new_point) < 0
+        return dist(self.target_point,self.new_point) < self.DISTANCE_THRESH
 
         
     def on_enter_setup(self):
@@ -96,7 +97,7 @@ class GoToPoint(behavior.Behavior):
         print("Execute drive")
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-        generatingfunction = _GoToPoint_.execute(start_time,DISTANCE_THRESH)
+        generatingfunction = _GoToPoint_.execute(start_time,self.DISTANCE_THRESH)
         for gf in generatingfunction:
             self.kub,target_point = gf
 

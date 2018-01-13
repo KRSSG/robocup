@@ -36,7 +36,7 @@ def function(id_,state):
 	# print(kub.kubs_id+3)
 
 
-rospy.init_node('node_new',anonymous=False)
+rospy.init_node('goalie',anonymous=False)
 start_time = rospy.Time.now()
 
 start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
