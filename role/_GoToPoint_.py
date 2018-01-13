@@ -73,7 +73,7 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
             velocity_magnitude = Vector2D(vx,vy).abs(Vector2D(vx,vy))
             if velocity_magnitude > MAX_BOT_SPEED:
                 angle_movement = math.atan2(vy,vx)
-                print("_____________Velocity Changed____________")
+                # print("_____________Velocity Changed____________")
                 vy = MAX_BOT_SPEED*math.sin(angle_movement)
                 vx = MAX_BOT_SPEED*math.cos(angle_movement)
                 # pass
@@ -94,17 +94,17 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
 
             if abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate))<ROTATION_FACTOR:
                 kub.turn(0)
-                print("Angle completed")
+                # print("Angle completed")
                 FLAG_turn = True
             else:
                 kub.turn(vw)
             # print("Distance ______",dist(kub.state.homePos[kub.kubs_id], GOAL_POINT))
-            if dist(kub.state.homePos[kub.kubs_id], GOAL_POINT)<0 :
+            if dist(kub.state.homePos[kub.kubs_id], GOAL_POINT)<DIST_THRESH :
                 kub.move(0,0)
-                print("Distance completed")
+                # print("Distance completed"*200)
                 FLAG_move = True
             else:
-                print("Sending velocity",vx,vy)
+                # print("Sending velocity",vx,vy)
                 kub.move(vx, vy)
 
             kub.execute()

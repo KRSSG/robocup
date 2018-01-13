@@ -20,26 +20,26 @@ import memcache
 shared = memcache.Client(['127.0.0.1:11211'],debug=False)
 
 def function(id_,state):
-	reciever = kubs.kubs(0,state,pub)
-	receive_point = Vector2D(HALF_FIELD_MAXX/2, HALF_FIELD_MAXY/3)
-	kicker = kubs.kubs(1,state,pub)
-	pr_fsm = CoPass.CoordinatedPass(skillreceiver=reciever, skillkicker=kicker)
-	pr_fsm.receive_point = receive_point
-	pr_fsm.as_graphviz()
-	pr_fsm.write_diagram_png()
-	pr_fsm.spin_cb()
-	# global flag
+	# reciever = kubs.kubs(0,state,pub)
+	# receive_point = Vector2D(HALF_FIELD_MAXX/2, HALF_FIELD_MAXY/3)
+	# kicker = kubs.kubs(1,state,pub)
+	# pr_fsm = CoPass.CoordinatedPass(skillreceiver=reciever, skillkicker=kicker)
+	# pr_fsm.receive_point = receive_point
+	# pr_fsm.as_graphviz()
+	# pr_fsm.write_diagram_png()
+	# pr_fsm.spin_cb()
+	# # global flag
 	# 
-	# kub = kubs.kubs(id_,state,pub)
-	# # print(kub.kubs_id)
-	# g_fsm = sample_tactic.SampleTactic()
-	# # print(kub.kubs_id+1)
-	# g_fsm.add_kub(kub)
-	# # print(kub.kubs_id+2)
+	kub = kubs.kubs(id_,state,pub)
+	# print(kub.kubs_id)
+	g_fsm = sample_tactic.SampleTactic()
+	# print(kub.kubs_id+1)
+	g_fsm.add_kub(kub)
+	# print(kub.kubs_id+2)
 
-	# g_fsm.as_graphviz()
-	# g_fsm.write_diagram_png()
-	# g_fsm.spin_cb()
+	g_fsm.as_graphviz()
+	g_fsm.write_diagram_png()
+	g_fsm.spin_cb()
 	# # print(kub.kubs_id+3)
 
 

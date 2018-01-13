@@ -123,9 +123,9 @@ class CompositeBehavior(behavior.Behavior):
             finally:
                 sys.stdout = save_stdout
 
-        print 'Starting {} at {}'.format(n_threads, time.time())
 
         n_threads = len(self._subbehavior_info.keys())
+        print 'Starting {} at {}'.format(n_threads, time.time())
         pool = ThreadPool(n_threads)
         pool.map(function_process, list(self._subbehavior_info.keys()))
         pool.close() 

@@ -65,6 +65,7 @@ class StateMachine(object):
                 if state_method is not None:
 
                     drive_mhd = state.name
+                    # print state_method,"in fsm",state.name,method_name
 
                     state_method()
 
