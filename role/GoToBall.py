@@ -12,7 +12,7 @@ class GoToBall(behavior.Behavior):
         course_approach = 2
         fine_approach = 3
 
-    def __init__(self,_force_fine_approach = False,continuous=False):
+    def __init__(self,course_approch_thresh =  DISTANCE_THRESH/3,continuous=False):
 
         super(GoToBall,self).__init__()
 
@@ -23,13 +23,12 @@ class GoToBall(behavior.Behavior):
         self.target_point = None
         
 
-        self.initial_target_dist_thresh = DISTANCE_THRESH/3
+        self.course_approch_thresh = course_approch_thresh
 
         self.ball_dist_thresh = BOT_BALL_THRESH
 
         self.behavior_failed = False
 
-        self._force_fine_approach = _force_fine_approach
 
         self.add_state(GoToBall.State.setup,
             behavior.Behavior.State.running)
@@ -44,7 +43,7 @@ class GoToBall(behavior.Behavior):
             GoToBall.State.setup,lambda: True,'immediately')
 
         self.add_transition(GoToBall.State.setup,
-            GoToBall.State.fine_approach,lambda: self.force_fine_approach(),'ball_in_vicinity')
+            GoToBall.State.fine_approach,lambda: self.fine_approach(),'ball_in_vicinity')
 
         self.add_transition(GoToBall.State.setup,
             GoToBall.State.course_approach,lambda: self.course_approach(),'setup')
@@ -70,16 +69,16 @@ class GoToBall(behavior.Behavior):
     def add_theta(self,theta):
         self.theta = theta
 
-    def force_fine_approach(self):
-        return not self.ball_in_vicinity() or self._force_fine_approach
+    def fine_approach(self):
+        return self.ball_in_vicinity() 
 
     def course_approach(self):
-        return self.ball_in_vicinity() and not self._force_fine_approach
+        return not self.ball_in_vicinity() 
     # def target_present(self):
     #     return not ball_in_front_of_bot(self.kub) and self.target_point is not None 
 
     def at_target_point(self):
-        return vicinity_points(self.target_point,self.kub.get_pos(),thresh= self.initial_target_dist_thresh)
+        return vicinity_points(self.target_point,self.kub.get_pos(),thresh= self.course_approch_thresh)
 
 
     def ball_in_vicinity(self):
@@ -111,7 +110,7 @@ class GoToBall(behavior.Behavior):
     def execute_course_approach(self):
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-        generatingfunction = _GoToPoint_.execute(start_time,self.initial_target_dist_thresh,True)
+        generatingfunction = _GoToPoint_.execute(start_time,self.course_approch_thresh,True)
         for gf in generatingfunction:
             self.kub,target_point = gf
             # self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
