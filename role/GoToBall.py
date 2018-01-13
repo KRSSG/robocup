@@ -19,6 +19,8 @@ class GoToBall(behavior.Behavior):
         self.name = "GoToBall"
 
     	self.power = 7.0
+
+        self.target_point = None
         
         self.force_fine_approach = force_fine_approach
 
@@ -68,13 +70,13 @@ class GoToBall(behavior.Behavior):
         self.theta = theta
     
     def target_present(self):
-        return not ball_in_front_of_bot(self.kub) and self.target_point is not None and not self.execute_fine_approach
+        return not ball_in_front_of_bot(self.kub) and self.target_point is not None and not self.force_fine_approach
 
     def at_target_point(self):
         return vicinity_points(self.target_point,self.kub.get_pos(),thresh= self.initial_target_dist_thresh)
 
     def force_execute_fine_approach(self):
-        return self.ball_in_vicinity() or self.execute_fine_approach
+        return self.ball_in_vicinity() or self.force_fine_approach
 
     def ball_in_vicinity(self):
         if ball_in_front_of_bot(self.kub):
@@ -92,15 +94,15 @@ class GoToBall(behavior.Behavior):
     def on_enter_setup(self):
         pass
     def execute_setup(self):
-        self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
-        _GoToPoint_.init(self.kub, self.target_point, self.theta)
         pass
         
     def on_exit_setup(self):
-        
         pass
 
     def on_enter_course_approach(self):
+        # self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
+        self.target_point = self.kub.state.ballPos
+        _GoToPoint_.init(self.kub, self.target_point, self.theta)
         pass
 
     def execute_course_approach(self):
@@ -109,16 +111,14 @@ class GoToBall(behavior.Behavior):
         generatingfunction = _GoToPoint_.execute(start_time,self.initial_target_dist_thresh,True)
         for gf in generatingfunction:
             self.kub,target_point = gf
-            self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
+            # self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
             self.target_point = self.kub.state.ballPos
-
             if not vicinity_points(self.target_point,target_point,thresh=BOT_RADIUS*3.5):
                 self.behavior_failed = True
                 break
 
 
     def on_exit_course_approach(self):
-        
         pass
 
     def on_enter_fine_approach(self):

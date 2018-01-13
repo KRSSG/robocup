@@ -79,7 +79,7 @@ class StateMachine(object):
                     if transition['condition']():
                         
                         next_states += [next_state]
-                        print(transition['name'])
+                        # print(transition['name'])
 
             if len(next_states) > 1:
                 logging.warn(

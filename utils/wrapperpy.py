@@ -4,8 +4,7 @@ from ctypes import *
 
 from obstacle import *
 import sys
-sys.path.append('plays_py/scripts/utils/')
-from geometry import *
+from utils.geometry import *
 
 # Load shared library : navigation.so
 

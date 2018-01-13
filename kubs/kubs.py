@@ -14,16 +14,15 @@ class kubs:
     ## @param      kubs_id  The kubs identifier
     ##
     
-    def __init__(self, kubs_id,state, pub):
+    def __init__(self, kubs_id, pub):
         self.kubs_id = kubs_id
-        self.pos = state.homePos[kubs_id]
         self.vx = 0
         self.vy = 0
         self.vw = 0
         self.isteamyellow = False
         self.dribbler = False
         self.power = False
-        self.state = state
+        # self.state = state
         # self.kubsBelief()
         self.pub = pub
         self.c=0

@@ -66,10 +66,10 @@ class Goalie(behavior.Behavior):
             self.GTP.spin()
 
     def execute_clear(self):
-        self.gtB = GoToBall.GoToBall(execute_fine_approach = False)
+        self.gtB = GoToBall.GoToBall(force_fine_approach = False)
         self.gtB.add_kub(self.kub)
         state = shared.get('state')
-        self.gtB.add_theta(theta=normalize_angle(math.pi + angle_diff(state.ballPos,state.homePos[self.kub.kubs_id])))
+        self.gtB.add_theta(theta=normalize_angle(math.pi + angle_diff(state.homePos[self.kub.kubs_id],Vector2D(3000,0))))
         self.gtB.spin()
 
     def execute_protect(self):

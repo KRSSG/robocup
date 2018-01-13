@@ -1,6 +1,6 @@
-print("_gotopoint imported")
+# print("_gotopoint imported")
 from kubs import kubs, cmd_node
-print("Importing run")
+# print("Importing run")
 try:
     velocity.run = reload(velocity.run)
 except:
@@ -28,7 +28,7 @@ FLAG_move = False
 FLAG_turn = False
 rotate = 0
 
-print("Importing _gotopoint_")
+# print("Importing _gotopoint_")
 FIRST_CALL = True
 
 prev_state = shared.get('state')
@@ -54,13 +54,13 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
 
     # print DIST_THRESH
     if FIRST_CALL:
-        print("First call of _gotopoint_")
+        # print("First call of _gotopoint_")
         start_time = startTime
         FIRST_CALL = False
         vx_end,vy_end = 0,0
 
 
-    while not (FLAG_move and FLAG_turn):
+    while not (FLAG_move ):
 
         kub.state = shared.get('state')
         if not(prev_state == kub.state):

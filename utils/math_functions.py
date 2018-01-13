@@ -212,10 +212,20 @@ def getPointBehindTheBall(point, theta):
 
 
 def deg_2_radian(theta):
+    if type(theta) is list:
+        theta2 = []
+        for i in theta:
+            theta2.append(i * math.pi / 180.0)
+        return theta2
     return theta * math.pi / 180.0
 
 
 def radian_2_deg(theta):
+    if type(theta) is list:
+        theta2 = []
+        for i in theta:
+            theta2.append(i* 180.0 / math.pi)
+        return theta2
     return theta * 180.0 / math.pi
 
 

@@ -19,11 +19,11 @@ pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
 import memcache
 shared = memcache.Client(['127.0.0.1:11211'],debug=False)
-
-# flag = True
+# _Goalie_.main()
+flag = True
+kub = kubs.kubs(0,pub)
 def function(id_,state):
 	# global flag
-	kub = kubs.kubs(id_,state,pub)
 	# print(kub.kubs_id)
 	g_fsm = Goalie.Goalie()
 	# print(kub.kubs_id+1)
@@ -46,6 +46,7 @@ start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
 while True:
 	state = shared.get('state')
 	if state:
+		kub.update_state(state)
 		function(KUB_ID,state)
 		
 
