@@ -60,7 +60,7 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
         vx_end,vy_end = 0,0
 
 
-    while not (FLAG_move ):
+    while not (FLAG_move and FLAG_turn):
 
         kub.state = shared.get('state')
         if not(prev_state == kub.state):

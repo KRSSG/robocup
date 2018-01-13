@@ -76,7 +76,7 @@ class Goalie(behavior.Behavior):
 
 
     def execute_clear(self):
-        self.gtB = GoToBall.GoToBall()
+        self.gtB = GoToBall.GoToBall(_force_fine_approach=True)
         self.gtB.add_kub(self.kub)
         state = shared.get('state')
         self.gtB.add_theta(theta=normalize_angle(angle_diff(state.homePos[self.kub.kubs_id],Vector2D(3000,0))))

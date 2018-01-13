@@ -12,7 +12,7 @@ class GoToBall(behavior.Behavior):
         course_approach = 2
         fine_approach = 3
 
-    def __init__(self,continuous=False):
+    def __init__(self,_force_fine_approach = False,continuous=False):
 
         super(GoToBall,self).__init__()
 
@@ -29,6 +29,8 @@ class GoToBall(behavior.Behavior):
 
         self.behavior_failed = False
 
+        self._force_fine_approach = _force_fine_approach
+
         self.add_state(GoToBall.State.setup,
             behavior.Behavior.State.running)
 
@@ -42,11 +44,10 @@ class GoToBall(behavior.Behavior):
             GoToBall.State.setup,lambda: True,'immediately')
 
         self.add_transition(GoToBall.State.setup,
-            GoToBall.State.fine_approach,lambda: self.ball_in_vicinity(),'ball_in_vicinity')
-
+            GoToBall.State.fine_approach,lambda: self.force_fine_approach(),'ball_in_vicinity')
 
         self.add_transition(GoToBall.State.setup,
-            GoToBall.State.course_approach,lambda: not self.ball_in_vicinity(),'setup')
+            GoToBall.State.course_approach,lambda: self.course_approach(),'setup')
 
         self.add_transition(GoToBall.State.course_approach,
             GoToBall.State.fine_approach,lambda:self.at_target_point(),'complete')
@@ -68,7 +69,12 @@ class GoToBall(behavior.Behavior):
 
     def add_theta(self,theta):
         self.theta = theta
-    
+
+    def force_fine_approach(self):
+        return not self.ball_in_vicinity() or self._force_fine_approach
+
+    def course_approach(self):
+        return self.ball_in_vicinity() and not self._force_fine_approach
     # def target_present(self):
     #     return not ball_in_front_of_bot(self.kub) and self.target_point is not None 
 
@@ -97,7 +103,7 @@ class GoToBall(behavior.Behavior):
         pass
 
     def on_enter_course_approach(self):
-        # self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
+        self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
         self.target_point = self.kub.state.ballPos
         _GoToPoint_.init(self.kub, self.target_point, self.theta)
         pass

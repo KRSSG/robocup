@@ -1,0 +1,20 @@
+digraph GoToBall {
+	failed [label="behavior::failed" shape=ellipse]
+	start [label="behavior::start" shape=diamond]
+	cancelled [label="behavior::cancelled" shape=ellipse]
+	completed [label="behavior::completed" shape=ellipse]
+	subgraph cluster_0 {
+		graph [label="behavior::running" style=dotted]
+		setup [label="role.GoToBall::setup" shape=ellipse]
+		course_approach [label="role.GoToBall::course_approach" shape=ellipse]
+		fine_approach [label="role.GoToBall::fine_approach" shape=ellipse]
+	}
+	start -> setup [label=immediately decorate=True]
+	setup -> failed [label=failed decorate=True]
+	setup -> course_approach [label=setup decorate=True]
+	setup -> fine_approach [label=ball_in_vicinity decorate=True]
+	course_approach -> failed [label=failed decorate=True]
+	course_approach -> fine_approach [label=complete decorate=True]
+	fine_approach -> failed [label=failed decorate=True]
+	fine_approach -> completed [label=complete decorate=True]
+}
