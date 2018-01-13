@@ -10,7 +10,9 @@ class Particle():
 		self.k[2] *= 0.01
 		self.v[2] *= 0.01
 		self.k[0] *= 0.5
-		self.v[0] *= 0.5
+
+		# self.k = np.array([0.7,0.005,0.0005])
+		# self.v = np.array([0.01,0.00001,0.0001])
 		self.currErrorSum = 0
 		self.bestLocalK = self.k
 		self.minLocalError = np.inf
@@ -32,10 +34,7 @@ class PSO():
 		self.currIter = 0
 		# For Debugging
 		self.errors = []
-		self.error_in_x = []
-		self.error_in_y = []
 		self.lastTime = time.time()
-		self.should_save_data = False
 
 		
 		

@@ -5,7 +5,6 @@
 
 class Error():
 	def __init__(self):
-		print("Error initialised")
 		self.errorX = 0.0
 		self.errorY = 0.0
 		self.errorIX = 0.0

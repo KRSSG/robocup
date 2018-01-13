@@ -1,4 +1,3 @@
-print("importing math function")
 import math
 from ctypes import *
 from geometry import Vector2D
@@ -73,22 +72,21 @@ class Circle(object):
 
 class Line(Structure):
 
-    def __init__(self, point1=None, angle=None, point2=None):
+    def __init__(self, point1=None, slope=None, point2=None):
         if not isinstance(point1, Vector2D):
             raise ValueError("point1 should be of type Vector2D, got %s" %type(point1).__name__)
         self.point = point1
-        if angle is None:
+        if slope is None:
             if not isinstance(point2, Vector2D):
                 raise ValueError("point1 should be of type Vector2D, got %s" %type(point2).__name__)
-            self.angle = math.atan2(point2.y - point1.y, point2.x - point1.x)
+            self.slope = math.atan2(point2.y - point1.y, point2.x - point1.x)
         else:
-            self.angle = angle
-        if self.angle > math.pi:
-            self.angle = math.pi - self.angle
-        elif self.angle < -math.pi:
-            self.angle = math.pi + self.angle
-        self.slope = math.tan(self.angle)
-           
+            self.slope = slope
+        if self.slope > math.pi:
+            self.slope = math.pi - self.slope
+        elif self.slope < -math.pi:
+            self.slope = math.pi + self.slope
+
     def if_intersect_with_circle(self, circle):
         if not isinstance(circle, Circle):
             raise ValueError("Expected instance of type Circle, got %s" %type(circle).__name__)
@@ -103,8 +101,6 @@ class Line(Structure):
     # @param      line2
     ##
 
-
-    # CHECK ---->  SLOPE
     def intersection_with_line(self, line2):
         if not isinstance(line, line2):
             raise ValueError("Expected Line instance, got %s" %type(line2).__name__)
@@ -145,7 +141,7 @@ class Line(Structure):
     # @param       point
     ##
 
-    def projection_on_line(self, point, theta = math.pi/2):
+    def projection_on_line(self, point, theta = math.pi):
         ########################
         ########### change fucntion to find projection on any angle
         ########################
@@ -168,17 +164,10 @@ class Line(Structure):
         #######################################
         if not isinstance(line, Line):
             raise ValueError("Expected Line, got %s" %type(point).__name__)
-        theta1 = atan(self.angle)
-        theta2 = atan(line.angle)
+        theta1 = atan(self.slope)
+        theta2 = atan(line.slope)
         theta = math.fabs(theta1 - theta2)
         return min(theta, math.fabs(180 - theta))
-
-    def normalized_vector(self):
-        # angle = math.atan(self.slope)
-        angle = self.angle
-        return Vector2D(math.cos(angle), math.sin(angle))
-
-
     ##
     ## @var slope  
     # Slope of line {tan(theta) = slope}

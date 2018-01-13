@@ -1,6 +1,6 @@
 from geometry import Vector2D
 from config import *
-
+from math_functions import *
 
 
 def ball_in_front_of_bot(kub):
