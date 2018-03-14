@@ -1,12 +1,16 @@
-## RobocupSSL
-# Additonal requirement 
-python-memcache
+# RobocupSSL
+## Requirement
+* Ubuntu 16.04
+* ROS-Kinetic
+* OMPL
+* Python-memcache
 ```bash
 $ sudo apt install memcached python-memcache
 ```
-# Run 
+* PyQt4
+## Run 
 ```bash
-$ ./kgpkubs_launch/scripts/ssl.sh `
+$ ./kgpkubs_launch/scripts/ssl.sh
 $ python bs.py
 $ python run_gui.py
 $ rosrun ompl_planner listener_ompl 
