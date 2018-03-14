@@ -1,6 +1,7 @@
 # implement the helper functions similar to 'ssl_common/geometry.hpp'
 import math
 from ctypes import *
+from geometry_msgs.msg import Pose2D
 
 PI = 3.14159265358979323
 INF = 9999999
@@ -13,7 +14,9 @@ class Vector2D(Structure):
 	def __init__(self,x = None,y = None):
 		if x is None:
 			self.x = self.y = INF
-		elif type(x) is Vector2D:
+		elif isinstance(x,Pose2D):
+			self.x, self.y = x.x, x.y
+		elif isinstance(x,Vector2D):
 			self.x, self.y = x.x, x.y
 		else:
 			self.x,self.y=x,y
@@ -49,8 +52,12 @@ class Vector2D(Structure):
 		return (v.x*v.x+v.y*v.y)
 
 	# Returns the angle made by the vector (head - self) in the range -pi to pi
-	def angle(self,head):
-		return math.atan2(self.y-head.y,self.x-head.x)
+	def angle(self,head=None):
+		if head is None:
+			return math.atan2(self.y,self.x)
+		else:
+			return math.atan2(head.y-self.y,head.x-self.x)
+
 
 	# Returns the Eucledian distance between the 2 vectors
 	def dist(self,another_point):
@@ -112,5 +119,4 @@ class Vector2D(Structure):
 			if t1 >= 0 and t1 <= 1 or t2 >= 0 and t2 <=1 :
 				return True
 		return False
-
 
