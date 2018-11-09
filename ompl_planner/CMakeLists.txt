@@ -13,7 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   krssg_ssl_msgs
 )
-find_package(OMPL REQUIRED)
+find_package(ompl)
 find_package(OpenCV REQUIRED)
 
 catkin_package()

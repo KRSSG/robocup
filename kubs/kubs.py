@@ -14,7 +14,7 @@ class kubs:
     ## @param      kubs_id  The kubs identifier
     ##
     
-    def __init__(self, kubs_id, pub):
+    def __init__(self, kubs_id, BState, pub):
         self.kubs_id = kubs_id
         self.vx = 0
         self.vy = 0
