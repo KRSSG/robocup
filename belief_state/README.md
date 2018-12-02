@@ -1,5 +1,2 @@
-Savitzky-Golay filter implementation
-====
-
-Extracted from https://raw.githubusercontent.com/thatchristoph/vmd-cvs-github/master/plugins/signalproc/src/sgsmooth.C
-
+# belief_state
+node that publishes belief state. should subscribe to vision and refbox.
