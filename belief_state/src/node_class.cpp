@@ -93,10 +93,10 @@ public:
 };
 
 bool isValidMsg(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vmsg){
-	if(vmsg->robots_yellow.size() == 0 && vmsg->robots_blue.size()==0)
-		return false;
-	if(vmsg->balls.size() == 0)
-		return false;
+	// if(vmsg->robots_yellow.size() == 0 && vmsg->robots_blue.size()==0)
+	// 	return false;
+	// if(vmsg->balls.size() == 0)
+	// 	return false;
 	return true;
 }
 
