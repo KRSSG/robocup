@@ -5,6 +5,7 @@
 #include "class_node.hpp"
 
 #include "robocup_ssl_client.h"
+// #include "robocup_ssl_client.cpp"
 #include <sstream>
 #include <krssg_ssl_msgs/SSL_DetectionFrame.h>
 #include <krssg_ssl_msgs/BeliefState.h>
@@ -37,12 +38,16 @@ int main(int argc, char **argv)
 
 	GOOGLE_PROTOBUF_VERIFY_VERSION;
 	int port = vision == 1 ? 10020: 10006;
-	RoboCupSSLClient client(port);	
-	client.open(true);
+	string net_address = "0.0.0.0" ;
+	RoboCupSSLClient client(port, net_address);
+	ROS_INFO("Opening UDP port");
+	client.open();
+	ROS_INFO("UDP port openened");
 	ROS_INFO("Connected to %s.\n", vision == 1? "grSim vision" : "ssl-vision");
 	SSL_WrapperPacket packet;
 	while(ros::ok()) {
 		//see if the packet contains a robot detection frame:
+		// cout << "ros ok " << endl;
 		if (client.receive(packet)) {
 			krssg_ssl_msgs::BeliefState final_msg;
 			krssg_ssl_msgs::SSL_DetectionFrame msg;
