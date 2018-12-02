@@ -1,5 +1,5 @@
 <launch>        
-  <node pkg="belief_state" type="beliefstate_node" name="beliefstate_node" output="screen">
+  <node pkg="belief_state" type="beliefstate_class" name="beliefstate_class" output="screen">
     
     
     <!-- <remap from="~image" to="/head/kinect2/qhd/image_color"/> -->

@@ -33,6 +33,8 @@ RoboCupSSLServer::RoboCupSSLServer(QObject *parent, const quint16 &port, const s
     _net_interface(new QNetworkInterface(QNetworkInterface::interfaceFromName(QString(net_interface.c_str()))))
 {
     _socket->setSocketOption(QAbstractSocket::MulticastTtlOption, 1);
+    cout << "Net address: " << net_address << endl;
+    cout << "Net interface: " << net_interface << endl;
 }
 
 RoboCupSSLServer::~RoboCupSSLServer()
@@ -80,7 +82,7 @@ bool RoboCupSSLServer::send(const SSL_WrapperPacket & packet)
         logStatus(QString("Sending UDP datagram failed (maybe too large?). Size was: %1 byte(s).").arg(datagram.size()), QColor("red"));
         return false;
     }
-
+    // cout << "UDP datagram send. Size was: " << datagram.size() << " byte(s)." << endl;
     return true;
 }
 

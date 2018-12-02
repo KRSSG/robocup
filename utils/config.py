@@ -8,27 +8,56 @@ def SELECT(sim_param, ssl_param):
 
 
 BS_ADDRESS                   = ['127.0.0.1:11211']
-BOT_MAX                      = SELECT(6, 5)
-BOT_ANGLE_THRESH			 = SELECT(0.32,0.32)
+
+# Geometry constants
 GOAL_DEPTH                   = SELECT(300, 300)
-MOVING_BALL_VELOCITY         = SELECT(40, 30)
-MIN_DIST_FROM_TARGET         = SELECT(30.0, 25.0)
 CENTER_X                     = SELECT(0, 0)
 CENTER_Y                     = SELECT(0, 0)
-HALF_FIELD_MAXX              = SELECT(3000, 2975)   #actual 225 (rugged surace at end)
-HALF_FIELD_MAXY              = SELECT(2000, 2050)
+HALF_FIELD_MAXX              = SELECT(4500, 4500)
+HALF_FIELD_MAXY              = SELECT(3000, 3000)
+OUR_GOAL_MAXY                = SELECT(350,	500)
+OUR_GOAL_MINY                = SELECT(-350, -500)
+OUR_GOAL_WIDTH               = OUR_GOAL_MAXY - OUR_GOAL_MINY
+CENTER_CIRCLE_DIAMETER       = SELECT(1000,1000)
+CENTER_CIRCLE_RADIUS		 = SELECT(500,500)
+DBOX_WIDTH                   = SELECT(1400,2000)	#Along y       
+DBOX_HEIGHT					 = SELECT(700,1000)	    #Along x      
+OUR_DBOX_MAXY				 = SELECT(700,1000)
+OUR_DBOX_MINY				 = SELECT(-700,-1000)
+OUR_DBOX_X 					 =-HALF_FIELD_MAXX + DBOX_HEIGHT
+# Old DBOX Constants
+DBOX_WIDTH_OLD                   = SELECT(1000,1000)       # Along X direction
+DBOX_HEIGHT_OLD					 = SELECT(1250,1250)	   # Along positive y direction
+DBOX_SMALLER_LENGTH          = SELECT(500,500)         # smaller length of line connecting the two quadrants along Y-axis
+DBOX_LARGER_LENGTH_OLD           = SELECT(1350,2500)       # larger length of line connecting the two quadrants along Y-axis
+DBOX_RADIUS                  = SELECT(425,1000)
+
+
+
+# Planning Constants
+CLEARANCE_PATH_PLANNER     = SELECT(500, 300)                 #mm
+MID_FIELD_THRESH           = SELECT(10, 150)                  #mm
+BOT_RADIUS                 = SELECT(90, 90)                  #mm
+BALL_RADIUS                = SELECT(21.5, 21.5)                 #mm
+SAFE_RADIUS                = (BOT_RADIUS * 2)
+COLLISION_DIST             = (BOT_RADIUS * 7)
+DRIBBLER_BALL_THRESH       = SELECT(300, 110)                 #mm
+FREEKICK_RADIUS            = SELECT(25,650) # To set
+FREEBALL_RADIUS            = SELECT(30,700) # To set
+KICKOFF_RADIUS             = SELECT(18,200) # To set
+
+MOVING_BALL_VELOCITY         = SELECT(40, 30)
+MIN_DIST_FROM_TARGET         = SELECT(30.0, 25.0)
+BALL_AT_CORNER_THRESH        = SELECT(20,20)
+
+
+BOT_MAX                      = SELECT(6, 5)
+BOT_ANGLE_THRESH			 = SELECT(0.32,0.32)
 OUR_GOAL_MAXX				 = SELECT(340,340)
-OUR_GOAL_MAXY                = SELECT(360,600)
-OUR_GOAL_MINY                = SELECT(-360, -600)
 OPP_GOAL_MAXY                = SELECT(600, 600)
 OPP_GOAL_MINY                = SELECT(-600, -600)
-OUR_GOAL_WIDTH               = OUR_GOAL_MAXY - OUR_GOAL_MINY
 OPP_GOAL_WIDTH               = OPP_GOAL_MAXY - OPP_GOAL_MINY
-CENTER_CIRCLE_DIAMETER       = SELECT(1000,1000)
-DBOX_WIDTH                   = SELECT(550,1200)       #Along X direction
-DBOX_HEIGHT                  = SELECT(670,855)        #Along Y direction(hal height in each y direction)
 DBOX_DEPTH                   = SELECT(10, 10)
-BALL_AT_CORNER_THRESH        = SELECT(20,20) 
 
 #Bot Parameteres configuration 
 ROTATION_FACTOR            = SELECT(0.15, 0.15)               

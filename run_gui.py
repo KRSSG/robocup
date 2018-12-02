@@ -1,3 +1,3 @@
-from GUI import ompl_gui
+from GUI import taskgo
 
-ompl_gui.main()
+taskgo.main()

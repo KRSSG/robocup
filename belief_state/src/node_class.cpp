@@ -93,10 +93,10 @@ public:
 };
 
 bool isValidMsg(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vmsg){
-	if(vmsg->robots_yellow.size() == 0 && vmsg->robots_blue.size()==0)
-		return false;
-	if(vmsg->balls.size() == 0)
-		return false;
+	// if(vmsg->robots_yellow.size() == 0 && vmsg->robots_blue.size()==0)
+	// 	return false;
+	// if(vmsg->balls.size() == 0)
+	// 	return false;
 	return true;
 }
 
@@ -151,8 +151,8 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 		else this->initialise();
 		this->time = ros::Time::now();
 		this->frame_number = vmsg->frame_number;
-		this->t_capture = vmsg->t_capture;
-		this->t_sent = vmsg->t_sent;
+		// this->t_capture = vmsg->t_capture;
+		// this->t_sent = vmsg->t_sent;
 		this->isteamyellow = ::isteamyellow;
 
 		vector<krssg_ssl_msgs::SSL_DetectionRobot> homePos, awayPos;
@@ -203,16 +203,16 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 		float distance_from_ball = 99999999, tempGoalie=7, tempDist=9999999;
 		for(int i=0;i<homePos.size();i++){
 			int bot_id = homePos[i].robot_id;
-	    		this->homeDetected[bot_id] = 1;
-	    		this->homePos[bot_id].x = homePos[i].x;
-	    		this->homePos[bot_id].y = homePos[i].y;
-	    		this->homePos[bot_id].theta = homePos[i].orientation;
+    		this->homeDetected[bot_id] = 1;
+    		this->homePos[bot_id].x = homePos[i].x;
+    		this->homePos[bot_id].y = homePos[i].y;
+    		this->homePos[bot_id].theta = homePos[i].orientation;
 
-    			//HOMEPOS FILTERING
-    			if(prev_msgQ.size() == MAX_QUEUE_SZ){
-				this->homePos[i].x *= FILTER[MAX_QUEUE_SZ - 1];
-				this->homePos[i].y *= FILTER[MAX_QUEUE_SZ - 1];
-				int count = -1;
+			//HOMEPOS FILTERING
+			if(prev_msgQ.size() == MAX_QUEUE_SZ){
+			this->homePos[i].x *= FILTER[MAX_QUEUE_SZ - 1];
+			this->homePos[i].y *= FILTER[MAX_QUEUE_SZ - 1];
+			int count = -1;
 				for(list<BeliefState>::iterator it = prev_msgQ.begin(); it != prev_msgQ.end(); it++){
 					if(it != prev_msgQ.begin()){
 						this->homePos[i].x += it->homePos[i].x*FILTER[count];
@@ -222,37 +222,45 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 				}
 			}
 
-    			float dist = sqrt(pow((homePos[i].x - this->ballPos.x),2) + pow((homePos[i].y - this->ballPos.y) , 2));
+			float dist = sqrt(pow((homePos[i].x - this->ballPos.x),2) + pow((homePos[i].y - this->ballPos.y) , 2));
    			if(dist < distance_from_ball){
       			distance_from_ball = dist;
      	 		this->our_bot_closest_to_ball = i;
 	      		if(distance_from_ball < MAX_DRIBBLE_R)
 	        		this->ball_in_our_possession = true;
-    			}
-    		
-    			float thisDist = distFn(homePos[i],(-HALF_FIELD_MAXX + DBOX_WIDTH),DBOX_HEIGHT) +
-    					distFn(homePos[i],(-HALF_FIELD_MAXX + DBOX_WIDTH),-DBOX_HEIGHT);
-	    		if(thisDist < tempDist){
-	    			tempDist = thisDist;
-	    			tempGoalie = bot_id;
-	    		}
     		}
-    	
-	    	this->our_goalie = tempGoalie;
+    		
 
-	    	tempGoalie = 7;
-	    	distance_from_ball = 9999999;
-	    	tempDist = 9999999;
+    			/* #######################################  */
 
-	    	for(int i=0;i<awayPos.size();i++){
-	    		int bot_id = awayPos[i].robot_id;
-	    		this->awayDetected[bot_id] = 1;
-	    		this->awayPos[bot_id].x = awayPos[i].x;
-	    		this->awayPos[bot_id].y = awayPos[i].y;
-	    		this->awayPos[bot_id].theta = awayPos[i].orientation;
+    			// Goalie id in referee msg
 
-	    		//AWAYPOS FILTERING
-	    		if(prev_msgQ.size() == MAX_QUEUE_SZ){
+    			// float thisDist = distFn(homePos[i],(-HALF_FIELD_MAXX + DBOX_WIDTH),DBOX_HEIGHT) +
+    			// 		distFn(homePos[i],(-HALF_FIELD_MAXX + DBOX_WIDTH),-DBOX_HEIGHT);
+	    		// if(thisDist < tempDist){
+	    		// 	tempDist = thisDist;
+	    		// 	tempGoalie = bot_id;
+	    		// }
+
+    			/* #######################################  */
+    	}
+	
+		// goalie id in refereee msg
+    	// this->our_goalie = tempGoalie;
+
+    	// tempGoalie = 7;
+    	// distance_from_ball = 9999999;
+    	// tempDist = 9999999;
+
+    	for(int i=0;i<awayPos.size();i++){
+    		int bot_id = awayPos[i].robot_id;
+    		this->awayDetected[bot_id] = 1;
+    		this->awayPos[bot_id].x = awayPos[i].x;
+    		this->awayPos[bot_id].y = awayPos[i].y;
+    		this->awayPos[bot_id].theta = awayPos[i].orientation;
+
+    		//AWAYPOS FILTERING
+    		if(prev_msgQ.size() == MAX_QUEUE_SZ){
 				this->awayPos[i].x *= FILTER[MAX_QUEUE_SZ - 1];
 				this->awayPos[i].y *= FILTER[MAX_QUEUE_SZ - 1];
 				int count = -1;
@@ -265,58 +273,74 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 				}
 			}
 
-	    		float dist = sqrt(((awayPos[i].x - this->ballPos.x)*(awayPos[i].x - this->ballPos.x)) + ((awayPos[i].y - this->ballPos.y)*(awayPos[i].y - this->ballPos.y)));
+    		float dist = sqrt(((awayPos[i].x - this->ballPos.x)*(awayPos[i].x - this->ballPos.x)) + ((awayPos[i].y - this->ballPos.y)*(awayPos[i].y - this->ballPos.y)));
 
-	    		if(dist < distance_from_ball){
-	      			distance_from_ball = dist;
-	      			this->opp_bot_closest_to_ball = bot_id;
-   			}
-
-	   		float thisDist = distFn(awayPos[i],(HALF_FIELD_MAXX - DBOX_WIDTH),DBOX_HEIGHT) + distFn(awayPos[i],(HALF_FIELD_MAXX - DBOX_WIDTH),-DBOX_HEIGHT);
-	    		if(thisDist < tempDist){
-	    			tempDist = thisDist;
-	    			tempGoalie = bot_id;
-	    		}
-	    	}
-
-	    	this->opp_goalie = tempGoalie;
-
-	    	//VELOCITY CALCULATIONS
-
-	    	BeliefState prevState;
-	    	if(prev_msgQ.size())
-	    		prevState = prev_msgQ.front();
-
-	    	assert(prevState.homePos.size() == 6);
-	    	assert(prevState.awayPos.size() == 6);
-
-	    	this->ballVel.x = (this->ballPos.x - prevState.ballPos.x)/(this->time - prevState.time).toSec();
-	    	this->ballVel.y = (this->ballPos.y - prevState.ballPos.y)/(this->time - prevState.time).toSec();
-	    	if(prev_msgQ.size() == MAX_QUEUE_SZ){
-				this->ballVel.x *= FILTER[MAX_QUEUE_SZ - 1];
-				this->ballVel.y *= FILTER[MAX_QUEUE_SZ - 1];
-				int count = -1;
-				for(list<BeliefState>::iterator it = prev_msgQ.begin(); it != prev_msgQ.end(); it++){
-					if(it != prev_msgQ.begin()){
-						this->ballVel.x += it->ballVel.x*FILTER[count];
-						this->ballVel.y += it->ballVel.y*FILTER[count];
-					}
-					count ++;
-				}
+    		if(dist < distance_from_ball){
+      			distance_from_ball = dist;
+      			this->opp_bot_closest_to_ball = bot_id;
 			}
-	    	for(int i=0;i<this->homePos.size();i++)
-	    	{
-	    		this->homeVel[i].x = (this->homePos[i].x - prevState.homePos[i].x)/(this->time - prevState.time).toSec();
-	    		this->homeVel[i].y = (this->homePos[i].y - prevState.homePos[i].y)/(this->time - prevState.time).toSec();
-	    	}
+
+			/*
+			###############################
+
+			Goalie id referee msg
+
+
+   			float thisDist = distFn(awayPos[i],(HALF_FIELD_MAXX - DBOX_WIDTH),DBOX_HEIGHT) + distFn(awayPos[i],(HALF_FIELD_MAXX - DBOX_WIDTH),-DBOX_HEIGHT);
+    		if(thisDist < tempDist){
+    			tempDist = thisDist;
+    			tempGoalie = bot_id;
+    		}
+
+    		*/
+    	}
+
+	    // this->opp_goalie = tempGoalie;
+
+	    //VELOCITY CALCULATIONS
+
+    	/*
+		
+
+		TODO: improve velocity calculation
+
+    	BeliefState prevState;
+    	if(prev_msgQ.size())
+    		prevState = prev_msgQ.front();
+
+    	assert(prevState.homePos.size() == 6);
+    	assert(prevState.awayPos.size() == 6);
+
+    	this->ballVel.x = (this->ballPos.x - prevState.ballPos.x)/(this->time - prevState.time).toSec();
+    	this->ballVel.y = (this->ballPos.y - prevState.ballPos.y)/(this->time - prevState.time).toSec();
+    	if(prev_msgQ.size() == MAX_QUEUE_SZ){
+			this->ballVel.x *= FILTER[MAX_QUEUE_SZ - 1];
+			this->ballVel.y *= FILTER[MAX_QUEUE_SZ - 1];
+			int count = -1;
+			for(list<BeliefState>::iterator it = prev_msgQ.begin(); it != prev_msgQ.end(); it++){
+				if(it != prev_msgQ.begin()){
+					this->ballVel.x += it->ballVel.x*FILTER[count];
+					this->ballVel.y += it->ballVel.y*FILTER[count];
+				}
+				count ++;
+			}
+		}
+    	for(int i=0;i<this->homePos.size();i++)
+    	{
+    		this->homeVel[i].x = (this->homePos[i].x - prevState.homePos[i].x)/(this->time - prevState.time).toSec();
+    		this->homeVel[i].y = (this->homePos[i].y - prevState.homePos[i].y)/(this->time - prevState.time).toSec();
+    	}
 
 		for(int i=0;i<this->awayPos.size();i++)
-	    	{
-	    		this->awayVel[i].x = (this->awayPos[i].x - prevState.awayPos[i].x)/(this->time - prevState.time).toSec();
-	    		this->awayVel[i].y = (this->awayPos[i].y - prevState.awayPos[i].y)/(this->time - prevState.time).toSec();
-	    	}
+    	{
+    		this->awayVel[i].x = (this->awayPos[i].x - prevState.awayPos[i].x)/(this->time - prevState.time).toSec();
+    		this->awayVel[i].y = (this->awayPos[i].y - prevState.awayPos[i].y)/(this->time - prevState.time).toSec();
+    	}
 
-	    	//UPDATING LIST
+
+    	*/
+
+    	//UPDATING LIST
 		if(prev_msgQ.size() == MAX_QUEUE_SZ){
 			prev_msgQ.pop_front();
 			prev_msgQ.push_back(*this);
@@ -348,8 +372,9 @@ void BeliefState::initialise(){
 	this->homeDetected = vector<bool>(6,0);
 	this->awayDetected = vector<bool>(6,0);
 
+
 	this->our_bot_closest_to_ball = this->opp_bot_closest_to_ball = 
-	this->our_goalie = this->opp_goalie = this->opp_bot_marking_our_attacker = 0;
+	this->opp_bot_marking_our_attacker = -1;
 
 	this->ball_at_corners = this->ball_in_our_possession = this->ball_in_our_half = false;
 }
@@ -418,8 +443,9 @@ krssg_ssl_msgs::BeliefState BeliefState::getBeliefStateMsg(){
 
 void Callback(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vmsg){
 	static list<BeliefState> prev_msgQ;
+	// cout << vmsg->balls[0].x << "," << vmsg->balls[0].y << endl;
 	BeliefState bs(vmsg,prev_msgQ);
-	bs.print();
+	// bs.print();
 	pub.publish(bs.getBeliefStateMsg());
 }
 
@@ -431,7 +457,6 @@ int main(int argc, char *argv[])
 	if(argc > 1){
 		::isteamyellow = atof(argv[1]);
 	}
-
 	ros::NodeHandle n;
 	ros::Subscriber vision_sub = n.subscribe("/vision", 10000, Callback);
 	::pub = n.advertise<krssg_ssl_msgs::BeliefState>("/belief_state", 10000);

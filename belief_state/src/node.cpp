@@ -25,6 +25,7 @@ ros::Subscriber vision_sub;
 ros::Publisher pub;
 queue<pair<geometry_msgs::Pose2D, ros::Time> > velQ;
 
+
   void PRINT(const krssg_ssl_msgs::BeliefState bs)
   {
     cout<<"isteamyellow: "<<bs.isteamyellow<<" frame_number: "<<bs.frame_number<<" t_capture: "<<bs.t_capture<<" t_sent: "<<bs.t_sent<<endl;
