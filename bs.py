@@ -22,6 +22,6 @@ def bsserver():
 	rospy.Subscriber('/belief_state', BeliefState, BS_callback, queue_size=1000)
   	s = rospy.Service('bsServer',bsServer,bs)
 	rospy.spin()
-
 if __name__ == "__main__":
 	bsserver()	
+

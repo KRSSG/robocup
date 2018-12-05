@@ -2,7 +2,7 @@
  * @file listener.cpp
  * @brief Communication Module for planner.
  * 
- * Node Name :- /listener
+ * Node Name :- /path_planner
  * Suscribed to :- /beliefstate, /gui_params
  * Publish to :- /path_planner_ompl
  */
@@ -150,7 +150,7 @@ bool path(krssg_ssl_msgs::path_plan::Request &req,
 }
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "listener");
+  ros::init(argc, argv, "path_planner");
   ros::NodeHandle n;
   ros::Subscriber sub = n.subscribe("/belief_state", 1000, Callback);
   ros::Subscriber sub1 = n.subscribe("/gui_params", 1000, Callback_gui);

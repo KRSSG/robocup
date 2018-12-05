@@ -353,7 +353,7 @@ def Callback_BS(msg):
 
 
 def main():
-    rospy.init_node('display1', anonymous=False)
+    rospy.init_node('gui', anonymous=False)
     rospy.Subscriber("/belief_state", BeliefState , Callback_BS);
     # rospy.Subscriber("/grsim_data", gr_Commands , Callback_VelProfile);
     rospy.Subscriber("/path_planner_ompl", planner_path, debug_path)
