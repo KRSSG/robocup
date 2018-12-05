@@ -146,7 +146,7 @@ class GoToBall(behavior.Behavior):
         self.power = 0.0
 
     def on_exit_fine_approach(self):
-        
+        #self.disable_kick()
         self.kub.kick(self.power)
         self.kub.execute()
         pass

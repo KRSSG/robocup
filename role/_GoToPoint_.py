@@ -15,6 +15,7 @@ from krssg_ssl_msgs.msg import gr_Commands
 from krssg_ssl_msgs.msg import gr_Robot_Command
 from utils.geometry import Vector2D
 from utils.config import *
+from krssg_ssl_msgs.srv import *
 from utils.functions import *
 import math
 
@@ -28,10 +29,16 @@ FLAG_move = False
 FLAG_turn = False
 rotate = 0
 
+rospy.wait_for_service('bsServer',)
+getState = rospy.ServiceProxy('bsServer',bsServer)
 # print("Importing _gotopoint_")
 FIRST_CALL = True
+vx_end,vy_end = 0,0
 
-prev_state = shared.get('state')
+#prev_state = shared.get('state')
+prev_state = None
+prev_state = getState(prev_state).stateB
+print(prev_state)
 def init(_kub,target,theta):
     global kub,GOAL_POINT,rotate,FLAG_turn,FLAG_move,FIRST_CALL
     kub = _kub
@@ -50,11 +57,10 @@ def reset():
     start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
     
 def execute(startTime,DIST_THRESH,avoid_ball=False):
-    global GOAL_POINT, start_time,FIRST_CALL,FLAG_turn,FLAG_move,kub,prev_state
+    global getState,GOAL_POINT, start_time,FIRST_CALL,FLAG_turn,FLAG_move,kub,prev_state,vx_end,vy_end
 
-    # print DIST_THRESH
     if FIRST_CALL:
-        # print("First call of _gotopoint_")
+        print("First call of _gotopoint_")
         start_time = startTime
         FIRST_CALL = False
         vx_end,vy_end = 0,0
@@ -62,14 +68,17 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
 
     while not (FLAG_move and FLAG_turn):
 
-        kub.state = shared.get('state')
+        #kub.state = shared.get('state')
+
+        kub.state = getState(prev_state).stateB
+        print(kub.state)
         if not(prev_state == kub.state):
             prev_state = kub.state
 
             t = rospy.Time.now()
             t = t.secs + 1.0*t.nsecs/pow(10,9)
 
-            [vx, vy, vw, REPLANNED] = velocity.run.Get_Vel(start_time, t, kub.kubs_id, GOAL_POINT, kub.state.homePos, kub.state.awayPos, avoid_ball)
+            [vx, vy, vw, REPLANNED] = velocity.run.Get_Vel(start_time, t, kub.kubs_id, GOAL_POINT, kub.state.homePos, kub.state.awayPos, kub.state, avoid_ball)
             velocity_magnitude = Vector2D(vx,vy).abs(Vector2D(vx,vy))
             if velocity_magnitude > MAX_BOT_SPEED:
                 angle_movement = math.atan2(vy,vx)
