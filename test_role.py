@@ -9,18 +9,19 @@ from krssg_ssl_msgs.msg import BeliefState
 from role import  GoToBall, GoToPoint
 from multiprocessing import Process
 from kubs import kubs
+from krssg_ssl_msgs.srv import bsServer
 from math import atan2,pi
 from utils.functions import *
 pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
 
 import memcache
-shared = memcache.Client(['127.0.0.1:11211'],debug=False)
+shared = memcache.Client(['127.0.0.1:11211'],debug=True)
 
 
 
 def function(id_,state):
-	kub = kubs.kubs(id_,pub)
+	kub = kubs.kubs(id_,state,pub)
 	kub.update_state(state)
 	print(kub.kubs_id)
 	g_fsm = GoToBall.GoToBall()
@@ -30,7 +31,7 @@ def function(id_,state):
 	g_fsm.add_theta(theta=normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.x+3000)))
 	g_fsm.as_graphviz()
 	g_fsm.write_diagram_png()
-
+	print('something before spin')
 	g_fsm.spin()
 	# 
 
@@ -43,11 +44,21 @@ start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
 
 # rospy.Subscriber('/belief_state', BeliefState, BS_callback, queue_size=1000)
 
-while True:
-	state=shared.get('state')	
-	if state:
-		function(1,state)
-		# break
+#while True:
+state = None
+#state=shared.get('state')
+rospy.wait_for_service('bsServer',)
+getState = rospy.ServiceProxy('bsServer',bsServer)
+try:
+	state = getState(state)
+except rospy.ServiceException, e:
+	print("chutiya")		
+if state:
+	print('lasknfcjscnajnstate',state.stateB.homePos)
+	function(1,state.stateB)
+	print('chal ja')
+	# break
+rospy.spin()	
 
 
 

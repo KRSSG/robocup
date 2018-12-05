@@ -2,13 +2,26 @@ import rospy
 from krssg_ssl_msgs.msg import BeliefState
 import memcache
 from utils.config import BS_ADDRESS
-shared = memcache.Client(BS_ADDRESS,debug=False)
-
+from krssg_ssl_msgs.srv import *
+#shared = memcache.Client(BS_ADDRESS,debug=False)
+State = None
 
 def BS_callback(state):
-	shared.set('state',state)
-	print state
+	global State 
+	State = state
+	#print state
 
-rospy.init_node('bs_memcache_node',anonymous=False)
-rospy.Subscriber('/belief_state', BeliefState, BS_callback, queue_size=1000)
-rospy.spin()
+def bs(req):
+	global State
+	print State
+	req.stateA = State
+	return bsServerResponse(req.stateA)
+
+def bsserver():
+	rospy.init_node('BSnode',anonymous=False)
+	rospy.Subscriber('/belief_state', BeliefState, BS_callback, queue_size=1000)
+  	s = rospy.Service('bsServer',bsServer,bs)
+	rospy.spin()
+if __name__ == "__main__":
+	bsserver()	
+

@@ -89,6 +89,7 @@ target_triangle.msg
  add_service_files(
    FILES
    path_plan.srv
+   bsServer.srv
 #   Service2.srv
  )
 
