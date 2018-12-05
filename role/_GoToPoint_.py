@@ -78,7 +78,7 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
             t = rospy.Time.now()
             t = t.secs + 1.0*t.nsecs/pow(10,9)
 
-            [vx, vy, vw, REPLANNED] = velocity.run.Get_Vel(start_time, t, kub.kubs_id, GOAL_POINT, kub.state.homePos, kub.state.awayPos, kub.state, avoid_ball)
+            [vx, vy, vw, REPLANNED] = velocity.run.Get_Vel(start_time, t, kub.kubs_id, GOAL_POINT, kub.state.homePos, kub.state.awayPos, avoid_ball)
             velocity_magnitude = Vector2D(vx,vy).abs(Vector2D(vx,vy))
             if velocity_magnitude > MAX_BOT_SPEED:
                 angle_movement = math.atan2(vy,vx)
