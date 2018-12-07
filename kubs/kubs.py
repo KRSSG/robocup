@@ -135,6 +135,10 @@ class kubs:
     def get_pos(self):
         return self.state.homePos[self.kubs_id]
 
+    
+    def get_theta(self):
+        return self.state.homePos[self.kubs_id].theta
+
     # def bs_callback(self, data):
     #     self.state.isteamyellow                 = data.isteamyellow
     #     self.state.frame_number                 = data.frame_number
