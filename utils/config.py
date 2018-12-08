@@ -98,6 +98,7 @@ MAX_BOT_SPEED              = SELECT(1800*FFV, 80.0*FFV)           #mm
 MIN_BOT_SPEED              = SELECT(5, 30)                      #mm/s
 MAX_BOT_OMEGA              = SELECT(0.5, 0.5)                     #rad/s//2
 MIN_BOT_OMEGA              = SELECT(0.15,0.15)                    #rad/s
+MAX_BOT_OMEGA_ACC 		   = SELECT(0.1, 0.1)					# rad/s^2
 MAX_BACK_DRIBBLE_V_Y       = SELECT(500, 500)                   #mm/s
 MAX_FRONT_DRIBBLE_V_Y      = SELECT(1200, 1200)                 #mm/s
 MAX_DRIBBLE_V_X            = SELECT(200, 100)                   #mm/s

@@ -9,6 +9,8 @@ def ball_in_front_of_bot(kub):
                         kub.state.ballPos.x - kub.get_pos().x)
     return vicinity_theta(theta1, theta2, thresh=0.25) and vicinity_points(kub.get_pos(), kub.state.ballPos, thresh=BOT_RADIUS * 4)
 
+def bot_in_front_of_ball(kub, thresh = BOT_RADIUS*1.5):
+    return vicinity_points(kub.get_pos(), kub.state.ballPos, thresh)
 
 def kub_has_ball(state, kub_id, is_opponent=False):
     if is_opponent:
