@@ -3,6 +3,7 @@ import behavior
 import _GoToPoint_
 import rospy
 from utils.functions import *
+from utils.geometry import Vector2D
 from utils.config import *
 from math import *
 
@@ -91,13 +92,6 @@ class GoToBall(behavior.Behavior):
         self.add_transition(GoToBall.State.intercept,
             behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
 
-    def tan_inverse(self,y,x):
-        if atan2(y,x) < 1.5707963 and atan2(y,x) > -1.5707963:
-            return atan2(y,x)
-        if atan2(y,x) > 1.5707963 and atan2(y,x) < 3.14159265:
-            return atan2(y,x)-3.14159265
-        else:
-            return atan2(y,x)+3.14159265
     
     def add_kub(self,kub):
         self.kub = kub
@@ -125,13 +119,13 @@ class GoToBall(behavior.Behavior):
     def ball_moving(self):
         #print("try to move idiot")
         #print("vx = ",self.kub.state.ballVel.x)
-        ball_vel_angle = self.tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
-        bot_ball_angle = self.tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
+        ball_vel_angle = tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
+        bot_ball_angle = tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
         perp_dist = sqrt((self.kub.state.homePos[self.kub.kubs_id].x -self.kub.state.ballPos.x)**2 + (self.kub.state.homePos[self.kub.kubs_id].y -self.kub.state.ballPos.y)**2)*sin(abs(ball_vel_angle-bot_ball_angle))
         #if ( getTime(perp_dist) < )
-        if(abs(ball_vel_angle-bot_ball_angle) < 0.05236):
+        if(abs(ball_vel_angle-bot_ball_angle) < SATISFIABLE_THETA_DEG):
             return False
-        if (abs(self.kub.state.ballVel.x) > 0.5 and abs(self.kub.state.ballVel.x) < 1500 ) or ( abs(self.kub.state.ballVel.y) > 0.5 and abs(self.kub.state.ballVel.y) < 1500 ) :
+        if (abs(self.kub.state.ballVel.x) > MIN_BOT_SPEED/60 and abs(self.kub.state.ballVel.x) < MAX_BOT_SPEED ) or ( abs(self.kub.state.ballVel.y) > MIN_BOT_SPEED/60 and abs(self.kub.state.ballVel.y) < MAX_BOT_SPEED ) :
         #   print("ball moved")
             return True
         else:
@@ -194,81 +188,81 @@ class GoToBall(behavior.Behavior):
                 break
 
     def intercept_complete(self):
-        ball_vel_angle = self.tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
-        if ( abs(ball_vel_angle - self.tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)) < 0.0523599):
+        ball_vel_angle = tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
+        if ( abs(ball_vel_angle - tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)) < 0.0523599):
             return 1
         return 0
 
-    def getTime(self,pathLength):
-        startSpeed = 900
-        finalSpeed = 0
-        rampUpTime = 0
-        maxAcc = 1000
-        maxSpeed = 900
-        rampUpTime = (maxSpeed-startSpeed)/maxAcc
-        # To be modified in function
-        plateauTime = 0
-        rampDownTime = -(finalSpeed - maxSpeed)/maxAcc
-        rampUpDist = rampUpTime*(startSpeed + maxSpeed)/2.0
-        # To be modified in function
-        plateauDist = 0
-        rampDownDist = rampDownTime*(maxSpeed + finalSpeed)/2.0
-        if rampUpDist + rampDownDist > pathLength:
-            # Triangle case :- Will Not attain maximum possible speed
-            maxSpeed = sqrt((pow(finalSpeed,2) + pow(startSpeed,2) + 2*maxAcc*abs(pathLength))/2.0)
-            rampUpTime = (maxSpeed - startSpeed)/maxAcc
-            rampDownTime = -(finalSpeed - maxSpeed)/maxAcc
-            rampUpDist = rampUpTime*(startSpeed + maxSpeed)/2.0
-            rampDownDist = rampDownTime*(finalSpeed + maxSpeed)/2.0
-            plateauTime = 0
-            plateauDist = 0
-        else:
-            # Trapezoidal case
-            # Attain Maximum Possible Speed for plateau Time
-            plateauDist = pathLength - (rampUpDist + rampDownDist)
-            plateauTime = plateauDist / maxSpeed
+    # def getTime(self,pathLength):
+    #     startSpeed = 900
+    #     finalSpeed = 0
+    #     rampUpTime = 0
+    #     maxAcc = 1000
+    #     maxSpeed = 900
+    #     rampUpTime = (maxSpeed-startSpeed)/maxAcc
+    #     # To be modified in function
+    #     plateauTime = 0
+    #     rampDownTime = -(finalSpeed - maxSpeed)/maxAcc
+    #     rampUpDist = rampUpTime*(startSpeed + maxSpeed)/2.0
+    #     # To be modified in function
+    #     plateauDist = 0
+    #     rampDownDist = rampDownTime*(maxSpeed + finalSpeed)/2.0
+    #     if rampUpDist + rampDownDist > pathLength:
+    #         # Triangle case :- Will Not attain maximum possible speed
+    #         maxSpeed = sqrt((pow(finalSpeed,2) + pow(startSpeed,2) + 2*maxAcc*abs(pathLength))/2.0)
+    #         rampUpTime = (maxSpeed - startSpeed)/maxAcc
+    #         rampDownTime = -(finalSpeed - maxSpeed)/maxAcc
+    #         rampUpDist = rampUpTime*(startSpeed + maxSpeed)/2.0
+    #         rampDownDist = rampDownTime*(finalSpeed + maxSpeed)/2.0
+    #         plateauTime = 0
+    #         plateauDist = 0
+    #     else:
+    #         # Trapezoidal case
+    #         # Attain Maximum Possible Speed for plateau Time
+    #         plateauDist = pathLength - (rampUpDist + rampDownDist)
+    #         plateauTime = plateauDist / maxSpeed
 
-        if pathLength <= 0:
-            return 0
+    #     if pathLength <= 0:
+    #         return 0
 
-        # Covered whole path
-        if abs(pathLength - (rampUpDist + plateauDist + rampUpDist)) < 0.0001:
-            return rampUpTime + plateauTime + rampDownTime
+    #     # Covered whole path
+    #     if abs(pathLength - (rampUpDist + plateauDist + rampUpDist)) < 0.0001:
+    #         return rampUpTime + plateauTime + rampDownTime
 
-        if pathLength <= rampUpDist:
-            # Time Calculations
-            # 1/2*a*t^2 + t*vi -d = 0
-            # t = -b + sqrt*(b^2 -4ac)/(2a)
-            b = startSpeed
-            a = maxAcc/2.0
-            c = -pathLength
-            root = sqrt(b*b - 4*a*c)
-            alpha = (-b + root)/(2*a)
-            beta = (-b - root)/(2*a)
-            if alpha > 0 and alpha <= rampUpTime:
-                return alpha
-            else:
-                return beta
+    #     if pathLength <= rampUpDist:
+    #         # Time Calculations
+    #         # 1/2*a*t^2 + t*vi -d = 0
+    #         # t = -b + sqrt*(b^2 -4ac)/(2a)
+    #         b = startSpeed
+    #         a = maxAcc/2.0
+    #         c = -pathLength
+    #         root = sqrt(b*b - 4*a*c)
+    #         alpha = (-b + root)/(2*a)
+    #         beta = (-b - root)/(2*a)
+    #         if alpha > 0 and alpha <= rampUpTime:
+    #             return alpha
+    #         else:
+    #             return beta
 
-        elif (pathLength <= rampUpDist + plateauDist ):
-            position = pathLength - rampUpDist
-            return rampUpTime + position/maxSpeed
+    #     elif (pathLength <= rampUpDist + plateauDist ):
+    #         position = pathLength - rampUpDist
+    #         return rampUpTime + position/maxSpeed
 
-        elif (pathLength < rampUpDist + plateauDist + rampDownDist):
-            # Again Time Calculations
-            position = pathLength - rampUpDist - plateauDist
-            b = maxSpeed
-            a = -maxAcc/2.0
-            c = -position
-            root = sqrt(b*b - 4*a*c)
-            alpha = (-b + root)/(2*a)
-            beta = (-b - root)/(2*a)
-            if alpha > 0 and alpha < rampDownTime:
-                return rampUpTime + plateauTime + alpha
-            else:
-                return rampUpTime + plateauTime + beta
-        else:
-            return rampUpTime + plateauTime + rampDownTime
+    #     elif (pathLength < rampUpDist + plateauDist + rampDownDist):
+    #         # Again Time Calculations
+    #         position = pathLength - rampUpDist - plateauDist
+    #         b = maxSpeed
+    #         a = -maxAcc/2.0
+    #         c = -position
+    #         root = sqrt(b*b - 4*a*c)
+    #         alpha = (-b + root)/(2*a)
+    #         beta = (-b - root)/(2*a)
+    #         if alpha > 0 and alpha < rampDownTime:
+    #             return rampUpTime + plateauTime + alpha
+    #         else:
+    #             return rampUpTime + plateauTime + beta
+    #     else:
+    #         return rampUpTime + plateauTime + rampDownTime
 
     # def intercept_possible(self,angle,ball_vel_angle,bot_ball_angle,perp_dist):
         
@@ -290,8 +284,8 @@ class GoToBall(behavior.Behavior):
         #print("ballvel= ",state.ballVel)
         print("intercept")
         global first
-        ball_vel_angle = self.tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
-        bot_ball_angle = self.tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
+        ball_vel_angle = tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
+        bot_ball_angle = tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
         perp_dist = sqrt((self.kub.state.homePos[self.kub.kubs_id].x -self.kub.state.ballPos.x)**2 + (self.kub.state.homePos[self.kub.kubs_id].y -self.kub.state.ballPos.y)**2)*sin(abs(ball_vel_angle-bot_ball_angle))
         approach = True
         
