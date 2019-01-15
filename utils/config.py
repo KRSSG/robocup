@@ -94,7 +94,7 @@ FFA 					  = SELECT(1.0,5.0)
 
 #MAX_BOT_ACCELERATION       = SELECT(900, 900) as per sudo  
 MAX_BOT_ACCELERATION       = SELECT(1000*FFA, 1000*FFA)  
-MAX_BOT_SPEED              = SELECT(1800*FFV, 80.0*FFV)           #mm
+MAX_BOT_SPEED              = SELECT(2500*FFV, 80.0*FFV)           #mm
 MIN_BOT_SPEED              = SELECT(5, 30)                      #mm/s
 MAX_BOT_OMEGA              = SELECT(0.5, 0.5)                     #rad/s//2
 MIN_BOT_OMEGA              = SELECT(0.15,0.15)                    #rad/s
@@ -107,6 +107,7 @@ MAX_BALL_SPEED             = SELECT(2700, 2700)                #mm/s
 DRIBBLER_BALL_ANGLE_RANGE  = SELECT(0.2, 0.10)                  #rad
 SATISFIABLE_THETA          = SELECT(0.08, 0.1)                  #rad
 SATISFIABLE_THETA_SHARP    = SELECT(0.01, 0.01)                 #rad
+SATISFIABLE_THETA_DEG      = SELECT(0.05236, 0.05236)
 MAX_BALL_STEAL_DIST        = SELECT(800, 800)
 
 #SSL param. not needed. 

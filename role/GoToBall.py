@@ -3,7 +3,11 @@ import behavior
 import _GoToPoint_
 import rospy
 from utils.functions import *
+from utils.geometry import Vector2D
 from utils.config import *
+from math import *
+
+first = 0
 
 class GoToBall(behavior.Behavior):
     """docstring for GoToBall"""
@@ -11,6 +15,7 @@ class GoToBall(behavior.Behavior):
         setup = 1 
         course_approach = 2
         fine_approach = 3
+        intercept = 4
 
     def __init__(self,course_approch_thresh =  DISTANCE_THRESH/3,continuous=False):
 
@@ -18,7 +23,7 @@ class GoToBall(behavior.Behavior):
 
         self.name = "GoToBall"
 
-    	self.power = 7.0
+        self.power = 7.0
 
         self.target_point = None
         
@@ -39,21 +44,42 @@ class GoToBall(behavior.Behavior):
         self.add_state(GoToBall.State.fine_approach,
             behavior.Behavior.State.running)
 
+        self.add_state(GoToBall.State.intercept,
+            behavior.Behavior.State.running)
+
         self.add_transition(behavior.Behavior.State.start,
             GoToBall.State.setup,lambda: True,'immediately')
 
         self.add_transition(GoToBall.State.setup,
-            GoToBall.State.fine_approach,lambda: self.fine_approach(),'ball_in_vicinity')
+           GoToBall.State.intercept,lambda:self.ball_moving(),'intercept_ball')
 
         self.add_transition(GoToBall.State.setup,
-            GoToBall.State.course_approach,lambda: self.course_approach(),'setup')
+            GoToBall.State.fine_approach,lambda: self.fine_approach() and not self.ball_moving() ,'ball_in_vicinity')
+
+        self.add_transition(GoToBall.State.setup,
+            GoToBall.State.course_approach,lambda: self.course_approach() and not self.ball_moving(),'setup')
+
+        self.add_transition(GoToBall.State.setup,
+            GoToBall.State.intercept,lambda:self.ball_moving(),'intercept_ball')
+
+        self.add_transition(GoToBall.State.intercept,
+            GoToBall.State.course_approach,lambda:self.course_approach() and not self.ball_moving(),'setup')
 
         self.add_transition(GoToBall.State.course_approach,
-            GoToBall.State.fine_approach,lambda:self.at_target_point(),'complete')
+            GoToBall.State.fine_approach,lambda:self.at_target_point() ,'complete')
+
+        self.add_transition(GoToBall.State.course_approach,
+            GoToBall.State.intercept,lambda:self.ball_moving(),'intercept_ball')
+
+        #self.add_transition(GoToBall.State.fine_approach,
+           #GoToBall.State.intercept,lambda:self.ball_moving(),'intercept_ball')
 
         self.add_transition(GoToBall.State.fine_approach,
             behavior.Behavior.State.completed,lambda:self.at_ball_pos(),'complete')
 
+        self.add_transition(GoToBall.State.intercept,
+            GoToBall.State.fine_approach,lambda:self.intercept_complete(),'intercept_complete')
+
         self.add_transition(GoToBall.State.setup,
             behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
 
@@ -62,6 +88,10 @@ class GoToBall(behavior.Behavior):
 
         self.add_transition(GoToBall.State.fine_approach,
             behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
+
+        self.add_transition(GoToBall.State.intercept,
+            behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
+
     
     def add_kub(self,kub):
         self.kub = kub
@@ -85,6 +115,21 @@ class GoToBall(behavior.Behavior):
         if ball_in_front_of_bot(self.kub):
             return True
         return False
+
+    def ball_moving(self):
+        #print("try to move idiot")
+        #print("vx = ",self.kub.state.ballVel.x)
+        ball_vel_angle = tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
+        bot_ball_angle = tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
+        perp_dist = sqrt((self.kub.state.homePos[self.kub.kubs_id].x -self.kub.state.ballPos.x)**2 + (self.kub.state.homePos[self.kub.kubs_id].y -self.kub.state.ballPos.y)**2)*sin(abs(ball_vel_angle-bot_ball_angle))
+        #if ( getTime(perp_dist) < )
+        if(abs(ball_vel_angle-bot_ball_angle) < SATISFIABLE_THETA_DEG):
+            return False
+        if (abs(self.kub.state.ballVel.x) > MIN_BOT_SPEED/60 and abs(self.kub.state.ballVel.x) < MAX_BOT_SPEED ) or ( abs(self.kub.state.ballVel.y) > MIN_BOT_SPEED/60 and abs(self.kub.state.ballVel.y) < MAX_BOT_SPEED ) :
+        #   print("ball moved")
+            return True
+        else:
+            return False
 
     def at_ball_pos(self):
         error = 10
@@ -123,6 +168,9 @@ class GoToBall(behavior.Behavior):
     def on_exit_course_approach(self):
         pass
 
+    def on_exit_intercept(self):
+        pass
+
     def on_enter_fine_approach(self):
         theta = self.kub.get_pos().theta
         _GoToPoint_.init(self.kub, self.kub.state.ballPos, theta)
@@ -139,14 +187,60 @@ class GoToBall(behavior.Behavior):
                 self.behavior_failed = True
                 break
 
+    def intercept_complete(self):
+        ball_vel_angle = tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
+        if ( abs(ball_vel_angle - tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)) < 0.0523599):
+            return 1
+        return 0
 
+    # def intercept_possible(self,angle,ball_vel_angle,bot_ball_angle,perp_dist):
+        
+    #   ball_dist = (perp_dist*tan(1.5707963-(3.14159265-ball_vel_angle+bot_ball_angle)) - perp_dist*tan(angle) )
+    #   a = cos(angle)
+    #   if a == 0:
+    #       a = 0.0001
+    #   if self.ball_moving():
+    #       if(1.5*self.getTime(perp_dist/a) < ball_dist/sqrt(self.kub.state.ballVel.y*self.kub.state.ballVel.y + self.kub.state.ballVel.x*self.kub.state.ballVel.x) ):
+    #           return True
+    #       return False
+    #   return False
 
+    def on_enter_intercept(self):
+        global first
+        first = 1
+
+    def execute_intercept(self):
+        #print("ballvel= ",state.ballVel)
+        print("intercept")
+        global first
+        ball_vel_angle = tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
+        bot_ball_angle = tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
+        perp_dist = sqrt((self.kub.state.homePos[self.kub.kubs_id].x -self.kub.state.ballPos.x)**2 + (self.kub.state.homePos[self.kub.kubs_id].y -self.kub.state.ballPos.y)**2)*sin(abs(ball_vel_angle-bot_ball_angle))
+        approach = True
+        
+        if (approach ):
+            first = 0
+            #theta = 1.5707963-abs(ball_vel_angle-bot_ball_angle) - 0.0872665   
+            my_target = Vector2D(0,0)   
+                
+            final_theta = atan2(self.kub.state.ballVel.x,self.kub.state.ballVel.y)
+
+            x_final = self.kub.state.homePos[self.kub.kubs_id].x + perp_dist*cos(final_theta)
+            y_final = self.kub.state.homePos[self.kub.kubs_id].y + perp_dist*sin(final_theta)
+            my_target = Vector2D(x_final, y_final)          
+                
+            start_time = rospy.Time.now()
+            start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
+            print("my_target = ",my_target)
+            _GoToPoint_.init(self.kub, my_target, 0)
+            generatingfunction = _GoToPoint_.execute(start_time, self.ball_dist_thresh)
+            
 
     def disable_kick(self):
         self.power = 0.0
 
     def on_exit_fine_approach(self):
-        #self.disable_kick()
+        
         self.kub.kick(self.power)
         self.kub.execute()
         pass
