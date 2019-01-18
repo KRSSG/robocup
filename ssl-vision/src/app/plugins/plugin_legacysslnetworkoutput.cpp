@@ -92,7 +92,7 @@ PluginLegacySSLNetworkOutputSettings::PluginLegacySSLNetworkOutputSettings()
   settings = new VarList("Legacy Network Output");
 
   settings->addChild(
-      multicast_address = new VarString("Multicast Address","0.0.0.0"));
+      multicast_address = new VarString("Multicast Address","224.5.23.2"));
   settings->addChild(ds_multicast_port_old =
       new VarInt("Legacy Double-Size Field Multicast Port",10005,1,65535));
   settings->addChild(

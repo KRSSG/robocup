@@ -32,13 +32,14 @@ int main(int argc, char **argv)
 
 	
 	GOOGLE_PROTOBUF_VERIFY_VERSION;
-	int port = use_grsim_vision? 10020: 10006;
-	string net_address = "0.0.0.0";
+	int port = use_grsim_vision? 10020: 10016;
+	string net_address = "224.5.23.1";
 	RoboCupSSLClient client(port, net_address);	
 	client.open();
 	printf("Connected to %s.\n", use_grsim_vision? "grSim vision" : "ssl-vision");
 	SSL_WrapperPacket packet;
 	while(ros::ok()) {
+		printf("........\n");
 		if (client.receive(packet)) {
 			krssg_ssl_msgs::SSL_DetectionFrame msg;
 			//see if the packet contains a robot detection frame:
@@ -82,6 +83,7 @@ int main(int argc, char **argv)
 					// botmsg.pixel_y = robot.pixel_y();
 					// botmsg.height = robot.height();
 					msg.robots_blue.push_back(botmsg);
+					cout << "Blue bot detected, bot_id =  " << robot.robot_id() << " pos: " << robot.x() << " " << robot.y() << endl;
 				}
 
 				//Yellow robot info:

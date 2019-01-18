@@ -5,10 +5,10 @@
 			<Var name="Reset SSL 2014" type="trigger">
 			</Var>
 			<Var name="Field Length" type="double" minval="" maxval="">
-				9000.000000
+				6000.000000
 			</Var>
 			<Var name="Field Width" type="double" minval="" maxval="">
-				6000.000000
+				4000.000000
 			</Var>
 			<Var name="Goal Width" type="double" minval="" maxval="">
 				1000.000000
@@ -512,7 +512,7 @@
 		</Var>
 		<Var name="Network Output" type="list">
 			<Var name="Multicast Address" type="string">
-				0.0.0.0
+				224.5.23.2
 			</Var>
 			<Var name="Multicast Port" type="int" minval="1" maxval="65535">
 				10006
@@ -522,7 +522,7 @@
 		</Var>
 		<Var name="Legacy Network Output" type="list">
 			<Var name="Multicast Address" type="string">
-				0.0.0.0
+				224.5.23.1
 			</Var>
 			<Var name="Legacy Double-Size Field Multicast Port" type="int" minval="1" maxval="65535">
 				10005
@@ -1387,7 +1387,7 @@
 					-13867.204210
 				</Var>
 				<Var name="tz" type="double" minval="0.000000" maxval="5000.000000">
-					3154.000000
+					3439.000000
 				</Var>
 			</Var>
 			<Var name="Calibration Parameters" type="list">

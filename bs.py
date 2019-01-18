@@ -9,7 +9,7 @@ State = None
 def BS_callback(state):
 	global State 
 	State = state
-	#print state
+	print state
 
 def bs(req):
 	global State
