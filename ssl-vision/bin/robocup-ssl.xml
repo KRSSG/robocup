@@ -402,7 +402,7 @@
 		</Var>
 		<Var name="Network Output" type="list">
 			<Var name="Multicast Address" type="string">
-				0.0.0.0
+				224.5.23.2
 			</Var>
 			<Var name="Multicast Port" type="int" minval="1" maxval="65535">
 				10006
@@ -412,7 +412,7 @@
 		</Var>
 		<Var name="Legacy Network Output" type="list">
 			<Var name="Multicast Address" type="string">
-				0.0.0.0
+				224.5.23.1
 			</Var>
 			<Var name="Legacy Double-Size Field Multicast Port" type="int" minval="1" maxval="65535">
 				10005

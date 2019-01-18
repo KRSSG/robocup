@@ -59,12 +59,12 @@ class Vector2D(Structure):
 			return math.atan2(head.y-self.y,head.x-self.x)
 
 	def tan_inverse(self):
-        if atan2(self.y,self.x) < 1.5707963 and atan2(self.y,self.x) > -1.5707963:
-            return atan2(self.y,self.x)
-        if atan2(y,x) > 1.5707963 and atan2(y,x) < 3.14159265:
-            return atan2(self.y,self.x)-3.14159265
-        else:
-            return atan2(self.y,self.x)+3.14159265
+		if atan2(self.y,self.x) < 1.5707963 and atan2(self.y,self.x) > -1.5707963:
+			return atan2(self.y,self.x)
+		if atan2(y,x) > 1.5707963 and atan2(y,x) < 3.14159265:
+			return atan2(self.y,self.x)-3.14159265
+		else:
+			return atan2(self.y,self.x)+3.14159265
 
 	# Returns the Eucledian distance between the 2 vectors
 	def dist(self,another_point):
