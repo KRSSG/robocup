@@ -2526,7 +2526,7 @@
 				true
 			</Var>
 			<Var name="Marker Image File" type="string">
-				/home/krssg/krssg/src/ssl-vision/kgp.png
+				/home/ssl/fsm/src/ssl-vision/kgp.png
 			</Var>
 			<Var name="Marker Image Rows" type="int" minval="" maxval="">
 				2
