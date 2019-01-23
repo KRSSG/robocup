@@ -19,12 +19,12 @@ function pr_launcher {
 }
 
 ps cax | grep project > /dev/null
-# if [ $? -eq 0 ]; then
-#   echo "grSim already running."
-# else
-#   echo "launching grSim."
-#   launcher "grSim" "rosrun grSim project"
-# fi
+if [ $? -eq 0 ]; then
+  echo "grSim already running."
+else
+  echo "launching grSim."
+  launcher "grSim" "rosrun grSim project"
+fi
 
 launcher    "core"         "roscore"
 pr_launcher "vision"    "vision.launch"

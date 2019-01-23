@@ -5,10 +5,10 @@
 			<Var name="Reset SSL 2014" type="trigger">
 			</Var>
 			<Var name="Field Length" type="double" minval="" maxval="">
-				6000.000000
+				9000.000000
 			</Var>
 			<Var name="Field Width" type="double" minval="" maxval="">
-				4000.000000
+				6000.000000
 			</Var>
 			<Var name="Goal Width" type="double" minval="" maxval="">
 				1000.000000
@@ -522,7 +522,7 @@
 		</Var>
 		<Var name="Legacy Network Output" type="list">
 			<Var name="Multicast Address" type="string">
-				224.5.23.1
+				224.5.23.2
 			</Var>
 			<Var name="Legacy Double-Size Field Multicast Port" type="int" minval="1" maxval="65535">
 				10005
@@ -1352,42 +1352,40 @@
 		</Var>
 		<Var name="YUV Calibrator" type="list">
 		</Var>
-		<Var name="Neural Calibrator" type="list">
-		</Var>
 		<Var name="Camera Calibrator" type="list">
 			<Var name="Camera Parameters" type="list">
 				<Var name="focal length" type="double" minval="" maxval="">
-					367.331415
+					500.000000
 				</Var>
 				<Var name="principal point x" type="double" minval="" maxval="">
-					173.069939
+					390.000000
 				</Var>
 				<Var name="principal point y" type="double" minval="" maxval="">
-					1542.805414
+					80.000000
 				</Var>
 				<Var name="distortion" type="double" minval="0.000000" maxval="2.000000">
-					0.002447
+					0.240000
 				</Var>
 				<Var name="q0" type="double" minval="" maxval="">
-					0.727388
+					0.700000
 				</Var>
 				<Var name="q1" type="double" minval="" maxval="">
-					-0.685840
+					-0.700000
 				</Var>
 				<Var name="q2" type="double" minval="" maxval="">
-					0.011237
+					0.000000
 				</Var>
 				<Var name="q3" type="double" minval="" maxval="">
-					0.020098
+					0.000000
 				</Var>
 				<Var name="tx" type="double" minval="" maxval="">
-					2125.748560
+					100.000000
 				</Var>
 				<Var name="ty" type="double" minval="" maxval="">
-					-13867.204210
+					0.000000
 				</Var>
 				<Var name="tz" type="double" minval="0.000000" maxval="5000.000000">
-					3439.000000
+					4393.000000
 				</Var>
 			</Var>
 			<Var name="Calibration Parameters" type="list">
@@ -1396,16 +1394,16 @@
 						Control point 0
 					</Var>
 					<Var name="Control point 0 image x" type="double" minval="" maxval="">
-						57.000000
+						10.000000
 					</Var>
 					<Var name="Control point 0 image y" type="double" minval="" maxval="">
-						349.000000
+						10.000000
 					</Var>
 					<Var name="Control point 0 field x" type="double" minval="" maxval="">
-						-4500.000000
+						0.000000
 					</Var>
 					<Var name="Control point 0 field y" type="double" minval="" maxval="">
-						3000.000000
+						0.000000
 					</Var>
 				</Var>
 				<Var name="Control Point 1" type="list">
@@ -1413,16 +1411,16 @@
 						Control point 1
 					</Var>
 					<Var name="Control point 1 image x" type="double" minval="" maxval="">
-						748.000000
+						20.000000
 					</Var>
 					<Var name="Control point 1 image y" type="double" minval="" maxval="">
-						356.000000
+						10.000000
 					</Var>
 					<Var name="Control point 1 field x" type="double" minval="" maxval="">
-						-4500.000000
+						0.000000
 					</Var>
 					<Var name="Control point 1 field y" type="double" minval="" maxval="">
-						-3000.000000
+						4495.000000
 					</Var>
 				</Var>
 				<Var name="Control Point 2" type="list">
@@ -1430,16 +1428,16 @@
 						Control point 2
 					</Var>
 					<Var name="Control point 2 image x" type="double" minval="" maxval="">
-						767.000000
+						10.000000
 					</Var>
 					<Var name="Control point 2 image y" type="double" minval="" maxval="">
-						12.000000
+						10.000000
 					</Var>
 					<Var name="Control point 2 field x" type="double" minval="" maxval="">
-						0.000000
+						4495.000000
 					</Var>
 					<Var name="Control point 2 field y" type="double" minval="" maxval="">
-						-3000.000000
+						0.000000
 					</Var>
 				</Var>
 				<Var name="Control Point 3" type="list">
@@ -1447,16 +1445,16 @@
 						Control point 3
 					</Var>
 					<Var name="Control point 3 image x" type="double" minval="" maxval="">
-						60.000000
+						10.000000
 					</Var>
 					<Var name="Control point 3 image y" type="double" minval="" maxval="">
-						8.000000
+						10.000000
 					</Var>
 					<Var name="Control point 3 field x" type="double" minval="" maxval="">
 						0.000000
 					</Var>
 					<Var name="Control point 3 field y" type="double" minval="" maxval="">
-						3000.000000
+						0.000000
 					</Var>
 				</Var>
 				<Var name="initial distortion" type="double" minval="" maxval="">
@@ -1466,7 +1464,7 @@
 					4000.000000
 				</Var>
 				<Var name="line search corridor width" type="double" minval="" maxval="">
-					283.000000
+					275.000000
 				</Var>
 				<Var name="Image boundary for edge detection" type="double" minval="" maxval="">
 					10.000000
@@ -1515,7 +1513,7 @@
 				false
 			</Var>
 			<Var name="thresholded" type="bool">
-				false
+				true
 			</Var>
 			<Var name="blobs" type="bool">
 				true
@@ -2330,8 +2328,6 @@
 			</Var>
 		</Var>
 		<Var name="YUV Calibrator" type="list">
-		</Var>
-		<Var name="Neural Calibrator" type="list">
 		</Var>
 		<Var name="Camera Calibrator" type="list">
 			<Var name="Camera Parameters" type="list">
@@ -3310,8 +3306,6 @@
 		</Var>
 		<Var name="YUV Calibrator" type="list">
 		</Var>
-		<Var name="Neural Calibrator" type="list">
-		</Var>
 		<Var name="Camera Calibrator" type="list">
 			<Var name="Camera Parameters" type="list">
 				<Var name="focal length" type="double" minval="" maxval="">
@@ -4288,8 +4282,6 @@
 			</Var>
 		</Var>
 		<Var name="YUV Calibrator" type="list">
-		</Var>
-		<Var name="Neural Calibrator" type="list">
 		</Var>
 		<Var name="Camera Calibrator" type="list">
 			<Var name="Camera Parameters" type="list">

@@ -112,7 +112,7 @@ class Vector2D(Structure):
 			return False
 	# self is the center of circle, checks whether the line made by the point1 and point2 intersects the circle
 	def intersects(self,point1,point2,radius):
-		# Source of algorithm used: http://stackoverflow.com/questions/1073336/circle-line-collision-detection 
+		# Source of algorithm used: http://stackoverflow.com/questions/10733336/circle-line-collision-detection 
 		d = point2 - point1
 		f = point1 - self
 		a = d.dot(d)
