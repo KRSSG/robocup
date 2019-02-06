@@ -80,3 +80,34 @@ def closest_opponent(state, position):
             closest_bot = opp_id
 
     return closest_bot
+
+def our_bot_closest_to_ball(state):
+    distance_from_ball = 99999999
+    our_bot_closest_to_ball = 0
+    for i in range(state.homePos.size()):
+        dist = math.sqrt(pow((state.homePos[i].x - state.ballPos.x),2) + pow((state.homePos[i].y - state.ballPos.y) , 2))
+        if dist < distance_from_ball :
+                distance_from_ball = dist
+                our_bot_closest_to_ball = i
+
+    return our_bot_closest_to_ball
+
+def opp_bot_closest_to_ball(state):
+    distance_from_ball = 99999999
+    opp_bot_closest_to_ball = 0
+    for i in range(state.awayPos.size()):
+        dist = math.sqrt(pow((state.awayPos[i].x - state.ballPos.x),2) + pow((state.awayPos[i].y - state.ballPos.y) , 2))
+        if dist < distance_from_ball :
+                distance_from_ball = dist
+                opp_bot_closest_to_ball = i
+
+    return opp_bot_closest_to_ball
+
+def ball_in_our_half(state):
+    if state.ballPos.x <= 0 :
+        return True
+    else :
+        return False
+
+
+

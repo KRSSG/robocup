@@ -15,7 +15,7 @@
 #include <deque>
 #include <fstream>
 
-const int BALL_AT_CORNER_THRESH	= 20; 
+//const int BALL_AT_CORNER_THRESH	= 20; 
 const int HALF_FIELD_MAXX		= 3000; 
 const int HALF_FIELD_MAXY		= 2000;
 const float MAX_DRIBBLE_R		= 3;
@@ -73,13 +73,13 @@ class BeliefState {
 	vector<bool> awayDetected, homeDetected;
 
 	//Predictions
-	short int 	our_bot_closest_to_ball,
-				opp_bot_closest_to_ball,
+	short int 	//our_bot_closest_to_ball,
+				//opp_bot_closest_to_ball,
 				our_goalie,
-				opp_goalie,
-				opp_bot_marking_our_attacker;
+				opp_goalie;
+				//opp_bot_marking_our_attacker;
 
-	bool ball_at_corners, ball_in_our_half, ball_in_our_possession;
+	//bool ball_in_our_half; //ball_at_corners, ball_in_our_possession;
 
 public:
 	BeliefState();
@@ -123,14 +123,14 @@ void BeliefState::copy(const BeliefState& bs){
 	this->ballDetected = bs.ballDetected;
 	this->homeDetected = bs.homeDetected;
 	this->awayDetected = bs.awayDetected;
-	this->our_bot_closest_to_ball = bs.our_bot_closest_to_ball;
-	this->opp_bot_closest_to_ball = bs.opp_bot_closest_to_ball;
+	//this->our_bot_closest_to_ball = bs.our_bot_closest_to_ball;
+	//this->opp_bot_closest_to_ball = bs.opp_bot_closest_to_ball;
 	this->our_goalie = bs.our_goalie;
 	this->opp_goalie = bs.opp_goalie;
-	this->opp_bot_marking_our_attacker = bs.opp_bot_marking_our_attacker;
-	this->ball_at_corners = bs.ball_at_corners;
-	this->ball_in_our_half = bs.ball_in_our_half;
-	this->ball_in_our_possession = bs.ball_in_our_possession;
+	//this->opp_bot_marking_our_attacker = bs.opp_bot_marking_our_attacker;
+	//this->ball_at_corners = bs.ball_at_corners;
+	//this->ball_in_our_half = bs.ball_in_our_half;
+	//this->ball_in_our_possession = bs.ball_in_our_possession;
 }
 
 float distFn(krssg_ssl_msgs::SSL_DetectionRobot p, float x, float y){
@@ -175,8 +175,7 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 			this->ballPos.y = vmsg->balls[0].y;
 
 			//FILTERING BALLPOS
-			if(prev_msgQ.size() == MAX_QUEUE_SZ)
-			{
+			if(prev_msgQ.size() == MAX_QUEUE_SZ){
 				this->ballPos.x *= FILTER[MAX_QUEUE_SZ - 1];
 				this->ballPos.y *= FILTER[MAX_QUEUE_SZ - 1];
 				int count = -1;
@@ -189,18 +188,18 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 				}
 			}
 
-			if(this->ballPos.x <= 0)
-				this->ball_in_our_half = true;
-			else this->ball_in_our_half = false;
-			if(	fabs(this->ballPos.x) > (HALF_FIELD_MAXX - BALL_AT_CORNER_THRESH) && 
+			// if(this->ballPos.x <= 0)
+			// 	this->ball_in_our_half = true;
+			// else this->ball_in_our_half = false;
+			/*if(	fabs(this->ballPos.x) > (HALF_FIELD_MAXX - BALL_AT_CORNER_THRESH) && 
 				fabs(this->ballPos.y) > (HALF_FIELD_MAXY - BALL_AT_CORNER_THRESH)	)
 				this->ball_at_corners = true;
-			else this->ball_at_corners = false;
+			else this->ball_at_corners = false;*/
 
 		}
 		else this->ballDetected = 0;
 		
-		float distance_from_ball = 99999999, tempGoalie=7, tempDist=9999999;
+		float tempGoalie=7, tempDist=9999999, distance_from_ball = 99999999;
 		for(int i=0;i<homePos.size();i++){
 			int bot_id = homePos[i].robot_id;
     		this->homeDetected[bot_id] = 1;
@@ -222,13 +221,12 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 				}
 			}
 
-			float dist = sqrt(pow((homePos[i].x - this->ballPos.x),2) + pow((homePos[i].y - this->ballPos.y) , 2));
-   			if(dist < distance_from_ball){
-      			distance_from_ball = dist;
-     	 		this->our_bot_closest_to_ball = i;
-	      		if(distance_from_ball < MAX_DRIBBLE_R)
-	        		this->ball_in_our_possession = true;
-    		}
+			// float dist = sqrt(pow((homePos[i].x - this->ballPos.x),2) + pow((homePos[i].y - this->ballPos.y) , 2));
+   // 			if(dist < distance_from_ball){
+   //    			distance_from_ball = dist;
+   //   	 		this->our_bot_closest_to_ball = i;
+	      		//if(distance_from_ball < MAX_DRIBBLE_R) this->ball_in_our_possession = true;
+    	}
     		
 
     			/* #######################################  */
@@ -243,7 +241,7 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 	    		// }
 
     			/* #######################################  */
-    	}
+    	
 	
 		// goalie id in refereee msg
     	// this->our_goalie = tempGoalie;
@@ -273,12 +271,12 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 				}
 			}
 
-    		float dist = sqrt(((awayPos[i].x - this->ballPos.x)*(awayPos[i].x - this->ballPos.x)) + ((awayPos[i].y - this->ballPos.y)*(awayPos[i].y - this->ballPos.y)));
+    //		float dist = sqrt(((awayPos[i].x - this->ballPos.x)*(awayPos[i].x - this->ballPos.x)) + ((awayPos[i].y - this->ballPos.y)*(awayPos[i].y - this->ballPos.y)));
 
-    		if(dist < distance_from_ball){
-      			distance_from_ball = dist;
-      			this->opp_bot_closest_to_ball = bot_id;
-			}
+   //  		if(dist < distance_from_ball){
+   //    			distance_from_ball = dist;
+   //    			this->opp_bot_closest_to_ball = bot_id;
+			// }
 
 			/*
 			###############################
@@ -373,10 +371,12 @@ void BeliefState::initialise(){
 	this->awayDetected = vector<bool>(6,0);
 
 
-	this->our_bot_closest_to_ball = this->opp_bot_closest_to_ball = 
-	this->opp_bot_marking_our_attacker = -1;
+	//this->our_bot_closest_to_ball = this->opp_bot_closest_to_ball = 
+	//this->opp_bot_marking_our_attacker = -1;
 
-	this->ball_at_corners = this->ball_in_our_possession = this->ball_in_our_half = false;
+	//this->ball_at_corners = false;
+	//this->ball_in_our_half = false;
+	//this->ball_in_our_possession = false;
 }
 
 void BeliefState::print(){
@@ -402,12 +402,13 @@ void BeliefState::print(){
 	::print(homeDetected);
 	cout<<"awayDetected:"<<endl;
 	::print(awayDetected);
-	cout<<"our_bot_closest_to_ball: "<<our_bot_closest_to_ball<<
-	" opp_bot_closest_to_ball: "<<opp_bot_closest_to_ball<<
-	" \n our_goalie: "<<our_goalie<<" opp_goalie: "<<opp_goalie<<
-	" opp_bot_marking_our_attacker: "<<opp_bot_marking_our_attacker<<
-	"\n ball_at_corners: "<<ball_at_corners<<" ball_in_our_half: "<<ball_in_our_half<<
-	"\n ball_in_our_possession: "<<ball_in_our_possession<<endl;
+	cout<<//"our_bot_closest_to_ball: "<<our_bot_closest_to_ball<<
+	//" opp_bot_closest_to_ball: "<<opp_bot_closest_to_ball<<
+	" \n our_goalie: "<<our_goalie<<" opp_goalie: "<<opp_goalie<<endl;
+	//" opp_bot_marking_our_attacker: "<<opp_bot_marking_our_attacker<<
+	//"\n ball_at_corners: "<<ball_at_corners<<
+	//"\n ball_in_our_half: "<<ball_in_our_half<<endl;
+	//"\n ball_in_our_possession: "<<ball_in_our_possession<<endl;
 }
 
 krssg_ssl_msgs::BeliefState BeliefState::getBeliefStateMsg(){
@@ -429,14 +430,14 @@ krssg_ssl_msgs::BeliefState BeliefState::getBeliefStateMsg(){
 		msg.homeDetected.push_back(this->homeDetected[i]);
 	for(int i=0;i<this->awayDetected.size();i++)
 		msg.awayDetected.push_back(this->awayDetected[i]);
-	msg.our_bot_closest_to_ball = this->our_bot_closest_to_ball;
-	msg.opp_bot_closest_to_ball = this->opp_bot_closest_to_ball;
+	//msg.our_bot_closest_to_ball = this->our_bot_closest_to_ball;
+	//msg.opp_bot_closest_to_ball = this->opp_bot_closest_to_ball;
 	msg.our_goalie = this->our_goalie;
 	msg.opp_goalie = this->opp_goalie;
-	msg.opp_bot_marking_our_attacker = this->opp_bot_marking_our_attacker;
-	msg.ball_at_corners = this->ball_at_corners;
-	msg.ball_in_our_half = this->ball_in_our_half;
-	msg.ball_in_our_possession = this->ball_in_our_possession;
+	//msg.opp_bot_marking_our_attacker = this->opp_bot_marking_our_attacker;
+	//msg.ball_at_corners = this->ball_at_corners;
+	//msg.ball_in_our_half = this->ball_in_our_half;
+	//msg.ball_in_our_possession = this->ball_in_our_possession;
 	return msg;
 }
 
