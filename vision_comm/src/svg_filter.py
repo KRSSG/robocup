@@ -1,8 +1,8 @@
 import numpy as np
-#import pylab as pl
+import pylab as pl
 import sys, os
 
-#import scipy, scipy.signal as sps
+import scipy, scipy.signal as sps
 
 import rospy
 from std_msgs.msg import String

@@ -3,7 +3,7 @@ import behavior
 import _GoToPoint_
 import rospy
 from utils.functions import *
-from utils.geometry import Vector2D
+from utils.geometry import *
 from utils.config import *
 from math import *
 
@@ -118,9 +118,11 @@ class GoToBall(behavior.Behavior):
 
     def ball_moving(self):
         #print("try to move idiot")
-        #print("vx = ",self.kub.state.ballVel.x)
-        ball_vel_angle = tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
-        bot_ball_angle = tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
+        #print("vx = ",self.kub.state.ballVel.x
+        ball_vel_dir = Vector2D(self.kub.state.ballVel.x, self.kub.state.ballVel.y)
+        ball_vel_angle = ball_vel_dir.tan_inverse()
+        bot_ball = Vector2D(self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x , self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y)
+        bot_ball_angle = bot_ball.tan_inverse()
         perp_dist = sqrt((self.kub.state.homePos[self.kub.kubs_id].x -self.kub.state.ballPos.x)**2 + (self.kub.state.homePos[self.kub.kubs_id].y -self.kub.state.ballPos.y)**2)*sin(abs(ball_vel_angle-bot_ball_angle))
         #if ( getTime(perp_dist) < )
         if(abs(ball_vel_angle-bot_ball_angle) < SATISFIABLE_THETA_DEG):
