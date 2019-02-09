@@ -469,7 +469,7 @@ int main(int argc, char **argv)
 {
   // if no argument is passed, assumed our team is blue
   // else if argument 0 = our team blue, 1 = our team yellow
-  ros::init(argc, argv, "beliefstate_node");
+  ros::init(argc, argv, "beliefstate_node1");
   is_team_yellow = 0;
   if (argc > 1) {
     is_team_yellow = atof(argv[1]);
