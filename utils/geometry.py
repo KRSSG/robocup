@@ -59,12 +59,12 @@ class Vector2D(Structure):
 			return math.atan2(head.y-self.y,head.x-self.x)
 
 	def tan_inverse(self):
-		if atan2(self.y,self.x) < 1.5707963 and atan2(self.y,self.x) > -1.5707963:
-			return atan2(self.y,self.x)
-		if atan2(y,x) > 1.5707963 and atan2(y,x) < 3.14159265:
-			return atan2(self.y,self.x)-3.14159265
+		if math.atan2(self.y,self.x) < 1.5707963 and math.atan2(self.y,self.x) > -1.5707963:
+			return math.atan2(self.y,self.x)
+		if math.atan2(self.y,self.x) > 1.5707963 and math.atan2(self.y,self.x) < 3.14159265:
+			return math.atan2(self.y,self.x)-3.14159265
 		else:
-			return atan2(self.y,self.x)+3.14159265
+			return math.atan2(self.y,self.x)+3.14159265
 
 	# Returns the Eucledian distance between the 2 vectors
 	def dist(self,another_point):
@@ -112,7 +112,7 @@ class Vector2D(Structure):
 			return False
 	# self is the center of circle, checks whether the line made by the point1 and point2 intersects the circle
 	def intersects(self,point1,point2,radius):
-		# Source of algorithm used: http://stackoverflow.com/questions/1073336/circle-line-collision-detection 
+		# Source of algorithm used: http://stackoverflow.com/questions/10733336/circle-line-collision-detection 
 		d = point2 - point1
 		f = point1 - self
 		a = d.dot(d)
