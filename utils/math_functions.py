@@ -210,8 +210,8 @@ def getPointBehindTheBall(point, theta):
 	return Vector2D(int(x), int(y))
 
 def getPointToGo(point, theta):
-	x = point.x + (2.5 * BOT_RADIUS) * (math.cos(theta))
-	y = point.y + (2.5 * BOT_RADIUS) * (math.sin(theta))
+	x = point.x + (1.5 * BOT_RADIUS) * (math.cos(theta))
+	y = point.y + (1.5 * BOT_RADIUS) * (math.sin(theta))
 	return Vector2D(int(x), int(y))
 
 def deg_2_radian(theta):
