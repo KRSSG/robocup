@@ -280,16 +280,12 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 
 			/*
 			###############################
-
 			Goalie id referee msg
-
-
    			float thisDist = distFn(awayPos[i],(HALF_FIELD_MAXX - DBOX_WIDTH),DBOX_HEIGHT) + distFn(awayPos[i],(HALF_FIELD_MAXX - DBOX_WIDTH),-DBOX_HEIGHT);
     		if(thisDist < tempDist){
     			tempDist = thisDist;
     			tempGoalie = bot_id;
     		}
-
     		*/
     	}
 
@@ -299,16 +295,12 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 
     	/*
 		
-
 		TODO: improve velocity calculation
-
     	BeliefState prevState;
     	if(prev_msgQ.size())
     		prevState = prev_msgQ.front();
-
     	assert(prevState.homePos.size() == 6);
     	assert(prevState.awayPos.size() == 6);
-
     	this->ballVel.x = (this->ballPos.x - prevState.ballPos.x)/(this->time - prevState.time).toSec();
     	this->ballVel.y = (this->ballPos.y - prevState.ballPos.y)/(this->time - prevState.time).toSec();
     	if(prev_msgQ.size() == MAX_QUEUE_SZ){
@@ -328,14 +320,11 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
     		this->homeVel[i].x = (this->homePos[i].x - prevState.homePos[i].x)/(this->time - prevState.time).toSec();
     		this->homeVel[i].y = (this->homePos[i].y - prevState.homePos[i].y)/(this->time - prevState.time).toSec();
     	}
-
 		for(int i=0;i<this->awayPos.size();i++)
     	{
     		this->awayVel[i].x = (this->awayPos[i].x - prevState.awayPos[i].x)/(this->time - prevState.time).toSec();
     		this->awayVel[i].y = (this->awayPos[i].y - prevState.awayPos[i].y)/(this->time - prevState.time).toSec();
     	}
-
-
     	*/
 
     	//UPDATING LIST
@@ -369,7 +358,11 @@ void BeliefState::initialise(){
 	this->ballDetected = false;
 	this->homeDetected = vector<bool>(6,0);
 	this->awayDetected = vector<bool>(6,0);
-
+	for( int i = 0; i < 6; i++ )
+	{
+		this->awayPos[i].x = this->awayPos[i].y = 3000;
+		this->homePos[i].x = this->homePos[i].y = 3500;
+	}
 
 	//this->our_bot_closest_to_ball = this->opp_bot_closest_to_ball = 
 	//this->opp_bot_marking_our_attacker = -1;
