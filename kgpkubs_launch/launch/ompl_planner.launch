@@ -1,5 +1,5 @@
 <launch>        
-  <node pkg="ompl_planner" type="planner_path" name="path_planner" output="screen">
+  <node pkg="ompl_planner" type="listener_ompl" name="listener_ompl" output="screen">
     
     
     <!-- <remap from="~image" to="/head/kinect2/qhd/image_color"/> -->
