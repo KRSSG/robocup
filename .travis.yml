@@ -16,9 +16,8 @@ cache:
 language: generic
 matrix:
   include:
-  - name: "Xenial kinetic"
+  - os: linux
     dist: xenial
-    env: ROS_DISTRO=kinetic
 
 ################################################################################
 
