@@ -19,27 +19,21 @@ function pr_launcher {
 }
 
 ps cax | grep project > /dev/null
-# if [ $? -eq 0 ]; then
-#   echo "grSim already running."
-# else
-#   echo "launching grSim."
-#   launcher "grSim" "rosrun grSim project"
-# fi
+if [ $? -eq 0 ]; then
+    echo "grSim already running."
+else
+    echo "launching grSim."
+    launcher "grSim" "rosrun grSim project"
+fi
 
 launcher    "core"         "roscore"
 pr_launcher "vision"    "vision.launch"
 pr_launcher "belief_state"      "belief_state.launch"
 pr_launcher "grsim_comm"    "grsim_comm.launch"
+pr_launcher "path_planner_ompl" "ompl_planner.launch"
 
+screen -S "GUI" -dm python run_gui.py
+screen -S "bs_memcache" -dm python bs.py
 
 # python vision_comm/src/svg_filter.py & >/dev/null
-# rosrun ompl_planner listener_ompl 
-# python bs.py
-
-# pr_launcher "robot"         "robot.launch"
-#pr_launcher "bot_comm"         "bot_comm.launch"
-#pr_launcher "test_play_node" "test_play.launch"
 # pr_launcher "play_node" "play.launch"
-# pr_launcher "rj_robot"         "rj_robot.launch"
-
-# rosrun grsim_comm debug_test

@@ -1,0 +1,9 @@
+<launch>        
+  <node pkg="ompl_planner" type="listener_ompl" name="listener_ompl" output="screen">
+    
+    
+    <!-- <remap from="~image" to="/head/kinect2/qhd/image_color"/> -->
+    <!-- <remap from="~camera_info" to="/head/kinect2/qhd/camera_info"/> -->
+    
+  </node>
+</launch>
