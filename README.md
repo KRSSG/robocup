@@ -1,4 +1,4 @@
-# RobocupSSL
+# RobocupSSL [![Build Status](https://travis-ci.com/KRSSG/robocup.svg?branch=fsm)](https://travis-ci.com/KRSSG/robocup)
 ## Requirement
 * Ubuntu 16.04
 * ROS-Kinetic
