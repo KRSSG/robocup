@@ -34,14 +34,6 @@ pr_launcher "grsim_comm"    "grsim_comm.launch"
 screen -S "GUI" -dm python run_gui.py
 screen -S "bs_memcache" -dm python bs.py
 rosrun ompl_planner listener_ompl
+
 # python vision_comm/src/svg_filter.py & >/dev/null
-# rosrun ompl_planner listener_ompl 
-# python bs.py
-
-# pr_launcher "robot"         "robot.launch"
-#pr_launcher "bot_comm"         "bot_comm.launch"
-#pr_launcher "test_play_node" "test_play.launch"
 # pr_launcher "play_node" "play.launch"
-# pr_launcher "rj_robot"         "rj_robot.launch"
-
-# rosrun grsim_comm debug_test
