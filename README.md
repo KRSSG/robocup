@@ -14,3 +14,6 @@ $ sudo apt install memcached python-memcache
 $ ./kgpkubs_launch/scripts/ssl.sh
 $ python test_role.py (or  python test_tactic.py)
 ```
+
+## Documentation
+We use Doxygen to document our code and build a website that help us to browse through code. You can build documentation of codebase using `$ doxygen Doxyfile` and browse documentation at `Documentation/html/index.html`. 
