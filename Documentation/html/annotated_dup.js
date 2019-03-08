@@ -1,20 +1,20 @@
 var annotated_dup =
 [
     [ "GUI", null, [
-      [ "interfacePath", null, [
-        [ "Ui_MainWindow", "class_g_u_i_1_1interface_path_1_1_ui___main_window.html", "class_g_u_i_1_1interface_path_1_1_ui___main_window" ]
+      [ "task", null, [
+        [ "Ui_MainWindow", "class_g_u_i_1_1task_1_1_ui___main_window.html", "class_g_u_i_1_1task_1_1_ui___main_window" ]
       ] ],
-      [ "InterfacePath_ompl", null, [
-        [ "Ui_MainWindow", "class_g_u_i_1_1_interface_path__ompl_1_1_ui___main_window.html", "class_g_u_i_1_1_interface_path__ompl_1_1_ui___main_window" ]
+      [ "taskcsgo", null, [
+        [ "GUI_link", "class_g_u_i_1_1taskcsgo_1_1_g_u_i__link.html", "class_g_u_i_1_1taskcsgo_1_1_g_u_i__link" ]
       ] ],
-      [ "ompl_gui", null, [
-        [ "MainWindow", "class_g_u_i_1_1ompl__gui_1_1_main_window.html", "class_g_u_i_1_1ompl__gui_1_1_main_window" ]
-      ] ],
-      [ "self_RRT", null, [
-        [ "MainWindow", "class_g_u_i_1_1self___r_r_t_1_1_main_window.html", "class_g_u_i_1_1self___r_r_t_1_1_main_window" ]
+      [ "taskgo", null, [
+        [ "MainWindow", "class_g_u_i_1_1taskgo_1_1_main_window.html", "class_g_u_i_1_1taskgo_1_1_main_window" ]
       ] ]
     ] ],
     [ "role", null, [
+      [ "allignTowardsPoint", null, [
+        [ "allignTowardsPoint", "classrole_1_1allign_towards_point_1_1allign_towards_point.html", "classrole_1_1allign_towards_point_1_1allign_towards_point" ]
+      ] ],
       [ "GoToBall", null, [
         [ "GoToBall", "classrole_1_1_go_to_ball_1_1_go_to_ball.html", "classrole_1_1_go_to_ball_1_1_go_to_ball" ]
       ] ],
@@ -23,6 +23,9 @@ var annotated_dup =
       ] ],
       [ "Kick", null, [
         [ "Kick", "classrole_1_1_kick_1_1_kick.html", "classrole_1_1_kick_1_1_kick" ]
+      ] ],
+      [ "KickToPoint", null, [
+        [ "KickToPoint", "classrole_1_1_kick_to_point_1_1_kick_to_point.html", "classrole_1_1_kick_to_point_1_1_kick_to_point" ]
       ] ],
       [ "Pass_Receive", null, [
         [ "PassReceive", "classrole_1_1_pass___receive_1_1_pass_receive.html", "classrole_1_1_pass___receive_1_1_pass_receive" ]
@@ -53,9 +56,6 @@ var annotated_dup =
       [ "RRT", "classrrt_1_1_r_r_t.html", "classrrt_1_1_r_r_t" ]
     ] ],
     [ "tactics", null, [
-      [ "_Goalie__", null, [
-        [ "TGoalie", "classtactics_1_1___goalie_____1_1_t_goalie.html", "classtactics_1_1___goalie_____1_1_t_goalie" ]
-      ] ],
       [ "CoPass", null, [
         [ "CoordinatedPass", "classtactics_1_1_co_pass_1_1_coordinated_pass.html", "classtactics_1_1_co_pass_1_1_coordinated_pass" ]
       ] ],
@@ -70,15 +70,15 @@ var annotated_dup =
       ] ]
     ] ],
     [ "utils", null, [
-      [ "fsm_thread", null, [
-        [ "fsm_thread", "classutils_1_1fsm__thread_1_1fsm__thread.html", "classutils_1_1fsm__thread_1_1fsm__thread" ]
-      ] ],
       [ "geometry", null, [
         [ "Vector2D", "classutils_1_1geometry_1_1_vector2_d.html", "classutils_1_1geometry_1_1_vector2_d" ]
       ] ],
       [ "math_functions", null, [
         [ "Circle", "classutils_1_1math__functions_1_1_circle.html", "classutils_1_1math__functions_1_1_circle" ],
         [ "Line", "classutils_1_1math__functions_1_1_line.html", "classutils_1_1math__functions_1_1_line" ]
+      ] ],
+      [ "obstacle", null, [
+        [ "Obstacle", "classutils_1_1obstacle_1_1_obstacle.html", null ]
       ] ],
       [ "tactics_union", null, [
         [ "AttackSupportP", "classutils_1_1tactics__union_1_1_attack_support_p.html", null ],
@@ -100,6 +100,10 @@ var annotated_dup =
         [ "PositionP", "classutils_1_1tactics__union_1_1_position_p.html", null ],
         [ "StopP", "classutils_1_1tactics__union_1_1_stop_p.html", null ],
         [ "VelocityP", "classutils_1_1tactics__union_1_1_velocity_p.html", null ]
+      ] ],
+      [ "wrapperpy", null, [
+        [ "MergeSCurve", "classutils_1_1wrapperpy_1_1_merge_s_curve.html", "classutils_1_1wrapperpy_1_1_merge_s_curve" ],
+        [ "Vector_Obstacle", "classutils_1_1wrapperpy_1_1_vector___obstacle.html", "classutils_1_1wrapperpy_1_1_vector___obstacle" ]
       ] ]
     ] ],
     [ "Utils", null, [

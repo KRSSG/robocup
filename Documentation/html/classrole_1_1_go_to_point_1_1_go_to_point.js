@@ -14,6 +14,7 @@ var classrole_1_1_go_to_point_1_1_go_to_point =
     [ "target_present", "classrole_1_1_go_to_point_1_1_go_to_point.html#a0d7601f8c0efb6c42ff5b0b55b571bd0", null ],
     [ "terminate", "classrole_1_1_go_to_point_1_1_go_to_point.html#af1ead0656c623c47ce7c40999b4bc7f8", null ],
     [ "behavior_failed", "classrole_1_1_go_to_point_1_1_go_to_point.html#a4828b7cb0730ef4d2e350ca32325cd4f", null ],
+    [ "DISTANCE_THRESH", "classrole_1_1_go_to_point_1_1_go_to_point.html#a37fc114cebc08ff5b8f83d595fd2bbfc", null ],
     [ "kub", "classrole_1_1_go_to_point_1_1_go_to_point.html#aeb1755342a574f1347c0208786a37452", null ],
     [ "name", "classrole_1_1_go_to_point_1_1_go_to_point.html#ac891c2d129e62390ad8d59a4ede6b0e4", null ],
     [ "new_point", "classrole_1_1_go_to_point_1_1_go_to_point.html#a42153ed24330babed8b4df0fca638b67", null ],
