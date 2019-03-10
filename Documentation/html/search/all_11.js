@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['vector2d',['Vector2D',['../classutils_1_1geometry_1_1_vector2_d.html',1,'utils::geometry']]],
-  ['velocity',['velocity',['../classvelocity_1_1profiler_1_1_velocity.html#a26ed2832d1aa94b50e572d8da915d5e5',1,'velocity::profiler::Velocity']]],
-  ['velocity',['Velocity',['../classvelocity_1_1profiler_1_1_velocity.html',1,'velocity::profiler']]],
-  ['velocityp',['VelocityP',['../classutils_1_1tactics__union_1_1_velocity_p.html',1,'utils::tactics_union']]],
-  ['velocityp',['VelocityP',['../classrole_1_1skills__union_1_1_velocity_p.html',1,'role::skills_union']]]
+  ['ui_5fmainwindow',['Ui_MainWindow',['../class_g_u_i_1_1task_1_1_ui___main_window.html',1,'GUI::task']]],
+  ['use_5fchipper',['use_chipper',['../classrole_1_1_kick_1_1_kick.html#ac52de78575b293b37e3dcc47719f5cd4',1,'role::Kick::Kick']]]
 ];

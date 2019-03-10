@@ -140,24 +140,30 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6ac7b18df94e68d8e77daddc4cc59de9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ac7b18df94e68d8e77daddc4cc59de9"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, avoid_ball=True, continuous=False)</td></tr>
-<tr class="separator:a6ac7b18df94e68d8e77daddc4cc59de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2e74d1492ff249bdddfc8978ef755b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa2e74d1492ff249bdddfc8978ef755b"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, course_approch_thresh=DISTANCE_THRESH/3, continuous=False)</td></tr>
+<tr class="separator:aaa2e74d1492ff249bdddfc8978ef755b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9831ef17b3e579c8fb5390ac6fc4021"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9831ef17b3e579c8fb5390ac6fc4021"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>add_kub</b> (self, kub)</td></tr>
 <tr class="separator:ac9831ef17b3e579c8fb5390ac6fc4021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d1d3753a8dfc824babf148ec9ea4c22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d1d3753a8dfc824babf148ec9ea4c22"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>add_theta</b> (self, theta)</td></tr>
 <tr class="separator:a8d1d3753a8dfc824babf148ec9ea4c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab2a079a5139b8c17cfd9013ea5115f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab2a079a5139b8c17cfd9013ea5115f5"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>target_present</b> (self)</td></tr>
-<tr class="separator:aab2a079a5139b8c17cfd9013ea5115f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622323a1c542b80ab76b16a619cffa71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a622323a1c542b80ab76b16a619cffa71"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>fine_approach</b> (self)</td></tr>
+<tr class="separator:a622323a1c542b80ab76b16a619cffa71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d961cc4f38f93960aebfaf040d9033"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55d961cc4f38f93960aebfaf040d9033"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>course_approach</b> (self)</td></tr>
+<tr class="separator:a55d961cc4f38f93960aebfaf040d9033"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6758eafc1956d762a455f779d712fe4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6758eafc1956d762a455f779d712fe4c"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>at_target_point</b> (self)</td></tr>
 <tr class="separator:a6758eafc1956d762a455f779d712fe4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a443ba3ceb1202fa7b9ab10602e33ff90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a443ba3ceb1202fa7b9ab10602e33ff90"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>ball_in_vicinity</b> (self)</td></tr>
 <tr class="separator:a443ba3ceb1202fa7b9ab10602e33ff90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227b6b7648efc022ea31e8ce4a67ddca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a227b6b7648efc022ea31e8ce4a67ddca"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>ball_moving</b> (self)</td></tr>
+<tr class="separator:a227b6b7648efc022ea31e8ce4a67ddca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d347fb8d2c5d6d06d4a9f9e0c63eaa6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d347fb8d2c5d6d06d4a9f9e0c63eaa6"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>at_ball_pos</b> (self)</td></tr>
 <tr class="separator:a0d347fb8d2c5d6d06d4a9f9e0c63eaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,12 +188,24 @@ def&#160;</td><td class="memItemRight" valign="bottom"><b>execute_course_approac
 <tr class="memitem:aa5fb804bc4920118e42abd3ccd839cd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5fb804bc4920118e42abd3ccd839cd7"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>on_exit_course_approach</b> (self)</td></tr>
 <tr class="separator:aa5fb804bc4920118e42abd3ccd839cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57f4850fab7694c569d21d4c357c637"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac57f4850fab7694c569d21d4c357c637"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>on_exit_intercept</b> (self)</td></tr>
+<tr class="separator:ac57f4850fab7694c569d21d4c357c637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bdb9d37c74d33d6a2b033b82f6eb4fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bdb9d37c74d33d6a2b033b82f6eb4fb"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>on_enter_fine_approach</b> (self)</td></tr>
 <tr class="separator:a2bdb9d37c74d33d6a2b033b82f6eb4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d0de5845e879a9b3eedb52a6d59a275"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d0de5845e879a9b3eedb52a6d59a275"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>execute_fine_approach</b> (self)</td></tr>
 <tr class="separator:a4d0de5845e879a9b3eedb52a6d59a275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26acf66d5fea2e0ea1f4549695894fc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26acf66d5fea2e0ea1f4549695894fc3"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>intercept_complete</b> (self)</td></tr>
+<tr class="separator:a26acf66d5fea2e0ea1f4549695894fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a803752765b14eb8bca1b293097ae7fb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a803752765b14eb8bca1b293097ae7fb1"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>on_enter_intercept</b> (self)</td></tr>
+<tr class="separator:a803752765b14eb8bca1b293097ae7fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c911d808071b831442cc3689a65b89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89c911d808071b831442cc3689a65b89"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>execute_intercept</b> (self)</td></tr>
+<tr class="separator:a89c911d808071b831442cc3689a65b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a835d7ebd547ee7e70f14e1cdd27b97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a835d7ebd547ee7e70f14e1cdd27b97"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>disable_kick</b> (self)</td></tr>
 <tr class="separator:a3a835d7ebd547ee7e70f14e1cdd27b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,12 +221,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0caf425d5bf846251f9e1314cacbc604"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0caf425d5bf846251f9e1314cacbc604"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>power</b></td></tr>
 <tr class="separator:a0caf425d5bf846251f9e1314cacbc604"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cbed8665e172c605327f0362ce7906e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0cbed8665e172c605327f0362ce7906e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>avoid_ball</b></td></tr>
-<tr class="separator:a0cbed8665e172c605327f0362ce7906e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8a0a9059e26c5a89aa39a11ac8535c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8a0a9059e26c5a89aa39a11ac8535c6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>initial_target_dist_thresh</b></td></tr>
-<tr class="separator:aa8a0a9059e26c5a89aa39a11ac8535c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb8ff71db6d885e11807d4ea9294667"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcb8ff71db6d885e11807d4ea9294667"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>target_point</b></td></tr>
+<tr class="separator:abcb8ff71db6d885e11807d4ea9294667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a7e231e9224542a52224340ef51e35e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a7e231e9224542a52224340ef51e35e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>course_approch_thresh</b></td></tr>
+<tr class="separator:a3a7e231e9224542a52224340ef51e35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31d4b56e37cd467248cde035bedd678d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31d4b56e37cd467248cde035bedd678d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ball_dist_thresh</b></td></tr>
 <tr class="separator:a31d4b56e37cd467248cde035bedd678d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,9 +239,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab330f3c439951a2dfdc708e793d07e20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab330f3c439951a2dfdc708e793d07e20"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>theta</b></td></tr>
 <tr class="separator:ab330f3c439951a2dfdc708e793d07e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcb8ff71db6d885e11807d4ea9294667"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcb8ff71db6d885e11807d4ea9294667"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>target_point</b></td></tr>
-<tr class="separator:abcb8ff71db6d885e11807d4ea9294667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">docstring for GoToBall</pre> </div><hr/>The documentation for this class was generated from the following file:<ul>
@@ -235,7 +250,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>role</b></li><li class="navelem"><b>GoToBall</b></li><li class="navelem"><a class="el" href="classrole_1_1_go_to_ball_1_1_go_to_ball.html">GoToBall</a></li>
-    <li class="footer">Generated on Sat Jan 13 2018 04:20:38 for KRSSG by
+    <li class="footer">Generated on Fri Mar 8 2019 22:30:03 for KRSSG by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>
