@@ -44,10 +44,10 @@ class GoToPoint(behavior.Behavior):
             GoToPoint.State.setup,lambda: True,'immediately')
 
         self.add_transition(GoToPoint.State.setup,
-            GoToPoint.State.drive,lambda: self.target_present(),'setup')
+            GoToPoint.State.drive,lambda: self.target_present,'setup')
 
-        #self.add_transition(GoToPoint.State.drive,
-        #    GoToPoint.State.drive,lambda: not self.at_new_point(),'restart')
+        self.add_transition(GoToPoint.State.drive,
+            GoToPoint.State.drive,lambda: not self.at_new_point(),'restart')
 
         self.add_transition(GoToPoint.State.drive,
             behavior.Behavior.State.completed,lambda:self.at_new_point(),'complete')
@@ -96,10 +96,8 @@ class GoToPoint(behavior.Behavior):
     def execute_drive(self):
         print("Execute drive")
         start_time = rospy.Time.now()
-        start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
-        _GoToPoint_.init(self.kub,self.target_point,self.theta)
+        start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
         generatingfunction = _GoToPoint_.execute(start_time,self.DISTANCE_THRESH)
-        print("Datatype of gf:",type(generatingfunction))
         for gf in generatingfunction:
             self.kub,target_point = gf
 

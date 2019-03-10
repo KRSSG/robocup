@@ -1,4 +1,4 @@
-# RobocupSSL [![Build Status](https://travis-ci.com/KRSSG/robocup.svg?branch=fsm)](https://travis-ci.com/KRSSG/robocup)
+# RobocupSSL
 ## Requirement
 * Ubuntu 16.04
 * ROS-Kinetic
@@ -8,12 +8,12 @@
 $ sudo apt install memcached python-memcache
 ```
 * PyQt4
-
 ## Run 
 ```bash
 $ ./kgpkubs_launch/scripts/ssl.sh
+$ python bs.py
+$ python run_gui.py
+$ rosrun ompl_planner listener_ompl 
 $ python test_role.py (or  python test_tactic.py)
 ```
-
-## Documentation
-We use Doxygen to document our code and build a website that help us to browse through code. You can build documentation of codebase using `$ doxygen Doxyfile` and browse documentation at `Documentation/html/index.html`. 
+in five different terminals !!

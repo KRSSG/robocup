@@ -70,7 +70,7 @@ MultiStackRoboCupSSL::MultiStackRoboCupSSL(RenderOptions * _opts, int cameras) :
           this,
           SLOT(RefreshLegacyNetworkOutput()));
 
-  ds_udp_server_new = new RoboCupSSLServer(10006, "224.5.23.1");
+  ds_udp_server_new = new RoboCupSSLServer(10006, "224.5.23.2");
   ds_udp_server_old = new RoboCupSSLServer(10005, "224.5.23.2");
 
   global_plugin_publish_geometry = new  PluginPublishGeometry(

@@ -12,14 +12,14 @@ geometry_msgs/Pose2D[] homeVel
 bool ballDetected
 bool[] homeDetected
 bool[] awayDetected
-# uint8   our_bot_closest_to_ball
-# uint8   opp_bot_closest_to_ball
+uint8   our_bot_closest_to_ball
+uint8   opp_bot_closest_to_ball
 uint8   our_goalie			#returns 10 for no goalie
 uint8   opp_goalie			#returns 10 for no goalie
-# uint8   opp_bot_marking_our_attacker
-# bool    ball_at_corners
-# bool    ball_in_our_half
-# bool    ball_in_our_possession
+uint8   opp_bot_marking_our_attacker
+bool    ball_at_corners
+bool    ball_in_our_half
+bool    ball_in_our_possession
 SSL_GeometryData geometryData
 
 # add other stuff eg. referee signals, bot/ball velocities and acc, score count, predicates, etc.

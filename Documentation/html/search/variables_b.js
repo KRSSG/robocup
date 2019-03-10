@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['velocity',['velocity',['../classvelocity_1_1profiler_1_1_velocity.html#a26ed2832d1aa94b50e572d8da915d5e5',1,'velocity::profiler::Velocity']]]
+  ['windowsize',['windowSize',['../_motion_planner_8cpp.html#ac9d295b6b68339ac488d95e3039193f2',1,'MotionPlanner.cpp']]]
 ];

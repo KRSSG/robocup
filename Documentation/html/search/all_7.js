@@ -10,6 +10,5 @@ var searchData=
   ['gotoball',['GoToBall',['../classrole_1_1_go_to_ball_1_1_go_to_ball.html',1,'role::GoToBall']]],
   ['gotoballp',['GoToBallP',['../classrole_1_1skills__union_1_1_go_to_ball_p.html',1,'role::skills_union']]],
   ['gotopoint',['GoToPoint',['../classrole_1_1_go_to_point_1_1_go_to_point.html',1,'role::GoToPoint']]],
-  ['gotopointp',['GoToPointP',['../classrole_1_1skills__union_1_1_go_to_point_p.html',1,'role::skills_union']]],
-  ['gui_5flink',['GUI_link',['../class_g_u_i_1_1taskcsgo_1_1_g_u_i__link.html',1,'GUI::taskcsgo']]]
+  ['gotopointp',['GoToPointP',['../classrole_1_1skills__union_1_1_go_to_point_p.html',1,'role::skills_union']]]
 ];

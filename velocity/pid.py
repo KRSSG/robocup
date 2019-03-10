@@ -65,6 +65,15 @@ def pid(vX,vY,errorInfo,pso=None):
 			vX = MAX_BOT_SPEED*math.cos(velocity_angle)
 			vY = MAX_BOT_SPEED*math.sin(velocity_angle)
 			# print("________________Velocity Clipped________________")
+
+		# errorInfo.errorXList.append(errorPX)
+		# errorInfo.errorYList.append(errorPY)
+		# errorInfo.currIter+=1
+		# if errorInfo.currIter%5 == 0:
+		# 	plt.plot(errorInfo.errorXList)
+		# 	plt.plot(errorInfo.errorYList)
+		# 	plt.savefig('pid_img/img/myfig_'+str(i)+'.png')
+		# 	i+=1
 		return vX,vY
 
 	# Optimiser (PSO)

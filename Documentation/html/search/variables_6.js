@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['lasterrorx',['lastErrorX',['../classvelocity_1_1error_1_1_error.html#aa3aa1a29b541c64e6ab99c5df3a4394f',1,'velocity::error::Error']]],
-  ['lasterrory',['lastErrorY',['../classvelocity_1_1error_1_1_error.html#ad298d2424fd95051c76ef76cb450b421',1,'velocity::error::Error']]]
+  ['majoraxis',['majorAxis',['../classvelocity_1_1profiler_1_1_velocity.html#ae7c6a3d965ad394f7a0c93985095af8b',1,'velocity::profiler::Velocity']]],
+  ['minoraxis',['minorAxis',['../classvelocity_1_1profiler_1_1_velocity.html#a04a0bce73641a904c71e796e8a833ef3',1,'velocity::profiler::Velocity']]],
+  ['motionangle',['motionAngle',['../classvelocity_1_1profiler_1_1_velocity.html#ad2c532b6f5a24455e814cb223649088f',1,'velocity::profiler::Velocity']]]
 ];

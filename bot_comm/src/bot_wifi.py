@@ -40,32 +40,31 @@ def vel_convert(vel_3_wheel):
     vy = vel_3_wheel[1]
     vw = -vel_3_wheel[2]
 
-    #print("vx",vx,"vy",1,"vw",vw)
+    print("vx",vx,"vy",1,"vw",vw)
     for i in range(4):
         v_4_wheel[i] = ((bot_radius*vw) - (vx*math.sin(theta[i]*math.pi/180.0)) + (vy*math.cos(theta[i]*math.pi/180.0)))/(bot_wheel_radius * math.pi)
-    #print("Before Wheel: ", v_4_wheel)
     for i in range(4):
         if v_4_wheel[i] > 0 :
-            v_4_wheel[i] = int(126 + ((v_4_wheel[i]-max_vel_wheel)*126.0) / max_vel_wheel)
+            v_4_wheel[i] = int(126 + ((v_4_wheel[i]-max_vel_wheel)*126) / max_vel_wheel)
         else :
             v_4_wheel[i] = int(256 - (v_4_wheel[i]*(129-256)) / max_vel_wheel)
-
-    #print("Wheel: ", v_4_wheel)
     return v_4_wheel
 
 def gr_Commands_CB(msg):
+    print("...")
     global buf
+    #print("Command received for bot_id : ",msg.robot_commands.id)
     vel_xyw = [None]*3
-
     vel_xyw[0] = int(msg.robot_commands.velnormal * FACTOR_T)
     vel_xyw[1] = -1*int(msg.robot_commands.veltangent * FACTOR_N)
     vel_xyw[2] =int(msg.robot_commands.velangular * FACTOR_W)
     # vel_xyw[2] = 0
-    #print("Velocities before convert: ",vel_xyw)
+    # vel_xyw = [0, 300 ,0]
     v_4_wheel = vel_convert(vel_xyw)
-    #print("Velocities ",vel_xyw)
+    print("Velocities ",vel_xyw)
     global frame,ti
-
+    # print(frame, ti,"  ", time.time())
+    # print("Frame Rate  ",frame*1.0/(time.time()-ti))
     frame += 1
     start = 1 + msg.robot_commands.id*5
     for i in range(4):
@@ -78,18 +77,11 @@ def gr_Commands_CB(msg):
     buf[8] = buf[7]
     buf[7] = buf[6]
     buf[6] = temp
-    #print("Data: ", buf)
-    print(buf)
-    ###########################################################################
-    #For only dribller --> 254
-    #For only kicker --> 1
-    #For both dribbler and kicker --> 253
-    ###########################################################################
-
+    print("Data: ", buf)
     if msg.robot_commands.spinner and msg.robot_commands.kickspeedx :
-        buf[start+4] = 253
+        buf[start+4] = 3
     elif msg.robot_commands.spinner :
-        buf[start+4] = 254
+        buf[start+4] = 2
     elif msg.robot_commands.kickspeedx :
         buf[start+4] = 1
     else:
@@ -107,13 +99,13 @@ def gr_Commands_CB(msg):
         #print("f#ck off ",i)
         buff += chr(int(buf[i])%256)
 
-    #print("Sending signal to ESP")
+    print(buf)
     data = s.recvfrom(BUFFER_SIZE)
-    #print("Received data from ESP")
     if data:
-        #print('Client to server: ', data)
+        print('Client to server: ', data)
         s.sendto(buff, data[1])
-    #print("Message Sent")
+        print("sent msg : ", buff)
+    print("done")
 
 
 

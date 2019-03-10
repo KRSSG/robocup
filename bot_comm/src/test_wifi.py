@@ -106,13 +106,9 @@ def gr_Commands_CB(msg):
     for i in xrange(1,32):
         buf[i] = 0
 
-    #Only dribbler ,                     buf[5] = 254
-    #For only kicker                     buf[5] = 1 
-    #for running both dribble and kicker buf[5] = 253
-    buf[7], buf[8], buf[9], buf[6] = vel_convert([0, 0,0*90])
-    
-    #buf[9], buf[6], buf[7], buf[8], buf[10] = [0,0,0,0,0]
-    buf[10]= 1
+#Only dribbler , buf[5] = 127. For only kicker buf[5] = 1 and for running both dribbler and kicker buf[5] = 128.
+    buf[7], buf[8], buf[9], buf[6] = vel_convert([0, 30,0])
+    buf[9], buf[6], buf[7], buf[8] = [10,10,10,10]
     #buf[6], buf[7], buf[8], buf[9] = 247, 247, 0, 0
     for i in xrange(5,9):
         buf[i] = int(buf[i])
@@ -120,12 +116,7 @@ def gr_Commands_CB(msg):
         buf[i] = int(buf[i])
 
     for i in xrange(32):
-        buf[i] %= 256
-        buf[i] %= 255
-
-
-    for i in xrange(32):
-        buff += chr(int(buf[i]))
+        buff += chr(int(buf[i])%256)
 
     print(buf)
     print("waiting to receivg")

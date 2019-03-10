@@ -1,8 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classrole_1_1allign_towards_point_1_1allign_towards_point.html" title="role.allignTowardsPoint.allign\lTowardsPoint" alt="" coords="128,5,319,47"/>
-<area shape="rect" id="node3" href="$classrole_1_1_go_to_ball_1_1_go_to_ball.html" title="role.GoToBall.GoToBall" alt="" coords="144,71,303,98"/>
-<area shape="rect" id="node4" href="$classrole_1_1_go_to_point_1_1_go_to_point.html" title="role.GoToPoint.GoToPoint" alt="" coords="136,122,311,149"/>
-<area shape="rect" id="node5" href="$classrole_1_1_kick_1_1_kick.html" title="lines up with the ball and the target, then drives up and kicks this differs from PivotKick which get..." alt="" coords="172,173,275,199"/>
-<area shape="rect" id="node6" href="$classrole_1_1_kick_to_point_1_1_kick_to_point.html" title="role.KickToPoint.KickToPoint" alt="" coords="127,223,320,250"/>
-<area shape="rect" id="node7" href="$classtactics_1_1_goalie_1_1_goalie.html" title="tactics.Goalie.Goalie" alt="" coords="152,274,295,301"/>
+<area shape="rect" id="node2" href="$classrole_1_1_go_to_ball_1_1_go_to_ball_1_1_state.html" title="role.GoToBall.GoToBall.State" alt="" coords="109,5,304,32"/>
+<area shape="rect" id="node3" href="$classrole_1_1_go_to_point_1_1_go_to_point_1_1_state.html" title="Class for state. " alt="" coords="117,57,296,98"/>
 </map>

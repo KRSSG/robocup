@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$class_g_u_i_1_1taskgo_1_1_main_window.html" title="GUI.taskgo.MainWindow" alt="" coords="171,56,339,83"/>
+<area shape="rect" id="node2" href="$classrole_1_1_go_to_ball_1_1_go_to_ball.html" title="role.GoToBall.GoToBall" alt="" coords="135,5,293,32"/>
+<area shape="rect" id="node3" href="$classrole_1_1_go_to_point_1_1_go_to_point.html" title="role.GoToPoint.GoToPoint" alt="" coords="127,56,301,83"/>
+<area shape="rect" id="node4" href="$classrole_1_1_kick_1_1_kick.html" title="lines up with the ball and the target, then drives up and kicks this differs from PivotKick which get..." alt="" coords="163,107,265,133"/>
+<area shape="rect" id="node5" href="$classtactics_1_1_goalie_1_1_goalie.html" title="tactics.Goalie.Goalie" alt="" coords="143,157,285,184"/>
 </map>

@@ -16,23 +16,10 @@ from krssg_ssl_msgs.msg import gr_Robot_Command
 from utils.geometry import Vector2D
 from utils.config import *
 from utils.functions import *
-from krssg_ssl_msgs.srv import bsServer
 import math
-pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
-id_ = 0
 
 import memcache
 shared = memcache.Client(BS_ADDRESS,debug=0)
-
-state = None
-# state=shared.get('state')
-rospy.wait_for_service('bsServer',)
-getState = rospy.ServiceProxy('bsServer',bsServer)
-try:
-    state = getState(state)
-except rospy.ServiceException, e:
-    print("chutiya")
-
 
 kub = None
 start_time = None
@@ -42,7 +29,7 @@ rotate = 0
 # print("Importing _gotopoint_")
 FIRST_CALL = True
 
-prev_state = state.stateB
+prev_state = shared.get('state')
 def init(_kub,theta):
     global kub,rotate,FLAG_turn,FIRST_CALL
     kub = _kub
@@ -68,16 +55,8 @@ def execute(startTime):
 
 
     while not FLAG_turn:
-        global pub,id_
-        state = None
-        #kub = kubs.kubs(id_,state,pub)
-        rospy.wait_for_service('bsServer',)
-        getState = rospy.ServiceProxy('bsServer',bsServer)  
-        try:
-            state = getState(state)
-        except rospy.ServiceException, e:
-            print("chutiya")
-        kub.state = state.stateB
+
+        kub.state = shared.get('state')
         if not(prev_state == kub.state):
             prev_state = kub.state
 
@@ -89,10 +68,10 @@ def execute(startTime):
             if not vw:
                 vw = 0
 
-            #print("rotate : ", rotate)
-            #print(" not rotate : ", kub.state.homePos[kub.kubs_id].theta)
+            print("rotate : ", rotate)
+            print(" not rotate : ", kub.state.homePos[kub.kubs_id].theta)
             print("diff : ",abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate)))
-            if (abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate))<2*ROTATION_FACTOR):
+            if (abs(kub.state.homePos[kub.kubs_id].theta-rotate)<2*ROTATION_FACTOR):
                 kub.turn(0)
                 print("Angle completed")
                 FLAG_turn = True

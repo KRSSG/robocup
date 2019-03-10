@@ -12,6 +12,10 @@ class Error():
 		self.lastErrorX = 0.0
 		self.lastErrorY = 0.0
 
+		self.errorXList=[]
+		self.errorYList=[]
+		self.currIter=0
+
 		## @var errorX
 		## Error in X
 		## @var errorY
