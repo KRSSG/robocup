@@ -50,7 +50,13 @@ using namespace VarTypes;
 #define DEF_VALUE(type,Type,name)  \
             std::shared_ptr<VarTypes::Var##Type> v_##name; \
             inline type name() {return v_##name->get##Type();}
+            
+#define DEF_FIELD_VALUE(type,Type,name)  \
+            std::shared_ptr<VarTypes::Var##Type> v_DivA_##name; \
+            std::shared_ptr<VarTypes::Var##Type> v_DivB_##name; \
+            inline type name() {return (Division() == "Division A" ? v_DivA_##name: v_DivB_##name)->get##Type(); }
 
+            
 #define DEF_ENUM(type,name)  \
             std::shared_ptr<VarTypes::VarStringEnum> v_##name; \
             type name() {if(v_##name!=nullptr) return v_##name->getString();return * (new type);}
@@ -65,6 +71,11 @@ using namespace VarTypes;
 #define DEF_VALUE(type,Type,name)  \
             std::tr1::shared_ptr<VarTypes::Var##Type> v_##name; \
             inline type name() {return v_##name->get##Type();}
+
+#define DEF_FIELD_VALUE(type,Type,name)  \
+            std::tr1::shared_ptr<VarTypes::Var##Type> v_DivA_##name; \
+            std::tr1::shared_ptr<VarTypes::Var##Type> v_DivB_##name; \
+            inline type name() {return (Division() == "Division A" ? v_DivA_##name: v_DivB_##name)->get##Type(); }
 
 #define DEF_ENUM(type,name)  \
             std::tr1::shared_ptr<VarTypes::VarStringEnum> v_##name; \
@@ -126,23 +137,25 @@ public:
   RobotSettings blueSettings;
   RobotSettings yellowSettings;
 
-  DEF_VALUE(double,Double,Field_Line_Width)
-  DEF_VALUE(double,Double,Field_Length)
-  DEF_VALUE(double,Double,Field_Width)
-  DEF_VALUE(double,Double,Field_Rad)
-  DEF_VALUE(double,Double,Field_Defense_Rad)
-  DEF_VALUE(double,Double,Field_Defense_Stretch)
-  DEF_VALUE(double,Double,Field_Free_Kick)
-  DEF_VALUE(double,Double,Field_Penalty_Rad)//TODO: what's this??
-  DEF_VALUE(double,Double,Field_Penalty_Line)
-  DEF_VALUE(double,Double,Field_Penalty_Point)
-  DEF_VALUE(double,Double,Field_Margin)
-  DEF_VALUE(double,Double,Field_Referee_Margin)
-  DEF_VALUE(double,Double,Wall_Thickness)
-  DEF_VALUE(double,Double,Goal_Thickness)
-  DEF_VALUE(double,Double,Goal_Depth)
-  DEF_VALUE(double,Double,Goal_Width)
-  DEF_VALUE(double,Double,Goal_Height)
+  /*    Geometry/Game Vartypes   */
+  DEF_ENUM(std::string, Division)
+  DEF_VALUE(int, Int, Robots_Count)
+  DEF_FIELD_VALUE(double,Double,Field_Line_Width)
+  DEF_FIELD_VALUE(double,Double,Field_Length)
+  DEF_FIELD_VALUE(double,Double,Field_Width)
+  DEF_FIELD_VALUE(double,Double,Field_Rad)
+  DEF_FIELD_VALUE(double,Double,Field_Free_Kick)
+  DEF_FIELD_VALUE(double,Double,Field_Penalty_Width)
+  DEF_FIELD_VALUE(double,Double,Field_Penalty_Depth)
+  DEF_FIELD_VALUE(double,Double,Field_Penalty_Point)
+  DEF_FIELD_VALUE(double,Double,Field_Margin)
+  DEF_FIELD_VALUE(double,Double,Field_Referee_Margin)
+  DEF_FIELD_VALUE(double,Double,Wall_Thickness)
+  DEF_FIELD_VALUE(double,Double,Goal_Thickness)
+  DEF_FIELD_VALUE(double,Double,Goal_Depth)
+  DEF_FIELD_VALUE(double,Double,Goal_Width)
+  DEF_FIELD_VALUE(double,Double,Goal_Height)
+
   DEF_ENUM(std::string,YellowTeam)
   DEF_ENUM(std::string,BlueTeam)
   DEF_VALUE(double,Double,BallRadius)
