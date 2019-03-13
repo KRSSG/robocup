@@ -15,58 +15,30 @@ Copyright (C) 2011, Parsian Robotic Center (eew.aut.ac.ir/~parsian/grsim)
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
-/*
-GUI and program
-============
-
-DONE **separate team parameters
-
-
-DONE f12
-DONE qdebug
-
-put outside blue( to the other side)
-DONE locate ball => set vel = 0 (also robot - reset robot)
-grass texture => webots
-DONE remove all unused vars in varswidget
-
-formation1 & 2 => ini file
-
-Icon & program title => grSim in all the code
-select names for camera modes
-[C => toggle mode
- all modes => shortcut keys]
-Help => about
-DONE turn off bug
-DONE remove plotter
-all keyboad shortcuts => actions
-
-select robot (draw circle)
-
-=============
-code
-
-comments
-refactor variable names
-
-
-
-
-
-  */
-
 #include <QtGui/QApplication>
 #include "mainwindow.h"
 #include "winmain.h"
 
 int main(int argc, char *argv[])
 {
+    std::locale::global( std::locale( "" ) );
+    
+    char** argend = argc + argv;
+
     QCoreApplication::setOrganizationName("Parsian");
     QCoreApplication::setOrganizationDomain("parsian-robotics.com");
     QCoreApplication::setApplicationName("grSim");
     QApplication a(argc, argv);
     MainWindow w;
-    w.show();
+
+    if (std::find(argv, argend, std::string("--headless")) != argend
+        || std::find(argv, argend, std::string("-H")) != argend) {
+        // enable headless mode
+        w.hide();
+        w.setIsGlEnabled(false);
+    } else {
+        // Run normally
+        w.show();
+    }
     return a.exec();
 }
