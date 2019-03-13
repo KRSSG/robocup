@@ -3,7 +3,7 @@ import behavior
 import _GoToPoint_
 import rospy
 from utils.functions import *
-from utils.geometry import Vector2D
+from utils.geometry import *
 from utils.config import *
 from math import *
 
@@ -30,7 +30,7 @@ class GoToBall(behavior.Behavior):
 
         self.course_approch_thresh = course_approch_thresh
 
-        self.ball_dist_thresh = BOT_BALL_THRESH
+        self.ball_dist_thresh = 2*BOT_BALL_THRESH
 
         self.behavior_failed = False
 
@@ -80,17 +80,17 @@ class GoToBall(behavior.Behavior):
         self.add_transition(GoToBall.State.intercept,
             GoToBall.State.fine_approach,lambda:self.intercept_complete(),'intercept_complete')
 
-        self.add_transition(GoToBall.State.setup,
-            behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
-
+        # self.add_transition(GoToBall.State.setup,
+        #   behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
+        #These three conditions for fail might cause a problem in dynamic gameplay as we are sending it back to setup and going to new point.
         self.add_transition(GoToBall.State.course_approach,
-            behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
+            GoToBall.State.setup,lambda: self.behavior_failed,'failed')
 
         self.add_transition(GoToBall.State.fine_approach,
-            behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
+            GoToBall.State.setup,lambda: self.behavior_failed,'failed')
 
         self.add_transition(GoToBall.State.intercept,
-            behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
+            GoToBall.State.setup,lambda: self.behavior_failed,'failed')
 
     
     def add_kub(self,kub):
@@ -118,21 +118,24 @@ class GoToBall(behavior.Behavior):
 
     def ball_moving(self):
         #print("try to move idiot")
-        #print("vx = ",self.kub.state.ballVel.x)
-        ball_vel_angle = tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
-        bot_ball_angle = tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
+        return False
+        #print("vx = ",self.kub.state.ballVel.x
+        ball_vel_dir = Vector2D(self.kub.state.ballVel.x, self.kub.state.ballVel.y)
+        ball_vel_angle = ball_vel_dir.tan_inverse()
+        bot_ball = Vector2D(self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x , self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y)
+        bot_ball_angle = bot_ball.tan_inverse()
         perp_dist = sqrt((self.kub.state.homePos[self.kub.kubs_id].x -self.kub.state.ballPos.x)**2 + (self.kub.state.homePos[self.kub.kubs_id].y -self.kub.state.ballPos.y)**2)*sin(abs(ball_vel_angle-bot_ball_angle))
         #if ( getTime(perp_dist) < )
         if(abs(ball_vel_angle-bot_ball_angle) < SATISFIABLE_THETA_DEG):
             return False
-        if (abs(self.kub.state.ballVel.x) > MIN_BOT_SPEED/60 and abs(self.kub.state.ballVel.x) < MAX_BOT_SPEED ) or ( abs(self.kub.state.ballVel.y) > MIN_BOT_SPEED/60 and abs(self.kub.state.ballVel.y) < MAX_BOT_SPEED ) :
-        #   print("ball moved")
+        if (abs(self.kub.state.ballVel.x) > 10*MIN_BOT_SPEED and abs(self.kub.state.ballVel.x) < MAX_BOT_SPEED ) or ( abs(self.kub.state.ballVel.y) > 10*MIN_BOT_SPEED and abs(self.kub.state.ballVel.y) < MAX_BOT_SPEED ) :
+            print("ball moved", self.kub.state.ballVel.x, self.kub.state.ballVel.y)
             return True
         else:
             return False
 
     def at_ball_pos(self):
-        error = 10
+        error = 50
         return vicinity_points(self.kub.get_pos(),self.kub.state.ballPos,thresh=self.ball_dist_thresh+error) 
 
     def terminate(self):
@@ -156,11 +159,12 @@ class GoToBall(behavior.Behavior):
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
         generatingfunction = _GoToPoint_.execute(start_time,self.course_approch_thresh,True)
+        #self.behavior_failed = False
         for gf in generatingfunction:
             self.kub,target_point = gf
             # self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
             self.target_point = self.kub.state.ballPos
-            if not vicinity_points(self.target_point,target_point,thresh=BOT_RADIUS*3.5):
+            if not vicinity_points(self.target_point,target_point,thresh=BOT_RADIUS*2.0):
                 self.behavior_failed = True
                 break
 
@@ -188,8 +192,10 @@ class GoToBall(behavior.Behavior):
                 break
 
     def intercept_complete(self):
-        ball_vel_angle = tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
-        if ( abs(ball_vel_angle - tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)) < 0.0523599):
+        ball_vel = Vector2D(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
+        ball_vel_angle = ball_vel.tan_inverse()
+        bot_ball_dir = Vector2D(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
+        if ( abs(ball_vel_angle - bot_ball_dir.tan_inverse() )< 0.0523599):
             return 1
         return 0
 
@@ -211,10 +217,12 @@ class GoToBall(behavior.Behavior):
 
     def execute_intercept(self):
         #print("ballvel= ",state.ballVel)
-        print("intercept")
+        #$print("intercept")
         global first
-        ball_vel_angle = tan_inverse(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
-        bot_ball_angle = tan_inverse(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
+        ball_vel = Vector2D(self.kub.state.ballVel.y,self.kub.state.ballVel.x)
+        bot_ball_dir = Vector2D(self.kub.state.ballPos.y-self.kub.state.homePos[self.kub.kubs_id].y , self.kub.state.ballPos.x-self.kub.state.homePos[self.kub.kubs_id].x)
+        ball_vel_angle = ball_vel.tan_inverse()
+        bot_ball_angle = bot_ball_dir.tan_inverse()
         perp_dist = sqrt((self.kub.state.homePos[self.kub.kubs_id].x -self.kub.state.ballPos.x)**2 + (self.kub.state.homePos[self.kub.kubs_id].y -self.kub.state.ballPos.y)**2)*sin(abs(ball_vel_angle-bot_ball_angle))
         approach = True
         
