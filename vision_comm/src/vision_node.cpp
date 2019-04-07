@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	ros::Publisher chatter_pub = n.advertise<krssg_ssl_msgs::SSL_DetectionFrame>("vision", 10000);
 	// ros::Rate loop_rate(10);
 
-	float max_ball_confidence[10] = {0};
+	float max_ball_confidence = 0;
 	float max_blue_bot_confidence[6] = {0};
 	float max_yellow_bot_confidence[6] = {0};
 	int camera_bool[num_cam] = {0};
@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 	int is_yellow_bot_detected[6] = {0};
 	map< int, krssg_ssl_msgs::SSL_DetectionRobot > blue_bots;
 	map< int, krssg_ssl_msgs::SSL_DetectionRobot > yellow_bots;
-	vector< krssg_ssl_msgs::SSL_DetectionBall > all_balls(10);
+	krssg_ssl_msgs::SSL_DetectionBall ball;
 	while(ros::ok()) {
 		//printf("........abcd\n");
 		if (client.receive(packet)) {
@@ -71,28 +71,22 @@ int main(int argc, char **argv)
 				cout<<"Camera num: "<<detection.camera_id()<<endl;
 				if (camera_bool[detection.camera_id()] == 1)
 				{
-					for(int i = 0; i < 10; i++)
-					{
-						max_ball_confidence[i] = 0;
-					}
-					for(int i = 0; i < balls_n; i++)
-					{
-						msg.balls.push_back(all_balls[i]);
-
-					}
+					max_ball_confidence = 0;
+					msg.balls.push_back(ball);	
+					// cout << "ball.x"				
 				}
 				for (int i = 0; i < balls_n; i++) {
-					SSL_DetectionBall ball = detection.balls(i);
+					SSL_DetectionBall ball_new = detection.balls(i);
 					
 					//krssg_ssl_msgs::SSL_DetectionBall ballmsg;
-					if (ball.confidence() > max_ball_confidence[i])
+					if (ball_new.confidence() > max_ball_confidence)
 					{
-						max_ball_confidence[i] = ball.confidence();
-						all_balls[i].confidence = ball.confidence();
-						all_balls[i].area = ball.area();
-						all_balls[i].x = ball.x();
-						all_balls[i].y = ball.y();
-						all_balls[i].z = ball.z();
+						max_ball_confidence = ball_new.confidence();
+						ball.confidence = ball_new.confidence();
+						ball.area = ball_new.area();
+						ball.x = ball_new.x();
+						ball.y = ball_new.y();
+						ball.z = ball_new.z();
 					}
 					
 					// Not using 
@@ -171,6 +165,7 @@ int main(int argc, char **argv)
 				}
 				if(camera_bool[detection.camera_id()] == 1)
 				{
+					cout << "ball size       "<<msg.balls.size() << endl;
 					chatter_pub.publish(msg);
 					for(int i = 0; i < num_cam; i++)
 					{
