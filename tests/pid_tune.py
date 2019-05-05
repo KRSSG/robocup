@@ -7,6 +7,7 @@ from krssg_ssl_msgs.msg import BeliefState
 from krssg_ssl_msgs.msg import gr_Commands
 from krssg_ssl_msgs.msg import gr_Robot_Command
 from krssg_ssl_msgs.msg import BeliefState
+from krssg_ssl_msgs.srv import bsServer
 print("importing gotopoint")
 from role import  GoToBall, GoToPoint
 from multiprocessing import Process
@@ -15,6 +16,8 @@ from math import atan2,pi
 from utils.functions import *
 from utils.config import *
 
+rospy.wait_for_service('bsServer',)
+getState = rospy.ServiceProxy('bsServer',bsServer)
 
 import sys
 # BOT_ID = sys.argv[1]
@@ -45,13 +48,26 @@ def main():
 	point = Vector2D(-2300,-1750)
 	# point = Vector2D(HALF_FIELD_MAXX, HALF_FIELD_MAXY)
 	pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
-	state = shared.get('state')
+	# state = shared.get('state')
+	state = None
+	try:
+		state = getState(state)
+	except rospy.ServiceException, e:
+		print e
+	if state:
+		state = state.stateB
 	kub = kubs.kubs(BOT_ID,state,pub)
 
 	# while True:
 	# for p in points:
 	print("Starting again")
-	state = shared.get('state')
+	# state = shared.get('state')
+	try:
+		state = getState(state)
+	except rospy.ServiceException, e:
+		print e
+	if state:
+		state = state.stateB
 	kub.update_state(state)
 	g_fsm = GoToPoint.GoToPoint()
 	g_fsm.add_kub(kub)

@@ -9,6 +9,10 @@ from role import GoToBall
 from utils.geometry import *
 import memcache
 shared = memcache.Client(['127.0.0.1:11211'],debug=False)
+from krssg_ssl_msgs.srv import bsServer
+
+rospy.wait_for_service('bsServer',)
+getState = rospy.ServiceProxy('bsServer',bsServer)
 
 
 # import skills.pivot_kick
