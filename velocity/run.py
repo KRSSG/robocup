@@ -22,7 +22,7 @@ REPLAN = 0
 FIRST_CALL = 1
 homePos = None
 awayPos = None
-prev_target = None
+prev_target = Vector2D()
 DESTINATION_THRESH = 2*BOT_BALL_THRESH
 
 def distance_(a, b):
@@ -38,10 +38,9 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
     awayPos = awayPos_
     kubid = kub_id
     # if not prev_target==None:
-    if isinstance(prev_target, Vector2D):
-        dist = distance_(target, prev_target)
-        if(dist>DESTINATION_THRESH):
-            REPLAN = 1
+    dist = distance_(target, prev_target)
+    if(dist>DESTINATION_THRESH):
+        REPLAN = 1
     prev_target = target        
     # print("in getVelocity, FIRST_CALL = ",FIRST_CALL)
     curPos = Vector2D(int(homePos[kubid].x),int(homePos[kubid].y))
