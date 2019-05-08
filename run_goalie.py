@@ -10,6 +10,7 @@ from krssg_ssl_msgs.msg import gr_Robot_Command
 from krssg_ssl_msgs.msg import BeliefState
 from multiprocessing import Process
 from kubs import kubs
+from krssg_ssl_msgs.srv import bsServer
 from math import atan2,pi
 from utils.functions import *
 
@@ -17,12 +18,11 @@ from tactics import  Goalie
 
 pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
-import memcache
-shared = memcache.Client(['127.0.0.1:11211'],debug=False)
 # _Goalie_.main()
 flag = True
-kub = kubs.kubs(0,pub)
 def function(id_,state):
+	kub = kubs.kubs(id_,state,pub)
+	kub.update_state(state)
 	# global flag
 	# print(kub.kubs_id)
 	g_fsm = Goalie.Goalie()
@@ -44,9 +44,16 @@ start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
 
 
 while True:
-	state = shared.get('state')
+	state = None
+	rospy.wait_for_service('bsServer',)
+	getState = rospy.ServiceProxy('bsServer',bsServer)
+	try:
+		state = getState(state)
+	except rospy.ServiceException, e:
+		print e
 	if state:
-		kub.update_state(state)
-		function(KUB_ID,state)
+		function(KUB_ID,state.stateB)
+		# break
+rospy.spin()
 		
 
