@@ -129,7 +129,7 @@ class Goalie(behavior.Behavior):
 			print e
 		if state:
 			state = state.stateB
-		return  (opponent_bot_with_ball(state) != None) and ((state.ballPos.x < -HALF_FIELD_MAXX/2 and not state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX) or (abs(state.ballPos.y) > OUR_GOAL_MAXY and state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX))
+		return  (opponent_bot_with_ball(state) != None) and ((state.ballPos.x < -HALF_FIELD_MAXX and not state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX) or (abs(state.ballPos.y) > OUR_GOAL_MAXY and state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX))
 
 	def _protect_to_clear(self):
 		state = None
