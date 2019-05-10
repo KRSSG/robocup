@@ -4,10 +4,10 @@ import enum
 from math import atan2
 from utils.functions import *
 from utils.config import *
-import memcache
 import os
 import rospy
-shared = memcache.Client(['127.0.0.1:11211'],debug=False)
+from krssg_ssl_msgs.srv import bsServer
+
 
 
 class Goalie(behavior.Behavior):
@@ -22,6 +22,8 @@ class Goalie(behavior.Behavior):
 		clear = 2
 		## Keep calm and wait for the ball to be valid.
 		peace = 3
+		## When number of bots near the goal is more protect and clear simulataneouly
+		active = 4
 
 	def __init__(self,continuous=False):
 		super(Goalie,self).__init__()
@@ -42,6 +44,9 @@ class Goalie(behavior.Behavior):
 
 		self.add_transition(Goalie.State.peace,Goalie.State.clear, lambda: self._peace_to_clear(),"clear now")
 
+		self.add_transition(Goalie.State.clear,
+			Goalie.State.active, lambda: self._clear_to_active(), "moving to hyperactive state")
+
 		self.add_transition(Goalie.State.protect, Goalie.State.clear, lambda: self._protect_to_clear(),"save now")
 		
 		self.add_transition(Goalie.State.protect,
@@ -50,6 +55,9 @@ class Goalie(behavior.Behavior):
 		    behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
 		self.add_transition(Goalie.State.clear,
 			behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
+		self.add_transition(Goalie.State.active,
+			behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
+
 
 	def GoToPoint(self,point,theta):
 		pass
@@ -64,36 +72,115 @@ class Goalie(behavior.Behavior):
 		self.kub = kub
 
 	def peace_out(self):
-		state = shared.get('state')
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
 		if state.ballPos.x > 0:
 			return True
 		return False
 
 	def _peace_to_clear(self):
-		state = shared.get('state')
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
 		# print state.ballPos.x , -HALF_FIELD_MAXX + OUR_GOAL_MAXX,state.ballPos.x < -HALF_FIELD_MAXX + OUR_GOAL_MAXX
 		return state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX
 		pass
 
+
+	def _clear_to_active(self):
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")	
+		
+		if state:
+			state=state.stateB
+
+
+		t=0
+		for i in range(0,len(state.awayDetected)):
+			print("helllo")
+			if state.awayPos[i].x<-3000 and abs(state.awayPos[i].y)<1000:
+				t+=1
+
+		return (ball_moving_towards_our_goal(state)) and state.ballPos.x < -HALF_FIELD_MAXX + 3*OUR_GOAL_MAXX  and t>=3
+
+
+
+
 	def _peace_to_protect(self):
-		state = shared.get('state')
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
 		# return False
 		return  (state.ballVel.x < -self.MIN_VEL or state.ballPos.x<=0) and \
 			not (state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX)
 
 	# def _any_to_peace(self):
-	#     state = shared.get('state')
+	#     state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
 	#     return state.ballVel.x >= 0 and state.ballPos.x>=0
 
 	def _protect_to_clear(self):
-		state = shared.get('state')
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
 		return state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX and state.ballVel.x < 0 and abs(state.ballPos.y) < OUR_GOAL_MAXY  
 
 	# note that execute_running() gets called BEFORE any of the execute_SUBSTATE methods gets called
 
 	def execute_peace(self):
 		print("Sab moh maya hain")
-		state = shared.get('state')
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
 		if abs(state.ballPos.y) < OUR_GOAL_MAXY:
 			expected_y = state.ballPos.y
 		else:
@@ -102,7 +189,7 @@ class Goalie(behavior.Behavior):
 			else:
 				expected_y = OUR_GOAL_MAXY
 		print("In Peace :", state.ballPos.y)
-		point = Vector2D(-HALF_FIELD_MAXX + 2*BOT_RADIUS, expected_y)
+		point = Vector2D(-HALF_FIELD_MAXX + 5*BOT_RADIUS, expected_y)
 		start_time = rospy.Time.now()
 		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
 		generatingfunction = _GoToPoint_.execute(start_time,BOT_BALL_THRESH)
@@ -111,7 +198,6 @@ class Goalie(behavior.Behavior):
 			print("peace gf", point.x + point.y)
 			if not vicinity_points(aim,point,thresh=BOT_RADIUS) or self.outOfField(state):
 				self.behavior_failed = True
-				print("Bhenchod:")
 				break
 
 
@@ -121,28 +207,104 @@ class Goalie(behavior.Behavior):
 	def execute_clear(self):
 		print("Clear kar raha hoon")
 		target = Vector2D(4000,0)
-		state = shared.get('state')
-		self.gtB = GoToBall.GoToBall(BOT_BALL_THRESH)
-		self.gtB.add_kub(self.kub)
-		self.gtB.add_theta(theta=normalize_angle(atan2(target.y - state.ballPos.y,target.x - state.ballPos.x)))
-		self.gtB.spin()
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
+		# self.gtB = GoToBall.GoToBall(BOT_BALL_THRESH)
+		# self.gtB.add_kub(self.kub)
+		# self.gtB.add_theta(theta=normalize_angle(atan2(target.y - state.ballPos.y,target.x - state.ballPos.x)))
+		# self.gtB.spin()
 
 		#Will Use KickToPoint after making it perfect with kicking
 
-		# self.ktp = KickToPoint.KickToPoint(target)
-		# self.ktp.add_kub(self.kub)
-		# self.ktp.add_theta(theta=normalize_angle(atan2(target.y - state.ballPos.y,target.x - state.ballPos.x)))
-		# self.ktp.spin()
+		self.ktp = KickToPoint.KickToPoint(target)
+		self.ktp.add_kub(self.kub)
+		self.ktp.add_theta(theta=normalize_angle(atan2(target.y - state.ballPos.y,target.x - state.ballPos.x)))
+		self.ktp.spin()
+
+	def execute_active(self):
+		print("entered the active state")
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB
+
+
+		if opponent_with_the_ball(state)!=None:
+			if state.ballVel.x < -10:
+				angle = math.atan(state.awayPos[state.opp_bot_closest_to_ball].theta)
+				expected_y = angle*(-HALF_FIELD_MAXX + 3*BOT_RADIUS - state.ballPos.x) + state.ballPos.y
+			else:
+				if abs(state.ballPos.y) < OUR_GOAL_MAXY:
+					expected_y = state.ballPos.y
+				else:
+					if state.ballPos.y < 0:
+						expected_y = OUR_GOAL_MINY
+					else:
+						expected_y = OUR_GOAL_MAXY
+			#print("Entered Protect , going to", point.x, point.y)
+			point = Vector2D(-HALF_FIELD_MAXX + 5*BOT_RADIUS,expected_y)
+		
+			#expected_y = angle*(-HALF_FIELD_MAXX - state.ballPos.x) + state.ballPos.y
+			start_time = rospy.Time.now()
+			start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
+			generatingfunction = _GoToPoint_.execute(start_time,BOT_BALL_THRESH)
+			for gf in generatingfunction:
+				self.kub,aim = gf
+				print("gf", point.x, point.y)
+				if not vicinity_points(aim,point,thresh=BOT_RADIUS) or self.outOfField(state):
+					self.behavior_failed = True
+					print("Fail Fail")
+					break
+
+		elif state.ballPos.x<-HALF_FIELD_MAXX+3*BOT_RADIUS:
+			target = Vector2D(0,0)
+			state = None
+			rospy.wait_for_service('bsServer',)
+			getState = rospy.ServiceProxy('bsServer',bsServer)
+			try:
+				state = getState(state)
+			except rospy.ServiceException, e:
+				print("exception found")
+
+			if state:
+				state=state.stateB	
+
+			self.ktp = KickToPoint.KickToPoint(target)
+			self.ktp.add_kub(self.kub)
+			self.ktp.add_theta(theta=normalize_angle(atan2(target.y - state.ballPos.y,target.x - state.ballPos.x)))
+			self.ktp.spin()
 
 	def execute_protect(self):
 		# pass
-		state = shared.get('state')
-		print("main rakshak hoon")
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
 		#expected_y = goalie_expected_y(state, self.kub.kubs_id)
 		if state.ballVel.x < -10:
 			#angle = state.ballVel.y/state.ballVel.x  
 			angle = math.atan(state.awayPos[state.opp_bot_closest_to_ball].theta)
-			expected_y = angle*(-HALF_FIELD_MAXX + 2*BOT_RADIUS - state.ballPos.x) + state.ballPos.y
+			expected_y = angle*(-HALF_FIELD_MAXX + 5*BOT_RADIUS - state.ballPos.x) + state.ballPos.y
 		else:
 			if abs(state.ballPos.y) < OUR_GOAL_MAXY:
 				expected_y = state.ballPos.y
@@ -152,7 +314,7 @@ class Goalie(behavior.Behavior):
 				else:
 					expected_y = OUR_GOAL_MAXY
 		#print("Entered Protect , going to", point.x, point.y)
-		point = Vector2D(-HALF_FIELD_MAXX + 2*BOT_RADIUS,expected_y)
+		point = Vector2D(-HALF_FIELD_MAXX + 5*BOT_RADIUS,expected_y)
 		
 		#expected_y = angle*(-HALF_FIELD_MAXX - state.ballPos.x) + state.ballPos.y
 		start_time = rospy.Time.now()
@@ -183,11 +345,23 @@ class Goalie(behavior.Behavior):
 		pass
 	def on_exit_protect(self):
 		pass
+	def on_exit_active(self):
+		pass
+
 	def on_enter_peace(self):
 		# self.theta = normalize_angle(angle_diff(self.kub.state.homePos[self.kub.kubs_id], self.kub.state.ballPos))
 		# _turnAround_.init(self.kub, self.theta )
 
-		state = shared.get('state')
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
 		if abs(state.ballPos.y) < OUR_GOAL_MAXY:
 				expected_y = state.ballPos.y
 		else:
@@ -196,15 +370,52 @@ class Goalie(behavior.Behavior):
 			else:
 				expected_y = OUR_GOAL_MAXY
 
-		point = Vector2D(-HALF_FIELD_MAXX + 2*BOT_RADIUS, expected_y)
+		point = Vector2D(-HALF_FIELD_MAXX + 5*BOT_RADIUS, expected_y)
 		#print("Entered Protect , going to", point.x, point.y)
 		theta = self.kub.get_pos().theta
 		_GoToPoint_.init(self.kub, point, theta)
 		pass
 	def on_enter_clear(self):
 		pass
+
+	def on_enter_active(self):
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
+
+		if abs(state.ballPos.y) < OUR_GOAL_MAXY:
+				expected_y = state.ballPos.y
+		else:
+			if state.ballPos.y < 0:
+				expected_y = OUR_GOAL_MINY
+			else:
+				expected_y = OUR_GOAL_MAXY
+
+		point = Vector2D(-HALF_FIELD_MAXX + 3*BOT_RADIUS, expected_y)
+		theta = self.kub.get_pos().theta
+		_GoToPoint_.init(self.kub, point, theta)
+		pass
+
+
+
 	def on_enter_protect(self):
-		state = shared.get('state')
+		state = None
+		rospy.wait_for_service('bsServer',)
+		getState = rospy.ServiceProxy('bsServer',bsServer)
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print("exception found")
+
+		if state:
+			state=state.stateB	
 		#expected_y = goalie_expected_y(state, self.kub.kubs_id)
 		if abs(state.ballVel.x) < 10:
 			if abs(state.ballPos.y) < OUR_GOAL_MAXY:
@@ -216,7 +427,7 @@ class Goalie(behavior.Behavior):
 					expected_y = OUR_GOAL_MAXY
 		else:
 			angle = state.ballVel.y/state.ballVel.x
-			expected_y = angle*(-HALF_FIELD_MAXX + 2*BOT_RADIUS - state.ballPos.x) + state.ballPos.y
+			expected_y = angle*(-HALF_FIELD_MAXX + 5*BOT_RADIUS - state.ballPos.x) + state.ballPos.y
 		point = Vector2D()
 
 		if expected_y < OUR_GOAL_MINY:
@@ -224,13 +435,13 @@ class Goalie(behavior.Behavior):
 		if expected_y > OUR_GOAL_MAXY:
 			expected_y = OUR_GOAL_MAXY
 
-		point = Vector2D(-HALF_FIELD_MAXX + 2*BOT_RADIUS, expected_y)
+		point = Vector2D(-HALF_FIELD_MAXX + 5*BOT_RADIUS, expected_y)
 		
 		# if expected_y > 0:
-		# 	point = Vector2D(-HALF_FIELD_MAXX + 2*BOT_RADIUS,expected_y)
+		# 	point = Vector2D(-HALF_FIELD_MAXX + 5*BOT_RADIUS,expected_y)
 		# else:
-		# 	point = Vector2D(-HALF_FIELD_MAXX + 2*BOT_RADIUS,expected_y)
+		# 	point = Vector2D(-HALF_FIELD_MAXX + 5*BOT_RADIUS,expected_y)
 		print("Entered Protect , going to", point.x, point.y)
 		theta = self.kub.get_pos().theta
 		_GoToPoint_.init(self.kub, point, theta)
-		pass
+pass
