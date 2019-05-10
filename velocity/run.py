@@ -22,7 +22,7 @@ REPLAN = 0
 FIRST_CALL = 1
 homePos = None
 awayPos = None
-prev_target = Vector2D()
+prev_target = Vector2D(-5000, -5000)
 DESTINATION_THRESH = 2*BOT_BALL_THRESH
 
 def distance_(a, b):
