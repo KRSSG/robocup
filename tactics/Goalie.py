@@ -444,4 +444,4 @@ class Goalie(behavior.Behavior):
 		print("Entered Protect , going to", point.x, point.y)
 		theta = self.kub.get_pos().theta
 		_GoToPoint_.init(self.kub, point, theta)
-pass
+		pass
