@@ -9,6 +9,7 @@ from velocity.run import *
 import _turnAround_
 
 start_time = None
+DIST_THRESH = 75
 
 class KickToPoint(behavior.Behavior):
 	"""docstring for GoToBall"""
@@ -91,10 +92,11 @@ class KickToPoint(behavior.Behavior):
 		self.target_theta = angle_diff(self.kub.state.ballpos, self.kub.get_pos())
 
 	def setstance(self):
+		global DIST_THRESH
 		#print("hello")
 		theta = angle_diff(self.target_point, self.kub.state.ballPos)
 		go_at = getPointToGo(self.kub.state.ballPos, theta) 
-		return go_at.dist(self.get_pos_as_vec2d(self.kub.get_pos())) >= 50 
+		return go_at.dist(self.get_pos_as_vec2d(self.kub.get_pos())) >= DIST_THRESH*0.85
 
 	def turnaround(self):
 		return not self.bot_moving() #and not self.facing_the_target() and self.near_targetBall_line() and self.one_more()
@@ -194,10 +196,11 @@ class KickToPoint(behavior.Behavior):
 	# 	print("exiting")
 
 	def execute_setStance(self):
+		global DIST_THRESH
 		print("executing setstance")
 		start_time = rospy.Time.now()
 		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-		generatingfunction = _GoToPoint_.execute(start_time,50,True)
+		generatingfunction = _GoToPoint_.execute(start_time,DIST_THRESH,True)
 		for gf in generatingfunction:
 			self.kub,target_point = gf
 			# self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
@@ -250,6 +253,7 @@ class KickToPoint(behavior.Behavior):
 			# self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
 			if not vicinity_theta(self.theta,final_theta,thresh=0.1):
 				self.behavior_failed = True
+				print("failed")
 				break
 
 
