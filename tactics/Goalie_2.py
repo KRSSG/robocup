@@ -78,9 +78,6 @@ class Goalie(behavior.Behavior):
 			behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
 
 
-	def GoToPoint(self,point,theta):
-		pass
-
 	def outOfField(self, state):
 		if state.ballPos.x < -HALF_FIELD_MAXX or state.ballPos.x > HALF_FIELD_MAXX or state.ballPos.y > HALF_FIELD_MAXY or state.ballPos.y < -HALF_FIELD_MAXY:
 			return True
