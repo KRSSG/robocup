@@ -319,7 +319,6 @@ class Goalie(behavior.Behavior):
 			expected_y = OUR_GOAL_MINY
 		if expected_y > OUR_GOAL_MAXY:
 			expected_y = OUR_GOAL_MAXY
-
 		point = Vector2D(-HALF_FIELD_MAXX + 3*BOT_RADIUS, expected_y)
 		
 		print("Entered Protect , going to", point.x, point.y)
@@ -344,7 +343,6 @@ class Goalie(behavior.Behavior):
 			expected_y = OUR_GOAL_MINY
 		if expected_y > OUR_GOAL_MAXY:
 			expected_y = OUR_GOAL_MAXY
-
 		point = Vector2D(-HALF_FIELD_MAXX + BOT_RADIUS, expected_y)
 		
 		# if expected_y > 0:
