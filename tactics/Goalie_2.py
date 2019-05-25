@@ -271,7 +271,7 @@ class Goalie(behavior.Behavior):
 
 		if opponent_with_the_ball(state)!=None:
 			if state.ballVel.x < -10:
-				angle = math.atan(state.awayPos[state.opp_bot_closest_to_ball].theta)
+				angle = state.awayPos[state.opp_bot_closest_to_ball].theta
 				expected_y = angle*(-HALF_FIELD_MAXX + 3*BOT_RADIUS - state.ballPos.x) + state.ballPos.y
 			else:
 				if abs(state.ballPos.y) < OUR_GOAL_MAXY:
@@ -329,7 +329,7 @@ class Goalie(behavior.Behavior):
 		#expected_y = goalie_expected_y(state, self.kub.kubs_id)
 		if state.ballVel.x < -10:
 			#angle = state.ballVel.y/state.ballVel.x  
-			angle = math.atan(state.awayPos[state.opp_bot_closest_to_ball].theta)
+			angle = state.awayPos[state.opp_bot_closest_to_ball].theta
 			expected_y = angle*(-HALF_FIELD_MAXX + 5*BOT_RADIUS - state.ballPos.x) + state.ballPos.y
 
 		else:
