@@ -33,7 +33,7 @@ class StateMachine(object):
 
     # Resets the FSM back into the start state
     def restart(self):
-        self.transition(self.start_state)
+        self.transition(self._start_state)
 
     # Registers a new state (which can optionally be a substate of an existing
     # state)
