@@ -107,6 +107,7 @@ class Line(Structure):
 			P.y = (m1 * c2 - m2 * c1) / (m1 - m2)
 		except:
 			return None
+		return P
 	##
 	# @brief      Find Prependicular distance of point from line
 	# https://en.wikipedia.org/wiki/Distance_from_a_point_to_a_line
@@ -205,8 +206,8 @@ def direction(vector):
 
 
 def getPointBehindTheBall(point, theta):
-	x = point.x - (3.5 * BOT_RADIUS) * (math.cos(theta))
-	y = point.y - (3.5 * BOT_RADIUS) * (math.sin(theta))
+	x = point.x + (3.5 * BOT_RADIUS) * (math.cos(theta))
+	y = point.y + (3.5 * BOT_RADIUS) * (math.sin(theta))
 	return Vector2D(int(x), int(y))
 
 def getPointToGo(point, theta):
@@ -238,10 +239,10 @@ def stan_inverse(self,y,x):
 		return atan2(y,x)+3.14159265
 
 
-def getPointBehindTheBall(point ,theta):
-  x = point.x -(3.5 * BOT_RADIUS) *(math.cos(theta))
-  y = point.y -(3.5 * BOT_RADIUS) *(math.sin(theta))
-  return Vector2D(int(x), int(y))
+# def getPointBehindTheBall(point ,theta):
+#   x = point.x +(3.5 * BOT_RADIUS) *(math.cos(theta))
+#   y = point.y +(3.5 * BOT_RADIUS) *(math.sin(theta))
+#   return Vector2D(int(x), int(y))
 
 def vicinity_points(point1, point2, thresh=10):
 	return dist(point1, point2) < thresh
