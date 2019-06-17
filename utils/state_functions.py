@@ -37,7 +37,7 @@ def ball_moving_towards_our_goal(state):
         ptA = Vector2D(-HALF_FIELD_MAXX, DBOX_HEIGHT)
         ptB = Vector2D(-HALF_FIELD_MAXX, -DBOX_HEIGHT)
         defend_line = Line(point1=ptA,point2=ptB)
-        opponent_aim = Line.intersection_with_line(ball_movement)
+        opponent_aim = defend_line.intersection_with_line(ball_movement)
         if opponent_aim.y > -DBOX_HEIGHT and opponent_aim.y < DBOX_HEIGHT:
             return True
     return False
