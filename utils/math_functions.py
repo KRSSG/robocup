@@ -105,6 +105,7 @@ class Line(Structure):
 		try:
 			P.x = (c2 - c1) / (m1 - m2)
 			P.y = (m1 * c2 - m2 * c1) / (m1 - m2)
+			return P
 		except:
 			return None
 	##
