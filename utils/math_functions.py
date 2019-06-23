@@ -168,7 +168,10 @@ class Line(Structure):
 		return Vector2D(math.cos(angle), math.sin(angle))
 	
 	def nearest_point_on_line(self,point):
-		t=((point.y-self.point.y)*self.angle+point.x-self.point.x)/(math.cos(self.angle)+math.sin(self.angle)*math.tan(self.angle))
+		if math.cos(self.angle) == 0:
+			point = Vector2D(point.x,self.point.y)
+			return point
+		t=((point.y-self.point.y)*math.tan(self.angle)+point.x-self.point.x)*(math.cos(self.angle))
 		x1=self.point.x+math.cos(self.angle)*t
 		y1=self.point.y+math.sin(self.angle)*t
 		point=Vector2D(x1,y1)
