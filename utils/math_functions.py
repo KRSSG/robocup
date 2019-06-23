@@ -166,7 +166,13 @@ class Line(Structure):
 		# angle = math.atan(self.slope)
 		angle = self.angle
 		return Vector2D(math.cos(angle), math.sin(angle))
-
+	
+	def nearest_point_on_line(self,point):
+		t=((point.y-self.point.y)*self.angle+point.x-self.point.x)/(math.cos(self.angle)+math.sin(self.angle)*math.tan(self.angle))
+		x1=self.point.x+math.cos(self.angle)*t
+		y1=self.point.y+math.sin(self.angle)*t
+		point=Vector2D(x1,y1)
+		return point
 
 	##
 	## @var slope  
