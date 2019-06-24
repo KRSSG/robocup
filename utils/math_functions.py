@@ -94,8 +94,8 @@ class Line(Structure):
 
 	# CHECK ---->  SLOPE
 	def intersection_with_line(self, line2):
-		if not isinstance(line, line2):
-			raise ValueError("Expected Line instance, got %s" %type(line2).__name__)
+		# if not isinstance(line, line2):
+		# 	raise ValueError("Expected Line instance, got %s" %type(line2).__name__)
 		c1 = self.point.y - self.slope * self.point.x
 		c2 = line2.point.y - line2.slope * line2.point.x
 
@@ -212,8 +212,8 @@ def direction(vector):
 
 
 def getPointBehindTheBall(point, theta):
-	x = point.x - (3.5 * BOT_RADIUS) * (math.cos(theta))
-	y = point.y - (3.5 * BOT_RADIUS) * (math.sin(theta))
+	x = point.x - (1*BOT_RADIUS) * (math.cos(theta))
+	y = point.y - (1*BOT_RADIUS) * (math.sin(theta))
 	return Vector2D(int(x), int(y))
 
 def getPointToGo(point, theta):
@@ -245,10 +245,10 @@ def stan_inverse(self,y,x):
 		return atan2(y,x)+3.14159265
 
 
-def getPointBehindTheBall(point ,theta):
-  x = point.x -(3.5 * BOT_RADIUS) *(math.cos(theta))
-  y = point.y -(3.5 * BOT_RADIUS) *(math.sin(theta))
-  return Vector2D(int(x), int(y))
+def getPointBehindTheBall(point, theta):
+	x = point.x - (1*BOT_RADIUS) * (math.cos(theta))
+	y = point.y - (1*BOT_RADIUS) * (math.sin(theta))
+	return Vector2D(int(x), int(y))
 
 def vicinity_points(point1, point2, thresh=10):
 	return dist(point1, point2) < thresh
