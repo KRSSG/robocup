@@ -211,9 +211,9 @@ def direction(vector):
 	return math.atan2(vector.y, vector.x)
 
 
-def getPointBehindTheBall(point, theta):
-	x = point.x - (3.5 * BOT_RADIUS) * (math.cos(theta))
-	y = point.y - (3.5 * BOT_RADIUS) * (math.sin(theta))
+def getPointBehindTheBall(point, theta, factor=3.5):
+	x = point.x + (factor * BOT_RADIUS) * (math.cos(theta))
+	y = point.y + (factor * BOT_RADIUS) * (math.sin(theta))
 	return Vector2D(int(x), int(y))
 
 def getPointToGo(point, theta):
@@ -243,12 +243,6 @@ def stan_inverse(self,y,x):
 		return atan2(y,x)-3.14159265
 	else:
 		return atan2(y,x)+3.14159265
-
-
-def getPointBehindTheBall(point ,theta, factor=3.5):
-  x = point.x +(factor * BOT_RADIUS) *(math.cos(theta))
-  y = point.y +(factor * BOT_RADIUS) *(math.sin(theta))
-  return Vector2D(int(x), int(y))
 
 def vicinity_points(point1, point2, thresh=10):
 	return dist(point1, point2) < thresh
