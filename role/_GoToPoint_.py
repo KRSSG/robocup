@@ -42,7 +42,7 @@ print(prev_state)
 def init(_kub,target,theta):
     global kub,GOAL_POINT,rotate,FLAG_turn,FLAG_move,FIRST_CALL
     kub = _kub
-    GOAL_POINT = point_2d()
+    GOAL_POINT = Vector2D()
     rotate = theta
     GOAL_POINT.x = target.x
     GOAL_POINT.y = target.y
