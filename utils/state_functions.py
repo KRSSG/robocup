@@ -37,7 +37,7 @@ def ball_moving_towards_our_goal(state):
         ptA = Vector2D(-HALF_FIELD_MAXX, DBOX_HEIGHT)
         ptB = Vector2D(-HALF_FIELD_MAXX, -DBOX_HEIGHT)
         defend_line = Line(point1=ptA,point2=ptB)
-        opponent_aim = Line.intersection_with_line(ball_movement)
+        opponent_aim = defend_line.intersection_with_line(ball_movement)
         if opponent_aim.y > -DBOX_HEIGHT and opponent_aim.y < DBOX_HEIGHT:
             return True
     return False
@@ -84,7 +84,7 @@ def closest_opponent(state, position):
 def our_bot_closest_to_ball(state):
     distance_from_ball = 99999999
     our_bot_closest_to_ball = 0
-    for i in range(state.homePos.size()):
+    for i in range(len(state.homePos)):
         dist = math.sqrt(pow((state.homePos[i].x - state.ballPos.x),2) + pow((state.homePos[i].y - state.ballPos.y) , 2))
         if dist < distance_from_ball :
                 distance_from_ball = dist
@@ -95,7 +95,7 @@ def our_bot_closest_to_ball(state):
 def opp_bot_closest_to_ball(state):
     distance_from_ball = 99999999
     opp_bot_closest_to_ball = 0
-    for i in range(state.awayPos.size()):
+    for i in range(len(state.awayPos)):
         dist = math.sqrt(pow((state.awayPos[i].x - state.ballPos.x),2) + pow((state.awayPos[i].y - state.ballPos.y) , 2))
         if dist < distance_from_ball :
                 distance_from_ball = dist
