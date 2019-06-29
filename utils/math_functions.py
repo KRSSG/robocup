@@ -105,6 +105,7 @@ class Line(Structure):
 		try:
 			P.x = (c2 - c1) / (m1 - m2)
 			P.y = (m1 * c2 - m2 * c1) / (m1 - m2)
+			return P
 		except:
 			return None
 	##
@@ -165,7 +166,13 @@ class Line(Structure):
 		# angle = math.atan(self.slope)
 		angle = self.angle
 		return Vector2D(math.cos(angle), math.sin(angle))
-
+	
+	def nearest_point_on_line(self,point):
+		t=(point.y-self.point.y)*math.sin(self.angle)+(point.x-self.point.x)*(math.cos(self.angle))
+		x1=self.point.x+math.cos(self.angle)*t
+		y1=self.point.y+math.sin(self.angle)*t
+		point=Vector2D(x1,y1)
+		return point
 
 	##
 	## @var slope  
@@ -204,9 +211,9 @@ def direction(vector):
 	return math.atan2(vector.y, vector.x)
 
 
-def getPointBehindTheBall(point, theta):
-	x = point.x - (3.5 * BOT_RADIUS) * (math.cos(theta))
-	y = point.y - (3.5 * BOT_RADIUS) * (math.sin(theta))
+def getPointBehindTheBall(point, theta, factor=3.5):
+	x = point.x + (factor * BOT_RADIUS) * (math.cos(theta))
+	y = point.y + (factor * BOT_RADIUS) * (math.sin(theta))
 	return Vector2D(int(x), int(y))
 
 def getPointToGo(point, theta):
@@ -236,12 +243,6 @@ def stan_inverse(self,y,x):
 		return atan2(y,x)-3.14159265
 	else:
 		return atan2(y,x)+3.14159265
-
-
-def getPointBehindTheBall(point ,theta):
-  x = point.x -(3.5 * BOT_RADIUS) *(math.cos(theta))
-  y = point.y -(3.5 * BOT_RADIUS) *(math.sin(theta))
-  return Vector2D(int(x), int(y))
 
 def vicinity_points(point1, point2, thresh=10):
 	return dist(point1, point2) < thresh
