@@ -87,10 +87,6 @@ class Goalie(behavior.Behavior):
 		self.kub = kub
 
 	def peace_out(self):
-<<<<<<< HEAD
-		# state = shared.get('state')
-=======
->>>>>>> fsm
 		state = None
 		try:
 			state = getState(state)
