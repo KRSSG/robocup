@@ -9,8 +9,6 @@ from krssg_ssl_msgs.msg import gr_Robot_Command
 from krssg_ssl_msgs.msg import point_SF
 from utils.config import *
 from utils.geometry import *
-import memcache
-shared = memcache.Client(['127.0.0.1:11211'], debug = False)
 import sys
 
 BOT_ID = int(sys.argv[1])
@@ -29,7 +27,6 @@ curr_pt = 0
 def BS_callback(BState):
     global pub,BOT_ID,state,kub,start_time, curr_pt
     global points
-    # BState = shared.get('state')
 
     if not state:
         print("__________________________________")

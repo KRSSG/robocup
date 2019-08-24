@@ -7,7 +7,6 @@ from utils.config import *
 import memcache
 import os
 import rospy
-shared = memcache.Client(['127.0.0.1:11211'],debug=False)
 from krssg_ssl_msgs.srv import  bsServer
 
 
