@@ -49,7 +49,7 @@ while True:
 	try:
 		state = getState(state)
 	except rospy.ServiceException, e:
-		print("chutiya")		
+		print("Error ",e)	
 	if state:
 		print('lasknfcjscnajnstate',state.stateB.homePos)
 		function(1,state.stateB)

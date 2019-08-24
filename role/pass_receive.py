@@ -218,7 +218,7 @@ class PassReceive(composite_behavior.CompositeBehavior):
             try:
                 state = getState(state).stateB
             except rospy.ServiceException, e:
-                print("chutiya")            
+                print("Error ",e)           
             self.kub.update_state(state)
             self.move.add_kub(self.kub)
             print(move_angle)
@@ -231,7 +231,7 @@ class PassReceive(composite_behavior.CompositeBehavior):
         try:
             state = getState(state).stateB
         except rospy.ServiceException, e:
-            print("chutiya") 
+            print("Error ",e) 
         self.recalculate()
         face_angle = self.pass_line.angle + math.pi
         self.face = GoToPoint.GoToPoint()
@@ -267,7 +267,7 @@ class PassReceive(composite_behavior.CompositeBehavior):
         try:
                 state = getState(state).stateB
         except rospy.ServiceException, e:
-                print("chutiya") 
+                print("Error ",e) 
         velocity_magnitude = MAX_BOT_SPEED/(5*BOT_RADIUS)
         kub_angle = self.pass_line.angle
         vx = velocity_magnitude*math.cos(kub_angle)

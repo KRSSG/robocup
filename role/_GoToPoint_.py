@@ -37,7 +37,7 @@ prev_state = None
 try:
     prev_state = getState(prev_state).stateB
 except rospy.ServiceException, e:
-    print("chutiya")
+    print("Error ", e)
 
 print(prev_state)
 def init(_kub,target,theta):
@@ -73,7 +73,7 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
         try:
             kub.state = getState(prev_state).stateB
         except rospy.ServiceException, e:
-            print("chutiya")
+            print("Error ", e)
         print(kub.state)
         if not(prev_state == kub.state):
             prev_state = kub.state

@@ -27,7 +27,7 @@ getState = rospy.ServiceProxy('bsServer',bsServer)
 try:
     state = getState(state)
 except rospy.ServiceException, e:
-    print("chutiya")
+    print("Error ",e)
 
 
 kub = None
@@ -72,7 +72,7 @@ def execute(startTime):
         try:
             state = getState(state)
         except rospy.ServiceException, e:
-            print("chutiya")
+            print("Error ",e)
         kub.state = state.stateB
         if not(prev_state == kub.state):
             prev_state = kub.state

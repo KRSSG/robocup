@@ -61,7 +61,7 @@ def main1(process_id):
 	    try:
 	            state = getState(state)
 	    except rospy.ServiceException, e:
-	            print("chutiya")		
+	            print("Error ", e)		
 	    if state:
 	            #print('lasknfcjscnajnstate',state.stateB.homePos)
 	            #p2 = multiprocessing.Process(target=function2, args=(2,state.stateB, )) 
@@ -86,7 +86,7 @@ def main2(process_id):
 	    try:
 	            state = getState(state)
 	    except rospy.ServiceException, e:
-	            print("chutiya")		
+	            print("Error ", e)		
 	    if state:
 	            #print('lasknfcjscnajnstate',state.stateB.homePos)
 	            #p2 = multiprocessing.Process(target=function2, args=(2,state.stateB, )) 
