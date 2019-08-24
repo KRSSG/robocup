@@ -32,8 +32,6 @@ BOT_ID = 0
 
 
 def main():
-	import memcache
-	shared = memcache.Client(['127.0.0.1:11211'],debug=False)
 	paddingX = 200	
 	paddingY = 100
 
@@ -48,7 +46,6 @@ def main():
 	point = Vector2D(-2300,-1750)
 	# point = Vector2D(HALF_FIELD_MAXX, HALF_FIELD_MAXY)
 	pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
-	# state = shared.get('state')
 	state = None
 	try:
 		state = getState(state)
@@ -61,7 +58,6 @@ def main():
 	# while True:
 	# for p in points:
 	print("Starting again")
-	# state = shared.get('state')
 	try:
 		state = getState(state)
 	except rospy.ServiceException, e:
