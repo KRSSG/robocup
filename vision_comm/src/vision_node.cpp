@@ -132,13 +132,7 @@ int main(int argc, char **argv)
 				if (camera_bool[detection.camera_id()] == 1)
 				{
 					for(int i = 0; i < 6; i++)
-					{
-						//if(is_yellow_bot_detected[i] == 1)
-						msg.robots_yellow.push_back(yellow_bots[i]);
-						max_yellow_bot_confidence[i] = 0;
-					}
-					for(int i = 0; i < 6; i++)
-						is_yellow_bot_detected[i] = 0;
+						max_yellow_bot_confidence[i] = 0,is_yellow_bot_detected[i] = 0;
 					//msg.robots_yellow = yellow_bots;
 				}
 				//Yellow robot info:
@@ -164,7 +158,14 @@ int main(int argc, char **argv)
 
 				}
 				if(camera_bool[detection.camera_id()] == 1)
-				{
+				{	
+					for(int i = 0; i < 6; i++)
+					{
+						//if(is_yellow_bot_detected[i] == 1)
+						msg.robots_yellow.push_back(yellow_bots[i]);
+						
+					}
+					
 					cout << "ball size       "<<msg.balls.size() << endl;
 					chatter_pub.publish(msg);
 					for(int i = 0; i < num_cam; i++)
