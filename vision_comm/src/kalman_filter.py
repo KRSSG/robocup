@@ -41,6 +41,9 @@ def updateFilter(dt):
                      [0,  1, 0,  0],
                      [0,  0, 1, dt],
                      [0,  0, 0,  1]])
+    
+    q = Q_discrete_white_noise(dim=2, dt=dt, var=1.5**2)
+    kf.Q = block_diag(q, q)
 vel_rect=[]
 
 def filter(dict_here):
