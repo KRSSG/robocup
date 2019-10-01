@@ -10,8 +10,9 @@ import enum
 import logging
 from math import pi,atan2
 
-# import memcache
-# shared = memcache.Client(['127.0.0.1:11211'],debug=False)
+from krssg_ssl_msgs.srv import bsServer
+rospy.wait_for_service('bsServer',)
+getState = rospy.ServiceProxy('bsServer', bsServer)
 
 class SampleTactic(composite_behavior.CompositeBehavior):
 
@@ -73,7 +74,13 @@ class SampleTactic(composite_behavior.CompositeBehavior):
 
 
     def on_enter_preparing(self):
-        # self.kub.state = shared.get('state')
+        state = None
+        try:
+            state = getState(state)
+        except rospy.ServiceException, e:
+            print e
+        if state:
+            self.kub.state = state.stateB
         print (self.kub.get_pos().x,self.kub.get_pos().y)
         self.fetch = GoToBall.GoToBall()
         self.fetch.add_kub(self.kub)
@@ -81,7 +88,13 @@ class SampleTactic(composite_behavior.CompositeBehavior):
         self.add_subbehavior(self.fetch,'fetch')
 
 
-        # self.kub.state = shared.get('state')
+        state = None
+        try:
+            state = getState(state)
+        except rospy.ServiceException, e:
+            print e
+        if state:
+            self.kub.state = state.stateB
         print (self.kub.get_pos().x,self.kub.get_pos().y)
         self.fetch = GoToBall.GoToBall()
         self.fetch.add_kub(self.kub)

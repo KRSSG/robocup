@@ -19,9 +19,6 @@ from krssg_ssl_msgs.srv import *
 from utils.functions import *
 import math
 
-import memcache
-shared = memcache.Client(BS_ADDRESS,debug=0)
-
 kub = None
 start_time = None
 GOAL_POINT = None
@@ -37,12 +34,16 @@ vx_end,vy_end = 0,0
 
 #prev_state = shared.get('state')
 prev_state = None
-prev_state = getState(prev_state).stateB
+try:
+    prev_state = getState(prev_state).stateB
+except rospy.ServiceException, e:
+    print("Error ", e)
+
 print(prev_state)
 def init(_kub,target,theta):
     global kub,GOAL_POINT,rotate,FLAG_turn,FLAG_move,FIRST_CALL
     kub = _kub
-    GOAL_POINT = point_2d()
+    GOAL_POINT = Vector2D()
     rotate = theta
     GOAL_POINT.x = target.x
     GOAL_POINT.y = target.y
@@ -69,8 +70,10 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
     while not (FLAG_move and FLAG_turn):
 
         #kub.state = shared.get('state')
-
-        kub.state = getState(prev_state).stateB
+        try:
+            kub.state = getState(prev_state).stateB
+        except rospy.ServiceException, e:
+            print("Error ", e)
         print(kub.state)
         if not(prev_state == kub.state):
             prev_state = kub.state
