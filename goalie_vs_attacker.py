@@ -17,11 +17,6 @@ import multiprocessing
 import threading
 #pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
-
-import memcache
-shared = memcache.Client(['127.0.0.1:11211'],debug=True)
-
-
 def function1(id_,state,pub):
 	kub1 = kubs.kubs(id_,state,pub)
 	print("aaaaaaaaaaaaaaaaaaaa")
@@ -66,7 +61,7 @@ def main1(process_id):
 	    try:
 	            state = getState(state)
 	    except rospy.ServiceException, e:
-	            print("chutiya")		
+	            print("Error ", e)		
 	    if state:
 	            #print('lasknfcjscnajnstate',state.stateB.homePos)
 	            #p2 = multiprocessing.Process(target=function2, args=(2,state.stateB, )) 
@@ -91,7 +86,7 @@ def main2(process_id):
 	    try:
 	            state = getState(state)
 	    except rospy.ServiceException, e:
-	            print("chutiya")		
+	            print("Error ", e)		
 	    if state:
 	            #print('lasknfcjscnajnstate',state.stateB.homePos)
 	            #p2 = multiprocessing.Process(target=function2, args=(2,state.stateB, )) 

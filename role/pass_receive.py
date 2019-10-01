@@ -6,13 +6,15 @@ from utils.config import *
 import enum
 import math
 import time
+import rospy,sys
 # import role_assignment
 # import skills
 from utils.functions import *
 from role import GoToPoint
-import memcache
-shared = memcache.Client(['127.0.0.1:11211'],debug=False)
+from krssg_ssl_msgs.srv import *
 
+rospy.wait_for_service('bsServer',)
+getState = rospy.ServiceProxy('bsServer',bsServer)
 
 # PassReceive accepts a receive_point as a parameter and gets setup there to catch the ball
 # It transitions to the 'aligned' state once it's there within its error thresholds and is steady
@@ -213,7 +215,10 @@ class PassReceive(composite_behavior.CompositeBehavior):
         if isinstance(self._target_pos,Vector2D):
             move_angle = self.pass_line.angle + math.pi
             self.move = GoToPoint.GoToPoint()
-            state = shared.get('state')
+            try:
+                state = getState(state).stateB
+            except rospy.ServiceException, e:
+                print("Error ",e)           
             self.kub.update_state(state)
             self.move.add_kub(self.kub)
             print(move_angle)
@@ -223,7 +228,10 @@ class PassReceive(composite_behavior.CompositeBehavior):
 
     def execute_aligned(self):
         print("execute aligning")
-        state = shared.get('state')
+        try:
+            state = getState(state).stateB
+        except rospy.ServiceException, e:
+            print("Error ",e) 
         self.recalculate()
         face_angle = self.pass_line.angle + math.pi
         self.face = GoToPoint.GoToPoint()
@@ -256,7 +264,10 @@ class PassReceive(composite_behavior.CompositeBehavior):
             return True
 
     def execute_receiving(self):
-        state = shared.get('state')
+        try:
+                state = getState(state).stateB
+        except rospy.ServiceException, e:
+                print("Error ",e) 
         velocity_magnitude = MAX_BOT_SPEED/(5*BOT_RADIUS)
         kub_angle = self.pass_line.angle
         vx = velocity_magnitude*math.cos(kub_angle)

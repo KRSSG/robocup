@@ -8,8 +8,7 @@ from krssg_ssl_msgs.msg import gr_Commands
 from krssg_ssl_msgs.msg import gr_Robot_Command
 from krssg_ssl_msgs.msg import point_SF
 from utils.config import *
-import memcache
-shared = memcache.Client(['127.0.0.1:11211'], debug = False)
+from krssg_ssl_msgs.srv import bsServer
 import sys
 
 BOT_ID = int(sys.argv[1])
@@ -22,7 +21,15 @@ GOAL_POINT.y = 1200
 REPLANNED = 0
 homePos = None
 awayPos = None
-BState = shared.get('state')
+state = None
+rospy.wait_for_service('bsServer',)
+getState = rospy.ServiceProxy('bsServer',bsServer)
+try:
+	state = getState(state)
+except rospy.ServiceException, e:
+	print e
+if state:
+	BState = state.stateB
 kub = kubs.kubs(BOT_ID, BState, pub)
 
 def reset():

@@ -9,13 +9,14 @@ from krssg_ssl_msgs.msg import gr_Robot_Command
 from krssg_ssl_msgs.msg import point_SF
 from utils.config import *
 from utils.functions import *
-import memcache
-shared = memcache.Client(['127.0.0.1:11211'], debug = False)
+from krssg_ssl_msgs.srv import bsServer
 import sys
 
 # BOT_ID = int(sys.argv[1])
 # print "bot_id received",BOT_ID
 pub = rospy.Publisher('/grsim_data', gr_Commands, queue_size=1000)
+rospy.wait_for_service('bsServer',)
+getState = rospy.ServiceProxy('bsServer', bsServer)
 
 GOAL_POINT = point_2d()
 GOAL_POINT.x = 1000
@@ -49,7 +50,9 @@ def execute(start_time_,DIST_THRESH,data,avoid_ball=False):
     global awayPos, start_time, BState, kub, target
     print ("safsdf")
     # while FLAG_move:
-    data = shared.get('state')
+    state = None
+    state = getState(state)
+    state = state.stateB 
     if FIRST_CALL:
         start_time = start_time_
         FIRST_CALL = False

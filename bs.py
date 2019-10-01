@@ -1,9 +1,7 @@
 import rospy
 from krssg_ssl_msgs.msg import BeliefState
-import memcache
 from utils.config import BS_ADDRESS
 from krssg_ssl_msgs.srv import *
-#shared = memcache.Client(BS_ADDRESS,debug=False)
 State = None
 
 def BS_callback(state):
