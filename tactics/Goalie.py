@@ -360,10 +360,8 @@ class Goalie(behavior.Behavior):
 # from math import atan2
 # from utils.functions import *
 # from utils.config import *
-# import memcache
 # import os
 # import rospy
-# shared = memcache.Client(['127.0.0.1:11211'],debug=False)
 
 
 # class Goalie(behavior.Behavior):
