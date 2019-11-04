@@ -81,10 +81,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES belief_state
-#  CATKIN_DEPENDS roscpp rospy std_msgs
-#  DEPENDS system_lib
+  INCLUDE_DIRS include
+  LIBRARIES belief_state
+  CATKIN_DEPENDS roscpp rospy std_msgs
+  DEPENDS system_lib
 )
 
 ###########
@@ -165,6 +165,13 @@ include_directories(
 
 # add_executable(beliefstate_node src/node.cpp ${src})
 # target_link_libraries(beliefstate_node ${catkin_LIBRARIES})
+
+include_directories(include ${catkin_INCLUDE_DIRS} ${PROTOBUF_INCLUDE_DIRS})
+include_directories(${CMAKE_BINARY_DIR}/${PROJECT_NAME})
+
+set(src
+  src/kalman_filter.cpp
+)
 
 add_executable(beliefstate_class src/node_class.cpp ${src})
 target_link_libraries(beliefstate_class ${catkin_LIBRARIES})

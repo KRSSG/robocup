@@ -7,13 +7,15 @@
 #include <geometry_msgs/Point32.h>
 #include "../../ssl_common/include/ssl_common/geometry.hpp"
 
-
+#include <bits/stdc++.h>
 #include <string.h>
 #include <math.h>
 #include <vector>
 #include <queue>
 #include <deque>
 #include <fstream>
+#include <Eigen/Dense>
+#include "kalman_filter.h"
 
 //const int BALL_AT_CORNER_THRESH	= 20; 
 const int HALF_FIELD_MAXX		= 3000; 
@@ -22,7 +24,6 @@ const float MAX_DRIBBLE_R		= 3;
 const int DBOX_WIDTH			= 600;
 const int DBOX_HEIGHT			= 600;
 const int MAX_QUEUE_SZ			= 5;
-
 short int isteamyellow = 0;
 
 using namespace std;
@@ -83,7 +84,7 @@ class BeliefState {
 
 public:
 	BeliefState();
-	BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& , list<BeliefState> &);
+	BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& , list<BeliefState> &, KalmanFilter *home[], KalmanFilter *away[], KalmanFilter *ball);
 	BeliefState(const BeliefState &);
 	void copy(const BeliefState&);
 	void initialise();
@@ -137,7 +138,7 @@ float distFn(krssg_ssl_msgs::SSL_DetectionRobot p, float x, float y){
 	return sqrt((p.x - x)*(p.x - x) + (p.y - y)*(p.y - y));
 }
 
-BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vmsg, list<BeliefState> &prev_msgQ){
+BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vmsg, list<BeliefState> &prev_msgQ, KalmanFilter *home[], KalmanFilter *away[], KalmanFilter *ball){
 	if(!isValidMsg(vmsg)){
 		if(prev_msgQ.size())
 			copy(prev_msgQ.back());
@@ -171,7 +172,7 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 
 		if(vmsg->balls.size()){
 			this->ballDetected = 1;
-			this->ballPos.x = vmsg->balls[0].x;
+			/*this->ballPos.x = vmsg->balls[0].x;
 			this->ballPos.y = vmsg->balls[0].y;
 
 			//FILTERING BALLPOS
@@ -186,8 +187,29 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 					}
 					count ++;
 				}
+			}*/
+			Eigen::VectorXd x(4);
+			if(!ball->intialized()){
+				Eigen::MatrixXd P(4, 4);
+				x << vmsg->balls[0].x, 0, vmsg->balls[0].y, 0;
+				P.setIdentity();
+				P = P*200;
+				ball->init(x, P);
 			}
-
+			else{
+				Eigen::VectorXd z(2);
+				z << vmsg->balls[0].x, vmsg->balls[0].y;
+				ball->predict();
+				x = ball->update(z);
+			}
+			// cout << ball.x_size << "\n" << ball.z_size << "\n" << ball.F <<
+			// "\n" << ball.Q << "\n" << ball.H << "\n" << ball.R << "\n" << ball.x
+			// << "\n" << ball.x_prior << "\n" << ball.x_post << "\n" << ball.P <<
+			// "\n" << ball.P_prior << "\n" << ball.P_post << "\n";
+			this->ballPos.x = x(0);
+			this->ballVel.x = x(1);
+			this->ballPos.y = x(2);
+			this->ballVel.y = x(3);
 			// if(this->ballPos.x <= 0)
 			// 	this->ball_in_our_half = true;
 			// else this->ball_in_our_half = false;
@@ -203,9 +225,28 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 		for(int i=0;i<homePos.size();i++){
 			int bot_id = homePos[i].robot_id;
     		this->homeDetected[bot_id] = 1;
-    		this->homePos[bot_id].x = homePos[i].x;
-    		this->homePos[bot_id].y = homePos[i].y;
     		this->homePos[bot_id].theta = homePos[i].orientation;
+    		Eigen::VectorXd x(4);
+    		if(!home[bot_id]->intialized()){
+    			Eigen::MatrixXd P(4, 4);
+    			x << homePos[i].x, 0, homePos[i].y, 0;
+    			P.setIdentity();
+    			P = P*200;
+    			home[bot_id]->init(x, P);
+    		}
+    		else{
+    			Eigen::VectorXd z(2);
+    			z << homePos[i].x, homePos[i].y;
+    			home[bot_id]->predict();
+    			x = home[bot_id]->update(z);
+    		}
+
+    		this->homePos[bot_id].x = x(0);
+    		this->homeVel[bot_id].x = x(1);
+    		this->homePos[bot_id].y = x(2);
+    		this->homeVel[bot_id].y = x(3);
+    		/*this->homePos[bot_id].x = homePos[i].x;
+    		this->homePos[bot_id].y = homePos[i].y;
 
 			//HOMEPOS FILTERING
 			if(prev_msgQ.size() == MAX_QUEUE_SZ){
@@ -219,7 +260,7 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 					}
 					count ++;
 				}
-			}
+			}*/
 
 			// float dist = sqrt(pow((homePos[i].x - this->ballPos.x),2) + pow((homePos[i].y - this->ballPos.y) , 2));
    // 			if(dist < distance_from_ball){
@@ -253,6 +294,28 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
     	for(int i=0;i<awayPos.size();i++){
     		int bot_id = awayPos[i].robot_id;
     		this->awayDetected[bot_id] = 1;
+    		this->awayPos[bot_id].theta = awayPos[i].orientation;
+    		Eigen::VectorXd x(4);
+    		if(!away[bot_id]->intialized()){
+    			Eigen::MatrixXd P(4, 4);
+    			x << awayPos[i].x, 0, awayPos[i].y, 0;
+    			P.setIdentity();
+    			P = P*200;
+    			away[bot_id]->init(x, P);
+    		}
+    		else{
+    			Eigen::VectorXd z(2);
+    			z << awayPos[i].x, awayPos[i].y;
+    			away[bot_id]->predict();
+    			x = away[bot_id]->update(z);
+    		}
+
+    		this->awayPos[bot_id].x = x(0);
+    		this->awayVel[bot_id].x = x(1);
+    		this->awayPos[bot_id].y = x(2);
+    		this->awayVel[bot_id].y = x(3);
+    		/*int bot_id = awayPos[i].robot_id;
+    		this->awayDetected[bot_id] = 1;
     		this->awayPos[bot_id].x = awayPos[i].x;
     		this->awayPos[bot_id].y = awayPos[i].y;
     		this->awayPos[bot_id].theta = awayPos[i].orientation;
@@ -269,7 +332,7 @@ BeliefState::BeliefState(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vms
 					}
 					count ++;
 				}
-			}
+			}*/
 
     //		float dist = sqrt(((awayPos[i].x - this->ballPos.x)*(awayPos[i].x - this->ballPos.x)) + ((awayPos[i].y - this->ballPos.y)*(awayPos[i].y - this->ballPos.y)));
 
@@ -409,7 +472,6 @@ krssg_ssl_msgs::BeliefState BeliefState::getBeliefStateMsg(){
 	msg.isteamyellow = this->isteamyellow;
 	msg.frame_number = this->frame_number;
 	msg.t_capture = this->t_capture;
-	msg.t_sent = this->t_sent;
 	msg.ballPos.x = this->ballPos.x;
 	msg.ballPos.y = this->ballPos.y;	
 	msg.awayPos = this->awayPos;
@@ -434,11 +496,13 @@ krssg_ssl_msgs::BeliefState BeliefState::getBeliefStateMsg(){
 	return msg;
 }
 
+KalmanFilter ball;
+KalmanFilter *home[6], *away[6];
 
 void Callback(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vmsg){
 	static list<BeliefState> prev_msgQ;
 	// cout << vmsg->balls[0].x << "," << vmsg->balls[0].y << endl;
-	BeliefState bs(vmsg,prev_msgQ);
+	BeliefState bs(vmsg,prev_msgQ, home, away, &ball);
 	// bs.print();
 	pub.publish(bs.getBeliefStateMsg());
 }
@@ -447,7 +511,24 @@ void Callback(const krssg_ssl_msgs::SSL_DetectionFrame::ConstPtr& vmsg){
 int main(int argc, char *argv[])
 {
 	ros::init(argc,argv,"beliefstate_node");
-
+	Eigen::MatrixXd F(4, 4), H(2, 4), Q(4, 4), R(2, 2);
+	double dt = 0.020;
+	F << 1, dt, 0, 0, 0, 1, 0, 0, 0, 0, 1, dt, 0, 0, 0, 1;
+	H << 1, 0, 0, 0, 0, 0, 1, 0;
+	Q << pow(dt, 4)/4, pow(dt, 3)/2, 0, 0, pow(dt, 3)/2, pow(dt, 2), 0, 0, 0, 0, pow(dt, 4)/4, pow(dt, 3)/2, 0, 0, pow(dt, 3)/2, pow(dt, 2);
+	Q = Q*1.5*1.5;
+	R.setIdentity();
+	R*=0.1*0.1;
+	for(int i=0; i<6; i++){
+		home[i] = (KalmanFilter*)malloc(sizeof(KalmanFilter));
+		home[i]->init(4, 2);
+		home[i]->init(F, H, Q, R, dt);
+		away[i] = (KalmanFilter*)malloc(sizeof(KalmanFilter));
+		away[i]->init(4, 2);
+		away[i]->init(F, H, Q, R, dt);
+	}
+	ball.init(4, 2);
+	ball.init(F, H, Q, R, dt);
 	if(argc > 1){
 		::isteamyellow = atof(argv[1]);
 	}
