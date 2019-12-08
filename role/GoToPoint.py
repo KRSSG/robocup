@@ -1,7 +1,5 @@
-print("Gotopoint imported")
 from enum import Enum
 import behavior
-print("Importing _gotopoint_")
 import _GoToPoint_
 try:
     _GoToPoint_ = reload(_GoToPoint_)
