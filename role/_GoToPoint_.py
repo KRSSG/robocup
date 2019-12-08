@@ -39,7 +39,7 @@ try:
 except rospy.ServiceException, e:
     print("Error ", e)
 
-print(prev_state)
+# print(prev_state)
 def init(_kub,target,theta):
     global kub,GOAL_POINT,rotate,FLAG_turn,FLAG_move,FIRST_CALL
     kub = _kub
@@ -74,7 +74,7 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
             kub.state = getState(prev_state).stateB
         except rospy.ServiceException, e:
             print("Error ", e)
-        print(kub.state)
+        # print(kub.state)
         if not(prev_state == kub.state):
             prev_state = kub.state
 
