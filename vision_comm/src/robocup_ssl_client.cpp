@@ -78,8 +78,8 @@ bool RoboCupSSLClient::open()
 
 bool RoboCupSSLClient::receive(SSL_WrapperPacket & packet)
 {
-    cout << "Receiving Data " << endl;
-    cout << (_socket->state() == QUdpSocket::BoundState) << " & " << _socket->hasPendingDatagrams() <<endl;
+    // cout << "Receiving Data " << endl;
+    // cout << (_socket->state() == QUdpSocket::BoundState) << " & " << _socket->hasPendingDatagrams() <<endl;
     if(_socket->state() == QUdpSocket::BoundState && _socket->hasPendingDatagrams()) {
         QByteArray datagram;
         mutex.lock();
@@ -87,10 +87,9 @@ bool RoboCupSSLClient::receive(SSL_WrapperPacket & packet)
         _socket->readDatagram(datagram.data(), datagram.size());
         mutex.unlock();
         //decode packet:
-        cout << "Decoding Data" << endl;
         return packet.ParseFromArray(datagram.data(), datagram.size());
     } else {
-        cout << "Error in receiving data" <<endl; 
+        cout << "####Error in receiving data###" <<endl; 
         return false;
     }
 }

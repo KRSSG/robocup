@@ -50,10 +50,7 @@ int main(int argc, char **argv)
 	map< int, krssg_ssl_msgs::SSL_DetectionRobot > yellow_bots;
 	krssg_ssl_msgs::SSL_DetectionBall ball;
 	while(ros::ok()) {
-		//printf("........abcd\n");
 		if (client.receive(packet)) {
-			cout<<"In IF************\n";
-			
 			//see if the packet contains a robot detection frame:
 			if (packet.has_detection()) {
 				SSL_DetectionFrame detection = packet.detection();
@@ -64,11 +61,12 @@ int main(int argc, char **argv)
 				msg.frame_number = detection.frame_number();
 				msg.t_capture = detection.t_capture();
 				
-				cout<<"Frame number: "<<msg.frame_number<<endl;
+				// cout<<"Frame number: "<<msg.frame_number<<endl;
+				
 				msg.t_sent = detection.t_sent();
 				msg.camera_id = detection.camera_id();
 				//Ball info:
-				cout<<"Camera num: "<<detection.camera_id()<<endl;
+				// cout<<"Camera num: "<<detection.camera_id()<<endl;
 				if (camera_bool[detection.camera_id()] == 1)
 				{
 					max_ball_confidence = 0;
@@ -166,7 +164,6 @@ int main(int argc, char **argv)
 						
 					}
 					
-					cout << "ball size       "<<msg.balls.size() << endl;
 					chatter_pub.publish(msg);
 					for(int i = 0; i < num_cam; i++)
 					{
