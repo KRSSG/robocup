@@ -4,7 +4,7 @@
 from kubs import kubs, cmd_node
 from velocity.run_w import *
 from velocity.profiler import *
-from velocity.pid import pid
+from velocity.pid import PID
 from velocity.pso import PSO
 from velocity.error import Error
 import rospy,sys
@@ -40,16 +40,13 @@ class moveRobot():
         self.avoid_ball = _avoid_ball
         self.replan_required = False
         self.pso = None
-
         self.path_profiling()
 
     def path_profiling(self):
         self.findPath(self.prev_state.homePos[self.kub.kubs_id], self.target_point)
-        self.reset()
-
-    def reset(self):
         start_time = rospy.Time.now()
         self.start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
+        self.PID = PID(self.errorInfo, self.pso)        
 
     def get_vel(self, cur_time):
 
@@ -76,6 +73,7 @@ class moveRobot():
                 index = self.vel_profiler.GetExpectedPositionIndex()
                 # index==-1 means travelled distance is greater than path lenght
                 # hence velocity in vel_profile is set to 0
+                print("CurPos ", curPos)
                 vX, vY, eX, eY = self.vel_profiler.sendVelocity(self.vel_profiler.getVelocity(),
                                     self.vel_profiler.motionAngle[index], index)
             else:
@@ -94,14 +92,14 @@ class moveRobot():
             rospy.loginfo("Replan due to obstacles.")
             self.replan_required = True
             return [0, 0, 0]
-        elif errorMag > 350 and distance > 1.5*BOT_BALL_THRESH:
+        elif errorMag > 650 and distance > 1.5*BOT_BALL_THRESH:
             rospy.loginfo("Replan due to high error from expected position.")
             self.replan_required = True
             return [0, 0, 0]
         else:
             self.errorInfo.errorX = eX
             self.errorInfo.errorY = eY
-            vX, vY = pid(vX, vY, self.errorInfo, self.pso)
+            vX, vY = self.PID.pid(vX, vY)
             botAngle = self.kub.state.homePos[kubid].theta
             vX_kub = vX*cos(botAngle) + vY*sin(botAngle)
             vY_kub = -vX*sin(botAngle) + vY*cos(botAngle)
@@ -155,9 +153,7 @@ class moveRobot():
 
         return False
 
-    def execute(self, _should_replan=True):
-        # _should_replan is used to check if replanning is allowed or not
-
+    def execute(self, pid_tuning=False):
         FLAG_turn = True ## temporary
         FLAG_move = False
         REPLANNED = False
@@ -187,11 +183,12 @@ class moveRobot():
                 vw = 0
 
             if self.replan_required:
-                self.path_profiling()
-                if not _should_replan:
+                if pid_tuning:
                     FLAG_turn = True
                     FLAG_move = True
                     vx, vy = 0, 0
+                else:
+                    self.path_profiling()
                 self.replan_required = False
             else:
                 pass
@@ -209,6 +206,7 @@ class moveRobot():
             else:
                 self.kub.turn(vw)
 
+            print(vx, vy)
             if dist(self.kub.state.homePos[self.kub.kubs_id], self.target_point)<self.DISTANCE_THRES :
                 self.kub.move(0,0)
                 FLAG_move = True
@@ -221,5 +219,12 @@ class moveRobot():
 
         
         self.kub.execute()
+
+        if pid_tuning:
+            import matplotlib.pyplot as plt
+            plt.plot(self.PID.errors_X) 
+            plt.plot(self.PID.errors_X)
+            plt.savefig('Figures/pid_tuning.png') 
+            rospy.loginfo("Plotted pid graph at Figures/pid_tuning.png")
 
         yield self.kub, self.target_point
