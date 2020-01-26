@@ -2,6 +2,3 @@ build/
 devel/
 *.catkin_generated
 *pyc
-
-!.gitignore
-Figures/
