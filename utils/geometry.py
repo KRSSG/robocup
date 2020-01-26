@@ -127,3 +127,12 @@ class Vector2D(Structure):
 				return True
 		return False
 
+	def __repr__(self):
+		desc = ""
+		desc += "Vector2D --> X = " + str(self.x) + ", Y = " + str(self.y)
+		return desc
+
+	def __str__(self):
+		desc = ""
+		desc += "Vector2D --> X = " + str(self.x) + ", Y = " + str(self.y)
+		return desc
