@@ -1,10 +1,7 @@
+# Integrated old run.py and __GoToPoint__.py
+# This file handles integration of PID, Velocity Profiling and Path Planning.
+
 from kubs import kubs, cmd_node
-# try:
-    # velocity.run = reload(velocity.run)
-# except:
-    # import velocity.run
-# from velocity.run import *
-import velocity.run 
 from velocity.run_w import *
 from velocity.profiler import *
 from velocity.pid import pid
@@ -12,9 +9,6 @@ from velocity.pso import PSO
 from velocity.error import Error
 import rospy,sys
 from krssg_ssl_msgs.msg import point_2d
-from krssg_ssl_msgs.msg import BeliefState
-from krssg_ssl_msgs.msg import gr_Commands
-from krssg_ssl_msgs.msg import gr_Robot_Command
 from utils.geometry import Vector2D
 from utils.config import *
 from krssg_ssl_msgs.srv import *
