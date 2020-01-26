@@ -40,7 +40,7 @@ class PID():
 		self.PSO = _PSO
 		self.dt = 0.001
 		self.i = 0
-		self.k = np.array([5, 0, 0])
+		self.k = np.array([5, 0.0, 0])
 		self.errors_X = []
 		self.errors_Y = []
 

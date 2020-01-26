@@ -73,7 +73,6 @@ class moveRobot():
                 index = self.vel_profiler.GetExpectedPositionIndex()
                 # index==-1 means travelled distance is greater than path lenght
                 # hence velocity in vel_profile is set to 0
-                print("CurPos ", curPos)
                 vX, vY, eX, eY = self.vel_profiler.sendVelocity(self.vel_profiler.getVelocity(),
                                     self.vel_profiler.motionAngle[index], index)
             else:
@@ -92,7 +91,7 @@ class moveRobot():
             rospy.loginfo("Replan due to obstacles.")
             self.replan_required = True
             return [0, 0, 0]
-        elif errorMag > 650 and distance > 1.5*BOT_BALL_THRESH:
+        elif errorMag > 500 and distance > 1.5*BOT_BALL_THRESH:
             rospy.loginfo("Replan due to high error from expected position.")
             self.replan_required = True
             return [0, 0, 0]

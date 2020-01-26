@@ -31,7 +31,7 @@ class Velocity():
 		self.pathLength = self.GetPathLength()
 		self.maxSpeed = MAX_BOT_SPEED
 		self.maxAcc = MAX_BOT_ACCELERATION
-		self.startSpeed = 1000
+		self.startSpeed = 0
 		self.finalSpeed = 0
 		self.motionAngle = []
 		self.majorAxis = 10.0
@@ -244,7 +244,6 @@ class Velocity():
 			#
 			# Accelerating at @maxAcc
 			#
-			 
 			self.distance_traversed = startSpeed*timeIntoLap + 0.5*maxAcc*timeIntoLap*timeIntoLap
 			self.velocity = startSpeed + maxAcc*timeIntoLap
 			return True

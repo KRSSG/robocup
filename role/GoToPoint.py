@@ -104,7 +104,7 @@ class GoToPoint(behavior.Behavior):
         # _GoToPoint_.init(self.kub,self.target_point,self.theta)
         self.move_robot = moveRobot(self.kub, self.target_point, self.theta, start_time, self.DISTANCE_THRESH)
         # generatingfunction = _GoToPoint_.execute(start_time,self.DISTANCE_THRESH)
-        generatingfunction = self.move_robot.execute()
+        generatingfunction = self.move_robot.execute(pid_tuning = False)
         print("Datatype of gf:",type(generatingfunction))
         for gf in generatingfunction:
             self.kub,target_point = gf
