@@ -61,7 +61,7 @@ DBOX_DEPTH                   = SELECT(10, 10)
 
 #Bot Parameteres configuration 
 ROTATION_FACTOR            = SELECT(0.15, 0.15)               
-DISTANCE_THRESH            = 1.5*SELECT(200.0,200.0)
+DISTANCE_THRESH            = SELECT(50.0,300.0)
 
 RFACTOR                    = SELECT(3,   0.3)
 RFACTOR_SMALL              = SELECT(0.6, 0.15)

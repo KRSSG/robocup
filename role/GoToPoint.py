@@ -8,6 +8,9 @@ except:
 import rospy
 from utils.functions import *
 from utils.config import *
+from utils.moveRobot import *
+
+
 
 class GoToPoint(behavior.Behavior):
     """docstring for GoToPoint"""
@@ -79,7 +82,10 @@ class GoToPoint(behavior.Behavior):
     def on_enter_setup(self):
         pass
     def execute_setup(self):
-        _GoToPoint_.init(self.kub,self.target_point,self.theta)
+        start_time = rospy.Time.now()
+        start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
+        self.move_robot = moveRobot(self.kub, self.target_point, self.theta, start_time, self.DISTANCE_THRESH)
+        # _GoToPoint_.init(self.kub,self.target_point,self.theta)
         pass
         
     def on_exit_setup(self):
@@ -95,8 +101,10 @@ class GoToPoint(behavior.Behavior):
         print("Execute drive")
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
-        _GoToPoint_.init(self.kub,self.target_point,self.theta)
-        generatingfunction = _GoToPoint_.execute(start_time,self.DISTANCE_THRESH)
+        # _GoToPoint_.init(self.kub,self.target_point,self.theta)
+        self.move_robot = moveRobot(self.kub, self.target_point, self.theta, start_time, self.DISTANCE_THRESH)
+        # generatingfunction = _GoToPoint_.execute(start_time,self.DISTANCE_THRESH)
+        generatingfunction = self.move_robot.execute()
         print("Datatype of gf:",type(generatingfunction))
         for gf in generatingfunction:
             self.kub,target_point = gf

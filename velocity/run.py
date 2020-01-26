@@ -40,12 +40,17 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
     # if not prev_target==None:
     if isinstance(prev_target, Vector2D):
         dist = distance_(target, prev_target)
+        # Check if target changed, then replan
         if(dist>DESTINATION_THRESH):
+            rospy.loginfo("Target Changed. Distance between old target and current target is greater then threshold.")
             REPLAN = 1
+
     prev_target = target        
+
     # print("in getVelocity, FIRST_CALL = ",FIRST_CALL)
     curPos = Vector2D(int(homePos[kubid].x),int(homePos[kubid].y))
     distance = sqrt(pow(target.x - homePos[kubid].x,2) + pow(target.y - homePos[kubid].y,2))
+    
     if(FIRST_CALL):
         startPt = point_2d()
         startPt.x = homePos[kubid].x
@@ -70,6 +75,7 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
         else:
             # print(t-start, expectedTraverseTime)
             if expectedTraverseTime == 'REPLAN':
+                rospy.loginfo("ExpectedTraverseTime==Replan.")
                 REPLAN = 1
             # print("Motion Not Possible")
             vX,vY,eX,eY = 0,0,0,0

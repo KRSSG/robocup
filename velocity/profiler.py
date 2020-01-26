@@ -97,6 +97,7 @@ class Velocity():
 			distance += self.path[i].dist(self.path[i-1])
 			if distance > self.distance_traversed:
 				return i
+		self.velocity = 0
 		return -1
 
 	##

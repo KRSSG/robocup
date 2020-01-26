@@ -67,12 +67,11 @@ class moveRobot():
         distance = self.target_point.dist(curPos)
 
         if distance < self.DISTANCE_THRES:
-            print("Very less distance")
-            # self.replan_required = True
+            rospy.loginfo("Nearby destiantion. Approximate to reaching destination.")
             return [0,0,0]
 
         if self.expectedTraverseTime == 'REPLAN':
-            print("Expected traverse time")
+            rospy.loginfo("Replan due to expectedTraverseTime.")
             self.replan_required = True
             ############### Change 0 to suitable vw
             return [0, 0, 0]
@@ -89,7 +88,7 @@ class moveRobot():
                 vX, vY, eX, eY = 0, 0, 0, 0
         else:
             # timeOut
-            print("_____timeout____")
+            rospy.loginfo("Replan due to timeout.")
             self.errorInfo = Error()
             vX, vY, eX, eY = 0, 0, 0, 0
             self.replan_required = True
@@ -98,11 +97,11 @@ class moveRobot():
         
         # Check obstacles
         if self.shouldReplan():
-            print("obstacles nearby")
+            rospy.loginfo("Replan due to obstacles.")
             self.replan_required = True
             return [0, 0, 0]
         elif errorMag > 350 and distance > 1.5*BOT_BALL_THRESH:
-            print("kafi jada error")
+            rospy.loginfo("Replan due to high error from expected position.")
             self.replan_required = True
             return [0, 0, 0]
         else:
@@ -180,9 +179,6 @@ class moveRobot():
             t = t.secs + 1.0*t.nsecs/pow(10,9)
 
             vx, vy, vw = self.get_vel(t)
-            # [vx, vy, vw, REPLANNED] = velocity.run.Get_Vel(self.start_time, t, self.kub.kubs_id, self.target_point, self.kub.state.homePos, self.kub.state.awayPos, self.avoid_ball)
-
-            print(vx, vy)
 
             velocity_magnitude = Vector2D(vx,vy).abs(Vector2D(vx,vy))
             
@@ -197,7 +193,6 @@ class moveRobot():
                 vw = 0
 
             if self.replan_required:
-                print("###############", self.replan_required)
                 self.path_profiling()
                 if not _should_replan:
                     FLAG_turn = True
@@ -206,10 +201,6 @@ class moveRobot():
                 self.replan_required = False
             else:
                 pass
-
-            # if (REPLANNED):
-            #     print("ding ding")
-            #     self.reset()
 
             if not vx and not vy:
                 vx,vy = self.vx_end, self.vy_end
@@ -226,7 +217,6 @@ class moveRobot():
 
             if dist(self.kub.state.homePos[self.kub.kubs_id], self.target_point)<self.DISTANCE_THRES :
                 self.kub.move(0,0)
-                # print("Distance completed"*200)
                 FLAG_move = True
             else:
                 self.kub.move(vx, vy)
