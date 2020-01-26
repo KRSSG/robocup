@@ -4,3 +4,6 @@ devel/
 *pyc
 *~
 *.png
+
+!.gitignore
+Figures/
