@@ -72,7 +72,6 @@ SSL_DetectionRobot.msg
 SSL_DetectionFrame.msg
 SSL_FieldLineSegment.msg
 gr_Replacement.msg
-SSL_Refbox.msg
 gr_Packet.msg
 profilerOutput.msg
 SSL_GeometryCameraCalibration.msg
@@ -81,6 +80,10 @@ gr_BallReplacement.msg
 sslDebug_Data.msg
 gr_RobotReplacement.msg
 target_triangle.msg
+Ref.msg
+game_event.msg
+Originator.msg
+SSL_Refbox.msg
  )
 
 
@@ -90,6 +93,7 @@ target_triangle.msg
    FILES
    path_plan.srv
    bsServer.srv
+   ref_comm.srv
 #   Service2.srv
  )
 
