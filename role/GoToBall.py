@@ -6,8 +6,16 @@ from utils.functions import *
 from utils.geometry import *
 from utils.config import *
 from math import *
-
+from math import *
+import time
+from krssg_ssl_msgs.msg import BeliefState
+from krssg_ssl_msgs.srv import bsServer
+from krssg_ssl_msgs.srv import *
+from krssg_ssl_msgs.msg import Ref
 first = 0
+rospy.wait_for_service('bsServer',)
+getState = rospy.ServiceProxy('bsServer',bsServer)
+state = None
 
 class GoToBall(behavior.Behavior):
     """docstring for GoToBall"""
@@ -150,8 +158,16 @@ class GoToBall(behavior.Behavior):
         pass
 
     def on_enter_course_approach(self):
+        global state
+        state = None
         self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
         self.target_point = self.kub.state.ballPos
+        try:
+            state = getState(state).stateB    
+        except rospy.ServiceException, e:
+            print("chutiya")        
+        if state :
+            self.theta = normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.x-3000))
         _GoToPoint_.init(self.kub, self.target_point, self.theta)
         pass
 
@@ -252,8 +268,3 @@ class GoToBall(behavior.Behavior):
         self.kub.kick(self.power)
         self.kub.execute()
         pass
-
-
-
-
-
