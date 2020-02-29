@@ -1,5 +1,7 @@
+print("Gotopoint imported")
 from enum import Enum
 import behavior
+print("Importing _gotopoint_")
 import _GoToPoint_
 try:
     _GoToPoint_ = reload(_GoToPoint_)
@@ -86,6 +88,7 @@ class GoToPoint(behavior.Behavior):
         pass
 
     def on_enter_drive(self):
+        _GoToPoint_.init(self.kub,self.target_point,self.theta)
         pass
 
     def terminate(self):
@@ -95,26 +98,31 @@ class GoToPoint(behavior.Behavior):
         print("Execute drive")
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
-        _GoToPoint_.init(self.kub,self.target_point,self.theta)
         generatingfunction = _GoToPoint_.execute(start_time,self.DISTANCE_THRESH)
         print("Datatype of gf:",type(generatingfunction))
         for gf in generatingfunction:
             self.kub,target_point = gf
 
             # print self.behavior_failed
-            if not vicinity_points(self.target_point,target_point):
-                # print 
-                # print  (self.target_point.x,self.target_point.y)
-                # print  (target_point.x,target_point.y)
-                # print 
-                self.behavior_failed = True
-                # print self.behavior_failed
-                break
+            # if not vicinity_points(self.target_point,target_point):
+            #     # print 
+            #     # print  (self.target_point.x,self.target_point.y)
+            #     # print  (target_point.x,target_point.y)
+            #     # print 
+            #     self.behavior_failed = True
+            #     # print self.behavior_failed
+            #     break
+            if vicinity_points(self.target_point, self.kub.get_pos()):
+                self.kub.reset()
+                self.kub.execute()
+                break    
         self.new_point = self.kub.get_pos()
         
 
     
     def on_exit_drive(self):
+        self.kub.reset()
+        self.kub.execute()
         pass
 
 
