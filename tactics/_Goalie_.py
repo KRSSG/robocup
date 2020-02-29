@@ -15,8 +15,9 @@ from kubs import kubs,cmd_node
 
 pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
-# import memcache
-# shared = memcache.Client(['127.0.0.1:11211'],debug=False)
+# from krssg_ssl_msgs.srv import bsServer
+# rospy.wait_for_service('bsServer',)
+# getState = rospy.ServiceProxy('bsServer', bsServer)
 
 POINTPREDICTIONFACTOR = 2
 
@@ -24,7 +25,13 @@ kub = kubs.kubs(0, pub)
 
 
 def GoToPoint(state,point,kub,orient_theta=None):
-    # state = shared.get('state')
+  # state = None
+  #   try:
+  #     state = getState(state)
+  #   except rospy.ServiceException, e:
+  #     print e
+  #   if state:
+  #     state = state.stateB
   bot_id = 0
   dribller = 0
   obs = Vector_Obstacle()

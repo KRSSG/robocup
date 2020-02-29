@@ -7,8 +7,9 @@ import logging
 from role import pass_receive
 from role import GoToBall
 from utils.geometry import *
-import memcache
-shared = memcache.Client(['127.0.0.1:11211'],debug=False)
+from krssg_ssl_msgs.srv import bsServer
+rospy.wait_for_service('bsServer',)
+getState = rospy.ServiceProxy('bsServer', bsServer)
 
 
 # import skills.pivot_kick
@@ -146,7 +147,9 @@ class CoordinatedPass(composite_behavior.CompositeBehavior):
 
     def execute_kicking(self):
         print("Executing kicking")
-        # state = shared.get('state')
+        # state = None
+        # state = getState(state)
+        # state = state.stateB
         # self.subbehavior_with_name('kicker').kub.update_state(state)
         self.subbehavior_with_name('kicker').enable_kick = True
         # The shot obstacle doesn't apply to the receiver
@@ -162,7 +165,9 @@ class CoordinatedPass(composite_behavior.CompositeBehavior):
     def on_enter_preparing(self):
         print("On enter preparing")
         self.skillkicker = GoToBall.GoToBall()
-        # state = shared.get('state')
+        # state = None
+        # state = getState(state)
+        # state = state.stateB
         # self.kicker.update_state(state)
         self.skillkicker.add_kub(self.kicker)
         self.skillkicker.disable_kick()
@@ -238,7 +243,9 @@ class CoordinatedPass(composite_behavior.CompositeBehavior):
         
     def on_enter_receiving(self):
         print("On enter receiving")
-        # state = shared.get('state')
+        # state = None
+        # state = getState(state)
+        # state = state.stateB
         # self.subbehavior_with_name('receiver').kub.update_state(state)
         self.subbehavior_with_name('receiver').ball_kicked = True
         # self.remove_subbehavior('kicker')

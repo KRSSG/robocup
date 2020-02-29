@@ -9,13 +9,12 @@ from krssg_ssl_msgs.msg import BeliefState
 from role import  GoToBall, GoToPoint, pass_receive
 from multiprocessing import Process
 from kubs import kubs
+from krssg_ssl_msgs.srv import bsServer
 from math import atan2,pi
 from utils.functions import *
 pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
 
-import memcache
-shared = memcache.Client(['127.0.0.1:11211'],debug=False)
 
 
 
@@ -44,11 +43,17 @@ start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
 # rospy.Subscriber('/belief_state', BeliefState, BS_callback, queue_size=1000)
 
 while True:
-	state=shared.get('state')	
+	state=None
+	rospy.wait_for_service('bsServer',)
+	getState = rospy.ServiceProxy('bsServer',bsServer)
+	try:
+		state = getState(state)
+	except rospy.ServiceException, e:
+		print e	
 	if state:
-		function(1,state)
+		function(1,state.stateB)	
 		# break
-
+rospy.spin()
 
 
 

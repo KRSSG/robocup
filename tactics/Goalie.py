@@ -4,10 +4,8 @@ import enum
 from math import atan2
 from utils.functions import *
 from utils.config import *
-import memcache
 import os
 import rospy
-shared = memcache.Client(['127.0.0.1:11211'],debug=False)
 from krssg_ssl_msgs.srv import  bsServer
 
 
@@ -362,10 +360,8 @@ class Goalie(behavior.Behavior):
 # from math import atan2
 # from utils.functions import *
 # from utils.config import *
-# import memcache
 # import os
 # import rospy
-# shared = memcache.Client(['127.0.0.1:11211'],debug=False)
 
 
 # class Goalie(behavior.Behavior):
@@ -422,36 +418,72 @@ class Goalie(behavior.Behavior):
 # 		self.kub = kub
 
 # 	def peace_out(self):
-# 		state = shared.get('state')
+# 		state = None
+		# try:
+		# 	state = getState(state)
+		# except rospy.ServiceException, e:
+		# 	print e
+		# if state:
+		# 	state = state.stateB
 # 		if state.ballPos.x > 0:
 # 			return True
 # 		return False
 
 # 	def _peace_to_clear(self):
-# 		state = shared.get('state')
+# 		state = None
+		# try:
+		# 	state = getState(state)
+		# except rospy.ServiceException, e:
+		# 	print e
+		# if state:
+		# 	state = state.stateB
 # 		# print state.ballPos.x , -HALF_FIELD_MAXX + OUR_GOAL_MAXX,state.ballPos.x < -HALF_FIELD_MAXX + OUR_GOAL_MAXX
 # 		return state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX
 # 		pass
 
 # 	def _peace_to_protect(self):
-# 		state = shared.get('state')
+# 		state = None
+		# try:
+		# 	state = getState(state)
+		# except rospy.ServiceException, e:
+		# 	print e
+		# if state:
+		# 	state = state.stateB
 # 		# return False
 # 		return  (state.ballVel.x < -self.MIN_VEL or state.ballPos.x<=0) and \
 # 			not (state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX)
 
 # 	# def _any_to_peace(self):
-# 	#     state = shared.get('state')
+# 	#     state = None
+		# try:
+		# 	state = getState(state)
+		# except rospy.ServiceException, e:
+		# 	print e
+		# if state:
+		# 	state = state.stateB
 # 	#     return state.ballVel.x >= 0 and state.ballPos.x>=0
 
 # 	def _protect_to_clear(self):
-# 		state = shared.get('state')
+# 		state = None
+		# try:
+		# 	state = getState(state)
+		# except rospy.ServiceException, e:
+		# 	print e
+		# if state:
+		# 	state = state.stateB
 # 		return state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX and state.ballVel.x < 0 and abs(state.ballPos.y) < OUR_GOAL_MAXY  
 
 # 	# note that execute_running() gets called BEFORE any of the execute_SUBSTATE methods gets called
 
 # 	def execute_peace(self):
 # 		print("Sab moh maya hain")
-# 		state = shared.get('state')
+# 		state = None
+		# try:
+		# 	state = getState(state)
+		# except rospy.ServiceException, e:
+		# 	print e
+		# if state:
+		# 	state = state.stateB
 # 		if abs(state.ballPos.y) < OUR_GOAL_MAXY:
 # 			expected_y = state.ballPos.y
 # 		else:
@@ -479,7 +511,13 @@ class Goalie(behavior.Behavior):
 # 	def execute_clear(self):
 # 		print("Clear kar raha hoon")
 # 		target = Vector2D(4000,0)
-# 		state = shared.get('state')
+# 		state = None
+		# try:
+		# 	state = getState(state)
+		# except rospy.ServiceException, e:
+		# 	print e
+		# if state:
+		# 	state = state.stateB
 # 		self.gtB = GoToBall.GoToBall(BOT_BALL_THRESH)
 # 		self.gtB.add_kub(self.kub)
 # 		self.gtB.add_theta(theta=normalize_angle(atan2(target.y - state.ballPos.y,target.x - state.ballPos.x)))
@@ -494,7 +532,13 @@ class Goalie(behavior.Behavior):
 
 # 	def execute_protect(self):
 # 		# pass
-# 		state = shared.get('state')
+# 		state = None
+		# try:
+		# 	state = getState(state)
+		# except rospy.ServiceException, e:
+		# 	print e
+		# if state:
+		# 	state = state.stateB
 # 		print("main rakshak hoon")
 # 		#expected_y = goalie_expected_y(state, self.kub.kubs_id)
 # 		if state.ballVel.x < -10:
@@ -545,7 +589,13 @@ class Goalie(behavior.Behavior):
 # 		# self.theta = normalize_angle(angle_diff(self.kub.state.homePos[self.kub.kubs_id], self.kub.state.ballPos))
 # 		# _turnAround_.init(self.kub, self.theta )
 
-# 		state = shared.get('state')
+# 		state = None
+		# try:
+		# 	state = getState(state)
+		# except rospy.ServiceException, e:
+		# 	print e
+		# if state:
+		# 	state = state.stateB
 # 		if abs(state.ballPos.y) < OUR_GOAL_MAXY:
 # 				expected_y = state.ballPos.y
 # 		else:
@@ -562,7 +612,13 @@ class Goalie(behavior.Behavior):
 # 	def on_enter_clear(self):
 # 		pass
 # 	def on_enter_protect(self):
-# 		state = shared.get('state')
+# 		state = None
+		# try:
+		# 	state = getState(state)
+		# except rospy.ServiceException, e:
+		# 	print e
+		# if state:
+		# 	state = state.stateB
 # 		#expected_y = goalie_expected_y(state, self.kub.kubs_id)
 # 		if abs(state.ballVel.x) < 10:
 # 			if abs(state.ballPos.y) < OUR_GOAL_MAXY:

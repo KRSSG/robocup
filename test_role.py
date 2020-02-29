@@ -15,8 +15,6 @@ from utils.functions import *
 pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
 
-import memcache
-shared = memcache.Client(['127.0.0.1:11211'],debug=True)
 
 
 
@@ -46,13 +44,12 @@ start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
 
 while True:
 	state = None
-	#state=shared.get('state')
 	rospy.wait_for_service('bsServer',)
 	getState = rospy.ServiceProxy('bsServer',bsServer)
 	try:
 		state = getState(state)
 	except rospy.ServiceException, e:
-		print("chutiya")		
+		print("Error ",e)	
 	if state:
 		print('lasknfcjscnajnstate',state.stateB.homePos)
 		function(1,state.stateB)
