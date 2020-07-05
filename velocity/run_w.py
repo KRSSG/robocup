@@ -11,7 +11,7 @@ def Get_Omega(kub_id, totalAngle, homePos):
     MAX_w = MAX_BOT_OMEGA
     # theta_left = float(homePos[kub_id].theta-totalAngle)
     theta_lft = normalize_angle(normalize_angle(homePos[kub_id].theta)-totalAngle)*-1.0
-    vw = 3.0*(theta_lft*abs(theta_lft)/(math.pi*math.pi))*MAX_w
+    vw = 10*(theta_lft*abs(theta_lft)/(math.pi*math.pi))*MAX_w
 
     if abs(vw) > MAX_BOT_OMEGA:
         vw = (vw/abs(vw))*MAX_BOT_OMEGA

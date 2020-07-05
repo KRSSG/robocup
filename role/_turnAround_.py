@@ -87,7 +87,7 @@ def execute(startTime,thresh=2*ROTATION_FACTOR):
 
             #print("rotate : ", rotate)
             #print(" not rotate : ", kub.state.homePos[kub.kubs_id].theta)
-            print("diff : ",abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate)))
+            # print("diff : ",abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate)))
             if (abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate))<thresh):
                 kub.turn(0)
                 print("Angle completed")

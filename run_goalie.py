@@ -1,4 +1,4 @@
-KUB_ID = 0
+KUB_ID = 1
 
 import rospy,sys
 from utils.geometry import Vector2D

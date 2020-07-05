@@ -74,7 +74,7 @@ def execute(startTime,DIST_THRESH,avoid_ball=False):
             kub.state = getState(prev_state).stateB
         except rospy.ServiceException, e:
             print("Error ", e)
-        print(kub.state)
+        # print(kub.state)
         if not(prev_state == kub.state):
             prev_state = kub.state
 

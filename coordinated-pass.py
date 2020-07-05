@@ -6,7 +6,7 @@ from krssg_ssl_msgs.msg import BeliefState
 from krssg_ssl_msgs.msg import gr_Commands
 from krssg_ssl_msgs.msg import gr_Robot_Command
 from krssg_ssl_msgs.msg import BeliefState
-from role import  GoToBall, GoToPoint, KickToPoint, pass_and_receive
+from role import  GoToBall, GoToPoint, KickToPoint, pass_and_receive, receiver, passer
 from multiprocessing import Process
 from kubs import kubs
 from krssg_ssl_msgs.srv import bsServer
@@ -24,22 +24,28 @@ shared = memcache.Client(['127.0.0.1:11211'],debug=True)
 
 def function(id_1,id_2,state,pub):
 	kub1 = kubs.kubs(id_1,state,pub)
-	print(id_1)
+	# print(id_1)
 	kub1.update_state(state)
 	kub2 = kubs.kubs(id_2,state,pub)
-	print(id_2)
+	# print(id_2)
 	kub2.update_state(state)
 	#print(kub1.kubs_id)
-	g_fsm = pass_and_receive.PassReceive()
+	p_fsm = passer.PassReceive()
+	r_fsm = receiver.PassReceive()
 	# g_fsm = GoToPoint.GoToPoint()
-	g_fsm.add_kub(kub1)
-	g_fsm.add_kub(kub2)
+	if dist(kub1.state.ballPos,kub1.get_pos())< dist(kub2.state.ballPos,kub2.get_pos()):
+		p_fsm.add_kub(kub1)
+		p_fsm.add_kub(kub2)
+		p_fsm.spin()
+	else:
+		r_fsm.add_kub(kub1)
+		r_fsm.add_kub(kub2)
+		r_fsm.spin()
 	# g_fsm.add_point(point=kub.state.ballPos,orient=normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.x-3000)))
 	#g_fsm.add_theta(theta=normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.x+3000)))
 	# g_fsm.as_graphviz()
 	# g_fsm.write_diagram_png()
 	#print('something before spin')
-	g_fsm.spin()
 
 def main1(process_id):
 	pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
@@ -57,7 +63,7 @@ def main1(process_id):
 	    if state:
 	            #print('lasknfcjscnajnstate',state.stateB.homePos)
 	            #p2 = multiprocessing.Process(target=function2, args=(2,state.stateB, )) 
-	            print("process 1")
+	            # print("process 1")
 	            function(1,2,state.stateB,pub)
 	            #p2.start()
 	            #p1.join()
@@ -82,7 +88,7 @@ def main2(process_id):
 	    if state:
 	            #print('lasknfcjscnajnstate',state.stateB.homePos)
 	            #p2 = multiprocessing.Process(target=function2, args=(2,state.stateB, )) 
-	            print("process 2")
+	            # print("process 2")
 	            function(2,1,state.stateB,pub)
 	            #p2.start()
 	            #p1.join()
