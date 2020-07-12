@@ -1,3 +1,4 @@
+
 print "In test GoToPoint"
 from kubs import kubs, cmd_node
 from velocity.run import *
