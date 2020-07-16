@@ -1,7 +1,7 @@
-
 print "In test GoToPoint"
 from kubs import kubs, cmd_node
 from velocity.run import *
+import velocity
 import rospy,sys,os
 import math
 import time
@@ -73,7 +73,6 @@ def GUI_Callback(data):
 
 
 
-
 def function(id_,state):
 	kub = kubs.kubs(id_,state,pub)
 	kub.update_state(state)
@@ -90,15 +89,12 @@ def function(id_,state):
 	g_fsm.spin()
 	# 
 
-
-
-
 def kp_callback(data):
 	global st, planned, ramp_rampt, ramp_dnt, ramp_upt, case, tnow
 	
 	ballpos = data.ballPos
-	theta = angle_diff(target, ballpos)
-	go_at = getPointBehindTheBall(ballpos, theta, 2)
+	theta = angle_diff(ballpos, target)    #Point1: ballpos; Point2: target 
+	go_at = getPointBehindTheBall(ballpos, theta, -2)      #Modify getPoint*Behind*TheBall late on**. Factor should be negative.
 
 	print(radian_2_deg(theta))
 	print(go_at.x)
@@ -108,21 +104,19 @@ def kp_callback(data):
 	t = t.secs + 1.0*t.nsecs/pow(10,9)
 	print(" t - start = ",t-start_time)
 	[vx, vy, vw, REPLANNED] = Get_Vel(start_time, t, BOT_ID, go_at, data.homePos, data.awayPos, True, 1.2)
-		#vx, vy, vw, replanned
+	#vx, vy, vw, replanned
 	print("-------------------  REPLANNED = ",REPLANNED)
 	if(REPLANNED):
     		reset()
 	
 	print("vx = ",vx)
 	print("vy = ",vy)
-	
-	mvx=vx
-	mvy=vy
 
 	# print("kubs_id = ",kub.kubs_id)
 
 	curPos = Vector2D(int(data.homePos[BOT_ID].x),int(data.homePos[BOT_ID].y))
 	#if vicinity_points(go_at, curPos, 4) == False:
+	d=distance_(curPos,go_at)
 	try:	
 		kub.move(vx, vy)
 		print(vw)
@@ -133,39 +127,50 @@ def kp_callback(data):
 		print("In except",e)
 		pass
 	print(dist(go_at, curPos))
-	
-	if vx == 0 and vy == 0:
-    	
 
+
+	#READY TO TAKE STANCE
+	if vx == 0 and vy == 0 and d < 1.2*BOT_BALL_THRESH:  
+    
 		print(data.homePos[BOT_ID].theta)
-		print(theta)
+		print("Target Alignment : ",theta)
 		totalAngle = theta
 		MAX_w = (MAX_BOT_OMEGA+MIN_BOT_OMEGA)/1.2
-		# theta_left = float(homePos[kub_id].theta-totalAngle)
-		theta_lft = normalize_angle(normalize_angle(data.homePos[BOT_ID].theta)-totalAngle)*-1.0+3.1412
-		
-		if abs(theta_lft)<ROTATION_FACTOR/100:
+		MIN_w = (MIN_BOT_OMEGA)
+
+		# theta2 = totalAngle :-- target angular alignment ; theta1 = current_bot_theta; New x-axis: Bot_theta_line
+		# rotating standard axes
+		deltheta = totalAngle-normalize_angle(data.homePos[BOT_ID].theta) 
+		modtheta = min(abs(deltheta),abs((2*math.pi)-deltheta))  #shortest turn
+		sign = (normalize_angle(deltheta))/(abs(normalize_angle(deltheta))) 
+
+		print "Remaining angle: ",modtheta,"   ",sign
+ 		
+		theta_lft = modtheta * sign  
+
+		if abs(theta_lft)<ROTATION_FACTOR/10:
 			vw = 0.0
 			READY_TO_KICK=True
 		else:
 			READY_TO_KICK=False
-			vw = (theta_lft/2*math.pi)*MAX_w
+			vw = 3.0*(theta_lft)/(math.pi)*MAX_w
+			#vw = (theta_lft/2*math.pi)*MAX_w
 
-		if abs(vw)<1*MIN_BOT_OMEGA and READY_TO_KICK==False:
-			vw = 1*MIN_BOT_OMEGA*(1 if vw>0 else -1)
-
+		if abs(vw)<1*MIN_w and READY_TO_KICK==False:
+			vw = 1*MIN_w*(1 if vw>0 else -1)
+		
+		if abs(vw) > MAX_w and READY_TO_KICK==False:
+    			vw = (vw/abs(vw))*MAX_w
 
 		if vw!=0:
 			print("TURNING")
+			#print("vw Hoon Main =",vw)
+			print("BOT THETA: ",data.homePos[BOT_ID].theta)
+			print "\nAngle Remaining : ",theta_lft
 		else:
-			print("DONE")
+			print("DONE !!")
 			
-		mvw=vw
-
-		
-
-		print "Omega Return",vw
-		print "TRY: ",mvw
+		print "Omega Return: ",vw
 		print READY_TO_KICK
 		print "___________________________________________________________________"
 		kub.reset()
@@ -180,7 +185,7 @@ def kp_callback(data):
 
 
 if __name__ == "__main__":
-	global start_time, st, planned, case, mvw
+	global start_time, st, planned, case
 	case = -1
 	st = None
 	planned = False
@@ -199,15 +204,17 @@ if __name__ == "__main__":
 	
 	sub2 = rospy.Subscriber('/gui_params', point_SF, GUI_Callback, queue_size = 1000)
 
-	print("Ho gya!!")
+	print("Ho gya align!!")
 	rospy.spin()
 	
 	sub1.unregister()
 	sub2.unregister()
-	print "AB MAIN KARUNGAAA -------- KICKKK !!!"
+	print "AB MAIN KARUNGA -------- KICKKK !!!"
 
 command="python KickP.py %s %s %s"%(BOT_ID,target.x,target.y)
-print(command)
+print("______________________________________________________________")
+print("/n",command,"/n")
+print("______________________________________________________________\n")
 os.system(command)
 	
 
