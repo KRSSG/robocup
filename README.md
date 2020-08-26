@@ -5,6 +5,11 @@
 * OMPL
 * PyQt4
 
+## Installation
+Follow this doc for installation instructions: https://docs.google.com/document/d/1dslgGWAXHz8jKqUmEGex7JvCxIh3FS-td155nmqGrdw/edit?usp=sharing
+Install OMPL without python bindings from http://ompl.kavrakilab.org/installation.html
+Install Protobuf version 2.6
+
 ## Run 
 ```bash
 $ ./kgpkubs_launch/scripts/ssl.sh
