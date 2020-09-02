@@ -25,7 +25,7 @@ def function(id_,state):
 	g_fsm = GoToPoint.GoToPoint()
 	# g_fsm = GoToPoint.GoToPoint()
 	g_fsm.add_kub(kub)
-	g_fsm.add_point(point=Vector2D(state.homePos[id_].x,state.homePos[id_].y),orient=normalize_angle(pi+atan2(state.ballPos.y-state.homePos[id_].y,state.ballPos.x-state.homePos[id_].x)))
+	g_fsm.add_point(point=Vector2D(-5000.0,0))
 	#g_fsm.add_theta(theta=normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.x+3000)))
 	g_fsm.as_graphviz()
 	g_fsm.write_diagram_png()

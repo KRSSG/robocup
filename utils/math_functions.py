@@ -93,7 +93,7 @@ class Line(Structure):
 
 	# CHECK ---->  SLOPE
 	def intersection_with_line(self, line2):
-		if not isinstance(line, line2):
+		if not isinstance(line2, Line):
 			raise ValueError("Expected Line instance, got %s" %type(line2).__name__)
 		c1 = self.point.y - self.slope * self.point.x
 		c2 = line2.point.y - line2.slope * line2.point.x
@@ -107,6 +107,7 @@ class Line(Structure):
 			return P
 		except:
 			return None
+		return P
 	##
 	# @brief      Find Prependicular distance of point from line
 	# https://en.wikipedia.org/wiki/Distance_from_a_point_to_a_line

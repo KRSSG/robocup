@@ -60,7 +60,7 @@ class Goalie(behavior.Behavior):
 
 		self.add_transition(Goalie.State.block, Goalie.State.clear, lambda: self._block_to_clear(),"clear now")
 
-		self.add_transition(Goalie.State.block, Goalie.State.protect, lambda: self._peace_to_protect() and not self._peace_to_block,"remain vigilant")
+		self.add_transition(Goalie.State.block, Goalie.State.protect, lambda: self._peace_to_protect() and not self._peace_to_block(),"remain vigilant")  #make changes here
 		
 		self.add_transition(Goalie.State.block, Goalie.State.peace, lambda: self.peace_out(),"relax")
 		
@@ -93,7 +93,7 @@ class Goalie(behavior.Behavior):
 			print e
 		if state:
 			state = state.stateB
-		if state.ballPos.x > 0:
+		if state.ballPos.x >= 0 and opponent_bot_with_ball(state) == None:
 			return True
 		return False
 
@@ -116,8 +116,9 @@ class Goalie(behavior.Behavior):
 			print e
 		if state:
 			state = state.stateB
-		return  (opponent_bot_with_ball(state) != None) or ((state.ballVel.x < -self.MIN_VEL or state.ballPos.x<=0) and \
-			not (state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX))
+		# return  (opponent_bot_with_ball(state) != None) or ((state.ballVel.x < -self.MIN_VEL or state.ballPos.x<=0) and \
+		# 	not (state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX))
+		return state.ballPos.x < 0 and opponent_bot_with_ball(state) == None
 
 	def _peace_to_block(self):
 		state = None
@@ -127,7 +128,8 @@ class Goalie(behavior.Behavior):
 			print e
 		if state:
 			state = state.stateB
-		return  (opponent_bot_with_ball(state) != None) and ((state.ballPos.x < -HALF_FIELD_MAXX and not state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX) or (abs(state.ballPos.y) > OUR_GOAL_MAXY and state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX))
+		# return  (opponent_bot_with_ball(state) != None) and ((state.ballPos.x < 0 and not state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX) or (abs(state.ballPos.y) > OUR_GOAL_MAXY and state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX)) #make changes here
+		return ball_moving_towards_our_goal(state) or opponent_bot_with_ball(state) != None
 
 	def _protect_to_clear(self):
 		state = None
@@ -149,10 +151,7 @@ class Goalie(behavior.Behavior):
 			state = state.stateB
 		return state.ballPos.x < -HALF_FIELD_MAXX + 2*OUR_GOAL_MAXX and abs(state.ballPos.y) < OUR_GOAL_MAXY
 
-	# note that execute_running() gets called BEFORE any of the execute_SUBSTATE methods gets called
-
-	def execute_peace(self):
-		print("Sab moh maya hain")
+	def peace_expected(self):
 		state = None
 		try:
 			state = getState(state)
@@ -160,123 +159,9 @@ class Goalie(behavior.Behavior):
 			print e
 		if state:
 			state = state.stateB
-		if abs(state.ballPos.y) < OUR_GOAL_MAXY:
-			expected_y = state.ballPos.y
-		else:
-			if state.ballPos.y < 0:
-				expected_y = OUR_GOAL_MINY
-			else:
-				expected_y = OUR_GOAL_MAXY
-		print("In Peace :", state.ballPos.y)
-		point = Vector2D(-HALF_FIELD_MAXX + 5*BOT_RADIUS, expected_y)
-		start_time = rospy.Time.now()
-		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-		generatingfunction = _GoToPoint_.execute(start_time,BOT_BALL_THRESH)
-		for gf in generatingfunction:
-			self.kub,aim = gf
-			print("peace gf", point.x + point.y)
-			if not vicinity_points(aim,point,thresh=BOT_RADIUS) or self.outOfField(state):
-				self.behavior_failed = True
-				print("Bhenchod:")
-				break
 
+		self.kub.update_state(state)
 
-		pass
-
-
-	def execute_clear(self):
-		print("Clear kar raha hoon")
-		target = Vector2D(4000,0)
-		state = None
-		try:
-			state = getState(state)
-		except rospy.ServiceException, e:
-			print e
-		if state:
-			state = state.stateB
-		self.ktp = KickToPoint.KickToPoint(target)
-		self.ktp.add_kub(self.kub)
-		self.ktp.add_theta(theta=normalize_angle(atan2(target.y - state.ballPos.y,target.x - state.ballPos.x)))
-		self.ktp.spin()
-
-	def execute_protect(self):
-		state = None
-		try:
-			state = getState(state)
-		except rospy.ServiceException, e:
-			print e
-		if state:
-			state = state.stateB
-		print("main rakshak hoon")
-		if state.ballVel.x < -10:  
-			angle = state.ballVel.y/state.ballVel.x
-			expected_y = angle*(-HALF_FIELD_MAXX + 3*BOT_RADIUS - state.ballPos.x) + state.ballPos.y
-		else:
-			if abs(state.ballPos.y) < OUR_GOAL_MAXY:
-				expected_y = state.ballPos.y
-			else:
-				if state.ballPos.y < 0:
-					expected_y = OUR_GOAL_MINY
-				else:
-					expected_y = OUR_GOAL_MAXY
-		point = Vector2D(-HALF_FIELD_MAXX + 3*BOT_RADIUS,expected_y)
-		start_time = rospy.Time.now()
-		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-		generatingfunction = _GoToPoint_.execute(start_time,BOT_BALL_THRESH)
-		for gf in generatingfunction:
-			self.kub,aim = gf
-			print("gf", point.x, point.y)
-			if not vicinity_points(aim,point,thresh=BOT_RADIUS) or self.outOfField(state):
-				self.behavior_failed = True
-				print("Fail Fail")
-				break
-
-	def execute_block(self):
-		state = None
-		try:
-			state = getState(state)
-		except rospy.ServiceException, e:
-			print e
-		if state:
-			state = state.stateB
-		print("main de Gea hoon")
-		messi = opponent_bot_with_ball(state)
-		angle = state.awayPos[messi].theta
-		expected_y = (math.tan(angle))*(-HALF_FIELD_MAXX + BOT_RADIUS - state.ballPos.x) + state.ballPos.y
-		point = Vector2D()
-
-		if expected_y < OUR_GOAL_MINY:
-			expected_y = OUR_GOAL_MINY
-		if expected_y > OUR_GOAL_MAXY:
-			expected_y = OUR_GOAL_MAXY
-		point = Vector2D(-HALF_FIELD_MAXX + BOT_RADIUS,expected_y)
-		start_time = rospy.Time.now()
-		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-		generatingfunction = _GoToPoint_.execute(start_time,BOT_BALL_THRESH)
-		for gf in generatingfunction:
-			self.kub,aim = gf
-			print("gf", point.x, point.y)
-			if not vicinity_points(aim,point,thresh=BOT_RADIUS) or self.outOfField(state):
-				self.behavior_failed = True
-				print("Fail Fail")
-				break
-
-	def on_exit_clear(self):
-		pass
-	def on_exit_peace(self):
-		pass
-	def on_exit_protect(self):
-		pass
-	def on_exit_block(self):
-		pass
-	def on_enter_peace(self):
-		state = None
-		try:
-			state = getState(state)
-		except rospy.ServiceException, e:
-			print e
-		if state:
-			state = state.stateB
 		if abs(state.ballPos.y) < OUR_GOAL_MAXY:
 				expected_y = state.ballPos.y
 		else:
@@ -286,12 +171,9 @@ class Goalie(behavior.Behavior):
 				expected_y = OUR_GOAL_MAXY
 
 		point = Vector2D(-HALF_FIELD_MAXX + 5*BOT_RADIUS, expected_y)
-		theta = self.kub.get_pos().theta
-		_GoToPoint_.init(self.kub, point, theta)
-		pass
-	def on_enter_clear(self):
-		pass
-	def on_enter_protect(self):
+		return point
+
+	def protect_expected(self):
 		state = None
 		try:
 			state = getState(state)
@@ -299,7 +181,9 @@ class Goalie(behavior.Behavior):
 			print e
 		if state:
 			state = state.stateB
-		#expected_y = goalie_expected_y(state, self.kub.kubs_id)
+
+		self.kub.update_state(state)
+
 		if abs(state.ballVel.x) < 10:
 			if abs(state.ballPos.y) < OUR_GOAL_MAXY:
 				expected_y = state.ballPos.y
@@ -318,12 +202,9 @@ class Goalie(behavior.Behavior):
 		if expected_y > OUR_GOAL_MAXY:
 			expected_y = OUR_GOAL_MAXY
 		point = Vector2D(-HALF_FIELD_MAXX + 3*BOT_RADIUS, expected_y)
-		
-		print("Entered Protect , going to", point.x, point.y)
-		theta = self.kub.get_pos().theta
-		_GoToPoint_.init(self.kub, point, theta)
-		pass
-	def on_enter_block(self):
+		return point
+
+	def block_expected(self):
 		state = None
 		try:
 			state = getState(state)
@@ -331,9 +212,14 @@ class Goalie(behavior.Behavior):
 			print e
 		if state:
 			state = state.stateB
-		#expected_y = goalie_expected_y(state, self.kub.kubs_id)
+
+		self.kub.update_state(state)
+
 		messi = opponent_bot_with_ball(state)
-		angle = state.awayPos[messi].theta
+		if messi != None:
+			angle = state.awayPos[messi].theta
+		else:
+			angle = atan2(state.ballVel.y, state.ballVel.x)
 		expected_y = (math.tan(angle))*(-HALF_FIELD_MAXX + BOT_RADIUS - state.ballPos.x) + state.ballPos.y
 		point = Vector2D()
 
@@ -342,15 +228,96 @@ class Goalie(behavior.Behavior):
 		if expected_y > OUR_GOAL_MAXY:
 			expected_y = OUR_GOAL_MAXY
 		point = Vector2D(-HALF_FIELD_MAXX + BOT_RADIUS, expected_y)
-		
-		# if expected_y > 0:
-		# 	point = Vector2D(-HALF_FIELD_MAXX + 2*BOT_RADIUS,expected_y)
-		# else:
-		# 	point = Vector2D(-HALF_FIELD_MAXX + 2*BOT_RADIUS,expected_y)
-		print("Entered Block , going to", point.x, point.y)
-		theta = angle + 3.141592654
+		return point,angle
+
+	# note that execute_running() gets called BEFORE any of the execute_SUBSTATE methods gets called
+
+	def execute_peace(self):
+		print("Sab moh maya hain")
+		start_time = rospy.Time.now()
+		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
+		generatingfunction = _GoToPoint_.execute(start_time,BOT_BALL_THRESH)
+		for gf in generatingfunction:
+			self.kub,aim = gf
+			point = self.peace_expected()
+			# print("peace gf", point.x + point.y)
+			if not vicinity_points(aim,point,thresh=BOT_RADIUS):   #make changes here
+				self.behavior_failed = True
+				print("Bhenchod:")
+				break
+
+	def execute_clear(self):
+		print("Clear kar raha hoon")
+		target = Vector2D(HALF_FIELD_MAXX,0)
+		state = None
+		try:
+			state = getState(state)
+		except rospy.ServiceException, e:
+			print e
+		if state:
+			state = state.stateB
+		self.ktp = KickToPoint.KickToPoint(target)
+		self.ktp.add_kub(self.kub)
+		self.ktp.add_theta(theta=normalize_angle(atan2(target.y - state.ballPos.y,target.x - state.ballPos.x)))
+		self.ktp.spin()
+		self.behavior_failed = self.ktp.behavior_failed
+
+	def execute_protect(self):
+		start_time = rospy.Time.now()
+		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
+		generatingfunction = _GoToPoint_.execute(start_time,BOT_BALL_THRESH)
+		for gf in generatingfunction:
+			self.kub,aim = gf
+			point = self.protect_expected()
+			# print("gf", point.x, point.y)
+			if not vicinity_points(aim,point,thresh=BOT_RADIUS):
+				self.behavior_failed = True
+				print("Fail Fail")
+				break
+
+	def execute_block(self):
+		start_time = rospy.Time.now()
+		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
+		generatingfunction = _GoToPoint_.execute(start_time,BOT_BALL_THRESH)
+		for gf in generatingfunction:
+			self.kub,aim = gf
+			point,angle = self.block_expected()
+			# print("gf", point.x, point.y)
+			if not vicinity_points(aim,point,thresh=BOT_RADIUS):
+				self.behavior_failed = True
+				print("Fail Fail")
+				break
+
+	def on_exit_clear(self):
+		pass
+	def on_exit_peace(self):
+		pass
+	def on_exit_protect(self):
+		pass
+	def on_exit_block(self):
+		pass
+	def on_enter_peace(self):
+		point = self.peace_expected()
+		theta = angle_diff(point,self.kub.state.ballPos)
 		_GoToPoint_.init(self.kub, point, theta)
-	pass
+		print [point.x, point.y]
+		pass
+	def on_enter_clear(self):
+		pass
+	def on_enter_protect(self):
+		point = self.protect_expected()
+		print("Entered Protect , going to", point.x, point.y)
+		theta = angle_diff(point,self.kub.state.ballPos)
+		_GoToPoint_.init(self.kub, point, theta)
+		print [point.x, point.y]
+		pass
+	def on_enter_block(self):
+		point,angle = self.block_expected()
+		print("Entered Block , going to", point.x, point.y)
+		theta = angle + math.pi
+		_GoToPoint_.init(self.kub, point, theta)
+		print [point.x, point.y]
+		pass
 
 
 

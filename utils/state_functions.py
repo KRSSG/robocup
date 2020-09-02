@@ -31,9 +31,9 @@ def kub_has_ball(state, kub_id, is_opponent=False):
 ##
 def ball_moving_towards_our_goal(state):
     ballPos = Vector2D(state.ballPos.x, state.ballPos.y)
-    ballvel = Vector2D(state.ballvel.x, state.ballvel.y)
+    ballvel = Vector2D(state.ballVel.x, state.ballVel.y)
     if ballvel.absSq(ballvel) > 0.1:
-        ball_movement = Line(ballPos, ballPos + ballvel)
+        ball_movement = Line(ballPos, math.atan2(ballvel.y,ballvel.x))
         ptA = Vector2D(-HALF_FIELD_MAXX, DBOX_HEIGHT)
         ptB = Vector2D(-HALF_FIELD_MAXX, -DBOX_HEIGHT)
         defend_line = Line(point1=ptA,point2=ptB)

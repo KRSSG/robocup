@@ -52,7 +52,7 @@ def reset():
     start_time = rospy.Time.now()
     start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
     
-def execute(startTime):
+def execute(startTime,thresh=2*ROTATION_FACTOR):
     global start_time,FIRST_CALL,FLAG_turn,kub,prev_state
 
     # print DIST_THRESH
@@ -87,8 +87,8 @@ def execute(startTime):
 
             #print("rotate : ", rotate)
             #print(" not rotate : ", kub.state.homePos[kub.kubs_id].theta)
-            print("diff : ",abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate)))
-            if (abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate))<2*ROTATION_FACTOR):
+            # print("diff : ",abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate)))
+            if (abs(normalize_angle(kub.state.homePos[kub.kubs_id].theta-rotate))<thresh):
                 kub.turn(0)
                 print("Angle completed")
                 FLAG_turn = True

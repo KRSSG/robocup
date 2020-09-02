@@ -12,49 +12,52 @@ from kubs import kubs
 from krssg_ssl_msgs.srv import bsServer
 from math import atan2,pi
 from utils.functions import *
-pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 
 
 
+import memcache
+shared = memcache.Client(['127.0.0.1:11211'],debug=True)
 
 
-def function(id_,state):
+
+def function(id_,state,pub):
 	kub = kubs.kubs(id_,state,pub)
 	kub.update_state(state)
 	print(kub.kubs_id)
-	target = Vector2D(0,0)
-	#ub.state.homePos[kub.kubs_id].theta += 3.1412
-	g_fsm = KickToPoint.KickToPoint(target)
+	# g_fsm = GoToBall.GoToBall()
 	# g_fsm = GoToPoint.GoToPoint()
+	g_fsm = KickToPoint.KickToPoint(Vector2D(-HALF_FIELD_MAXX, 0))
 	g_fsm.add_kub(kub)
+	theta = angle_diff(state.ballPos, Vector2D(-HALF_FIELD_MAXX, 0))
+	g_fsm.add_theta(theta)
 	# g_fsm.add_point(point=kub.state.ballPos,orient=normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.x-3000)))
-	g_fsm.add_theta(theta=normalize_angle(atan2(target.y - state.ballPos.y,target.x - state.ballPos.x)))
-	#g_fsm.as_graphviz()
-	#g_fsm.write_diagram_png()
+	# g_fsm.add_theta(theta=normalize_angle(pi+atan2(state.ballPos.y,state.ballPos.x+3000)))
+	g_fsm.as_graphviz()
+	g_fsm.write_diagram_png()
+	#print('something before spin')
 	g_fsm.spin()
 	# 
 
 
 
-#print str(kub.kubs_id) + str('***********')
+pub = rospy.Publisher('/grsim_data',gr_Commands,queue_size=1000)
 rospy.init_node('node',anonymous=False)
-start_time = rospy.Time.now()
-start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-
-# rospy.Subscriber('/belief_state', BeliefState, BS_callback, queue_size=1000)
 
 while True:
-	state=None
+	state = None
+	#state=shared.get('state')
 	rospy.wait_for_service('bsServer',)
 	getState = rospy.ServiceProxy('bsServer',bsServer)
 	try:
 		state = getState(state)
 	except rospy.ServiceException, e:
-		print e	
+		print("chutiya")		
 	if state:
-		function(1,state.stateB)
+		#print('lasknfcjscnajnstate',state.stateB.homePos)
+		function(1,state.stateB,pub)
+		#print('chal ja')
 		# break
-rospy.spin()
+rospy.spin()	
 
 
 

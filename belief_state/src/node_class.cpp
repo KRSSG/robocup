@@ -18,11 +18,11 @@
 #include "kalman_filter.h"
 
 //const int BALL_AT_CORNER_THRESH	= 20; 
-const int HALF_FIELD_MAXX		= 3000; 
-const int HALF_FIELD_MAXY		= 2000;
+const int HALF_FIELD_MAXX		= 6000; 
+const int HALF_FIELD_MAXY		= 4500;
 const float MAX_DRIBBLE_R		= 3;
-const int DBOX_WIDTH			= 600;
-const int DBOX_HEIGHT			= 600;
+const int DBOX_WIDTH			= 2400;
+const int DBOX_HEIGHT			= 1200;
 const int MAX_QUEUE_SZ			= 5;
 short int isteamyellow = 0;
 
