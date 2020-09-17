@@ -6,30 +6,31 @@ from utils.functions import *
 from utils.geometry import *
 from utils.config import *
 from math import *
-from math import *
 import time
 from krssg_ssl_msgs.msg import BeliefState
 from krssg_ssl_msgs.srv import bsServer
 from krssg_ssl_msgs.srv import *
 from krssg_ssl_msgs.msg import Ref
 first = 0
+
+rospy.wait_for_service('ref_comm',)
+getrState = rospy.ServiceProxy('ref_comm',ref_comm)
 rospy.wait_for_service('bsServer',)
 getState = rospy.ServiceProxy('bsServer',bsServer)
 state = None
-
-class GoToBall(behavior.Behavior):
-    """docstring for GoToBall"""
+class Referee(behavior.Behavior):
+    """docstring for Referee"""
     class State(Enum):
         setup = 1 
         course_approach = 2
         fine_approach = 3
         intercept = 4
+        ref = 5
 
-    def __init__(self,course_approch_thresh =  DISTANCE_THRESH/3,continuous=False):
+    def __init__(self,ref_state,course_approch_thresh =  DISTANCE_THRESH/3,continuous=False):
+        super(Referee,self).__init__()
 
-        super(GoToBall,self).__init__()
-
-        self.name = "GoToBall"
+        self.name = "Referee"
 
         self.power = 7.0
 
@@ -42,65 +43,96 @@ class GoToBall(behavior.Behavior):
 
         self.behavior_failed = False
 
+        self.ref_state = ref_state
 
-        self.add_state(GoToBall.State.setup,
+        self.add_state(Referee.State.setup,
             behavior.Behavior.State.running)
 
-        self.add_state(GoToBall.State.course_approach,
+        self.add_state(Referee.State.course_approach,
             behavior.Behavior.State.running)
         
-        self.add_state(GoToBall.State.fine_approach,
+        self.add_state(Referee.State.fine_approach,
             behavior.Behavior.State.running)
 
-        self.add_state(GoToBall.State.intercept,
+        self.add_state(Referee.State.intercept,
+            behavior.Behavior.State.running)
+
+        self.add_state(Referee.State.ref,
             behavior.Behavior.State.running)
 
         self.add_transition(behavior.Behavior.State.start,
-            GoToBall.State.setup,lambda: True,'immediately')
+            Referee.State.setup,lambda: True,'immediately')
 
-        self.add_transition(GoToBall.State.setup,
-           GoToBall.State.intercept,lambda:self.ball_moving(),'intercept_ball')
+        self.add_transition(Referee.State.setup,
+           Referee.State.intercept,lambda:self.ball_moving() and self.ref_check(),'intercept_ball')
 
-        self.add_transition(GoToBall.State.setup,
-            GoToBall.State.fine_approach,lambda: self.fine_approach() and not self.ball_moving() ,'ball_in_vicinity')
+        self.add_transition(Referee.State.setup,
+           Referee.State.ref,lambda:not self.ref_check(),'referee')
 
-        self.add_transition(GoToBall.State.setup,
-            GoToBall.State.course_approach,lambda: self.course_approach() and not self.ball_moving(),'setup')
+        self.add_transition(Referee.State.ref,
+           Referee.State.setup,lambda:True,'referee')
 
-        self.add_transition(GoToBall.State.setup,
-            GoToBall.State.intercept,lambda:self.ball_moving(),'intercept_ball')
+        self.add_transition(Referee.State.setup,
+            Referee.State.fine_approach,lambda: self.fine_approach() and not self.ball_moving() and self.ref_check(),'ball_in_vicinity')
 
-        self.add_transition(GoToBall.State.intercept,
-            GoToBall.State.course_approach,lambda:self.course_approach() and not self.ball_moving(),'setup')
+        self.add_transition(Referee.State.setup,
+            Referee.State.course_approach,lambda: self.course_approach() and not self.ball_moving() and self.ref_check(),'setup')
 
-        self.add_transition(GoToBall.State.course_approach,
-            GoToBall.State.fine_approach,lambda:self.at_target_point() ,'complete')
+        self.add_transition(Referee.State.setup,
+            Referee.State.intercept,lambda:self.ball_moving() and self.ref_check(),'intercept_ball')
 
-        self.add_transition(GoToBall.State.course_approach,
-            GoToBall.State.intercept,lambda:self.ball_moving(),'intercept_ball')
+        self.add_transition(Referee.State.intercept,
+            Referee.State.course_approach,lambda:self.course_approach() and not self.ball_moving() and self.ref_check(),'setup')
 
-        #self.add_transition(GoToBall.State.fine_approach,
-           #GoToBall.State.intercept,lambda:self.ball_moving(),'intercept_ball')
+        self.add_transition(Referee.State.intercept,
+           Referee.State.ref,lambda:not self.ref_check(),'referee')
 
-        self.add_transition(GoToBall.State.fine_approach,
-            behavior.Behavior.State.completed,lambda:self.at_ball_pos(),'complete')
+        self.add_transition(Referee.State.course_approach,
+            Referee.State.fine_approach,lambda:self.at_target_point() and self.ref_check() ,'complete')
 
-        self.add_transition(GoToBall.State.intercept,
-            GoToBall.State.fine_approach,lambda:self.intercept_complete(),'intercept_complete')
+        self.add_transition(Referee.State.course_approach,
+           Referee.State.ref,lambda:not self.ref_check(),'referee')
 
-        # self.add_transition(GoToBall.State.setup,
+        self.add_transition(Referee.State.fine_approach,
+           Referee.State.ref,lambda:not self.ref_check(),'referee')
+
+        self.add_transition(Referee.State.course_approach,
+            Referee.State.intercept,lambda:self.ball_moving() and self.ref_check(),'intercept_ball')
+
+        #self.add_transition(Referee.State.fine_approach,
+           #Referee.State.intercept,lambda:self.ball_moving(),'intercept_ball')
+
+        self.add_transition(Referee.State.fine_approach,
+            behavior.Behavior.State.completed,lambda:self.at_target_point(),'complete')
+
+        self.add_transition(Referee.State.intercept,
+            Referee.State.fine_approach,lambda:self.intercept_complete() and self.ref_check(),'intercept_complete')
+
+        # self.add_transition(Referee.State.setup,
         #   behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
         #These three conditions for fail might cause a problem in dynamic gameplay as we are sending it back to setup and going to new point.
-        self.add_transition(GoToBall.State.course_approach,
-            GoToBall.State.setup,lambda: self.behavior_failed,'failed')
+        self.add_transition(Referee.State.course_approach,
+            Referee.State.setup,lambda: self.behavior_failed,'failed')
 
-        self.add_transition(GoToBall.State.fine_approach,
-            GoToBall.State.setup,lambda: self.behavior_failed,'failed')
+        self.add_transition(Referee.State.fine_approach,
+            Referee.State.setup,lambda: self.behavior_failed,'failed')
 
-        self.add_transition(GoToBall.State.intercept,
-            GoToBall.State.setup,lambda: self.behavior_failed,'failed')
+        self.add_transition(Referee.State.intercept,
+            Referee.State.setup,lambda: self.behavior_failed,'failed')
 
-    
+
+
+    def ref_check(self):
+        self.ref_state = None
+        self.ref_state = getrState(self.ref_state).stateB
+        # print("ref_state: ", self.ref_state)
+        # time.sleep(2)
+          
+        if self.ref_state.command == 2 or self.ref_state.command == 3:
+            return True
+        else:
+            return False    
+            # time.sleep(2)
     def add_kub(self,kub):
         self.kub = kub
 
@@ -153,14 +185,30 @@ class GoToBall(behavior.Behavior):
         pass
     def execute_setup(self):
         pass
-        
+    
+    def on_enter_ref(self):
+        pass
+
+    def execute_ref(self):
+        print("executing ref")
+        self.kub.reset()
+        self.kub.execute()
+        while True:
+            if self.ref_check():
+                break
+        # time.sleep(2)
+        pass
+    def on_exit_ref(self):
+        pass
+
     def on_exit_setup(self):
         pass
 
     def on_enter_course_approach(self):
+        # print("#################entered course approach",self.kub.state)
         global state
         state = None
-        self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
+        self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta,5)
         self.target_point = self.kub.state.ballPos
         try:
             state = getState(state).stateB    
@@ -172,14 +220,21 @@ class GoToBall(behavior.Behavior):
         pass
 
     def execute_course_approach(self):
+
         start_time = rospy.Time.now()
         start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
         generatingfunction = _GoToPoint_.execute(start_time,self.course_approch_thresh,True)
         #self.behavior_failed = False
         for gf in generatingfunction:
+
             self.kub,target_point = gf
             # self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
             self.target_point = self.kub.state.ballPos
+            print("behaviour =", behavior.Behavior.State)
+            print("behaviour =", self.State)
+            # time.sleep(2)
+            if not self.ref_check():
+                break 
             if not vicinity_points(self.target_point,target_point,thresh=BOT_RADIUS*2.0):
                 self.behavior_failed = True
                 break
@@ -192,6 +247,7 @@ class GoToBall(behavior.Behavior):
         pass
 
     def on_enter_fine_approach(self):
+        # print("##########################entered fine approach",self.kub.state)
         theta = self.kub.get_pos().theta
         _GoToPoint_.init(self.kub, self.kub.state.ballPos, theta)
         pass
@@ -202,7 +258,9 @@ class GoToBall(behavior.Behavior):
         generatingfunction = _GoToPoint_.execute(start_time,self.ball_dist_thresh)
         for gf in generatingfunction:
             self.kub,ballPos = gf
-            
+            # print("behaviour = ",behavior.Behavior.State)
+            # print("behaviour =", self.State)            
+            # time.sleep(2) 
             if not vicinity_points(ballPos,self.kub.state.ballPos,thresh=BOT_RADIUS):
                 self.behavior_failed = True
                 break

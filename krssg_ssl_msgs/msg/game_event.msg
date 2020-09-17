@@ -1,0 +1,3 @@
+uint8 gameEventType
+Originator originator
+string message

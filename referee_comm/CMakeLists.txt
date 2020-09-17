@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(krssg_ssl_msgs)
+project(referee_comm)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  geometry_msgs
-  message_generation
+  roscpp
+  rospy
   std_msgs
 )
 
@@ -28,10 +28,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## * Let MSG_DEP_SET be the set of packages whose message types you use in
 ##   your messages/services/actions (e.g. std_msgs, actionlib_msgs, ...).
 ## * In the file package.xml:
-##   * add a build_depend tag for "message_generation"
 ##   * add a build_depend and a run_depend tag for each package in MSG_DEP_SET
-##   * If MSG_DEP_SET isn't empty the following dependency has been pulled in
-##     but can be declared for certainty nonetheless:
+##   * If MSG_DEP_SET isn't empty the following dependencies might have been
+##     pulled in transitively but can be declared for certainty nonetheless:
+##     * add a build_depend tag for "message_generation"
 ##     * add a run_depend tag for "message_runtime"
 ## * In this file (CMakeLists.txt):
 ##   * add "message_generation" and every package in MSG_DEP_SET to
@@ -43,60 +43,18 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * uncomment the generate_messages entry below
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
-## Generate messages in the 'msg' folder
-add_message_files(
-   FILES
-BeliefState.msg
-point_2d.msg
-Vector2f.msg
-team_info.msg
-gr_Robot_Command.msg
-SSL_WrapperPacket.msg
-SSL_GeometryData.msg
-replan.msg
-sslDebug_Line.msg
-SSL_DetectionBall.msg
-debug_msg.msg
-obstacle.msg
-TacticPacket.msg
-SSL_FieldCircularArc.msg
-point_SF.msg
-planner_path.msg
-plannner.msg
-pid_tune.msg
-IR_data.msg
-gr_Commands.msg
-pid_message.msg
-sslDebug_Circle.msg
-SSL_DetectionRobot.msg
-SSL_DetectionFrame.msg
-SSL_FieldLineSegment.msg
-gr_Replacement.msg
-gr_Packet.msg
-profilerOutput.msg
-SSL_GeometryCameraCalibration.msg
-SSL_GeometryFieldSize.msg
-gr_BallReplacement.msg
-sslDebug_Data.msg
-gr_RobotReplacement.msg
-target_triangle.msg
-Ref.msg
-game_event.msg
-Originator.msg
-SSL_Refbox.msg
- )
+find_package(catkin REQUIRED COMPONENTS
+   roscpp
+   rospy
+   std_msgs
+   message_generation
+   krssg_ssl_msgs
+)
 
-
-
-## Generate services in the 'srv' folder
- add_service_files(
-   FILES
-   path_plan.srv
-   bsServer.srv
-   ref_comm.srv
-#   Service2.srv
- )
-
+##Generate messages in the 'msg' folder
+ # add_message_files(
+ #   FILES
+ # )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -113,27 +71,6 @@ SSL_Refbox.msg
 # )
 
 ## Generate added messages and services with any dependencies listed here
-generate_messages(DEPENDENCIES   geometry_msgs   std_msgs)
-
-################################################
-## Declare ROS dynamic reconfigure parameters ##
-################################################
-
-## To declare and build dynamic reconfigure parameters within this
-## package, follow these steps:
-## * In the file package.xml:
-##   * add a build_depend and a run_depend tag for "dynamic_reconfigure"
-## * In this file (CMakeLists.txt):
-##   * add "dynamic_reconfigure" to
-##     find_package(catkin REQUIRED COMPONENTS ...)
-##   * uncomment the "generate_dynamic_reconfigure_options" section below
-##     and list every .cfg file to be processed
-
-## Generate dynamic reconfigure parameters in the 'cfg' folder
-# generate_dynamic_reconfigure_options(
-#   cfg/DynReconf1.cfg
-#   cfg/DynReconf2.cfg
-# )
 
 ###################################
 ## catkin specific configuration ##
@@ -145,10 +82,10 @@ generate_messages(DEPENDENCIES   geometry_msgs   std_msgs)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES krssg_ssl_msgs
-  CATKIN_DEPENDS geometry_msgs std_msgs message_runtime
-#  DEPENDS system_lib
+  INCLUDE_DIRS include
+  LIBRARIES referee_comm
+  CATKIN_DEPENDS roscpp rospy std_msgs
+  DEPENDS system_lib
 )
 
 ###########
@@ -162,25 +99,20 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-## Declare a C++ library
-# add_library(krssg_ssl_msgs
-#   src/${PROJECT_NAME}/krssg_ssl_msgs.cpp
+## Declare a cpp library
+# add_library(referee_comm
+#   src/${PROJECT_NAME}/referee_comm.cpp
 # )
 
-## Add cmake target dependencies of the library
-## as an example, code may need to be generated before libraries
-## either from message generation or dynamic reconfigure
-# add_dependencies(krssg_ssl_msgs ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+## Declare a cpp executable
+# add_executable(referee_comm_node src/referee_comm_node.cpp)
 
-## Declare a C++ executable
-# add_executable(krssg_ssl_msgs_node src/krssg_ssl_msgs_node.cpp)
-
-## Add cmake target dependencies of the executable
-## same as for the library above
-# add_dependencies(krssg_ssl_msgs_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+## Add cmake target dependencies of the executable/library
+## as an example, message headers may need to be generated before nodes
+# add_dependencies(referee_comm_node referee_comm_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(krssg_ssl_msgs_node
+# target_link_libraries(referee_comm_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -199,7 +131,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS krssg_ssl_msgs krssg_ssl_msgs_node
+# install(TARGETS referee_comm referee_comm_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -224,10 +156,38 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_krssg_ssl_msgs.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_referee_comm.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+#set(libs)
+set(QT_USE_QTNETWORK TRUE)
+find_package(Qt REQUIRED)
+include(${QT_USE_FILE})
+list(APPEND libs ${QT_LIBRARIES})
+
+find_package(Protobuf REQUIRED)
+protobuf_generate_cpp(PROTO_CPP PROTO_H
+    include/proto/ssl_game_controller_auto_ref.proto
+    include/proto/ssl_game_controller_common.proto
+    include/proto/ssl_game_controller_team.proto
+    include/proto/ssl_game_event.proto
+    include/proto/ssl_game_event_2019.proto
+    include/proto/ssl_referee.proto   
+)
+
+set(src 
+  src/netraw.cpp
+  src/robocup_ssl_client.cpp
+)
+#Including proto files
+include_directories(include ${catkin_INCLUDE_DIRS} ${PROTOBUF_INCLUDE_DIRS})
+include_directories(${CMAKE_BINARY_DIR}/${PROJECT_NAME})
+
+
+add_executable(ref_data src/referee_node.cpp ${src} ${PROTO_CPP} ${PROTO_H})
+target_link_libraries(ref_data ${catkin_LIBRARIES} ${PROTOBUF_LIBRARIES} ${QT_LIBRARIES})
+add_dependencies(ref_data grsim_comm_generate_messages_cpp)
