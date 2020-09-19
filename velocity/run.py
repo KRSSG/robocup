@@ -30,7 +30,7 @@ def distance_(a, b):
     dy = a.y-b.y
     return sqrt(dx*dx+dy*dy)
 
-def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
+def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False, f=1.5):
     # print("Get_Vel:     t - start = ",t-start)       
     global expectedTraverseTime, REPLAN, v, errorInfo, pso, FIRST_CALL, homePos, awayPos, kubid, prev_target
     REPLAN = 0
@@ -53,7 +53,7 @@ def Get_Vel(start, t, kub_id, target, homePos_, awayPos_,avoid_ball=False):
         findPath(startPt, target, avoid_ball)
         FIRST_CALL = 0
 
-    if distance < 1.5*BOT_BALL_THRESH:
+    if distance < f*BOT_BALL_THRESH:
         return [0,0,0,0]
     # print("ex = ",expectedTraverseTime) 
     # print("t = ",t," start = ",start)

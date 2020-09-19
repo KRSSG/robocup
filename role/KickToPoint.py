@@ -16,8 +16,7 @@ class KickToPoint(behavior.Behavior):
 	class State(Enum):
 		normal = 1
 		setStance = 2
-		turnAround = 3
-		GoAndKick = 4
+		GoAndKick = 3
 
 	def __init__(self,target,continuous=False):
 
@@ -25,11 +24,13 @@ class KickToPoint(behavior.Behavior):
 
 		self.name = "KickToPoint"
 
-		self.power = 7.0
-
 		self.target_point = target 
 
 		self.go_at = None 
+
+		self.power = 0
+
+		self.goto_kick=False;
 
 		self.setStanceThresh = 1.5*BOT_RADIUS
 
@@ -42,9 +43,6 @@ class KickToPoint(behavior.Behavior):
 
 		self.add_state(KickToPoint.State.setStance,
 			behavior.Behavior.State.running)
-
-		self.add_state(KickToPoint.State.turnAround,
-			behavior.Behavior.State.running)
 		
 		self.add_state(KickToPoint.State.GoAndKick,
 			behavior.Behavior.State.running)
@@ -56,24 +54,15 @@ class KickToPoint(behavior.Behavior):
 			KickToPoint.State.setStance,lambda: self.setstance(),'far_away')
 
 		self.add_transition(KickToPoint.State.normal,
-			KickToPoint.State.turnAround,lambda: self.turnAroundDirect(),'near_enough')
-
-		self.add_transition(KickToPoint.State.normal,
-			KickToPoint.State.GoAndKick,lambda:self.GoAndKickDirect(),'very_close')
-
-		self.add_transition(KickToPoint.State.setStance,
-			KickToPoint.State.turnAround,lambda:self.turnaround(),'turn')
-
-		self.add_transition(KickToPoint.State.turnAround,
-			KickToPoint.State.GoAndKick,lambda: self.goandkick(),'kick')
+			KickToPoint.State.GoAndKick,lambda: self.GoAndKickDirect(),'very_close')
 
 		self.add_transition(KickToPoint.State.GoAndKick,
 			behavior.Behavior.State.completed,lambda: self.at_ball_pos(),'kicked!!!')
 
 		self.add_transition(KickToPoint.State.setStance,
-			behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
+			KickToPoint.State.GoAndKick,lambda: self.goto_kick,'kicking')
 
-		self.add_transition(KickToPoint.State.turnAround,
+		self.add_transition(KickToPoint.State.setStance,
 			behavior.Behavior.State.failed,lambda: self.behavior_failed,'failed')
 
 		self.add_transition(KickToPoint.State.GoAndKick,
@@ -94,18 +83,14 @@ class KickToPoint(behavior.Behavior):
 	def setstance(self):
 		global DIST_THRESH
 		#print("hello")
-		theta = angle_diff(self.target_point, self.kub.state.ballPos)
+		theta = angle_diff(self.kub.state.ballPos,self.target_point)
 		go_at = getPointToGo(self.kub.state.ballPos, theta) 
-		return go_at.dist(self.get_pos_as_vec2d(self.kub.get_pos())) >= DIST_THRESH*0.85
+		print "##########################"
+		return go_at.dist(self.get_pos_as_vec2d(self.kub.get_pos())) >= DIST_THRESH*1.00
 
-	def turnaround(self):
-		return not self.bot_moving() #and not self.facing_the_target() and self.near_targetBall_line() and self.one_more()
-
-	def turnAroundDirect(self):
-		return not self.setstance() and not self.bot_moving()
 
 	def GoAndKickDirect(self):
-		return self.facing_the_target() and not self.setstance()
+		return not self.setstance()
 
 	def goandkick(self):
 		print("facing_the_target : ", self.facing_the_target())
@@ -126,7 +111,11 @@ class KickToPoint(behavior.Behavior):
 			return True
 		return False
 
+	def kicking_power(self):
+		return math.sqrt(dist(self.target_point,self.kub.state.ballPos)/6400.0)*5.0
+	
 	def ball_nearby(self, thresh = BOT_RADIUS*1.5):
+
 		if bot_in_front_of_ball(self.kub, thresh):
 			return True
 		else :
@@ -135,7 +124,7 @@ class KickToPoint(behavior.Behavior):
 	def facing_the_target(self):
 		print(" theta1 : ", self.theta)
 		print(" bot theta : ", self.kub.get_theta())
-		if vicinity_theta( self.theta, normalize_angle(self.kub.get_theta()), thresh=0.30 ):
+		if vicinity_theta( self.theta, self.kub.get_theta(), thresh=0.30 ):
 			return True
 		else :
 			return False
@@ -144,135 +133,67 @@ class KickToPoint(behavior.Behavior):
 		error = 10
 		return vicinity_points(self.kub.get_pos(),self.kub.state.ballPos,thresh=BOT_BALL_THRESH+error)
 
-
-	# def on_enter_setStance(self):
-	# 	global start_time
-	# 	start_time = rospy.Time.now()
-	# 	start_time = start_time.secs + 1.0*start_time.nsecs/pow(10,9)
-
-	def on_enter_setStance(self):
-		print("entered setstance")
-		theta = angle_diff(self.target_point, self.kub.state.ballPos)
-		self.go_at = getPointToGo(self.kub.state.ballPos, theta)
-		_GoToPoint_.init(self.kub, self.go_at, self.theta)
-		pass
-
 	def reset(self):
 		global start_time
 		start_time = rospy.Time.now()
 		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)
 
+	def on_enter_normal(self):
+		pass
+
 	def execute_normal(self):
 		pass	
 
-	# def execute_setStance(self):
-	# 	global start_time
-	# 	t = rospy.Time.now()
-	# 	t = t.secs + 1.0*t.nsecs/pow(10,9)
-	# 	#print(" t - start = ",t-start_time)
-	# 	theta = angle_diff(self.target_point, self.kub.state.ballPos)
-	# 	go_at = getPointToGo(self.kub.state.ballPos, theta)
-	# 	#print("goo", go_at)
-	# 	[vx, vy, vw, REPLANNED] = Get_Vel(start_time, t, self.kub.kubs_id, Vector2D(go_at.x, go_at.y), self.kub.state.homePos, self.kub.state.awayPos, True)
-	# 		#vx, vy, vw, replanned
-	# 	#print("-------------------REPLANNED = ",REPLANNED)
-	# 	if(REPLANNED):
-	# 		self.reset()
-		
-	# 	# print("kubs_id = ",kub.kubs_id)
-	# 	curPos = self.kub.get_pos()
-	# 	#if vicinity_points(go_at, curPos, 4) == False:
-	# 	try:   
-	# 		#print("vx = ",vx)
-	# 		#print("vy = ",vy)
-	# 		self.kub.move(vx, vy)
-	# 		#print(vw)
-	# 		#print("homePos")
-	# 		self.kub.turn(vw)
-	# 		self.kub.execute()
-	# 	except Exception as e:
-	# 		print("In except",e)
-	# 		pass
-	# 	print("exiting")
+	def on_exit_normal(self):
+		pass
+	def getPointToGo1(self,point, theta):
+		x = point.x - (1.5 * BOT_RADIUS) * (math.cos(theta))
+		y = point.y - (1.5 * BOT_RADIUS) * (math.sin(theta))
+		return Vector2D(int(x), int(y))
+
+	def on_enter_setStance(self):
+		print("entered setstance hello")
+		self.theta = normalize_angle(angle_diff( self.kub.state.ballPos,self.target_point))
+		self.power = self.kicking_power()
+		self.go_at = self.getPointToGo1(self.kub.state.ballPos, self.theta)
+		_GoToPoint_.init(self.kub, self.go_at, self.theta)
+		pass
+
 
 	def execute_setStance(self):
 		global DIST_THRESH
-		print("executing setstance")
+		print("executing setstance fnfnfj")
 		start_time = rospy.Time.now()
-		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
+		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)  
+		print "-----------------------##########-"
 		generatingfunction = _GoToPoint_.execute(start_time,DIST_THRESH,True)
+		
 		for gf in generatingfunction:
 			self.kub,target_point = gf
 			# self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
 			theta = angle_diff(self.target_point, self.kub.state.ballPos)
-			self.go_at = getPointToGo(self.kub.state.ballPos, theta)
-			if not vicinity_points(self.go_at,target_point,thresh=BOT_BALL_THRESH):
-				self.behavior_failed = True
+			print(self.theta)
+			self.kub.kick(self.kicking_power())
+			#print theta,"------------------------"
+			self.go_at = self.getPointToGo1(self.kub.state.ballPos, theta)
+			# #print vicinity_points(self.go_at,target_point,thresh=BOT_BALL_THRESH)
+			# if(dist(self.go_at,self.kub.get_pos())<BOT_BALL_THRESH):
+			# 	self.behavior_failed = True
+			# # 	break
+			if not vicinity_points(self.go_at, target_point,thresh=BOT_RADIUS*2.0):
+				print "Finally"
+				# self.behavior_failed = True 
 				break
-
-
-	def on_enter_turnAround(self):
-		print("entered turnAround")
-		print(self.get_pos_as_vec2d(self.kub.get_pos()).dist(self.get_pos_as_vec2d(self.kub.state.ballPos)))
-		self.theta = normalize_angle(angle_diff(self.kub.state.ballPos,self.target_point))
-		_turnAround_.init(self.kub, self.theta )
-		pass
-
-	# def execute_turnAround(self):
-	# 	print("TURNING")
-	# 	#print(data.homePos[BOT_ID].theta)
-	# 	#print(theta)
-	# 	theta = angle_diff(self.target_point, self.kub.state.ballpos)
-	# 	totalAngle = theta
-	# 	MAX_w = (MAX_BOT_OMEGA+MIN_BOT_OMEGA)/1.2
-	# 	# theta_left = float(homePos[kub_id].theta-totalAngle)
-	# 	theta_lft = normalize_angle(normalize_angle(self.kub.state.homePos[self.kub.kubs_id].theta)-totalAngle)*-1.0+3.1412
-	# 	vw = (theta_lft/2*math.pi)*MAX_w
-	# 	# print "totalAngle",radian_2_deg(totalAngle)
-	# 	# print "theta_left ",radian_2_deg(theta_lft),theta_lft
-	# 	# print "homePos theta ",radian_2_deg(normalize_angle(homePos[kub_id].theta))
-	# 	# print "omega ",vw
-	# 	if abs(vw)<1*MIN_BOT_OMEGA:
-	# 		vw = 1*MIN_BOT_OMEGA*(1 if vw>0 else -1)
-
-	# 	if abs(theta_lft)<ROTATION_FACTOR/2:
-	# 		vw = 0.0
-
-	# 	print "Omega return",vw
-	# 	self.kub.reset()
-	# 	self.kub.turn(vw)
-	# 	self.kub.execute()
-
-	def execute_turnAround(self):
-		print("executing turnaround")
-		start_time = rospy.Time.now()
-		start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9)   
-		generatingfunction = _turnAround_.execute(start_time)
-		for gf in generatingfunction:
-			self.kub,final_theta = gf
-			# self.target_point = getPointBehindTheBall(self.kub.state.ballPos,self.theta)
-			if not vicinity_theta(self.theta,final_theta,thresh=0.1):
-				self.behavior_failed = True
-				print("failed")
-				break
-
+			#print self.go_at.x,"1",self.go_at.y,"abc",self.kub.get_pos().x,"2",self.kub.get_pos().y
+		print("main nikal gya")
+		self.goto_kick = True;
+			
 
 	def on_enter_GoAndKick(self):
 		print("entered GoAndKick")
 		theta = self.kub.get_pos().theta
 		_GoToPoint_.init(self.kub, self.kub.state.ballPos, theta)
 		pass
-
-	# def on_enter_GoAndKick(self):
-	# 	print("entered GoAndKick")
-	# 	global alpha, buffer_dist, start_time
-	# 	start_time = rospy.Time.now()
-	# 	start_time = 1.0*start_time.secs + 1.0*start_time.nsecs/pow(10,9) 
-	# 	alpha = atan2(self.kub.state.ballPos.y - self.kub.get_pos().y,self.kub.state.ballPos.x - self.kub.get_pos().x ) - self.kub.state.homePos[self.kub.kubs_id].theta
-	# 	buffer_dist = self.get_pos_as_vec2d(self.kub.get_pos()).dist(self.get_pos_as_vec2d(self.kub.state.ballPos))*abs(sin(alpha))
-	# 	theta = self.kub.get_pos().theta
-	# 	_GoToPoint_.init(self.kub, self.kub.state.ballPos, theta)
-	# 	pass
 
 	def execute_GoAndKick(self):
 		print("ha ma pahuch gaya")
@@ -288,33 +209,19 @@ class KickToPoint(behavior.Behavior):
 				self.behavior_failed = True
 				break
 
-	# def execute_GoAndKick(self):
-	# 	print("ha ma pahuch gaya")
-	# 	global alpha, buffer_dist, start_time
-	# 	time = rospy.Time.now()
-	# 	time = 1.0*time.secs + 1.0*time.nsecs/pow(10,9)
-	# 	self.kub.kick(self.power)
-	# 	self.kub.execute()	
-
-
-		
-
 	def on_exit_GoAndKick(self):
 		print("kicking bolo all is well")
-		#self.kub.kick(self.power)
 		self.kub.reset()
 		self.kub.kick(self.power)
 		self.kub.execute()
+		self.goto_kick=False
 		pass
 
-	def on_enter_normal(self):
-		pass
-
-	def on_exit_normal(self):
-		pass
+	
 
 	def on_exit_setStance(self):
-		print("exiting setstance")
+		print("main firse nikl gya")
+		self.goto_kick = True;
 		pass
 
 	def on_exit_turnAround(self):
